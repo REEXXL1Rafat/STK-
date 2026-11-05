@@ -1,0 +1,44 @@
+SATARK Risk Window · Punjab and Haryana · Fri 06 Nov 2026
+Expected today: about 65 fire detections. Most in Firozpur, Sangrur, Bathinda, Tarn Taran.
+
+Team 1
+  1. near Mehma, Firozpur · risk 10% · https://maps.google.com/?q=31.0250,74.6250
+  2. near Mandi Amin Ganj, Firozpur · risk 8% · https://maps.google.com/?q=30.9750,74.7250
+  3. near Bhangala, Tarn Taran · risk 7% · https://maps.google.com/?q=31.1250,74.7250
+  4. near Dibbi Pura, Tarn Taran · risk 6% · https://maps.google.com/?q=31.1750,74.5750
+Team 2
+  1. near Mandir Mathra Bhagi, Tarn Taran · risk 11% · https://maps.google.com/?q=31.3750,74.5750
+  2. near Bhai Ladhu, Tarn Taran · risk 7% · https://maps.google.com/?q=31.2750,74.6750
+  3. near Shaheed, Tarn Taran · risk 6% · https://maps.google.com/?q=31.2250,74.7750
+  4. near Jaura, Tarn Taran · risk 8% · https://maps.google.com/?q=31.3750,74.8250
+Team 3
+  1. near Gumti Kalan, Bathinda · risk 7% · https://maps.google.com/?q=30.4250,75.1750
+  2. near Dial Pura Mirja, Bathinda · risk 6% · https://maps.google.com/?q=30.3750,75.0750
+  3. near Ghanda Bana, Bathinda · risk 6% · https://maps.google.com/?q=30.3750,75.2750
+  4. near Gumti Khurd, Sangrur · risk 6% · https://maps.google.com/?q=30.4750,75.6750
+Team 4
+  1. near Dhakkowal, Kapurthala · risk 8% · https://maps.google.com/?q=31.2250,75.0750
+  2. near Rurki Khas, Firozpur · risk 8% · https://maps.google.com/?q=31.1250,75.0250
+  3. near Daroli Bhai, Firozpur · risk 5% · https://maps.google.com/?q=30.8750,74.7250
+  4. near Pola, Fatehgarh Sahib · risk 5% · https://maps.google.com/?q=30.5250,76.4750
+Team 5
+  1. near Sandhaur, Sangrur · risk 7% · https://maps.google.com/?q=30.5750,75.7250
+  2. near Bainstani Kalan, Sangrur · risk 6% · https://maps.google.com/?q=30.5250,75.8250
+  3. near Saraud, Sangrur · risk 6% · https://maps.google.com/?q=30.5750,75.9250
+  4. near Kumbherwal, Sangrur · risk 6% · https://maps.google.com/?q=30.4250,75.7750
+
+These 20 stops cover about 3% of today's expected fires.
+
+Next days: tomorrow about 178 detections; day after about 207 detections
+Support first. Enforcement last.
+
+ਸਤਰਕ ਰਿਸਕ ਵਿੰਡੋ
+ਅੱਜ ਪਰਾਲੀ ਸਾੜਨ ਦਾ ਖ਼ਤਰਾ ਸਭ ਤੋਂ ਵੱਧ ਇੱਥੇ ਹੈ: Firozpur, Sangrur, Bathinda, Tarn Taran
+ਟੀਮ 1: Mehma (10%) → Mandi Amin Ganj (8%) → Bhangala (7%) → Dibbi Pura (6%)
+ਟੀਮ 2: Mandir Mathra Bhagi (11%) → Bhai Ladhu (7%) → Shaheed (6%) → Jaura (8%)
+ਟੀਮ 3: Gumti Kalan (7%) → Dial Pura Mirja (6%) → Ghanda Bana (6%) → Gumti Khurd (6%)
+ਟੀਮ 4: Dhakkowal (8%) → Rurki Khas (8%) → Daroli Bhai (5%) → Pola (5%)
+ਟੀਮ 5: Sandhaur (7%) → Bainstani Kalan (6%) → Saraud (6%) → Kumbherwal (6%)
+ਪਹਿਲਾਂ ਮਦਦ, ਸਜ਼ਾ ਬਾਅਦ ਵਿੱਚ। ਕਿਸਾਨ ਨੂੰ ਮਸ਼ੀਨ ਜਾਂ ਡੀਕੰਪੋਜ਼ਰ ਬਾਰੇ ਦੱਸੋ।
+
+Satellites miss most fires lit after about 1:30 pm, so real numbers are higher.
