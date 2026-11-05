@@ -1,0 +1,78 @@
+# SATARK Risk Window, run ONCE after uploading (Actions tab, "Risk Window setup", Run workflow).
+# Downloads everything it needs by itself, tests every extra signal, trains, scores this season
+# and publishes the dashboard. Takes about 1 to 3 hours. After that, the daily workflow takes over.
+name: Risk Window setup (run once)
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency: risk-window
+
+jobs:
+  setup:
+    runs-on: ubuntu-latest
+    timeout-minutes: 350
+    defaults:
+      run:
+        working-directory: gis_prediction/risk_window
+    env:
+      FIRMS_MAP_KEY: ${{ secrets.FIRMS_MAP_KEY }}
+      EE_SERVICE_ACCOUNT_KEY: ${{ secrets.EE_SERVICE_ACCOUNT_KEY }}
+      SATARK_SITE_URL: ${{ vars.SATARK_SITE_URL || format('https://{0}.github.io/{1}/', github.repository_owner, github.event.repository.name) }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+          cache: pip
+      - run: pip install -r requirements.txt
+      - name: Check the NASA key is there
+        run: |
+          if [ -z "$FIRMS_MAP_KEY" ]; then echo "Add the FIRMS_MAP_KEY secret first (see SETUP.md)"; exit 1; fi
+      - name: Satellite fires and weather (only what's missing)
+        run: |
+          if [ -f data/fires_punjab_haryana.csv.gz ]; then
+            python fetch_history.py --sensors=MODIS
+          else
+            python fetch_history.py
+          fi
+      - name: Save progress
+        run: |
+          git config user.name "satark-bot"
+          git config user.email "satark-bot@users.noreply.github.com"
+          git add data && git commit -m "Risk Window setup: satellite and weather data" || true
+          git push || true
+      - name: Harvest signal from Sentinel-2 (skipped if Earth Engine isn't set up)
+        continue-on-error: true
+        timeout-minutes: 200
+        run: python harvest.py --backfill
+      - name: Test extra signals and train (today, tomorrow, day after)
+        run: |
+          python train.py purba_medinipur --select
+          python train.py punjab_haryana --select
+      - name: Score this season and build the dashboard
+        run: python daily.py --backfill
+      - name: Keep everything
+        run: |
+          git add data models out
+          git commit -m "Risk Window setup: models and dashboard" || echo "nothing new"
+          git pull --rebase --autostash || true
+          git push
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: gis_prediction/risk_window/out
+
+  deploy:
+    needs: setup
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
