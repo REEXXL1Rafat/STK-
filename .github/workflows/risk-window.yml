@@ -1,0 +1,76 @@
+# SATARK Risk Window, every morning at 6:00 IST, on its own:
+#   new satellite fires (VIIRS + MODIS), weather forecast, harvest signal (if Earth Engine is set up),
+#   forecast for today / tomorrow / day after, team plan, morning brief, scoreboard, dashboard.
+# Sundays: retrain, and re-test every extra signal so only the ones that help are used.
+# Secrets: FIRMS_MAP_KEY (needed). Optional: EE_SERVICE_ACCOUNT_KEY, TELEGRAM_TOKEN, TELEGRAM_CHAT.
+# Optional variable: SATARK_SITE_URL, if you put the page on your own domain.
+name: Risk Window daily
+
+on:
+  schedule:
+    - cron: "30 0 * * *"     # 00:30 UTC = 06:00 IST
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency: risk-window
+
+jobs:
+  forecast:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    defaults:
+      run:
+        working-directory: gis_prediction/risk_window
+    env:
+      FIRMS_MAP_KEY: ${{ secrets.FIRMS_MAP_KEY }}
+      EE_SERVICE_ACCOUNT_KEY: ${{ secrets.EE_SERVICE_ACCOUNT_KEY }}
+      SATARK_SITE_URL: ${{ vars.SATARK_SITE_URL || format('https://{0}.github.io/{1}/', github.repository_owner, github.event.repository.name) }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+          cache: pip
+      - run: pip install -r requirements.txt
+      - name: Harvest signal from Sentinel-2 (skipped if Earth Engine isn't set up)
+        continue-on-error: true
+        timeout-minutes: 30
+        run: python harvest.py
+      - name: Retrain on Sundays during the season, or if there is no model yet
+        run: |
+          if [ "$(date -u +%u)" = "7" ] || [ ! -f models/punjab_haryana.pkl ] || [ ! -f models/purba_medinipur.pkl ]; then
+            python train.py punjab_haryana --select --if-in-season
+            python train.py purba_medinipur --select --if-in-season
+          fi
+      - name: Forecast
+        run: python daily.py
+        env:
+          TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
+          TELEGRAM_CHAT: ${{ secrets.TELEGRAM_CHAT }}
+          TELEGRAM_CHAT_PUNJAB_HARYANA: ${{ secrets.TELEGRAM_CHAT_PUNJAB_HARYANA }}
+          TELEGRAM_CHAT_PURBA_MEDINIPUR: ${{ secrets.TELEGRAM_CHAT_PURBA_MEDINIPUR }}
+      - name: Keep today's data, models and scoreboard
+        run: |
+          git config user.name "satark-bot"
+          git config user.email "satark-bot@users.noreply.github.com"
+          git add data models out
+          git commit -m "Risk Window $(date -u +%F)" || echo "nothing new"
+          git pull --rebase --autostash || true
+          git push
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: gis_prediction/risk_window/out
+
+  deploy:
+    needs: forecast
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
