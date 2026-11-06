@@ -1,0 +1,1 @@
+[{"latitude": "22.357", "longitude": "87.3484", "acq_date": "2020-11-28", "acq_time": "732", "satellite": "Aqua", "confidence": "79", "frp": "16.1", "daynight": "D", "product": "MODIS_SP"}, {"latitude": "22.667", "longitude": "87.9171", "acq_date": "2020-11-28", "acq_time": "732", "satellite": "Aqua", "confidence": "62", "frp": "5", "daynight": "D", "product": "MODIS_SP"}]
