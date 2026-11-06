@@ -134,6 +134,16 @@
     "catch@50": 0.7203931212425232,
     "avg_precision": 0.41601032118210374,
     "kept": true
+   },
+   "modis": {
+    "catch@50": 0.7125307321548462,
+    "avg_precision": 0.417779978453254,
+    "kept": false
+   },
+   "wind_dir": {
+    "catch@50": 0.7120392918586731,
+    "avg_precision": 0.4202733367953619,
+    "kept": false
    }
   },
   "kept": [
@@ -904,5 +914,5 @@
    "persist_catch": 0.7142857313156128
   }
  ],
- "generated": "2026-11-05"
+ "generated": "2026-11-06"
 }
