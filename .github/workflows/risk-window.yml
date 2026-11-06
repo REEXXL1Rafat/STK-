@@ -1,9 +1,10 @@
 # SATARK Risk Window, every morning at 6:00 IST, on its own:
-#   new satellite fires (VIIRS + MODIS), weather forecast, harvest signal (if Earth Engine is set up),
-#   forecast for today / tomorrow / day after, team plan, morning brief, scoreboard, dashboard.
-# Sundays: retrain, and re-test every extra signal so only the ones that help are used.
+#   new satellite fires (VIIRS + MODIS), weather forecast, Sentinel-2 harvest and burn scars (if Earth Engine
+#   is set up), forecast for today / tomorrow / day after, smoke paths, team plan, morning brief, scoreboard,
+#   green villages, dashboard. Anything the setup run didn't finish is downloaded and trained here, a bit each day.
+# Sundays in season: retrain, and re-test every extra signal so only the ones that help are used.
 # Secrets: FIRMS_MAP_KEY (needed). Optional: EE_SERVICE_ACCOUNT_KEY, TELEGRAM_TOKEN, TELEGRAM_CHAT.
-# Optional variable: SATARK_SITE_URL, if you put the page on your own domain.
+# Optional variables: SATARK_SITE_URL (your own domain), SATARK_VOICE_URL (the voice key server, see SETUP.md).
 name: Risk Window daily
 
 on:
@@ -21,7 +22,7 @@ concurrency: risk-window
 jobs:
   forecast:
     runs-on: ubuntu-latest
-    timeout-minutes: 120
+    timeout-minutes: 180
     defaults:
       run:
         working-directory: gis_prediction/risk_window
@@ -29,6 +30,7 @@ jobs:
       FIRMS_MAP_KEY: ${{ secrets.FIRMS_MAP_KEY }}
       EE_SERVICE_ACCOUNT_KEY: ${{ secrets.EE_SERVICE_ACCOUNT_KEY }}
       SATARK_SITE_URL: ${{ vars.SATARK_SITE_URL || format('https://{0}.github.io/{1}/', github.repository_owner, github.event.repository.name) }}
+      SATARK_VOICE_URL: ${{ vars.SATARK_VOICE_URL }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -36,16 +38,18 @@ jobs:
           python-version: "3.13"
           cache: pip
       - run: pip install -r requirements.txt
-      - name: Harvest signal from Sentinel-2 (skipped if Earth Engine isn't set up)
+      - name: Anything still missing from the past seasons
         continue-on-error: true
-        timeout-minutes: 30
+        timeout-minutes: 60
+        run: python fetch_history.py
+      - name: Sentinel-2 harvest and burn scars (skipped if Earth Engine isn't set up)
+        continue-on-error: true
+        timeout-minutes: 40
         run: python harvest.py
-      - name: Retrain on Sundays during the season, or if there is no model yet
+      - name: Train regions that have data but no model yet; retrain on Sundays during the season
         run: |
-          if [ "$(date -u +%u)" = "7" ] || [ ! -f models/punjab_haryana.pkl ] || [ ! -f models/purba_medinipur.pkl ]; then
-            python train.py punjab_haryana --select --if-in-season
-            python train.py purba_medinipur --select --if-in-season
-          fi
+          python train.py --all --missing --select
+          if [ "$(date -u +%u)" = "7" ]; then python train.py --all --select --if-in-season; fi
       - name: Forecast
         run: python daily.py
         env:
@@ -53,10 +57,14 @@ jobs:
           TELEGRAM_CHAT: ${{ secrets.TELEGRAM_CHAT }}
           TELEGRAM_CHAT_PUNJAB_HARYANA: ${{ secrets.TELEGRAM_CHAT_PUNJAB_HARYANA }}
           TELEGRAM_CHAT_PURBA_MEDINIPUR: ${{ secrets.TELEGRAM_CHAT_PURBA_MEDINIPUR }}
+          TELEGRAM_CHAT_UTTAR_PRADESH: ${{ secrets.TELEGRAM_CHAT_UTTAR_PRADESH }}
+          TELEGRAM_CHAT_MADHYA_PRADESH: ${{ secrets.TELEGRAM_CHAT_MADHYA_PRADESH }}
+          TELEGRAM_CHAT_RAJASTHAN: ${{ secrets.TELEGRAM_CHAT_RAJASTHAN }}
       - name: Keep today's data, models and scoreboard
         run: |
           git config user.name "satark-bot"
           git config user.email "satark-bot@users.noreply.github.com"
+          git rm -r -q --cached --ignore-unmatch out/index.html out/data 'out/*/latest.json' || true
           git add data models out
           git commit -m "Risk Window $(date -u +%F)" || echo "nothing new"
           git pull --rebase --autostash || true

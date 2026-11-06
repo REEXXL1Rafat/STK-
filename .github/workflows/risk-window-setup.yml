@@ -1,6 +1,7 @@
-# SATARK Risk Window, run ONCE after uploading (Actions tab, "Risk Window setup", Run workflow).
-# Downloads everything it needs by itself, tests every extra signal, trains, scores this season
-# and publishes the dashboard. Takes about 1 to 3 hours. After that, the daily workflow takes over.
+# SATARK Risk Window, run ONCE after uploading (Actions tab, "Risk Window setup (run once)", Run workflow).
+# Run it again after adding Earth Engine, or after an update that adds regions.
+# Downloads everything that's missing, tests every extra signal, trains every region, scores this season
+# and publishes the dashboard. Takes 1 to 4 hours. After that, the daily workflow takes over.
 name: Risk Window setup (run once)
 
 on:
@@ -24,6 +25,7 @@ jobs:
       FIRMS_MAP_KEY: ${{ secrets.FIRMS_MAP_KEY }}
       EE_SERVICE_ACCOUNT_KEY: ${{ secrets.EE_SERVICE_ACCOUNT_KEY }}
       SATARK_SITE_URL: ${{ vars.SATARK_SITE_URL || format('https://{0}.github.io/{1}/', github.repository_owner, github.event.repository.name) }}
+      SATARK_VOICE_URL: ${{ vars.SATARK_VOICE_URL }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -34,31 +36,28 @@ jobs:
       - name: Check the NASA key is there
         run: |
           if [ -z "$FIRMS_MAP_KEY" ]; then echo "Add the FIRMS_MAP_KEY secret first (see SETUP.md)"; exit 1; fi
-      - name: Satellite fires and weather (only what's missing)
-        run: |
-          if [ -f data/fires_punjab_haryana.csv.gz ]; then
-            python fetch_history.py --sensors=MODIS
-          else
-            python fetch_history.py
-          fi
+      - name: Satellite fires and weather (only what's missing, every region)
+        timeout-minutes: 200
+        run: python fetch_history.py
       - name: Save progress
+        if: always()
         run: |
           git config user.name "satark-bot"
           git config user.email "satark-bot@users.noreply.github.com"
           git add data && git commit -m "Risk Window setup: satellite and weather data" || true
+          git pull --rebase --autostash || true
           git push || true
-      - name: Harvest signal from Sentinel-2 (skipped if Earth Engine isn't set up)
+      - name: Sentinel-2 harvest and burn scars, and population (skipped if Earth Engine isn't set up)
         continue-on-error: true
-        timeout-minutes: 200
+        timeout-minutes: 150
         run: python harvest.py --backfill
-      - name: Test extra signals and train (today, tomorrow, day after)
-        run: |
-          python train.py purba_medinipur --select
-          python train.py punjab_haryana --select
+      - name: Test extra signals and train every region (today, tomorrow, day after)
+        run: python train.py --all --select
       - name: Score this season and build the dashboard
         run: python daily.py --backfill
       - name: Keep everything
         run: |
+          git rm -r -q --cached --ignore-unmatch out/index.html out/data 'out/*/latest.json' || true
           git add data models out
           git commit -m "Risk Window setup: models and dashboard" || echo "nothing new"
           git pull --rebase --autostash || true
