@@ -1,17 +1,17 @@
 SATARK Risk Window · Punjab and Haryana · Fri 06 Nov 2026
 Yesterday: of the 50 places we flagged, satellites saw fire in 14 (28%). They held 8% of all fires seen.
-Expected today: about 229 fire detections. Most in Firozpur, Sangrur, Bathinda, Ludhiana.
+Expected today: about 229 fire detections. Most in Firozpur, Sangrur, Bathinda, Patiala.
 
 Team 1
   1. near Mehma, Firozpur · risk 46% · https://maps.google.com/?q=31.0250,74.6250
   2. near Mandi Amin Ganj, Firozpur · risk 31% · https://maps.google.com/?q=30.9750,74.7250
-  3. near Lakho Ke Behram, Firozpur · risk 23% · https://maps.google.com/?q=30.8750,74.3750
-  4. near Poohla, Bathinda · risk 22% · https://maps.google.com/?q=30.2750,75.1250
+  3. near Bhangala, Tarn Taran · risk 32% · https://maps.google.com/?q=31.1250,74.7250
+  4. near Lakho Ke Behram, Firozpur · risk 23% · https://maps.google.com/?q=30.8750,74.3750
 Team 2
-  1. near Bhangala, Tarn Taran · risk 32% · https://maps.google.com/?q=31.1250,74.7250
-  2. near Jaura, Tarn Taran · risk 25% · https://maps.google.com/?q=31.3750,74.8250
-  3. near Sukhewala, Firozpur · risk 22% · https://maps.google.com/?q=30.9750,75.0250
-  4. near Dial Pura Bhai Ka, Bathinda · risk 22% · https://maps.google.com/?q=30.1750,75.1750
+  1. near Mandir Mathra Bhagi, Tarn Taran · risk 26% · https://maps.google.com/?q=31.3750,74.5750
+  2. near Bhai Ladhu, Tarn Taran · risk 22% · https://maps.google.com/?q=31.2750,74.6750
+  3. near Jaura, Tarn Taran · risk 24% · https://maps.google.com/?q=31.3750,74.8250
+  4. near Bhindi Aulakh, Amritsar · risk 23% · https://maps.google.com/?q=31.8250,74.5750
 Team 3
   1. near Dhakkowal, Kapurthala · risk 27% · https://maps.google.com/?q=31.2250,75.0750
   2. near Gandiwind Dhattal, Tarn Taran · risk 25% · https://maps.google.com/?q=31.2250,74.9750
@@ -19,27 +19,27 @@ Team 3
   4. near Dhunda, Tarn Taran · risk 22% · https://maps.google.com/?q=31.3250,75.1250
 Team 4
   1. near Roorki, Patiala · risk 33% · https://maps.google.com/?q=30.3250,76.5750
-  2. near Badochikalan, Fatehgarh Sahib · risk 26% · https://maps.google.com/?q=30.5250,76.3750
-  3. near Mandir Mathra Bhagi, Tarn Taran · risk 26% · https://maps.google.com/?q=31.3750,74.5750
-  4. near Bhindi Aulakh, Amritsar · risk 24% · https://maps.google.com/?q=31.8250,74.5750
+  2. near Terkiana, Bathinda · risk 24% · https://maps.google.com/?q=30.4750,75.1750
+  3. near Poohla, Bathinda · risk 22% · https://maps.google.com/?q=30.2750,75.1250
+  4. near Dial Pura Bhai Ka, Bathinda · risk 22% · https://maps.google.com/?q=30.1750,75.1750
 Team 5
   1. near Sandhaur, Sangrur · risk 30% · https://maps.google.com/?q=30.5750,75.7250
   2. near Bhaini Baringa, Ludhiana · risk 28% · https://maps.google.com/?q=30.6250,75.6250
-  3. near Thuliwal, Barnala · risk 22% · https://maps.google.com/?q=30.4750,75.6250
-  4. near Terkiana, Bathinda · risk 24% · https://maps.google.com/?q=30.4750,75.1750
+  3. near Kumbherwal, Sangrur · risk 22% · https://maps.google.com/?q=30.4250,75.7750
+  4. near Badochikalan, Fatehgarh Sahib · risk 26% · https://maps.google.com/?q=30.5250,76.3750
 
 These 20 stops cover about 3% of today's expected fires.
 
-Next days: tomorrow about 261 detections; day after about 279 detections
+Next days: tomorrow about 264 detections; day after about 281 detections
 Support first. Enforcement last.
 
 ਸਤਰਕ ਰਿਸਕ ਵਿੰਡੋ
-ਅੱਜ ਪਰਾਲੀ ਸਾੜਨ ਦਾ ਖ਼ਤਰਾ ਸਭ ਤੋਂ ਵੱਧ ਇੱਥੇ ਹੈ: Firozpur, Sangrur, Bathinda, Ludhiana
-ਟੀਮ 1: Mehma (46%) → Mandi Amin Ganj (31%) → Lakho Ke Behram (23%) → Poohla (22%)
-ਟੀਮ 2: Bhangala (32%) → Jaura (25%) → Sukhewala (22%) → Dial Pura Bhai Ka (22%)
+ਅੱਜ ਪਰਾਲੀ ਸਾੜਨ ਦਾ ਖ਼ਤਰਾ ਸਭ ਤੋਂ ਵੱਧ ਇੱਥੇ ਹੈ: Firozpur, Sangrur, Bathinda, Patiala
+ਟੀਮ 1: Mehma (46%) → Mandi Amin Ganj (31%) → Bhangala (32%) → Lakho Ke Behram (23%)
+ਟੀਮ 2: Mandir Mathra Bhagi (26%) → Bhai Ladhu (22%) → Jaura (24%) → Bhindi Aulakh (23%)
 ਟੀਮ 3: Dhakkowal (27%) → Gandiwind Dhattal (25%) → Rurki Khas (23%) → Dhunda (22%)
-ਟੀਮ 4: Roorki (33%) → Badochikalan (26%) → Mandir Mathra Bhagi (26%) → Bhindi Aulakh (24%)
-ਟੀਮ 5: Sandhaur (30%) → Bhaini Baringa (28%) → Thuliwal (22%) → Terkiana (24%)
+ਟੀਮ 4: Roorki (33%) → Terkiana (24%) → Poohla (22%) → Dial Pura Bhai Ka (22%)
+ਟੀਮ 5: Sandhaur (30%) → Bhaini Baringa (28%) → Kumbherwal (22%) → Badochikalan (26%)
 ਪਹਿਲਾਂ ਮਦਦ, ਸਜ਼ਾ ਬਾਅਦ ਵਿੱਚ। ਕਿਸਾਨ ਨੂੰ ਮਸ਼ੀਨ ਜਾਂ ਡੀਕੰਪੋਜ਼ਰ ਬਾਰੇ ਦੱਸੋ।
 
 Satellites miss most fires lit after about 1:30 pm, so real numbers are higher.

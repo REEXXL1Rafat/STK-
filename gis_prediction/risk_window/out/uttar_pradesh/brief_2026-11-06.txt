@@ -6,40 +6,40 @@ Team 1
   1. near Baral, Jhansi · risk 29% · https://maps.google.com/?q=25.6250,78.8750
   2. near Palar, Jhansi · risk 28% · https://maps.google.com/?q=25.5750,78.7250
   3. Jhansi · risk 22% · https://maps.google.com/?q=25.5750,78.6250
-  4. near Karguwan, Jhansi · risk 24% · https://maps.google.com/?q=25.4750,78.6750
+  4. near Karguwan, Jhansi · risk 25% · https://maps.google.com/?q=25.4750,78.6750
 Team 2
-  1. near Chheonta, Jhansi · risk 27% · https://maps.google.com/?q=25.8250,78.8750
-  2. near Chamend, Jalaun · risk 24% · https://maps.google.com/?q=26.1250,79.2250
-  3. near Sarawan, Jalaun · risk 13% · https://maps.google.com/?q=26.2750,79.2750
+  1. near Chheonta, Jhansi · risk 28% · https://maps.google.com/?q=25.8250,78.8750
+  2. near Chamend, Jalaun · risk 25% · https://maps.google.com/?q=26.1250,79.2250
+  3. near Rampura Kirwaha, Jalaun · risk 18% · https://maps.google.com/?q=26.3250,79.3750
   4. near Saina Kalan, Firozabad · risk 26% · https://maps.google.com/?q=27.3250,78.7250
 Team 3
-  1. near Kachhewan Kalan, Jalaun · risk 35% · https://maps.google.com/?q=25.9750,79.0250
-  2. near Konch Bazariya, Jalaun · risk 25% · https://maps.google.com/?q=25.9750,79.1250
+  1. near Kachhewan Kalan, Jalaun · risk 36% · https://maps.google.com/?q=25.9750,79.0250
+  2. near Konch Bazariya, Jalaun · risk 26% · https://maps.google.com/?q=25.9750,79.1250
   3. near Jamrohi Khurd, Jalaun · risk 16% · https://maps.google.com/?q=25.8750,79.1250
-  4. near Atariya, Jalaun · risk 20% · https://maps.google.com/?q=26.1250,79.1250
+  4. near Atariya, Jalaun · risk 21% · https://maps.google.com/?q=26.1250,79.1250
 Team 4
   1. near Itahiya, Jalaun · risk 39% · https://maps.google.com/?q=26.1750,79.4250
-  2. near Rampura Kirwaha, Jalaun · risk 18% · https://maps.google.com/?q=26.3250,79.3750
-  3. near Gardhiya, Kanpur Dehat · risk 14% · https://maps.google.com/?q=26.4250,79.6250
-  4. Jalaun · risk 15% · https://maps.google.com/?q=25.9750,79.6750
+  2. Jalaun · risk 15% · https://maps.google.com/?q=25.9750,79.6750
+  3. near Baoni Estate, Jalaun · risk 14% · https://maps.google.com/?q=25.9750,79.8250
+  4. near Gardhiya, Kanpur Dehat · risk 15% · https://maps.google.com/?q=26.4250,79.6250
 Team 5
-  1. near Gujraai, Kanpur Dehat · risk 29% · https://maps.google.com/?q=26.3250,79.9750
-  2. near Baoni Estate, Jalaun · risk 13% · https://maps.google.com/?q=25.9750,79.8250
-  3. near Bahua, Fatehpur · risk 14% · https://maps.google.com/?q=25.8750,80.6250
-  4. near Madhavpur Chhatauna, Lucknow · risk 15% · https://maps.google.com/?q=26.7250,81.1250
+  1. near Gujraai, Kanpur Dehat · risk 30% · https://maps.google.com/?q=26.3250,79.9750
+  2. near Bahua, Fatehpur · risk 14% · https://maps.google.com/?q=25.8750,80.6250
+  3. near Madhavpur Chhatauna, Lucknow · risk 14% · https://maps.google.com/?q=26.7250,81.1250
+  4. near Reo, Jhansi · risk 14% · https://maps.google.com/?q=25.7750,79.0250
 
 These 20 stops cover about 7% of today's expected fires.
 
-Next days: tomorrow about 212 detections; day after about 300 detections
+Next days: tomorrow about 215 detections; day after about 310 detections
 Support first. Enforcement last.
 
 सतर्क रिस्क विंडो
 आज पराली जलाने का खतरा सबसे ज़्यादा यहाँ है: Jalaun, Jhansi, Kanpur Dehat, Fatehpur
-टीम 1: Baral (29%) → Palar (28%) → Jhansi (22%) → Karguwan (24%)
-टीम 2: Chheonta (27%) → Chamend (24%) → Sarawan (13%) → Saina Kalan (26%)
-टीम 3: Kachhewan Kalan (35%) → Konch Bazariya (25%) → Jamrohi Khurd (16%) → Atariya (20%)
-टीम 4: Itahiya (39%) → Rampura Kirwaha (18%) → Gardhiya (14%) → Jalaun (15%)
-टीम 5: Gujraai (29%) → Baoni Estate (13%) → Bahua (14%) → Madhavpur Chhatauna (15%)
+टीम 1: Baral (29%) → Palar (28%) → Jhansi (22%) → Karguwan (25%)
+टीम 2: Chheonta (28%) → Chamend (25%) → Rampura Kirwaha (18%) → Saina Kalan (26%)
+टीम 3: Kachhewan Kalan (36%) → Konch Bazariya (26%) → Jamrohi Khurd (16%) → Atariya (21%)
+टीम 4: Itahiya (39%) → Jalaun (15%) → Baoni Estate (14%) → Gardhiya (15%)
+टीम 5: Gujraai (30%) → Bahua (14%) → Madhavpur Chhatauna (14%) → Reo (14%)
 पहले मदद, सज़ा बाद में। किसान को मशीन या डीकंपोज़र के बारे में बताइए।
 
 Satellites miss most fires lit after about 1:30 pm, so real numbers are higher.
