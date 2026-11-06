@@ -1,501 +1,501 @@
 iy,ix,lat,lon,district,place,p,mu,p_2026-11-07,p_2026-11-08
 1,25,21.575,88.175,South 24 Parganas,,0.0001,0.0003,0.0002,0.0003
 1,27,21.575,88.275,South 24 Parganas,Freser Ganj,0.0001,0.0003,0.0002,0.0003
-2,12,21.625,87.525,Purba Medinipur,Digha New Township,0.0001,0.0003,0.0001,0.0003
-2,13,21.625,87.575,Purba Medinipur,Bodhra,0.0001,0.0003,0.0001,0.0003
+2,12,21.625,87.525,Purba Medinipur,Digha New Township,0.0001,0.0002,0.0001,0.0003
+2,13,21.625,87.575,Purba Medinipur,Bodhra,0.0001,0.0002,0.0001,0.0003
 2,26,21.625,88.225,South 24 Parganas,Baliara,0.0001,0.0003,0.0002,0.0003
 2,27,21.625,88.275,South 24 Parganas,Maharajganj,0.0001,0.0003,0.0002,0.0003
-3,11,21.675,87.475,Purba Medinipur,Ranisai,0.0001,0.0003,0.0001,0.0003
-3,12,21.675,87.525,Purba Medinipur,Hirapur,0.0001,0.0003,0.0001,0.0003
-3,13,21.675,87.575,Purba Medinipur,Jhawgeria,0.0001,0.0003,0.0002,0.0005
-3,14,21.675,87.625,Purba Medinipur,Satilapur,0.0001,0.0003,0.0001,0.0006
-3,15,21.675,87.675,Purba Medinipur,Kalindi Teghari,0.0001,0.0003,0.0002,0.0006
-3,16,21.675,87.725,Purba Medinipur,Dadanpatrabarh,0.0001,0.0003,0.0001,0.0003
+3,11,21.675,87.475,Purba Medinipur,Ranisai,0.0001,0.0002,0.0001,0.0003
+3,12,21.675,87.525,Purba Medinipur,Hirapur,0.0001,0.0002,0.0001,0.0003
+3,13,21.675,87.575,Purba Medinipur,Jhawgeria,0.0001,0.0003,0.0002,0.0008
+3,14,21.675,87.625,Purba Medinipur,Satilapur,0.0001,0.0003,0.0001,0.0005
+3,15,21.675,87.675,Purba Medinipur,Kalindi Teghari,0.0001,0.0003,0.0002,0.0008
+3,16,21.675,87.725,Purba Medinipur,Dadanpatrabarh,0.0001,0.0002,0.0001,0.0003
 3,23,21.675,88.075,South 24 Parganas,Narayanibad,0.0001,0.0003,0.0002,0.0003
 3,24,21.675,88.125,South 24 Parganas,Mansadwip,0.0001,0.0003,0.0002,0.0003
 3,27,21.675,88.275,South 24 Parganas,Chandanpiri,0.0001,0.0003,0.0002,0.0003
-4,11,21.725,87.475,Purba Medinipur,Mirgoda,0.0001,0.0003,0.0001,0.0006
-4,12,21.725,87.525,Purba Medinipur,Bishnupur,0.0001,0.0003,0.0001,0.0006
-4,13,21.725,87.575,Purba Medinipur,Gopalchak,0.0001,0.0003,0.0001,0.0006
-4,14,21.725,87.625,Purba Medinipur,Dakhin Badalpur,0.0001,0.0003,0.0001,0.0006
-4,15,21.725,87.675,Purba Medinipur,Pichabani,0.0001,0.0003,0.0001,0.0006
-4,16,21.725,87.725,Purba Medinipur,Sabajput,0.0001,0.0003,0.0002,0.0006
-4,17,21.725,87.775,Purba Medinipur,Deshdattabarh,0.0001,0.0003,0.0001,0.0006
-4,18,21.725,87.825,Purba Medinipur,Junput,0.0001,0.0003,0.0002,0.0005
+4,11,21.725,87.475,Purba Medinipur,Mirgoda,0.0001,0.0003,0.0001,0.0005
+4,12,21.725,87.525,Purba Medinipur,Bishnupur,0.0001,0.0003,0.0001,0.0005
+4,13,21.725,87.575,Purba Medinipur,Gopalchak,0.0001,0.0003,0.0001,0.0005
+4,14,21.725,87.625,Purba Medinipur,Dakhin Badalpur,0.0001,0.0003,0.0001,0.0005
+4,15,21.725,87.675,Purba Medinipur,Pichabani,0.0001,0.0003,0.0001,0.0005
+4,16,21.725,87.725,Purba Medinipur,Sabajput,0.0001,0.0003,0.0002,0.0005
+4,17,21.725,87.775,Purba Medinipur,Deshdattabarh,0.0001,0.0003,0.0001,0.0005
+4,18,21.725,87.825,Purba Medinipur,Junput,0.0001,0.0003,0.0002,0.0008
 4,23,21.725,88.075,South 24 Parganas,Radhakrishnapur,0.0001,0.0003,0.0002,0.0003
 4,24,21.725,88.125,South 24 Parganas,Mandirtala,0.0001,0.0003,0.0002,0.0003
 4,26,21.725,88.225,South 24 Parganas,Debnagar,0.0001,0.0003,0.0002,0.0003
 4,27,21.725,88.275,South 24 Parganas,Dwariknagar,0.0001,0.0003,0.0002,0.0003
-5,9,21.775,87.375,Pashchim Medinipur,Nilda,0.0002,0.0004,0.0002,0.0007
-5,10,21.775,87.425,Pashchim Medinipur,Begunia,0.0002,0.0004,0.0002,0.0007
-5,11,21.775,87.475,Purba Medinipur,Shipur,0.0002,0.0004,0.0002,0.0007
-5,12,21.775,87.525,Purba Medinipur,Jumki,0.0001,0.0003,0.0002,0.0007
-5,13,21.775,87.575,Purba Medinipur,Khagda,0.0002,0.0003,0.0001,0.0007
-5,14,21.775,87.625,Purba Medinipur,Biswanathpur,0.0001,0.0003,0.0002,0.0006
-5,15,21.775,87.675,Purba Medinipur,Kantai,0.0001,0.0003,0.0001,0.0006
-5,16,21.775,87.725,Purba Medinipur,Karkuli,0.0001,0.0003,0.0002,0.0005
-5,17,21.775,87.775,Purba Medinipur,Darua,0.0001,0.0003,0.0001,0.0006
-5,18,21.775,87.825,Purba Medinipur,Baikunthapur,0.0001,0.0003,0.0002,0.0005
-5,19,21.775,87.875,Purba Medinipur,Bankiput,0.0001,0.0003,0.0001,0.0003
+5,9,21.775,87.375,Pashchim Medinipur,Nilda,0.0002,0.0004,0.0002,0.0005
+5,10,21.775,87.425,Pashchim Medinipur,Begunia,0.0002,0.0003,0.0001,0.0005
+5,11,21.775,87.475,Purba Medinipur,Shipur,0.0002,0.0003,0.0002,0.0005
+5,12,21.775,87.525,Purba Medinipur,Jumki,0.0001,0.0003,0.0001,0.0005
+5,13,21.775,87.575,Purba Medinipur,Khagda,0.0001,0.0003,0.0001,0.0005
+5,14,21.775,87.625,Purba Medinipur,Biswanathpur,0.0001,0.0003,0.0002,0.0005
+5,15,21.775,87.675,Purba Medinipur,Kantai,0.0001,0.0003,0.0001,0.0005
+5,16,21.775,87.725,Purba Medinipur,Karkuli,0.0001,0.0002,0.0002,0.0007
+5,17,21.775,87.775,Purba Medinipur,Darua,0.0001,0.0003,0.0001,0.0005
+5,18,21.775,87.825,Purba Medinipur,Baikunthapur,0.0001,0.0003,0.0002,0.0008
+5,19,21.775,87.875,Purba Medinipur,Bankiput,0.0001,0.0002,0.0001,0.0003
 5,23,21.775,88.075,South 24 Parganas,Harinbari,0.0001,0.0003,0.0002,0.0003
 5,24,21.775,88.125,South 24 Parganas,Khasramkarchak,0.0001,0.0003,0.0002,0.0003
 5,26,21.775,88.225,South 24 Parganas,Durgapur Tekarbazar,0.0001,0.0003,0.0002,0.0003
-6,7,21.825,87.275,Pashchim Medinipur,Chak Islampur,0.0002,0.0004,0.0001,0.0007
-6,8,21.825,87.325,Pashchim Medinipur,Barangi,0.0002,0.0003,0.0001,0.0006
-6,9,21.825,87.375,Pashchim Medinipur,Borai,0.0002,0.0004,0.0002,0.0007
-6,10,21.825,87.425,Pashchim Medinipur,Rajnagar,0.0001,0.0003,0.0002,0.0006
-6,11,21.825,87.475,Purba Medinipur,Kalyanpur Tentulmuri,0.0002,0.0004,0.0001,0.0008
-6,12,21.825,87.525,Purba Medinipur,Negua,0.0001,0.0004,0.0001,0.0007
-6,13,21.825,87.575,Purba Medinipur,Chhatri,0.0001,0.0003,0.0002,0.0007
-6,14,21.825,87.625,Purba Medinipur,Basudebpur,0.0001,0.0003,0.0001,0.0006
-6,15,21.825,87.675,Purba Medinipur,Murisai,0.0001,0.0003,0.0002,0.0006
-6,16,21.825,87.725,Purba Medinipur,Bahitrakunda,0.0001,0.0003,0.0002,0.0006
-6,17,21.825,87.775,Purba Medinipur,Sarada,0.0001,0.0003,0.0002,0.0005
-6,18,21.825,87.825,Purba Medinipur,Dholmari,0.0001,0.0003,0.0001,0.0003
-6,19,21.825,87.875,Purba Medinipur,Boga,0.0001,0.0003,0.0001,0.0003
+6,7,21.825,87.275,Pashchim Medinipur,Chak Islampur,0.0002,0.0003,0.0001,0.0005
+6,8,21.825,87.325,Pashchim Medinipur,Barangi,0.0002,0.0003,0.0001,0.0004
+6,9,21.825,87.375,Pashchim Medinipur,Borai,0.0002,0.0003,0.0002,0.0005
+6,10,21.825,87.425,Pashchim Medinipur,Rajnagar,0.0001,0.0003,0.0002,0.0005
+6,11,21.825,87.475,Purba Medinipur,Kalyanpur Tentulmuri,0.0002,0.0003,0.0001,0.0006
+6,12,21.825,87.525,Purba Medinipur,Negua,0.0002,0.0003,0.0001,0.0005
+6,13,21.825,87.575,Purba Medinipur,Chhatri,0.0001,0.0003,0.0001,0.0005
+6,14,21.825,87.625,Purba Medinipur,Basudebpur,0.0001,0.0003,0.0001,0.0005
+6,15,21.825,87.675,Purba Medinipur,Murisai,0.0001,0.0003,0.0002,0.0005
+6,16,21.825,87.725,Purba Medinipur,Bahitrakunda,0.0001,0.0003,0.0002,0.0008
+6,17,21.825,87.775,Purba Medinipur,Sarada,0.0001,0.0003,0.0002,0.0008
+6,18,21.825,87.825,Purba Medinipur,Dholmari,0.0001,0.0002,0.0001,0.0003
+6,19,21.825,87.875,Purba Medinipur,Boga,0.0001,0.0002,0.0001,0.0003
 6,20,21.825,87.925,Purba Medinipur,Lakshmanchak,0.0001,0.0003,0.0002,0.0003
 6,24,21.825,88.125,South 24 Parganas,Bamankhali,0.0001,0.0003,0.0002,0.0003
 6,26,21.825,88.225,South 24 Parganas,Budhakhali,0.0001,0.0003,0.0002,0.0003
 6,27,21.825,88.275,South 24 Parganas,Bamanagar,0.0001,0.0003,0.0002,0.0003
 7,3,21.875,87.075,Pashchim Medinipur,,0.0001,0.0003,0.0001,0.0003
-7,7,21.875,87.275,Pashchim Medinipur,Angua,0.0002,0.0004,0.0002,0.0007
-7,8,21.875,87.325,Pashchim Medinipur,Anikola,0.0002,0.0004,0.0002,0.0007
-7,9,21.875,87.375,Pashchim Medinipur,Akpura,0.0002,0.0004,0.0002,0.0007
-7,10,21.875,87.425,Pashchim Medinipur,Siyalsai,0.0001,0.0004,0.0002,0.0007
-7,11,21.875,87.475,Purba Medinipur,Bartana,0.0001,0.0004,0.0001,0.0007
-7,12,21.875,87.525,Purba Medinipur,Rasan,0.0001,0.0003,0.0002,0.0006
-7,13,21.875,87.575,Purba Medinipur,Khejurda,0.0001,0.0003,0.0002,0.0007
-7,14,21.875,87.625,Purba Medinipur,Bidurpur,0.0001,0.0003,0.0002,0.0006
-7,15,21.875,87.675,Purba Medinipur,Hatbaincha,0.0001,0.0003,0.0002,0.0006
-7,16,21.875,87.725,Purba Medinipur,Kumirda,0.0001,0.0003,0.0002,0.0005
-7,17,21.875,87.775,Purba Medinipur,Gangadharchak,0.0001,0.0003,0.0001,0.0003
-7,18,21.875,87.825,Purba Medinipur,Uttar Amtalia,0.0001,0.0003,0.0001,0.0003
-7,19,21.875,87.875,Purba Medinipur,Jahanabad,0.0001,0.0003,0.0001,0.0003
+7,7,21.875,87.275,Pashchim Medinipur,Angua,0.0002,0.0004,0.0002,0.0005
+7,8,21.875,87.325,Pashchim Medinipur,Anikola,0.0002,0.0004,0.0002,0.0005
+7,9,21.875,87.375,Pashchim Medinipur,Akpura,0.0002,0.0004,0.0002,0.0005
+7,10,21.875,87.425,Pashchim Medinipur,Siyalsai,0.0002,0.0003,0.0001,0.0005
+7,11,21.875,87.475,Purba Medinipur,Bartana,0.0002,0.0003,0.0001,0.0005
+7,12,21.875,87.525,Purba Medinipur,Rasan,0.0001,0.0003,0.0002,0.0005
+7,13,21.875,87.575,Purba Medinipur,Khejurda,0.0001,0.0003,0.0001,0.0005
+7,14,21.875,87.625,Purba Medinipur,Bidurpur,0.0001,0.0003,0.0002,0.0005
+7,15,21.875,87.675,Purba Medinipur,Hatbaincha,0.0001,0.0003,0.0001,0.0005
+7,16,21.875,87.725,Purba Medinipur,Kumirda,0.0001,0.0002,0.0002,0.0007
+7,17,21.875,87.775,Purba Medinipur,Gangadharchak,0.0001,0.0002,0.0001,0.0003
+7,18,21.875,87.825,Purba Medinipur,Uttar Amtalia,0.0001,0.0002,0.0001,0.0003
+7,19,21.875,87.875,Purba Medinipur,Jahanabad,0.0001,0.0002,0.0001,0.0003
 7,20,21.875,87.925,Purba Medinipur,Kasaria,0.0001,0.0003,0.0002,0.0003
 7,21,21.875,87.975,Purba Medinipur,Kasaria,0.0001,0.0003,0.0002,0.0003
 7,25,21.875,88.175,South 24 Parganas,Kakdwip,0.0001,0.0003,0.0002,0.0003
 7,26,21.875,88.225,South 24 Parganas,Ganeshpur Baikunthapur,0.0001,0.0003,0.0002,0.0003
 7,27,21.875,88.275,South 24 Parganas,Muchikata Baikunthapur,0.0001,0.0003,0.0002,0.0003
-8,2,21.925,87.025,Pashchim Medinipur,,0.0001,0.0004,0.0001,0.0006
+8,2,21.925,87.025,Pashchim Medinipur,,0.0001,0.0003,0.0002,0.0005
 8,3,21.925,87.075,Pashchim Medinipur,,0.0001,0.0003,0.0001,0.0003
-8,7,21.925,87.275,Pashchim Medinipur,Dantan,0.0002,0.0004,0.0002,0.0006
-8,8,21.925,87.325,Pashchim Medinipur,Uttar Ranibarh,0.0002,0.0004,0.0001,0.0007
-8,9,21.925,87.375,Pashchim Medinipur,Jenkapur,0.0002,0.0004,0.0002,0.0007
-8,10,21.925,87.425,Pashchim Medinipur,Renjura,0.0001,0.0004,0.0001,0.0007
-8,11,21.925,87.475,Pashchim Medinipur,Uttar Asda,0.0002,0.0003,0.0001,0.0006
-8,12,21.925,87.525,Purba Medinipur,Khar,0.0002,0.0004,0.0002,0.0007
-8,13,21.925,87.575,Purba Medinipur,Erenda,0.0002,0.0003,0.0001,0.0006
-8,14,21.925,87.625,Purba Medinipur,Sukhakhola,0.0001,0.0003,0.0001,0.0006
-8,15,21.925,87.675,Purba Medinipur,Ichhabari,0.0001,0.0003,0.0002,0.0006
-8,16,21.925,87.725,Purba Medinipur,Paushi,0.0001,0.0003,0.0001,0.0006
-8,17,21.925,87.775,Purba Medinipur,Dakshin Kalamdan,0.0001,0.0003,0.0001,0.0003
-8,18,21.925,87.825,Purba Medinipur,Haldia Patna,0.0001,0.0003,0.0001,0.0003
-8,19,21.925,87.875,Purba Medinipur,Serkhanchak,0.0001,0.0003,0.0001,0.0003
-8,20,21.925,87.925,Purba Medinipur,Baratala,0.0001,0.0004,0.0003,0.0005
+8,7,21.925,87.275,Pashchim Medinipur,Dantan,0.0002,0.0003,0.0001,0.0005
+8,8,21.925,87.325,Pashchim Medinipur,Uttar Ranibarh,0.0002,0.0003,0.0002,0.0005
+8,9,21.925,87.375,Pashchim Medinipur,Jenkapur,0.0002,0.0003,0.0002,0.0006
+8,10,21.925,87.425,Pashchim Medinipur,Renjura,0.0002,0.0003,0.0001,0.0005
+8,11,21.925,87.475,Pashchim Medinipur,Uttar Asda,0.0002,0.0003,0.0002,0.0004
+8,12,21.925,87.525,Purba Medinipur,Khar,0.0002,0.0003,0.0001,0.0005
+8,13,21.925,87.575,Purba Medinipur,Erenda,0.0002,0.0003,0.0001,0.0004
+8,14,21.925,87.625,Purba Medinipur,Sukhakhola,0.0001,0.0003,0.0001,0.0005
+8,15,21.925,87.675,Purba Medinipur,Ichhabari,0.0001,0.0003,0.0002,0.0008
+8,16,21.925,87.725,Purba Medinipur,Paushi,0.0001,0.0003,0.0001,0.0005
+8,17,21.925,87.775,Purba Medinipur,Dakshin Kalamdan,0.0001,0.0002,0.0001,0.0003
+8,18,21.925,87.825,Purba Medinipur,Haldia Patna,0.0001,0.0002,0.0001,0.0003
+8,19,21.925,87.875,Purba Medinipur,Serkhanchak,0.0001,0.0002,0.0001,0.0003
+8,20,21.925,87.925,Purba Medinipur,Baratala,0.0001,0.0003,0.0003,0.0006
 8,21,21.925,87.975,Purba Medinipur,Tekhalibazar,0.0001,0.0003,0.0002,0.0003
 8,23,21.925,88.075,South 24 Parganas,,0.0001,0.0003,0.0002,0.0003
 8,26,21.925,88.225,South 24 Parganas,Ramratanpur,0.0001,0.0003,0.0002,0.0003
 8,27,21.925,88.275,South 24 Parganas,Dakshin Chandipur,0.0001,0.0003,0.0002,0.0003
-9,3,21.975,87.075,Pashchim Medinipur,Baligeria,0.0001,0.0004,0.0001,0.0006
+9,3,21.975,87.075,Pashchim Medinipur,Baligeria,0.0001,0.0003,0.0002,0.0005
 9,4,21.975,87.125,Pashchim Medinipur,Paika,0.0001,0.0003,0.0002,0.0005
-9,6,21.975,87.225,Pashchim Medinipur,Tararui,0.0001,0.0004,0.0001,0.0005
-9,7,21.975,87.275,Pashchim Medinipur,Tararui,0.0002,0.0004,0.0001,0.0007
-9,8,21.975,87.325,Pashchim Medinipur,Kotepada,0.0002,0.0003,0.0001,0.0007
-9,9,21.975,87.375,Pashchim Medinipur,Keshrambha,0.0002,0.0004,0.0002,0.0007
-9,10,21.975,87.425,Pashchim Medinipur,Khakurda,0.0001,0.0004,0.0001,0.0007
-9,11,21.975,87.475,Pashchim Medinipur,Lalat,0.0001,0.0003,0.0002,0.0007
-9,12,21.975,87.525,Purba Medinipur,Kharuigarh,0.0001,0.0004,0.0001,0.0007
-9,13,21.975,87.575,Purba Medinipur,Chandanpur,0.0001,0.0003,0.0002,0.0007
-9,14,21.975,87.625,Purba Medinipur,Kalsi,0.0001,0.0003,0.0001,0.0006
-9,15,21.975,87.675,Purba Medinipur,Itaberia,0.0001,0.0003,0.0002,0.0005
-9,16,21.975,87.725,Purba Medinipur,Bhaghadari,0.0001,0.0003,0.0002,0.0005
-9,17,21.975,87.775,Purba Medinipur,Jukhia Bazar,0.0001,0.0003,0.0001,0.0006
-9,18,21.975,87.825,Purba Medinipur,Chingurdania,0.0001,0.0003,0.0001,0.0006
-9,19,21.975,87.875,Purba Medinipur,Subdi,0.0001,0.0003,0.0001,0.0003
-9,20,21.975,87.925,Purba Medinipur,Takapura,0.0001,0.0004,0.0004,0.0005
+9,6,21.975,87.225,Pashchim Medinipur,Tararui,0.0001,0.0003,0.0002,0.0005
+9,7,21.975,87.275,Pashchim Medinipur,Tararui,0.0002,0.0003,0.0001,0.0005
+9,8,21.975,87.325,Pashchim Medinipur,Kotepada,0.0002,0.0003,0.0001,0.0006
+9,9,21.975,87.375,Pashchim Medinipur,Keshrambha,0.0002,0.0003,0.0002,0.0005
+9,10,21.975,87.425,Pashchim Medinipur,Khakurda,0.0002,0.0003,0.0001,0.0005
+9,11,21.975,87.475,Pashchim Medinipur,Lalat,0.0001,0.0003,0.0001,0.0005
+9,12,21.975,87.525,Purba Medinipur,Kharuigarh,0.0002,0.0003,0.0001,0.0005
+9,13,21.975,87.575,Purba Medinipur,Chandanpur,0.0001,0.0003,0.0001,0.0005
+9,14,21.975,87.625,Purba Medinipur,Kalsi,0.0001,0.0003,0.0001,0.0005
+9,15,21.975,87.675,Purba Medinipur,Itaberia,0.0001,0.0003,0.0002,0.0008
+9,16,21.975,87.725,Purba Medinipur,Bhaghadari,0.0001,0.0002,0.0002,0.0007
+9,17,21.975,87.775,Purba Medinipur,Jukhia Bazar,0.0001,0.0003,0.0001,0.0005
+9,18,21.975,87.825,Purba Medinipur,Chingurdania,0.0001,0.0003,0.0001,0.0005
+9,19,21.975,87.875,Purba Medinipur,Subdi,0.0001,0.0002,0.0001,0.0003
+9,20,21.975,87.925,Purba Medinipur,Takapura,0.0002,0.0003,0.0003,0.0006
 9,21,21.975,87.975,Purba Medinipur,Debhog,0.0001,0.0003,0.0002,0.0003
 9,22,21.975,88.025,Purba Medinipur,Debhog,0.0001,0.0003,0.0002,0.0003
 9,23,21.975,88.075,Purba Medinipur,Haldia Port,0.0001,0.0003,0.0002,0.0003
 9,25,21.975,88.175,South 24 Parganas,Ramtanunagar,0.0001,0.0003,0.0002,0.0003
 9,26,21.975,88.225,South 24 Parganas,Srinagar Makarpara,0.0001,0.0003,0.0002,0.0003
-9,27,21.975,88.275,South 24 Parganas,Imamuddipur,0.0001,0.0004,0.0003,0.0005
-10,3,22.025,87.075,Pashchim Medinipur,Paika,0.0001,0.0004,0.0003,0.0005
-10,4,22.025,87.125,Pashchim Medinipur,Tufuria Kamalpur,0.0001,0.0003,0.0002,0.0003
-10,5,22.025,87.175,Pashchim Medinipur,Tufuria Kamalpur,0.0001,0.0004,0.0002,0.0006
-10,6,22.025,87.225,Pashchim Medinipur,Bakurpada,0.0001,0.0004,0.0002,0.0006
-10,7,22.025,87.275,Pashchim Medinipur,Dhangarpara,0.0002,0.0004,0.0002,0.0007
-10,8,22.025,87.325,Pashchim Medinipur,Khatnagar,0.0002,0.0004,0.0002,0.0007
-10,9,22.025,87.375,Pashchim Medinipur,Thakurchak,0.0002,0.0004,0.0002,0.0007
-10,10,22.025,87.425,Pashchim Medinipur,Khakurda,0.0002,0.0004,0.0002,0.0007
-10,11,22.025,87.475,Purba Medinipur,Kajlagarh,0.0001,0.0003,0.0002,0.0007
-10,12,22.025,87.525,Purba Medinipur,Naipur,0.0001,0.0003,0.0002,0.0006
-10,13,22.025,87.575,Purba Medinipur,Makrampur,0.0001,0.0003,0.0002,0.0005
-10,14,22.025,87.625,Purba Medinipur,Ballyagobindapur,0.0001,0.0003,0.0002,0.0006
-10,15,22.025,87.675,Purba Medinipur,Manikjore,0.0001,0.0003,0.0002,0.0006
-10,16,22.025,87.725,Purba Medinipur,Dumandari,0.0001,0.0003,0.0002,0.0006
-10,17,22.025,87.775,Purba Medinipur,Barabari South,0.0001,0.0003,0.0002,0.0006
-10,18,22.025,87.825,Purba Medinipur,Kismatbajkul,0.0001,0.0003,0.0001,0.0003
-10,19,22.025,87.875,Purba Medinipur,Gholpukuria,0.0001,0.0003,0.0002,0.0005
-10,20,22.025,87.925,Purba Medinipur,Gholpukuria,0.0003,0.0004,0.0003,0.0003
-10,21,22.025,87.975,Purba Medinipur,Chaulkhola,0.0003,0.0005,0.0005,0.0005
-10,22,22.025,88.025,Purba Medinipur,Dasghara,0.0003,0.0004,0.0003,0.0005
-10,23,22.025,88.075,Purba Medinipur,Haldia Ts,0.0003,0.0004,0.0003,0.0003
-10,26,22.025,88.225,South 24 Parganas,Keoratala,0.0003,0.0004,0.0003,0.0003
-10,27,22.025,88.275,South 24 Parganas,Seoratala,0.0003,0.0004,0.0003,0.0005
-11,1,22.075,86.975,Pashchim Medinipur,,0.0001,0.0004,0.0002,0.0006
-11,2,22.075,87.025,Pashchim Medinipur,,0.0001,0.0004,0.0003,0.0006
-11,3,22.075,87.075,Pashchim Medinipur,Rohini,0.0001,0.0004,0.0002,0.0006
-11,4,22.075,87.125,Pashchim Medinipur,Rohini,0.0001,0.0004,0.0003,0.0005
-11,5,22.075,87.175,Pashchim Medinipur,,0.0001,0.0004,0.0002,0.0006
-11,6,22.075,87.225,Pashchim Medinipur,Keshiary,0.0001,0.0004,0.0002,0.0007
-11,7,22.075,87.275,Pashchim Medinipur,Dhalbelun,0.0001,0.0004,0.0002,0.0007
-11,8,22.075,87.325,Pashchim Medinipur,Phandar,0.0001,0.0004,0.0002,0.0007
-11,9,22.075,87.375,Pashchim Medinipur,Akanda,0.0002,0.0004,0.0002,0.0007
-11,10,22.075,87.425,Pashchim Medinipur,Gaita,0.0001,0.0003,0.0002,0.0006
-11,11,22.075,87.475,Pashchim Medinipur,Argora,0.0001,0.0003,0.0002,0.0006
-11,12,22.075,87.525,Purba Medinipur,Narghat,0.0001,0.0003,0.0002,0.0005
-11,13,22.075,87.575,Purba Medinipur,Selmabad,0.0001,0.0003,0.0002,0.0005
-11,14,22.075,87.625,Purba Medinipur,Panchuria,0.0001,0.0003,0.0002,0.0005
-11,15,22.075,87.675,Purba Medinipur,Noonhanda,0.0001,0.0003,0.0002,0.0005
-11,16,22.075,87.725,Purba Medinipur,Bhimeswaribazar,0.0001,0.0003,0.0002,0.0006
-11,17,22.075,87.775,Purba Medinipur,Bhimeswaribazar,0.0001,0.0003,0.0001,0.0003
-11,18,22.075,87.825,Purba Medinipur,Mathchandipur,0.0001,0.0003,0.0001,0.0003
-11,19,22.075,87.875,Purba Medinipur,Mathchandipur,0.0001,0.0003,0.0002,0.0005
-11,20,22.075,87.925,Purba Medinipur,Gholpukuria,0.0003,0.0004,0.0003,0.0003
-11,21,22.075,87.975,Purba Medinipur,Lakshya,0.0003,0.0004,0.0003,0.0003
-11,22,22.075,88.025,Purba Medinipur,Balughata,0.0003,0.0005,0.0005,0.0005
-11,23,22.075,88.075,Purba Medinipur,Barabari,0.0003,0.0004,0.0003,0.0003
-11,24,22.075,88.125,Purba Medinipur,Khanjanchak,0.0003,0.0004,0.0003,0.0003
-11,26,22.075,88.225,South 24 Parganas,South Bishnupur,0.0003,0.0004,0.0003,0.0005
-11,27,22.075,88.275,South 24 Parganas,Sitarampur,0.0003,0.0004,0.0003,0.0005
-12,0,22.125,86.925,Pashchim Medinipur,,0.0001,0.0003,0.0002,0.0003
-12,1,22.125,86.975,Pashchim Medinipur,,0.0001,0.0004,0.0002,0.0006
-12,2,22.125,87.025,Pashchim Medinipur,,0.0001,0.0004,0.0002,0.0006
-12,3,22.125,87.075,Pashchim Medinipur,Rohini,0.0001,0.0004,0.0002,0.0006
-12,4,22.125,87.125,Pashchim Medinipur,Rohini,0.0001,0.0004,0.0003,0.0005
-12,5,22.125,87.175,Pashchim Medinipur,Kultikri,0.0001,0.0004,0.0002,0.0007
-12,6,22.125,87.225,Pashchim Medinipur,Amda,0.0002,0.0004,0.0003,0.0006
-12,7,22.125,87.275,Pashchim Medinipur,Tarua,0.0001,0.0004,0.0002,0.0006
-12,8,22.125,87.325,Pashchim Medinipur,Tarua,0.0002,0.0004,0.0003,0.0006
-12,9,22.125,87.375,Pashchim Medinipur,Bakhrabad,0.0001,0.0004,0.0002,0.0007
-12,10,22.125,87.425,Pashchim Medinipur,Khalina,0.0001,0.0003,0.0002,0.0006
-12,11,22.125,87.475,Pashchim Medinipur,Khurshi,0.0001,0.0003,0.0002,0.0006
-12,12,22.125,87.525,Pashchim Medinipur,Adasimla,0.0001,0.0003,0.0002,0.0005
-12,13,22.125,87.575,Pashchim Medinipur,Rangibasan,0.0001,0.0003,0.0002,0.0005
-12,14,22.125,87.625,Pashchim Medinipur,Saulabheri,0.0001,0.0003,0.0002,0.0005
-12,15,22.125,87.675,Pashchim Medinipur,Purba Dwarikapur,0.0001,0.0003,0.0002,0.0005
-12,16,22.125,87.725,Purba Medinipur,Purba Dwarikapur,0.0001,0.0003,0.0002,0.0006
-12,17,22.125,87.775,Purba Medinipur,,0.0001,0.0003,0.0001,0.0003
-12,18,22.125,87.825,Purba Medinipur,Mathchandipur,0.0001,0.0003,0.0002,0.0006
-12,19,22.125,87.875,Purba Medinipur,Narghat Laban Satyagraha,0.0001,0.0003,0.0001,0.0003
-12,20,22.125,87.925,Purba Medinipur,Narghat Laban Satyagraha,0.0003,0.0004,0.0003,0.0003
-12,21,22.125,87.975,Purba Medinipur,Kumarchak,0.0003,0.0004,0.0003,0.0003
-12,22,22.125,88.025,Purba Medinipur,Kumarpur,0.0003,0.0004,0.0003,0.0003
-12,23,22.125,88.075,Purba Medinipur,Chaitanyapur,0.0003,0.0004,0.0003,0.0005
-12,24,22.125,88.125,Purba Medinipur,Diamond Harbour Rs,0.0003,0.0004,0.0003,0.0003
-12,25,22.125,88.175,Purba Medinipur,Radhanagar,0.0003,0.0004,0.0003,0.0003
-12,26,22.125,88.225,South 24 Parganas,Dakshin Radhanagar,0.0003,0.0004,0.0003,0.0005
-12,27,22.125,88.275,South 24 Parganas,Baidyahat,0.0003,0.0005,0.0005,0.0005
-13,0,22.175,86.925,Pashchim Medinipur,,0.0001,0.0004,0.0002,0.0006
-13,1,22.175,86.975,Pashchim Medinipur,,0.0001,0.0004,0.0002,0.0006
-13,2,22.175,87.025,Pashchim Medinipur,,0.0001,0.0004,0.0002,0.0006
-13,3,22.175,87.075,Pashchim Medinipur,,0.0002,0.0004,0.0002,0.0006
-13,4,22.175,87.125,Pashchim Medinipur,Kultikri,0.0001,0.0004,0.0002,0.0007
-13,5,22.175,87.175,Pashchim Medinipur,Kultikri,0.0001,0.0004,0.0002,0.0007
-13,6,22.175,87.225,Pashchim Medinipur,,0.0001,0.0004,0.0002,0.0006
-13,7,22.175,87.275,Pashchim Medinipur,Tarua,0.0001,0.0003,0.0002,0.0003
-13,8,22.175,87.325,Pashchim Medinipur,Kashipur,0.0002,0.0004,0.0003,0.0006
-13,9,22.175,87.375,Pashchim Medinipur,Bahurupa,0.0002,0.0004,0.0002,0.0007
-13,10,22.175,87.425,Pashchim Medinipur,Jhanjianankar,0.0001,0.0003,0.0002,0.0007
-13,11,22.175,87.475,Pashchim Medinipur,Kalasbarh,0.0001,0.0003,0.0002,0.0006
-13,12,22.175,87.525,Pashchim Medinipur,Chandkutibatikati,0.0001,0.0003,0.0002,0.0006
-13,13,22.175,87.575,Pashchim Medinipur,Sabang,0.0001,0.0003,0.0002,0.0005
-13,14,22.175,87.625,Pashchim Medinipur,Sabang,0.0001,0.0003,0.0002,0.0005
-13,15,22.175,87.675,Pashchim Medinipur,,0.0001,0.0003,0.0002,0.0006
-13,16,22.175,87.725,Purba Medinipur,,0.0001,0.0003,0.0001,0.0003
-13,17,22.175,87.775,Purba Medinipur,,0.0001,0.0003,0.0001,0.0003
-13,18,22.175,87.825,Purba Medinipur,Naldanga,0.0001,0.0003,0.0001,0.0003
-13,19,22.175,87.875,Purba Medinipur,Kalyanchak,0.0001,0.0003,0.0001,0.0003
-13,20,22.175,87.925,Purba Medinipur,Kalyanchak,0.0003,0.0004,0.0003,0.0005
-13,21,22.175,87.975,Purba Medinipur,Mahisadal,0.0003,0.0005,0.0005,0.0005
-13,22,22.175,88.025,Purba Medinipur,Mahisadal,0.0003,0.0004,0.0003,0.0003
-13,23,22.175,88.075,Purba Medinipur,Deulpota,0.0003,0.0004,0.0003,0.0003
-13,24,22.175,88.125,Purba Medinipur,Ghasipur,0.0003,0.0004,0.0003,0.0003
-13,26,22.175,88.225,South 24 Parganas,Sethbagan,0.0003,0.0004,0.0003,0.0005
-13,27,22.175,88.275,South 24 Parganas,Ramanandapur,0.0003,0.0004,0.0003,0.0005
-14,0,22.225,86.925,Pashchim Medinipur,,0.0002,0.0004,0.0002,0.0006
-14,1,22.225,86.975,Pashchim Medinipur,,0.0001,0.0004,0.0002,0.0007
-14,2,22.225,87.025,Pashchim Medinipur,Bankura,0.0001,0.0004,0.0002,0.0007
-14,3,22.225,87.075,Pashchim Medinipur,Bankura,0.0012,0.0015,0.0023,0.0044
-14,4,22.225,87.125,Pashchim Medinipur,Dokra,0.0002,0.0004,0.0003,0.0006
-14,5,22.225,87.175,Pashchim Medinipur,Banskuthi,0.0001,0.0004,0.0002,0.0006
-14,6,22.225,87.225,Pashchim Medinipur,Uttar Dumurkhola,0.0001,0.0004,0.0003,0.0006
-14,7,22.225,87.275,Pashchim Medinipur,Salua Govt Colony,0.0002,0.0004,0.0003,0.0006
-14,8,22.225,87.325,Pashchim Medinipur,Fulgeria,0.0002,0.0004,0.0003,0.0006
-14,9,22.225,87.375,Pashchim Medinipur,Makrampurbazar,0.0001,0.0003,0.0002,0.0003
-14,10,22.225,87.425,Pashchim Medinipur,Birbira,0.0001,0.0004,0.0002,0.0007
-14,11,22.225,87.475,Pashchim Medinipur,Barakalankai,0.0001,0.0004,0.0002,0.0007
-14,12,22.225,87.525,Pashchim Medinipur,Nonakuribazar,0.0001,0.0003,0.0002,0.0006
-14,13,22.225,87.575,Pashchim Medinipur,Dhaneswarpur,0.0001,0.0003,0.0002,0.0006
-14,14,22.225,87.625,Pashchim Medinipur,Dalimoula,0.0001,0.0003,0.0002,0.0006
-14,15,22.225,87.675,Pashchim Medinipur,Jalchak,0.0001,0.0003,0.0002,0.0006
-14,16,22.225,87.725,Purba Medinipur,Jalchak,0.0001,0.0003,0.0001,0.0003
-14,17,22.225,87.775,Purba Medinipur,Moyna,0.0001,0.0003,0.0001,0.0003
-14,18,22.225,87.825,Purba Medinipur,Chotodighari,0.0001,0.0003,0.0001,0.0003
-14,19,22.225,87.875,Purba Medinipur,Chotodighari,0.0001,0.0003,0.0001,0.0003
-14,20,22.225,87.925,Purba Medinipur,Byabattarhat,0.0003,0.0004,0.0003,0.0003
-14,21,22.225,87.975,Purba Medinipur,Mahisadal,0.0003,0.0004,0.0003,0.0003
-14,24,22.225,88.125,South 24 Parganas,Goanara Gobindapur,0.0003,0.0004,0.0003,0.0005
-14,25,22.225,88.175,South 24 Parganas,Darikrishna Nagar,0.0003,0.0004,0.0003,0.0005
-14,26,22.225,88.225,South 24 Parganas,Panchagram Singhberia,0.0003,0.0004,0.0003,0.0003
-14,27,22.225,88.275,South 24 Parganas,Nazra,0.0003,0.0004,0.0003,0.0005
-15,0,22.275,86.925,Pashchim Medinipur,Aguiboni,0.0001,0.0004,0.0002,0.0007
-15,1,22.275,86.975,Pashchim Medinipur,Aguiboni,0.0002,0.0004,0.0003,0.0006
-15,2,22.275,87.025,Pashchim Medinipur,Bankura,0.0001,0.0004,0.0002,0.0007
-15,3,22.275,87.075,Pashchim Medinipur,Bankura,0.0001,0.0004,0.0002,0.0006
-15,4,22.275,87.125,Pashchim Medinipur,,0.0001,0.0004,0.0002,0.0006
-15,5,22.275,87.175,Pashchim Medinipur,,0.0001,0.0004,0.0002,0.0006
-15,6,22.275,87.225,Pashchim Medinipur,Uttar Dumurkhola,0.0001,0.0004,0.0003,0.0005
-15,7,22.275,87.275,Pashchim Medinipur,Salua Govt Colony,0.0001,0.0004,0.0002,0.0006
-15,8,22.275,87.325,Pashchim Medinipur,Salua Govt Colony,0.0001,0.0004,0.0002,0.0006
-15,9,22.275,87.375,Pashchim Medinipur,Baharadari,0.0001,0.0004,0.0002,0.0007
-15,10,22.275,87.425,Pashchim Medinipur,Tentulmuri,0.0001,0.0004,0.0002,0.0007
-15,11,22.275,87.475,Pashchim Medinipur,Paramanandapur,0.0001,0.0003,0.0002,0.0007
-15,12,22.275,87.525,Pashchim Medinipur,,0.0001,0.0003,0.0002,0.0006
-15,13,22.275,87.575,Pashchim Medinipur,Pingla,0.0001,0.0003,0.0002,0.0006
-15,14,22.275,87.625,Pashchim Medinipur,Dalimoula,0.0001,0.0003,0.0002,0.0006
-15,15,22.275,87.675,Pashchim Medinipur,Sabong Shyamsundarpur,0.0001,0.0003,0.0002,0.0006
-15,16,22.275,87.725,Purba Medinipur,Ramchandrapur So East Midnapore,0.0001,0.0003,0.0002,0.0005
-15,17,22.275,87.775,Purba Medinipur,Moyna,0.0001,0.0003,0.0001,0.0003
-15,18,22.275,87.825,Purba Medinipur,Salgechhia,0.0001,0.0003,0.0001,0.0003
-15,19,22.275,87.875,Purba Medinipur,Rajhat,0.0001,0.0003,0.0001,0.0003
-15,20,22.275,87.925,Purba Medinipur,Sankarara,0.0003,0.0004,0.0003,0.0003
-15,21,22.275,87.975,Haora,Ajodhyahat,0.0003,0.0004,0.0003,0.0003
-15,22,22.275,88.025,Haora,Kalidaha,0.0003,0.0004,0.0003,0.0003
-15,23,22.275,88.075,Haora,Dingakhola,0.0003,0.0004,0.0003,0.0003
-15,24,22.275,88.125,South 24 Parganas,Panarhat,0.0003,0.0004,0.0003,0.0003
-15,25,22.275,88.175,South 24 Parganas,Seorahati,0.0003,0.0004,0.0003,0.0003
-15,26,22.275,88.225,South 24 Parganas,Purba Putiary,0.0003,0.0004,0.0003,0.0005
-15,27,22.275,88.275,South 24 Parganas,Boinchberia,0.0003,0.0005,0.0005,0.0005
-16,0,22.325,86.925,Pashchim Medinipur,Aguiboni,0.0001,0.0004,0.0002,0.0006
-16,1,22.325,86.975,Pashchim Medinipur,,0.0001,0.0004,0.0002,0.0006
-16,2,22.325,87.025,Pashchim Medinipur,,0.0001,0.0004,0.0002,0.0006
-16,3,22.325,87.075,Pashchim Medinipur,Nutanchati,0.0001,0.0004,0.0002,0.0006
-16,4,22.325,87.125,Pashchim Medinipur,Charkabani,0.0001,0.0003,0.0002,0.0005
-16,5,22.325,87.175,Pashchim Medinipur,Kalaikunda A F,0.0001,0.0004,0.0002,0.0006
-16,6,22.325,87.225,Pashchim Medinipur,Kalaikunda A F,0.0001,0.0004,0.0002,0.0006
-16,7,22.325,87.275,Pashchim Medinipur,Nimpura,0.0001,0.0004,0.0002,0.0006
-16,8,22.325,87.325,Pashchim Medinipur,Harishpur,0.0001,0.0004,0.0002,0.0033
-16,9,22.325,87.375,Pashchim Medinipur,Inda,0.0001,0.0004,0.0002,0.0007
-16,10,22.325,87.425,Pashchim Medinipur,Madpur,0.0001,0.0003,0.0002,0.0007
-16,11,22.325,87.475,Pashchim Medinipur,Madpur,0.0001,0.0003,0.0002,0.0007
-16,12,22.325,87.525,Pashchim Medinipur,Ballichak,0.0001,0.0003,0.0002,0.0007
-16,13,22.325,87.575,Pashchim Medinipur,Ballichak,0.0001,0.0003,0.0002,0.0006
-16,14,22.325,87.625,Pashchim Medinipur,Bansda Palashi,0.0001,0.0003,0.0002,0.0006
-16,15,22.325,87.675,Pashchim Medinipur,Hour,0.0001,0.0003,0.0002,0.0006
-16,16,22.325,87.725,Purba Medinipur,Ramchandrapur So East Midnapore,0.0001,0.0003,0.0002,0.0006
-16,17,22.325,87.775,Purba Medinipur,Ramchandrapur So East Midnapore,0.0001,0.0003,0.0001,0.0003
-16,18,22.325,87.825,Purba Medinipur,Raghunathbari,0.0001,0.0003,0.0001,0.0003
-16,19,22.325,87.875,Purba Medinipur,Demarihat,0.0001,0.0003,0.0001,0.0003
-16,20,22.325,87.925,Purba Medinipur,Biswas,0.0003,0.0004,0.0003,0.0005
-16,21,22.325,87.975,Haora,Ramnagar,0.0003,0.0004,0.0003,0.0003
-16,22,22.325,88.025,Haora,Kharuberia,0.0003,0.0004,0.0003,0.0005
-16,23,22.325,88.075,Haora,Dafarpur,0.0003,0.0004,0.0003,0.0003
-16,24,22.325,88.125,South 24 Parganas,Mohirampur,0.0003,0.0005,0.0005,0.0005
-16,25,22.325,88.175,South 24 Parganas,Kalsa,0.0003,0.0005,0.0005,0.0005
-16,26,22.325,88.225,South 24 Parganas,Linton Street,0.0003,0.0005,0.0003,0.0006
-16,27,22.325,88.275,South 24 Parganas,Serakole,0.0003,0.0004,0.0003,0.0003
-17,0,22.375,86.925,Pashchim Medinipur,,0.0001,0.0004,0.0003,0.0005
-17,1,22.375,86.975,Pashchim Medinipur,,0.0001,0.0003,0.0002,0.0005
-17,2,22.375,87.025,Pashchim Medinipur,Nutanchati,0.0001,0.0003,0.0002,0.0003
-17,3,22.375,87.075,Pashchim Medinipur,Nutanchati,0.0001,0.0004,0.0003,0.0005
-17,4,22.375,87.125,Pashchim Medinipur,Manikpara,0.0001,0.0003,0.0002,0.0003
-17,5,22.375,87.175,Pashchim Medinipur,Reserve Bank Nm Ltd,0.0002,0.0004,0.0002,0.0006
-17,6,22.375,87.225,Pashchim Medinipur,Balarampur,0.0001,0.0004,0.0002,0.0007
-17,7,22.375,87.275,Pashchim Medinipur,Nimpura,0.0001,0.0003,0.0002,0.0003
-17,8,22.375,87.325,Pashchim Medinipur,Kharagpur New Settlement,0.0001,0.0003,0.0002,0.0003
-17,9,22.375,87.375,Pashchim Medinipur,Inda,0.0002,0.0004,0.0002,0.0006
-17,10,22.375,87.425,Pashchim Medinipur,Attrakhi,0.0001,0.0003,0.0002,0.0007
-17,11,22.375,87.475,Pashchim Medinipur,Madpur,0.0001,0.0004,0.0002,0.0007
-17,12,22.375,87.525,Pashchim Medinipur,Arjuni,0.0001,0.0003,0.0002,0.0006
-17,13,22.375,87.575,Pashchim Medinipur,Debra Bazar,0.0001,0.0003,0.0002,0.0006
-17,14,22.375,87.625,Pashchim Medinipur,Bansda Palashi,0.0001,0.0003,0.0002,0.0006
-17,15,22.375,87.675,Purba Medinipur,Hour,0.0001,0.0003,0.0002,0.0006
-17,16,22.375,87.725,Purba Medinipur,Chabukiauttarbarh,0.0001,0.0003,0.0002,0.0005
-17,17,22.375,87.775,Purba Medinipur,Purba Itara,0.0001,0.0003,0.0001,0.0003
-17,18,22.375,87.825,Purba Medinipur,Ramtarakhat,0.0001,0.0003,0.0001,0.0003
-17,19,22.375,87.875,Purba Medinipur,Ramtarakhat,0.0001,0.0003,0.0001,0.0003
-17,20,22.375,87.925,Purba Medinipur,Nakol,0.0003,0.0004,0.0003,0.0003
-17,21,22.375,87.975,Haora,Naul,0.0003,0.0004,0.0003,0.0005
-17,22,22.375,88.025,Haora,Amardah,0.0003,0.0004,0.0003,0.0005
-17,23,22.375,88.075,Haora,Belari,0.0003,0.0004,0.0003,0.0003
-17,24,22.375,88.125,South 24 Parganas,Bahirkunja,0.0003,0.0004,0.0003,0.0003
-17,25,22.375,88.175,South 24 Parganas,Kamra,0.0003,0.0004,0.0003,0.0005
-17,26,22.375,88.225,South 24 Parganas,Patipukur,0.0003,0.0004,0.0003,0.0005
-17,27,22.375,88.275,South 24 Parganas,Amtala,0.0003,0.0004,0.0003,0.0005
-18,0,22.425,86.925,Pashchim Medinipur,,0.0001,0.0004,0.0003,0.0005
-18,1,22.425,86.975,Pashchim Medinipur,Raghunathpur So West Midnapore,0.0001,0.0004,0.0003,0.0005
-18,2,22.425,87.025,Pashchim Medinipur,Sevayatan,0.0001,0.0004,0.0003,0.0005
-18,3,22.425,87.075,Pashchim Medinipur,,0.0001,0.0003,0.0002,0.0005
-18,4,22.425,87.125,Pashchim Medinipur,Manikpara,0.0001,0.0004,0.0011,0.0033
-18,5,22.425,87.175,Pashchim Medinipur,Reserve Bank Nm Ltd,0.0012,0.0015,0.0019,0.0044
-18,6,22.425,87.225,Pashchim Medinipur,Reserve Bank Nm Ltd,0.0001,0.0004,0.0002,0.0006
-18,7,22.425,87.275,Pashchim Medinipur,Ellaboni,0.0001,0.0004,0.0002,0.0006
-18,8,22.425,87.325,Pashchim Medinipur,Midnapore,0.0001,0.0004,0.0002,0.0006
-18,9,22.425,87.375,Pashchim Medinipur,Chanserpur,0.0001,0.0004,0.0002,0.0007
-18,10,22.425,87.425,Pashchim Medinipur,Chanserpur,0.0001,0.0003,0.0002,0.0007
-18,11,22.425,87.475,Pashchim Medinipur,Attrakhi,0.0001,0.0003,0.0002,0.0006
-18,12,22.425,87.525,Pashchim Medinipur,Khunkhunia,0.0001,0.0003,0.0002,0.0006
-18,13,22.425,87.575,Pashchim Medinipur,Khunkhunia,0.0001,0.0003,0.0002,0.0006
-18,14,22.425,87.625,Pashchim Medinipur,Hariharpur,0.0001,0.0003,0.0002,0.0006
-18,15,22.425,87.675,Purba Medinipur,Kharikamathani,0.0001,0.0003,0.0003,0.0032
-18,16,22.425,87.725,Purba Medinipur,Dalpara,0.0001,0.0003,0.0002,0.0006
-18,17,22.425,87.775,Purba Medinipur,Siddha,0.0001,0.0003,0.0002,0.0005
-18,18,22.425,87.825,Purba Medinipur,Pulsita,0.0001,0.0003,0.0002,0.0005
-18,19,22.425,87.875,Purba Medinipur,Ktpp,0.0006,0.0006,0.0008,0.0023
-18,21,22.425,87.975,Haora,Baidyanathpur,0.0003,0.0005,0.0005,0.0005
-18,22,22.425,88.025,Haora,Rabibhag,0.0003,0.0004,0.0003,0.0005
-18,23,22.425,88.075,Haora,Kashmul,0.0003,0.0004,0.0003,0.0003
-18,24,22.425,88.125,Haora,Kanjiakhali,0.0003,0.0004,0.0003,0.0003
-18,25,22.425,88.175,South 24 Parganas,Chak Kashipur,0.0003,0.0005,0.0005,0.0005
-18,26,22.425,88.225,South 24 Parganas,Raipur,0.0003,0.0004,0.0003,0.0005
-18,27,22.425,88.275,South 24 Parganas,Rasapunja,0.0003,0.0005,0.0005,0.0006
-19,0,22.475,86.925,Pashchim Medinipur,,0.0001,0.0004,0.0003,0.0005
-19,1,22.475,86.975,Pashchim Medinipur,Jamda So West Midnapore,0.0001,0.0004,0.0003,0.0005
-19,2,22.475,87.025,Pashchim Medinipur,Bandgora,0.0001,0.0004,0.0002,0.0006
-19,3,22.475,87.075,Pashchim Medinipur,Bandgora,0.0001,0.0004,0.0011,0.0033
-19,4,22.475,87.125,Pashchim Medinipur,,0.0007,0.0014,0.0016,0.0035
-19,5,22.475,87.175,Pashchim Medinipur,,0.0001,0.0004,0.0003,0.0006
-19,6,22.475,87.225,Pashchim Medinipur,,0.0001,0.0004,0.0002,0.0006
-19,7,22.475,87.275,Pashchim Medinipur,Ellaboni,0.0001,0.0004,0.0002,0.0006
-19,8,22.475,87.325,Pashchim Medinipur,Natunbazar So West Midnapore,0.0001,0.0004,0.0002,0.0006
-19,9,22.475,87.375,Pashchim Medinipur,Chanserpur,0.0002,0.0004,0.0003,0.0006
-19,10,22.475,87.425,Pashchim Medinipur,Chanserpur,0.0001,0.0003,0.0002,0.0006
-19,11,22.475,87.475,Pashchim Medinipur,,0.0001,0.0003,0.0002,0.0006
-19,12,22.475,87.525,Pashchim Medinipur,Khunkhunia,0.0001,0.0003,0.0002,0.0005
-19,13,22.475,87.575,Pashchim Medinipur,Khunkhunia,0.0001,0.0003,0.0002,0.0006
-19,14,22.475,87.625,Pashchim Medinipur,Lowada,0.0001,0.0003,0.0002,0.0006
-19,15,22.475,87.675,Pashchim Medinipur,Dalpara,0.0001,0.0003,0.0002,0.0006
-19,16,22.475,87.725,Purba Medinipur,Khukurdaha,0.0001,0.0003,0.0002,0.0006
-19,17,22.475,87.775,Purba Medinipur,Brindaban Chak,0.0001,0.0003,0.0002,0.0006
-19,18,22.475,87.825,Purba Medinipur,Sulani,0.0001,0.0003,0.0001,0.0003
-19,19,22.475,87.875,Purba Medinipur,Dudhkumrarhat,0.0001,0.0003,0.0002,0.0005
-19,20,22.475,87.925,Haora,Panitras,0.0003,0.0005,0.0005,0.0005
-19,21,22.475,87.975,Haora,Khadinan,0.0003,0.0005,0.0005,0.0006
-19,22,22.475,88.025,Haora,Mahishrekha,0.0003,0.0004,0.0003,0.0003
-19,23,22.475,88.075,Haora,Birshibpur,0.0003,0.0004,0.0003,0.0005
-19,24,22.475,88.125,Haora,Benjanharia,0.0016,0.001,0.0015,0.0023
-19,25,22.475,88.175,South 24 Parganas,Budge Budge So Hsgii,0.0018,0.0015,0.0027,0.0032
-19,26,22.475,88.225,South 24 Parganas,Nodakhali,0.0003,0.0005,0.0005,0.0005
-19,27,22.475,88.275,South 24 Parganas,Jairampur So Kolkata,0.0003,0.0005,0.0005,0.0006
-20,0,22.525,86.925,Pashchim Medinipur,,0.0007,0.0007,0.0014,0.0009
-20,1,22.525,86.975,Pashchim Medinipur,Dheko,0.0011,0.001,0.0014,0.0015
-20,2,22.525,87.025,Pashchim Medinipur,Dheko,0.001,0.001,0.0034,0.0013
-20,3,22.525,87.075,Pashchim Medinipur,,0.001,0.001,0.0015,0.0015
-20,4,22.525,87.125,Pashchim Medinipur,Sabrakone,0.001,0.001,0.0034,0.0013
-20,5,22.525,87.175,Pashchim Medinipur,Sabrakone,0.0011,0.001,0.0036,0.0013
-20,6,22.525,87.225,Pashchim Medinipur,,0.001,0.001,0.0015,0.0015
-20,7,22.525,87.275,Pashchim Medinipur,Godapeasal,0.0011,0.001,0.0014,0.0015
-20,8,22.525,87.325,Pashchim Medinipur,Godapeasal,0.0032,0.0043,0.0039,0.0087
-20,9,22.525,87.375,Pashchim Medinipur,Godapeasal,0.001,0.001,0.0015,0.0015
-20,10,22.525,87.425,Pashchim Medinipur,Amritpur,0.0008,0.0011,0.0012,0.0017
-20,11,22.525,87.475,Pashchim Medinipur,Amritpur,0.001,0.001,0.0016,0.0015
-20,12,22.525,87.525,Pashchim Medinipur,,0.001,0.001,0.0014,0.0013
-20,13,22.525,87.575,Pashchim Medinipur,,0.001,0.001,0.0034,0.0013
-20,14,22.525,87.625,Pashchim Medinipur,,0.001,0.001,0.0014,0.0013
-20,15,22.525,87.675,Pashchim Medinipur,Chechua Gobinda Nagar,0.001,0.001,0.0015,0.0015
-20,16,22.525,87.725,Pashchim Medinipur,Chechua Gobinda Nagar,0.0011,0.001,0.0014,0.0015
-20,17,22.525,87.775,Pashchim Medinipur,Khukurdaha,0.001,0.001,0.0014,0.0013
-20,18,22.525,87.825,Pashchim Medinipur,Sulani,0.0007,0.0007,0.0014,0.0009
-20,19,22.525,87.875,Pashchim Medinipur,Chitnan,0.0006,0.0007,0.0009,0.0006
-20,20,22.525,87.925,Haora,Chakur,0.001,0.001,0.0034,0.0013
-20,21,22.525,87.975,Haora,Sarda,0.001,0.001,0.0034,0.0013
-20,22,22.525,88.025,Haora,Dakshinmoyna,0.001,0.001,0.0015,0.0015
-20,23,22.525,88.075,Haora,Dasbhaga,0.001,0.001,0.0034,0.0013
-20,24,22.525,88.125,Haora,Betai,0.0007,0.0007,0.0014,0.0009
-20,25,22.525,88.175,Haora,Nalpur,0.0007,0.0007,0.0014,0.0009
-20,26,22.525,88.225,Haora,Baragarrah,0.001,0.001,0.0034,0.0048
-20,27,22.525,88.275,South 24 Parganas,Kcmills,0.0006,0.0007,0.0009,0.0006
-21,0,22.575,86.925,Pashchim Medinipur,,0.0012,0.001,0.0014,0.007
-21,1,22.575,86.975,Pashchim Medinipur,Mathurakati,0.0012,0.0011,0.0015,0.0014
-21,2,22.575,87.025,Pashchim Medinipur,Mathurakati,0.0032,0.0038,0.0036,0.0071
-21,3,22.575,87.075,Pashchim Medinipur,Bamal,0.001,0.001,0.0014,0.0013
-21,4,22.575,87.125,Pashchim Medinipur,Sabrakone,0.0007,0.0007,0.0014,0.0009
-21,5,22.575,87.175,Pashchim Medinipur,Sabrakone,0.001,0.001,0.0014,0.0013
-21,6,22.575,87.225,Pashchim Medinipur,,0.001,0.001,0.0015,0.0015
-21,7,22.575,87.275,Pashchim Medinipur,,0.0006,0.0007,0.0009,0.0006
-21,8,22.575,87.325,Pashchim Medinipur,Godapeasal,0.001,0.001,0.0034,0.0013
-21,9,22.575,87.375,Pashchim Medinipur,,0.001,0.001,0.0014,0.0013
-21,10,22.575,87.425,Pashchim Medinipur,Keshpur,0.001,0.001,0.0015,0.0015
-21,11,22.575,87.475,Pashchim Medinipur,Keshpur,0.0012,0.001,0.0014,0.0014
-21,12,22.575,87.525,Pashchim Medinipur,,0.001,0.001,0.0034,0.0013
-21,13,22.575,87.575,Pashchim Medinipur,,0.0007,0.0007,0.0014,0.0009
-21,14,22.575,87.625,Pashchim Medinipur,,0.001,0.001,0.0034,0.0013
-21,15,22.575,87.675,Pashchim Medinipur,Chechua Gobinda Nagar,0.0007,0.0007,0.0014,0.0009
-21,16,22.575,87.725,Pashchim Medinipur,Bhuta,0.001,0.001,0.0014,0.0013
-21,17,22.575,87.775,Pashchim Medinipur,Natunbazar So Hooghly,0.001,0.001,0.0014,0.0013
-21,18,22.575,87.825,Pashchim Medinipur,Uttar Batora,0.001,0.001,0.0015,0.0015
-21,19,22.575,87.875,Haora,Kasmali,0.001,0.001,0.0034,0.0013
-21,20,22.575,87.925,Haora,Chandrapur,0.0011,0.001,0.0014,0.0015
-21,21,22.575,87.975,Haora,Gazipur,0.0011,0.001,0.0036,0.0013
-21,22,22.575,88.025,Haora,Rajabazar So Hooghly,0.001,0.001,0.0015,0.0015
-21,23,22.575,88.075,Haora,Gobindapur,0.001,0.001,0.0014,0.0013
-21,24,22.575,88.125,Haora,Siddheswar,0.001,0.001,0.0015,0.0015
-21,25,22.575,88.175,Haora,Nabghara,0.0011,0.001,0.0036,0.0013
-21,26,22.575,88.225,Haora,Ramchandrapur Bo Sank,0.0031,0.004,0.008,0.0059
-21,27,22.575,88.275,Haora,Jagacha,0.0006,0.0007,0.0009,0.0006
-22,0,22.625,86.925,Pashchim Medinipur,,0.0013,0.0011,0.0015,0.0014
-22,1,22.625,86.975,Pashchim Medinipur,Mathurakati,0.001,0.001,0.0015,0.0015
-22,2,22.625,87.025,Pashchim Medinipur,Bamal,0.0032,0.0037,0.0031,0.0059
-22,3,22.625,87.075,Pashchim Medinipur,Bamal,0.001,0.001,0.0034,0.0013
-22,4,22.625,87.125,Pashchim Medinipur,,0.0006,0.0007,0.0009,0.0006
-22,5,22.625,87.175,Pashchim Medinipur,,0.001,0.001,0.0034,0.0013
-22,6,22.625,87.225,Pashchim Medinipur,,0.0006,0.0007,0.0009,0.0006
-22,7,22.625,87.275,Pashchim Medinipur,Routara,0.0007,0.0007,0.0014,0.0009
-22,8,22.625,87.325,Pashchim Medinipur,Shalboni,0.0032,0.0037,0.0031,0.006
-22,9,22.625,87.375,Pashchim Medinipur,Shalboni,0.001,0.001,0.0034,0.0013
-22,10,22.625,87.425,Pashchim Medinipur,,0.0033,0.0044,0.0038,0.0071
-22,11,22.625,87.475,Pashchim Medinipur,Neradeul,0.0011,0.001,0.0014,0.0015
-22,12,22.625,87.525,Pashchim Medinipur,Buriapat,0.0011,0.001,0.0014,0.0015
-22,13,22.625,87.575,Pashchim Medinipur,Midnapore Dsb,0.0012,0.001,0.002,0.0014
-22,14,22.625,87.625,Pashchim Medinipur,,0.0011,0.001,0.0014,0.0015
-22,15,22.625,87.675,Pashchim Medinipur,Daspur,0.001,0.001,0.0034,0.0013
-22,16,22.625,87.725,Pashchim Medinipur,Daspur,0.001,0.001,0.0015,0.0015
-22,17,22.625,87.775,Pashchim Medinipur,Natunbazar So Hooghly,0.001,0.001,0.0015,0.0015
-22,18,22.625,87.825,Hugli,Mar0Khana,0.0007,0.0007,0.0014,0.0009
-22,19,22.625,87.875,Hugli,Palaspai,0.001,0.001,0.0034,0.0013
-22,20,22.625,87.925,Haora,Dudsar,0.001,0.001,0.0015,0.0015
-22,21,22.625,87.975,Haora,Sonatala,0.001,0.001,0.0034,0.0013
-22,22,22.625,88.025,Haora,Penro,0.0011,0.001,0.0014,0.0015
-22,23,22.625,88.075,Haora,Maju,0.0012,0.001,0.0014,0.0014
-22,24,22.625,88.125,Haora,Garbalia,0.0013,0.0011,0.0015,0.0014
-22,25,22.625,88.175,Haora,Wadipur,0.0011,0.0011,0.0012,0.0017
-22,26,22.625,88.225,Haora,Bhandardaha,0.001,0.001,0.0015,0.0015
-22,27,22.625,88.275,Haora,Tentulkuli,0.0011,0.001,0.0036,0.0013
-23,0,22.675,86.925,Bankura,U C Danga,0.0011,0.001,0.0014,0.0015
-23,1,22.675,86.975,Bankura,Asansol,0.0011,0.001,0.0014,0.0015
-23,2,22.675,87.025,Pashchim Medinipur,Asansol,0.0011,0.001,0.0014,0.0015
-23,3,22.675,87.075,Pashchim Medinipur,,0.0006,0.0007,0.0009,0.0006
-23,4,22.675,87.125,Pashchim Medinipur,,0.0011,0.001,0.0036,0.0049
-23,5,22.675,87.175,Pashchim Medinipur,,0.0032,0.0043,0.004,0.0114
-23,6,22.675,87.225,Pashchim Medinipur,,0.0034,0.0053,0.0047,0.0114
-23,7,22.675,87.275,Pashchim Medinipur,Routara,0.001,0.001,0.0014,0.0013
-23,8,22.675,87.325,Pashchim Medinipur,Routara,0.0031,0.0036,0.0086,0.0048
-23,9,22.675,87.375,Pashchim Medinipur,,0.0007,0.0007,0.0014,0.0009
-23,10,22.675,87.425,Pashchim Medinipur,,0.001,0.001,0.0014,0.0013
-23,11,22.675,87.475,Pashchim Medinipur,Buriapat,0.0013,0.0011,0.0015,0.0014
-23,12,22.675,87.525,Pashchim Medinipur,Midnapore Dsb,0.0064,0.0068,0.0097,0.0114
-23,13,22.675,87.575,Pashchim Medinipur,Midnapore Dsb,0.0008,0.001,0.001,0.0017
-23,14,22.675,87.625,Pashchim Medinipur,,0.0009,0.001,0.0012,0.0017
-23,15,22.675,87.675,Pashchim Medinipur,Ghatal,0.001,0.0011,0.0012,0.0014
-23,16,22.675,87.725,Pashchim Medinipur,Ghatal,0.0007,0.0007,0.0014,0.0009
-23,17,22.675,87.775,Pashchim Medinipur,Laudangri,0.0011,0.001,0.0014,0.0015
-23,18,22.675,87.825,Hugli,Nandanpur,0.001,0.001,0.0034,0.0013
-23,19,22.675,87.875,Hugli,Harishchak,0.0011,0.001,0.0016,0.0059
-23,20,22.675,87.925,Hugli,Uttar Mansri,0.0011,0.001,0.0014,0.0072
-23,21,22.675,87.975,Haora,Chingra,0.001,0.001,0.0034,0.0048
-23,22,22.675,88.025,Haora,Sibnarayanchak,0.001,0.001,0.0015,0.0015
-23,23,22.675,88.075,Haora,Chaknan,0.0012,0.0011,0.0015,0.0014
-23,24,22.675,88.125,Haora,Bargachia,0.0013,0.0011,0.0015,0.007
-23,26,22.675,88.225,Hugli,Parbatipur,0.0032,0.0039,0.0047,0.007
-23,27,22.675,88.275,Hugli,Mrigala,0.001,0.001,0.0015,0.0015
+9,27,21.975,88.275,South 24 Parganas,Imamuddipur,0.0001,0.0003,0.0003,0.0006
+10,3,22.025,87.075,Pashchim Medinipur,Paika,0.0001,0.0003,0.0003,0.0007
+10,4,22.025,87.125,Pashchim Medinipur,Tufuria Kamalpur,0.0001,0.0003,0.0001,0.0003
+10,5,22.025,87.175,Pashchim Medinipur,Tufuria Kamalpur,0.0002,0.0003,0.0002,0.0005
+10,6,22.025,87.225,Pashchim Medinipur,Bakurpada,0.0002,0.0003,0.0002,0.0005
+10,7,22.025,87.275,Pashchim Medinipur,Dhangarpara,0.0002,0.0004,0.0002,0.0005
+10,8,22.025,87.325,Pashchim Medinipur,Khatnagar,0.0002,0.0004,0.0002,0.0006
+10,9,22.025,87.375,Pashchim Medinipur,Thakurchak,0.0002,0.0003,0.0002,0.0005
+10,10,22.025,87.425,Pashchim Medinipur,Khakurda,0.0002,0.0003,0.0002,0.0006
+10,11,22.025,87.475,Purba Medinipur,Kajlagarh,0.0001,0.0003,0.0002,0.0005
+10,12,22.025,87.525,Purba Medinipur,Naipur,0.0002,0.0003,0.0002,0.0004
+10,13,22.025,87.575,Purba Medinipur,Makrampur,0.0001,0.0003,0.0002,0.0007
+10,14,22.025,87.625,Purba Medinipur,Ballyagobindapur,0.0001,0.0003,0.0002,0.0007
+10,15,22.025,87.675,Purba Medinipur,Manikjore,0.0001,0.0003,0.0002,0.0007
+10,16,22.025,87.725,Purba Medinipur,Dumandari,0.0001,0.0003,0.0001,0.0005
+10,17,22.025,87.775,Purba Medinipur,Barabari South,0.0001,0.0003,0.0002,0.0007
+10,18,22.025,87.825,Purba Medinipur,Kismatbajkul,0.0001,0.0002,0.0001,0.0003
+10,19,22.025,87.875,Purba Medinipur,Gholpukuria,0.0001,0.0002,0.0002,0.0006
+10,20,22.025,87.925,Purba Medinipur,Gholpukuria,0.0002,0.0004,0.0002,0.0003
+10,21,22.025,87.975,Purba Medinipur,Chaulkhola,0.0003,0.0005,0.0005,0.0007
+10,22,22.025,88.025,Purba Medinipur,Dasghara,0.0003,0.0004,0.0004,0.0006
+10,23,22.025,88.075,Purba Medinipur,Haldia Ts,0.0002,0.0004,0.0002,0.0003
+10,26,22.025,88.225,South 24 Parganas,Keoratala,0.0002,0.0004,0.0002,0.0003
+10,27,22.025,88.275,South 24 Parganas,Seoratala,0.0003,0.0004,0.0004,0.0006
+11,1,22.075,86.975,Pashchim Medinipur,,0.0002,0.0003,0.0002,0.0005
+11,2,22.075,87.025,Pashchim Medinipur,,0.0002,0.0003,0.0004,0.0005
+11,3,22.075,87.075,Pashchim Medinipur,Rohini,0.0002,0.0003,0.0002,0.0005
+11,4,22.075,87.125,Pashchim Medinipur,Rohini,0.0001,0.0003,0.0003,0.0007
+11,5,22.075,87.175,Pashchim Medinipur,,0.0002,0.0003,0.0002,0.0005
+11,6,22.075,87.225,Pashchim Medinipur,Keshiary,0.0002,0.0004,0.0002,0.0005
+11,7,22.075,87.275,Pashchim Medinipur,Dhalbelun,0.0002,0.0004,0.0002,0.0005
+11,8,22.075,87.325,Pashchim Medinipur,Phandar,0.0002,0.0004,0.0002,0.0005
+11,9,22.075,87.375,Pashchim Medinipur,Akanda,0.0002,0.0004,0.0002,0.0005
+11,10,22.075,87.425,Pashchim Medinipur,Gaita,0.0002,0.0003,0.0002,0.0004
+11,11,22.075,87.475,Pashchim Medinipur,Argora,0.0001,0.0003,0.0001,0.0005
+11,12,22.075,87.525,Purba Medinipur,Narghat,0.0001,0.0002,0.0002,0.0006
+11,13,22.075,87.575,Purba Medinipur,Selmabad,0.0001,0.0002,0.0002,0.0006
+11,14,22.075,87.625,Purba Medinipur,Panchuria,0.0001,0.0002,0.0002,0.0006
+11,15,22.075,87.675,Purba Medinipur,Noonhanda,0.0001,0.0002,0.0002,0.0006
+11,16,22.075,87.725,Purba Medinipur,Bhimeswaribazar,0.0001,0.0003,0.0001,0.0005
+11,17,22.075,87.775,Purba Medinipur,Bhimeswaribazar,0.0001,0.0002,0.0001,0.0003
+11,18,22.075,87.825,Purba Medinipur,Mathchandipur,0.0001,0.0002,0.0001,0.0003
+11,19,22.075,87.875,Purba Medinipur,Mathchandipur,0.0001,0.0002,0.0002,0.0006
+11,20,22.075,87.925,Purba Medinipur,Gholpukuria,0.0002,0.0004,0.0002,0.0003
+11,21,22.075,87.975,Purba Medinipur,Lakshya,0.0002,0.0004,0.0002,0.0003
+11,22,22.075,88.025,Purba Medinipur,Balughata,0.0003,0.0005,0.0005,0.0007
+11,23,22.075,88.075,Purba Medinipur,Barabari,0.0002,0.0004,0.0002,0.0003
+11,24,22.075,88.125,Purba Medinipur,Khanjanchak,0.0002,0.0004,0.0002,0.0003
+11,26,22.075,88.225,South 24 Parganas,South Bishnupur,0.0003,0.0004,0.0004,0.0006
+11,27,22.075,88.275,South 24 Parganas,Sitarampur,0.0003,0.0004,0.0004,0.0006
+12,0,22.125,86.925,Pashchim Medinipur,,0.0001,0.0003,0.0001,0.0003
+12,1,22.125,86.975,Pashchim Medinipur,,0.0002,0.0003,0.0002,0.0005
+12,2,22.125,87.025,Pashchim Medinipur,,0.0002,0.0003,0.0002,0.0005
+12,3,22.125,87.075,Pashchim Medinipur,Rohini,0.0002,0.0003,0.0002,0.0005
+12,4,22.125,87.125,Pashchim Medinipur,Rohini,0.0001,0.0003,0.0003,0.0007
+12,5,22.125,87.175,Pashchim Medinipur,Kultikri,0.0002,0.0004,0.0002,0.0005
+12,6,22.125,87.225,Pashchim Medinipur,Amda,0.0002,0.0004,0.0004,0.0005
+12,7,22.125,87.275,Pashchim Medinipur,Tarua,0.0002,0.0003,0.0002,0.0005
+12,8,22.125,87.325,Pashchim Medinipur,Tarua,0.0002,0.0004,0.0004,0.0005
+12,9,22.125,87.375,Pashchim Medinipur,Bakhrabad,0.0002,0.0004,0.0002,0.0005
+12,10,22.125,87.425,Pashchim Medinipur,Khalina,0.0001,0.0003,0.0001,0.0005
+12,11,22.125,87.475,Pashchim Medinipur,Khurshi,0.0001,0.0003,0.0001,0.0005
+12,12,22.125,87.525,Pashchim Medinipur,Adasimla,0.0001,0.0003,0.0002,0.0007
+12,13,22.125,87.575,Pashchim Medinipur,Rangibasan,0.0001,0.0003,0.0002,0.0007
+12,14,22.125,87.625,Pashchim Medinipur,Saulabheri,0.0001,0.0002,0.0002,0.0006
+12,15,22.125,87.675,Pashchim Medinipur,Purba Dwarikapur,0.0001,0.0003,0.0002,0.0007
+12,16,22.125,87.725,Purba Medinipur,Purba Dwarikapur,0.0001,0.0003,0.0001,0.0005
+12,17,22.125,87.775,Purba Medinipur,,0.0001,0.0002,0.0001,0.0003
+12,18,22.125,87.825,Purba Medinipur,Mathchandipur,0.0001,0.0003,0.0002,0.0007
+12,19,22.125,87.875,Purba Medinipur,Narghat Laban Satyagraha,0.0001,0.0002,0.0001,0.0003
+12,20,22.125,87.925,Purba Medinipur,Narghat Laban Satyagraha,0.0002,0.0004,0.0002,0.0003
+12,21,22.125,87.975,Purba Medinipur,Kumarchak,0.0002,0.0004,0.0002,0.0003
+12,22,22.125,88.025,Purba Medinipur,Kumarpur,0.0002,0.0004,0.0002,0.0003
+12,23,22.125,88.075,Purba Medinipur,Chaitanyapur,0.0003,0.0004,0.0004,0.0006
+12,24,22.125,88.125,Purba Medinipur,Diamond Harbour Rs,0.0002,0.0004,0.0002,0.0003
+12,25,22.125,88.175,Purba Medinipur,Radhanagar,0.0002,0.0004,0.0002,0.0003
+12,26,22.125,88.225,South 24 Parganas,Dakshin Radhanagar,0.0003,0.0004,0.0004,0.0006
+12,27,22.125,88.275,South 24 Parganas,Baidyahat,0.0003,0.0005,0.0005,0.0007
+13,0,22.175,86.925,Pashchim Medinipur,,0.0002,0.0003,0.0002,0.0005
+13,1,22.175,86.975,Pashchim Medinipur,,0.0002,0.0003,0.0002,0.0005
+13,2,22.175,87.025,Pashchim Medinipur,,0.0002,0.0003,0.0004,0.0005
+13,3,22.175,87.075,Pashchim Medinipur,,0.0002,0.0003,0.0004,0.0005
+13,4,22.175,87.125,Pashchim Medinipur,Kultikri,0.0002,0.0004,0.0002,0.0005
+13,5,22.175,87.175,Pashchim Medinipur,Kultikri,0.0002,0.0004,0.0002,0.0005
+13,6,22.175,87.225,Pashchim Medinipur,,0.0002,0.0003,0.0002,0.0005
+13,7,22.175,87.275,Pashchim Medinipur,Tarua,0.0001,0.0003,0.0001,0.0003
+13,8,22.175,87.325,Pashchim Medinipur,Kashipur,0.0002,0.0004,0.0004,0.0005
+13,9,22.175,87.375,Pashchim Medinipur,Bahurupa,0.0002,0.0004,0.0002,0.0004
+13,10,22.175,87.425,Pashchim Medinipur,Jhanjianankar,0.0001,0.0003,0.0002,0.0005
+13,11,22.175,87.475,Pashchim Medinipur,Kalasbarh,0.0001,0.0003,0.0002,0.0005
+13,12,22.175,87.525,Pashchim Medinipur,Chandkutibatikati,0.0001,0.0003,0.0001,0.0005
+13,13,22.175,87.575,Pashchim Medinipur,Sabang,0.0001,0.0003,0.0002,0.0007
+13,14,22.175,87.625,Pashchim Medinipur,Sabang,0.0001,0.0003,0.0002,0.0007
+13,15,22.175,87.675,Pashchim Medinipur,,0.0001,0.0003,0.0001,0.0005
+13,16,22.175,87.725,Purba Medinipur,,0.0001,0.0002,0.0001,0.0003
+13,17,22.175,87.775,Purba Medinipur,,0.0001,0.0002,0.0001,0.0003
+13,18,22.175,87.825,Purba Medinipur,Naldanga,0.0001,0.0002,0.0001,0.0003
+13,19,22.175,87.875,Purba Medinipur,Kalyanchak,0.0001,0.0002,0.0001,0.0003
+13,20,22.175,87.925,Purba Medinipur,Kalyanchak,0.0003,0.0004,0.0004,0.0006
+13,21,22.175,87.975,Purba Medinipur,Mahisadal,0.0003,0.0005,0.0005,0.0007
+13,22,22.175,88.025,Purba Medinipur,Mahisadal,0.0002,0.0004,0.0002,0.0003
+13,23,22.175,88.075,Purba Medinipur,Deulpota,0.0002,0.0004,0.0002,0.0003
+13,24,22.175,88.125,Purba Medinipur,Ghasipur,0.0002,0.0004,0.0002,0.0003
+13,26,22.175,88.225,South 24 Parganas,Sethbagan,0.0003,0.0004,0.0004,0.0006
+13,27,22.175,88.275,South 24 Parganas,Ramanandapur,0.0003,0.0004,0.0004,0.0006
+14,0,22.225,86.925,Pashchim Medinipur,,0.0002,0.0003,0.0004,0.0005
+14,1,22.225,86.975,Pashchim Medinipur,,0.0002,0.0004,0.0002,0.0005
+14,2,22.225,87.025,Pashchim Medinipur,Bankura,0.0002,0.0004,0.0002,0.0005
+14,3,22.225,87.075,Pashchim Medinipur,Bankura,0.0012,0.0017,0.0033,0.0033
+14,4,22.225,87.125,Pashchim Medinipur,Dokra,0.0002,0.0003,0.0004,0.0005
+14,5,22.225,87.175,Pashchim Medinipur,Banskuthi,0.0002,0.0003,0.0002,0.0005
+14,6,22.225,87.225,Pashchim Medinipur,Uttar Dumurkhola,0.0002,0.0003,0.0004,0.0005
+14,7,22.225,87.275,Pashchim Medinipur,Salua Govt Colony,0.0002,0.0004,0.0004,0.0005
+14,8,22.225,87.325,Pashchim Medinipur,Fulgeria,0.0002,0.0004,0.0004,0.0005
+14,9,22.225,87.375,Pashchim Medinipur,Makrampurbazar,0.0001,0.0003,0.0001,0.0003
+14,10,22.225,87.425,Pashchim Medinipur,Birbira,0.0002,0.0003,0.0002,0.0005
+14,11,22.225,87.475,Pashchim Medinipur,Barakalankai,0.0002,0.0003,0.0002,0.0005
+14,12,22.225,87.525,Pashchim Medinipur,Nonakuribazar,0.0001,0.0003,0.0001,0.0005
+14,13,22.225,87.575,Pashchim Medinipur,Dhaneswarpur,0.0001,0.0003,0.0001,0.0005
+14,14,22.225,87.625,Pashchim Medinipur,Dalimoula,0.0001,0.0003,0.0001,0.0005
+14,15,22.225,87.675,Pashchim Medinipur,Jalchak,0.0001,0.0003,0.0002,0.0007
+14,16,22.225,87.725,Purba Medinipur,Jalchak,0.0001,0.0002,0.0001,0.0003
+14,17,22.225,87.775,Purba Medinipur,Moyna,0.0001,0.0002,0.0001,0.0003
+14,18,22.225,87.825,Purba Medinipur,Chotodighari,0.0001,0.0002,0.0001,0.0003
+14,19,22.225,87.875,Purba Medinipur,Chotodighari,0.0001,0.0002,0.0001,0.0003
+14,20,22.225,87.925,Purba Medinipur,Byabattarhat,0.0002,0.0004,0.0002,0.0003
+14,21,22.225,87.975,Purba Medinipur,Mahisadal,0.0002,0.0004,0.0002,0.0003
+14,24,22.225,88.125,South 24 Parganas,Goanara Gobindapur,0.0003,0.0004,0.0004,0.0006
+14,25,22.225,88.175,South 24 Parganas,Darikrishna Nagar,0.0003,0.0004,0.0004,0.0006
+14,26,22.225,88.225,South 24 Parganas,Panchagram Singhberia,0.0002,0.0004,0.0002,0.0003
+14,27,22.225,88.275,South 24 Parganas,Nazra,0.0003,0.0004,0.0004,0.0006
+15,0,22.275,86.925,Pashchim Medinipur,Aguiboni,0.0002,0.0004,0.0002,0.0005
+15,1,22.275,86.975,Pashchim Medinipur,Aguiboni,0.0002,0.0003,0.0004,0.0005
+15,2,22.275,87.025,Pashchim Medinipur,Bankura,0.0002,0.0004,0.0002,0.0005
+15,3,22.275,87.075,Pashchim Medinipur,Bankura,0.0002,0.0003,0.0002,0.0005
+15,4,22.275,87.125,Pashchim Medinipur,,0.0002,0.0003,0.0002,0.0005
+15,5,22.275,87.175,Pashchim Medinipur,,0.0002,0.0003,0.0002,0.0005
+15,6,22.275,87.225,Pashchim Medinipur,Uttar Dumurkhola,0.0001,0.0003,0.0003,0.0007
+15,7,22.275,87.275,Pashchim Medinipur,Salua Govt Colony,0.0002,0.0003,0.0002,0.0005
+15,8,22.275,87.325,Pashchim Medinipur,Salua Govt Colony,0.0002,0.0003,0.0002,0.0005
+15,9,22.275,87.375,Pashchim Medinipur,Baharadari,0.0002,0.0004,0.0002,0.0005
+15,10,22.275,87.425,Pashchim Medinipur,Tentulmuri,0.0002,0.0003,0.0002,0.0005
+15,11,22.275,87.475,Pashchim Medinipur,Paramanandapur,0.0001,0.0003,0.0002,0.0005
+15,12,22.275,87.525,Pashchim Medinipur,,0.0002,0.0003,0.0002,0.0004
+15,13,22.275,87.575,Pashchim Medinipur,Pingla,0.0001,0.0003,0.0002,0.0005
+15,14,22.275,87.625,Pashchim Medinipur,Dalimoula,0.0001,0.0003,0.0002,0.0007
+15,15,22.275,87.675,Pashchim Medinipur,Sabong Shyamsundarpur,0.0001,0.0003,0.0002,0.0007
+15,16,22.275,87.725,Purba Medinipur,Ramchandrapur So East Midnapore,0.0001,0.0003,0.0002,0.0007
+15,17,22.275,87.775,Purba Medinipur,Moyna,0.0001,0.0002,0.0001,0.0003
+15,18,22.275,87.825,Purba Medinipur,Salgechhia,0.0001,0.0002,0.0001,0.0003
+15,19,22.275,87.875,Purba Medinipur,Rajhat,0.0001,0.0002,0.0001,0.0003
+15,20,22.275,87.925,Purba Medinipur,Sankarara,0.0002,0.0004,0.0002,0.0003
+15,21,22.275,87.975,Haora,Ajodhyahat,0.0002,0.0004,0.0002,0.0003
+15,22,22.275,88.025,Haora,Kalidaha,0.0002,0.0004,0.0002,0.0003
+15,23,22.275,88.075,Haora,Dingakhola,0.0002,0.0004,0.0002,0.0003
+15,24,22.275,88.125,South 24 Parganas,Panarhat,0.0002,0.0004,0.0002,0.0003
+15,25,22.275,88.175,South 24 Parganas,Seorahati,0.0002,0.0004,0.0002,0.0003
+15,26,22.275,88.225,South 24 Parganas,Purba Putiary,0.0003,0.0004,0.0004,0.0006
+15,27,22.275,88.275,South 24 Parganas,Boinchberia,0.0003,0.0005,0.0005,0.0007
+16,0,22.325,86.925,Pashchim Medinipur,Aguiboni,0.0002,0.0003,0.0002,0.0005
+16,1,22.325,86.975,Pashchim Medinipur,,0.0002,0.0003,0.0002,0.0005
+16,2,22.325,87.025,Pashchim Medinipur,,0.0002,0.0003,0.0002,0.0005
+16,3,22.325,87.075,Pashchim Medinipur,Nutanchati,0.0002,0.0003,0.0002,0.0005
+16,4,22.325,87.125,Pashchim Medinipur,Charkabani,0.0001,0.0003,0.0002,0.0006
+16,5,22.325,87.175,Pashchim Medinipur,Kalaikunda A F,0.0002,0.0003,0.0002,0.0005
+16,6,22.325,87.225,Pashchim Medinipur,Kalaikunda A F,0.0002,0.0003,0.0002,0.0005
+16,7,22.325,87.275,Pashchim Medinipur,Nimpura,0.0002,0.0003,0.0002,0.0005
+16,8,22.325,87.325,Pashchim Medinipur,Harishpur,0.0002,0.0003,0.0002,0.0026
+16,9,22.325,87.375,Pashchim Medinipur,Inda,0.0002,0.0004,0.0002,0.0005
+16,10,22.325,87.425,Pashchim Medinipur,Madpur,0.0001,0.0003,0.0002,0.0005
+16,11,22.325,87.475,Pashchim Medinipur,Madpur,0.0001,0.0003,0.0002,0.0005
+16,12,22.325,87.525,Pashchim Medinipur,Ballichak,0.0001,0.0003,0.0002,0.0005
+16,13,22.325,87.575,Pashchim Medinipur,Ballichak,0.0002,0.0003,0.0002,0.0004
+16,14,22.325,87.625,Pashchim Medinipur,Bansda Palashi,0.0001,0.0003,0.0001,0.0005
+16,15,22.325,87.675,Pashchim Medinipur,Hour,0.0001,0.0003,0.0001,0.0005
+16,16,22.325,87.725,Purba Medinipur,Ramchandrapur So East Midnapore,0.0001,0.0003,0.0002,0.0007
+16,17,22.325,87.775,Purba Medinipur,Ramchandrapur So East Midnapore,0.0001,0.0002,0.0001,0.0003
+16,18,22.325,87.825,Purba Medinipur,Raghunathbari,0.0001,0.0002,0.0001,0.0003
+16,19,22.325,87.875,Purba Medinipur,Demarihat,0.0001,0.0002,0.0001,0.0003
+16,20,22.325,87.925,Purba Medinipur,Biswas,0.0003,0.0004,0.0004,0.0006
+16,21,22.325,87.975,Haora,Ramnagar,0.0002,0.0004,0.0002,0.0003
+16,22,22.325,88.025,Haora,Kharuberia,0.0003,0.0004,0.0004,0.0006
+16,23,22.325,88.075,Haora,Dafarpur,0.0002,0.0004,0.0002,0.0003
+16,24,22.325,88.125,South 24 Parganas,Mohirampur,0.0003,0.0005,0.0005,0.0007
+16,25,22.325,88.175,South 24 Parganas,Kalsa,0.0003,0.0005,0.0005,0.0007
+16,26,22.325,88.225,South 24 Parganas,Linton Street,0.0003,0.0005,0.0003,0.0005
+16,27,22.325,88.275,South 24 Parganas,Serakole,0.0002,0.0004,0.0002,0.0003
+17,0,22.375,86.925,Pashchim Medinipur,,0.0001,0.0003,0.0003,0.0007
+17,1,22.375,86.975,Pashchim Medinipur,,0.0001,0.0003,0.0002,0.0006
+17,2,22.375,87.025,Pashchim Medinipur,Nutanchati,0.0001,0.0003,0.0001,0.0003
+17,3,22.375,87.075,Pashchim Medinipur,Nutanchati,0.0001,0.0003,0.0003,0.0007
+17,4,22.375,87.125,Pashchim Medinipur,Manikpara,0.0001,0.0003,0.0001,0.0003
+17,5,22.375,87.175,Pashchim Medinipur,Reserve Bank Nm Ltd,0.0002,0.0003,0.0004,0.0005
+17,6,22.375,87.225,Pashchim Medinipur,Balarampur,0.0002,0.0004,0.0002,0.0005
+17,7,22.375,87.275,Pashchim Medinipur,Nimpura,0.0001,0.0003,0.0001,0.0003
+17,8,22.375,87.325,Pashchim Medinipur,Kharagpur New Settlement,0.0001,0.0003,0.0001,0.0003
+17,9,22.375,87.375,Pashchim Medinipur,Inda,0.0002,0.0004,0.0003,0.0004
+17,10,22.375,87.425,Pashchim Medinipur,Attrakhi,0.0001,0.0003,0.0002,0.0005
+17,11,22.375,87.475,Pashchim Medinipur,Madpur,0.0001,0.0003,0.0002,0.0005
+17,12,22.375,87.525,Pashchim Medinipur,Arjuni,0.0002,0.0003,0.0002,0.0004
+17,13,22.375,87.575,Pashchim Medinipur,Debra Bazar,0.0001,0.0003,0.0001,0.0005
+17,14,22.375,87.625,Pashchim Medinipur,Bansda Palashi,0.0001,0.0003,0.0001,0.0005
+17,15,22.375,87.675,Purba Medinipur,Hour,0.0001,0.0003,0.0002,0.0005
+17,16,22.375,87.725,Purba Medinipur,Chabukiauttarbarh,0.0001,0.0003,0.0002,0.0007
+17,17,22.375,87.775,Purba Medinipur,Purba Itara,0.0001,0.0002,0.0001,0.0003
+17,18,22.375,87.825,Purba Medinipur,Ramtarakhat,0.0001,0.0002,0.0001,0.0003
+17,19,22.375,87.875,Purba Medinipur,Ramtarakhat,0.0001,0.0002,0.0001,0.0003
+17,20,22.375,87.925,Purba Medinipur,Nakol,0.0002,0.0004,0.0002,0.0003
+17,21,22.375,87.975,Haora,Naul,0.0003,0.0004,0.0004,0.0006
+17,22,22.375,88.025,Haora,Amardah,0.0003,0.0004,0.0004,0.0006
+17,23,22.375,88.075,Haora,Belari,0.0002,0.0004,0.0002,0.0003
+17,24,22.375,88.125,South 24 Parganas,Bahirkunja,0.0002,0.0004,0.0002,0.0003
+17,25,22.375,88.175,South 24 Parganas,Kamra,0.0003,0.0004,0.0004,0.0006
+17,26,22.375,88.225,South 24 Parganas,Patipukur,0.0003,0.0004,0.0004,0.0006
+17,27,22.375,88.275,South 24 Parganas,Amtala,0.0003,0.0004,0.0004,0.0006
+18,0,22.425,86.925,Pashchim Medinipur,,0.0001,0.0003,0.0003,0.0007
+18,1,22.425,86.975,Pashchim Medinipur,Raghunathpur So West Midnapore,0.0001,0.0003,0.0003,0.0007
+18,2,22.425,87.025,Pashchim Medinipur,Sevayatan,0.0001,0.0003,0.0003,0.0007
+18,3,22.425,87.075,Pashchim Medinipur,,0.0001,0.0003,0.0002,0.0006
+18,4,22.425,87.125,Pashchim Medinipur,Manikpara,0.0002,0.0003,0.0014,0.0026
+18,5,22.425,87.175,Pashchim Medinipur,Reserve Bank Nm Ltd,0.0012,0.0017,0.0033,0.0033
+18,6,22.425,87.225,Pashchim Medinipur,Reserve Bank Nm Ltd,0.0002,0.0003,0.0002,0.0005
+18,7,22.425,87.275,Pashchim Medinipur,Ellaboni,0.0002,0.0003,0.0002,0.0005
+18,8,22.425,87.325,Pashchim Medinipur,Midnapore,0.0002,0.0003,0.0002,0.0005
+18,9,22.425,87.375,Pashchim Medinipur,Chanserpur,0.0002,0.0004,0.0002,0.0005
+18,10,22.425,87.425,Pashchim Medinipur,Chanserpur,0.0001,0.0003,0.0002,0.0005
+18,11,22.425,87.475,Pashchim Medinipur,Attrakhi,0.0001,0.0003,0.0002,0.0005
+18,12,22.425,87.525,Pashchim Medinipur,Khunkhunia,0.0001,0.0003,0.0002,0.0005
+18,13,22.425,87.575,Pashchim Medinipur,Khunkhunia,0.0001,0.0003,0.0001,0.0005
+18,14,22.425,87.625,Pashchim Medinipur,Hariharpur,0.0001,0.0003,0.0001,0.0005
+18,15,22.425,87.675,Purba Medinipur,Kharikamathani,0.0001,0.0003,0.0002,0.0029
+18,16,22.425,87.725,Purba Medinipur,Dalpara,0.0001,0.0003,0.0001,0.0005
+18,17,22.425,87.775,Purba Medinipur,Siddha,0.0001,0.0003,0.0002,0.0007
+18,18,22.425,87.825,Purba Medinipur,Pulsita,0.0001,0.0003,0.0002,0.0007
+18,19,22.425,87.875,Purba Medinipur,Ktpp,0.0005,0.0008,0.001,0.0031
+18,21,22.425,87.975,Haora,Baidyanathpur,0.0003,0.0005,0.0005,0.0007
+18,22,22.425,88.025,Haora,Rabibhag,0.0003,0.0004,0.0004,0.0006
+18,23,22.425,88.075,Haora,Kashmul,0.0002,0.0004,0.0002,0.0003
+18,24,22.425,88.125,Haora,Kanjiakhali,0.0002,0.0004,0.0002,0.0003
+18,25,22.425,88.175,South 24 Parganas,Chak Kashipur,0.0003,0.0005,0.0005,0.0007
+18,26,22.425,88.225,South 24 Parganas,Raipur,0.0003,0.0004,0.0004,0.0006
+18,27,22.425,88.275,South 24 Parganas,Rasapunja,0.0003,0.0005,0.0005,0.0007
+19,0,22.475,86.925,Pashchim Medinipur,,0.0001,0.0003,0.0003,0.0007
+19,1,22.475,86.975,Pashchim Medinipur,Jamda So West Midnapore,0.0001,0.0003,0.0003,0.0007
+19,2,22.475,87.025,Pashchim Medinipur,Bandgora,0.0002,0.0003,0.0002,0.0005
+19,3,22.475,87.075,Pashchim Medinipur,Bandgora,0.0002,0.0003,0.0012,0.0028
+19,4,22.475,87.125,Pashchim Medinipur,,0.0006,0.0016,0.0027,0.0027
+19,5,22.475,87.175,Pashchim Medinipur,,0.0002,0.0003,0.0003,0.0007
+19,6,22.475,87.225,Pashchim Medinipur,,0.0002,0.0003,0.0002,0.0005
+19,7,22.475,87.275,Pashchim Medinipur,Ellaboni,0.0002,0.0003,0.0002,0.0005
+19,8,22.475,87.325,Pashchim Medinipur,Natunbazar So West Midnapore,0.0002,0.0003,0.0002,0.0005
+19,9,22.475,87.375,Pashchim Medinipur,Chanserpur,0.0002,0.0004,0.0004,0.0005
+19,10,22.475,87.425,Pashchim Medinipur,Chanserpur,0.0002,0.0003,0.0002,0.0004
+19,11,22.475,87.475,Pashchim Medinipur,,0.0002,0.0003,0.0002,0.0004
+19,12,22.475,87.525,Pashchim Medinipur,Khunkhunia,0.0001,0.0003,0.0002,0.0007
+19,13,22.475,87.575,Pashchim Medinipur,Khunkhunia,0.0001,0.0003,0.0001,0.0005
+19,14,22.475,87.625,Pashchim Medinipur,Lowada,0.0001,0.0003,0.0002,0.0005
+19,15,22.475,87.675,Pashchim Medinipur,Dalpara,0.0001,0.0003,0.0001,0.0005
+19,16,22.475,87.725,Purba Medinipur,Khukurdaha,0.0001,0.0003,0.0001,0.0005
+19,17,22.475,87.775,Purba Medinipur,Brindaban Chak,0.0001,0.0003,0.0001,0.0005
+19,18,22.475,87.825,Purba Medinipur,Sulani,0.0001,0.0002,0.0001,0.0003
+19,19,22.475,87.875,Purba Medinipur,Dudhkumrarhat,0.0001,0.0002,0.0002,0.0006
+19,20,22.475,87.925,Haora,Panitras,0.0003,0.0005,0.0005,0.0007
+19,21,22.475,87.975,Haora,Khadinan,0.0003,0.0005,0.0005,0.0007
+19,22,22.475,88.025,Haora,Mahishrekha,0.0002,0.0004,0.0002,0.0003
+19,23,22.475,88.075,Haora,Birshibpur,0.0003,0.0004,0.0004,0.0006
+19,24,22.475,88.125,Haora,Benjanharia,0.0013,0.0014,0.0021,0.0031
+19,25,22.475,88.175,South 24 Parganas,Budge Budge So Hsgii,0.0015,0.0023,0.0032,0.0033
+19,26,22.475,88.225,South 24 Parganas,Nodakhali,0.0003,0.0005,0.0005,0.0007
+19,27,22.475,88.275,South 24 Parganas,Jairampur So Kolkata,0.0003,0.0005,0.0005,0.0007
+20,0,22.525,86.925,Pashchim Medinipur,,0.0001,0.0003,0.0003,0.0006
+20,1,22.525,86.975,Pashchim Medinipur,Dheko,0.0002,0.0004,0.0003,0.0005
+20,2,22.525,87.025,Pashchim Medinipur,Dheko,0.0001,0.0003,0.0004,0.0007
+20,3,22.525,87.075,Pashchim Medinipur,,0.0002,0.0003,0.0003,0.0005
+20,4,22.525,87.125,Pashchim Medinipur,Sabrakone,0.0001,0.0003,0.0004,0.0007
+20,5,22.525,87.175,Pashchim Medinipur,Sabrakone,0.0002,0.0003,0.0004,0.0007
+20,6,22.525,87.225,Pashchim Medinipur,,0.0002,0.0003,0.0003,0.0005
+20,7,22.525,87.275,Pashchim Medinipur,Godapeasal,0.0002,0.0004,0.0003,0.0005
+20,8,22.525,87.325,Pashchim Medinipur,Godapeasal,0.0008,0.0017,0.0022,0.0038
+20,9,22.525,87.375,Pashchim Medinipur,Godapeasal,0.0002,0.0003,0.0003,0.0005
+20,10,22.525,87.425,Pashchim Medinipur,Amritpur,0.0003,0.0006,0.0003,0.0005
+20,11,22.525,87.475,Pashchim Medinipur,Amritpur,0.0005,0.0005,0.0003,0.0005
+20,12,22.525,87.525,Pashchim Medinipur,,0.0003,0.0005,0.0003,0.0005
+20,13,22.525,87.575,Pashchim Medinipur,,0.0003,0.0005,0.0004,0.0007
+20,14,22.525,87.625,Pashchim Medinipur,,0.0003,0.0005,0.0003,0.0005
+20,15,22.525,87.675,Pashchim Medinipur,Chechua Gobinda Nagar,0.0003,0.0005,0.0002,0.0005
+20,16,22.525,87.725,Pashchim Medinipur,Chechua Gobinda Nagar,0.0005,0.0006,0.0003,0.0005
+20,17,22.525,87.775,Pashchim Medinipur,Khukurdaha,0.0003,0.0005,0.0002,0.0005
+20,18,22.525,87.825,Pashchim Medinipur,Sulani,0.0003,0.0005,0.0003,0.0006
+20,19,22.525,87.875,Pashchim Medinipur,Chitnan,0.0003,0.0004,0.0002,0.0004
+20,20,22.525,87.925,Haora,Chakur,0.0002,0.0006,0.0004,0.0007
+20,21,22.525,87.975,Haora,Sarda,0.0002,0.0006,0.0004,0.0007
+20,22,22.525,88.025,Haora,Dakshinmoyna,0.0003,0.0006,0.0003,0.0005
+20,23,22.525,88.075,Haora,Dasbhaga,0.0002,0.0006,0.0004,0.0007
+20,24,22.525,88.125,Haora,Betai,0.0002,0.0005,0.0003,0.0006
+20,25,22.525,88.175,Haora,Nalpur,0.0002,0.0005,0.0003,0.0006
+20,26,22.525,88.225,Haora,Baragarrah,0.0002,0.0006,0.0004,0.0038
+20,27,22.525,88.275,South 24 Parganas,Kcmills,0.0002,0.0004,0.0002,0.0003
+21,0,22.575,86.925,Pashchim Medinipur,,0.0002,0.0004,0.0004,0.0034
+21,1,22.575,86.975,Pashchim Medinipur,Mathurakati,0.0002,0.0004,0.0004,0.0005
+21,2,22.575,87.025,Pashchim Medinipur,Mathurakati,0.0006,0.0015,0.0021,0.0033
+21,3,22.575,87.075,Pashchim Medinipur,Bamal,0.0002,0.0003,0.0003,0.0005
+21,4,22.575,87.125,Pashchim Medinipur,Sabrakone,0.0001,0.0003,0.0003,0.0006
+21,5,22.575,87.175,Pashchim Medinipur,Sabrakone,0.0002,0.0003,0.0003,0.0005
+21,6,22.575,87.225,Pashchim Medinipur,,0.0002,0.0003,0.0003,0.0005
+21,7,22.575,87.275,Pashchim Medinipur,,0.0001,0.0003,0.0002,0.0003
+21,8,22.575,87.325,Pashchim Medinipur,Godapeasal,0.0001,0.0003,0.0004,0.0007
+21,9,22.575,87.375,Pashchim Medinipur,,0.0002,0.0003,0.0003,0.0005
+21,10,22.575,87.425,Pashchim Medinipur,Keshpur,0.0005,0.0005,0.0003,0.0005
+21,11,22.575,87.475,Pashchim Medinipur,Keshpur,0.0004,0.0006,0.0003,0.0005
+21,12,22.575,87.525,Pashchim Medinipur,,0.0003,0.0005,0.0004,0.0007
+21,13,22.575,87.575,Pashchim Medinipur,,0.0003,0.0005,0.0003,0.0006
+21,14,22.575,87.625,Pashchim Medinipur,,0.0003,0.0005,0.0004,0.0007
+21,15,22.575,87.675,Pashchim Medinipur,Chechua Gobinda Nagar,0.0003,0.0005,0.0003,0.0006
+21,16,22.575,87.725,Pashchim Medinipur,Bhuta,0.0003,0.0005,0.0003,0.0005
+21,17,22.575,87.775,Pashchim Medinipur,Natunbazar So Hooghly,0.0003,0.0005,0.0003,0.0005
+21,18,22.575,87.825,Pashchim Medinipur,Uttar Batora,0.0005,0.0005,0.0003,0.0005
+21,19,22.575,87.875,Haora,Kasmali,0.0003,0.0005,0.0004,0.0007
+21,20,22.575,87.925,Haora,Chandrapur,0.0003,0.0006,0.0003,0.0005
+21,21,22.575,87.975,Haora,Gazipur,0.0003,0.0006,0.0004,0.0007
+21,22,22.575,88.025,Haora,Rajabazar So Hooghly,0.0003,0.0006,0.0003,0.0005
+21,23,22.575,88.075,Haora,Gobindapur,0.0003,0.0006,0.0003,0.0005
+21,24,22.575,88.125,Haora,Siddheswar,0.0003,0.0006,0.0003,0.0005
+21,25,22.575,88.175,Haora,Nabghara,0.0003,0.0006,0.0004,0.0007
+21,26,22.575,88.225,Haora,Ramchandrapur Bo Sank,0.0014,0.0029,0.0032,0.0047
+21,27,22.575,88.275,Haora,Jagacha,0.0002,0.0004,0.0002,0.0003
+22,0,22.625,86.925,Pashchim Medinipur,,0.0002,0.0004,0.0004,0.0006
+22,1,22.625,86.975,Pashchim Medinipur,Mathurakati,0.0002,0.0003,0.0003,0.0005
+22,2,22.625,87.025,Pashchim Medinipur,Bamal,0.0006,0.0015,0.0017,0.0026
+22,3,22.625,87.075,Pashchim Medinipur,Bamal,0.0001,0.0003,0.0004,0.0007
+22,4,22.625,87.125,Pashchim Medinipur,,0.0001,0.0003,0.0002,0.0003
+22,5,22.625,87.175,Pashchim Medinipur,,0.0001,0.0003,0.0004,0.0007
+22,6,22.625,87.225,Pashchim Medinipur,,0.0001,0.0003,0.0002,0.0003
+22,7,22.625,87.275,Pashchim Medinipur,Routara,0.0001,0.0003,0.0003,0.0006
+22,8,22.625,87.325,Pashchim Medinipur,Shalboni,0.0006,0.0015,0.0016,0.0026
+22,9,22.625,87.375,Pashchim Medinipur,Shalboni,0.0001,0.0003,0.0004,0.0007
+22,10,22.625,87.425,Pashchim Medinipur,,0.0024,0.0028,0.0019,0.0032
+22,11,22.625,87.475,Pashchim Medinipur,Neradeul,0.0005,0.0006,0.0003,0.0005
+22,12,22.625,87.525,Pashchim Medinipur,Buriapat,0.0005,0.0006,0.0003,0.0005
+22,13,22.625,87.575,Pashchim Medinipur,Midnapore Dsb,0.0003,0.0006,0.0003,0.0005
+22,14,22.625,87.625,Pashchim Medinipur,,0.0005,0.0006,0.0003,0.0005
+22,15,22.625,87.675,Pashchim Medinipur,Daspur,0.0003,0.0005,0.0004,0.0007
+22,16,22.625,87.725,Pashchim Medinipur,Daspur,0.0003,0.0005,0.0002,0.0005
+22,17,22.625,87.775,Pashchim Medinipur,Natunbazar So Hooghly,0.0003,0.0005,0.0002,0.0005
+22,18,22.625,87.825,Hugli,Mar0Khana,0.0003,0.0005,0.0003,0.0006
+22,19,22.625,87.875,Hugli,Palaspai,0.0003,0.0005,0.0004,0.0007
+22,20,22.625,87.925,Haora,Dudsar,0.0003,0.0006,0.0003,0.0005
+22,21,22.625,87.975,Haora,Sonatala,0.0002,0.0006,0.0004,0.0007
+22,22,22.625,88.025,Haora,Penro,0.0003,0.0006,0.0003,0.0005
+22,23,22.625,88.075,Haora,Maju,0.0003,0.0006,0.0003,0.0005
+22,24,22.625,88.125,Haora,Garbalia,0.0003,0.0006,0.0003,0.0006
+22,25,22.625,88.175,Haora,Wadipur,0.0003,0.0006,0.0003,0.0005
+22,26,22.625,88.225,Haora,Bhandardaha,0.0003,0.0006,0.0003,0.0005
+22,27,22.625,88.275,Haora,Tentulkuli,0.0003,0.0006,0.0004,0.0007
+23,0,22.675,86.925,Bankura,U C Danga,0.0002,0.0004,0.0004,0.0005
+23,1,22.675,86.975,Bankura,Asansol,0.0002,0.0004,0.0003,0.0005
+23,2,22.675,87.025,Pashchim Medinipur,Asansol,0.0002,0.0004,0.0003,0.0005
+23,3,22.675,87.075,Pashchim Medinipur,,0.0001,0.0003,0.0002,0.0003
+23,4,22.675,87.125,Pashchim Medinipur,,0.0002,0.0003,0.0004,0.004
+23,5,22.675,87.175,Pashchim Medinipur,,0.0008,0.0017,0.0022,0.005
+23,6,22.675,87.225,Pashchim Medinipur,,0.0009,0.0019,0.003,0.005
+23,7,22.675,87.275,Pashchim Medinipur,Routara,0.0002,0.0003,0.0003,0.0005
+23,8,22.675,87.325,Pashchim Medinipur,Routara,0.0005,0.0016,0.0024,0.0039
+23,9,22.675,87.375,Pashchim Medinipur,,0.0001,0.0003,0.0003,0.0006
+23,10,22.675,87.425,Pashchim Medinipur,,0.0003,0.0005,0.0002,0.0005
+23,11,22.675,87.475,Pashchim Medinipur,Buriapat,0.0003,0.0006,0.0003,0.0006
+23,12,22.675,87.525,Pashchim Medinipur,Midnapore Dsb,0.0028,0.0041,0.0029,0.0063
+23,13,22.675,87.575,Pashchim Medinipur,Midnapore Dsb,0.0003,0.0006,0.0003,0.0006
+23,14,22.675,87.625,Pashchim Medinipur,,0.0003,0.0006,0.0003,0.0006
+23,15,22.675,87.675,Pashchim Medinipur,Ghatal,0.0003,0.0006,0.0003,0.0006
+23,16,22.675,87.725,Pashchim Medinipur,Ghatal,0.0003,0.0005,0.0003,0.0006
+23,17,22.675,87.775,Pashchim Medinipur,Laudangri,0.0005,0.0006,0.0003,0.0005
+23,18,22.675,87.825,Hugli,Nandanpur,0.0003,0.0005,0.0004,0.0007
+23,19,22.675,87.875,Hugli,Harishchak,0.0005,0.0006,0.0003,0.0027
+23,20,22.675,87.925,Hugli,Uttar Mansri,0.0003,0.0006,0.0003,0.0028
+23,21,22.675,87.975,Haora,Chingra,0.0002,0.0006,0.0004,0.0038
+23,22,22.675,88.025,Haora,Sibnarayanchak,0.0003,0.0006,0.0003,0.0005
+23,23,22.675,88.075,Haora,Chaknan,0.0003,0.0006,0.0003,0.0007
+23,24,22.675,88.125,Haora,Bargachia,0.0003,0.0006,0.0003,0.0033
+23,26,22.675,88.225,Hugli,Parbatipur,0.0012,0.003,0.0018,0.0029
+23,27,22.675,88.275,Hugli,Mrigala,0.0003,0.0006,0.0003,0.0005

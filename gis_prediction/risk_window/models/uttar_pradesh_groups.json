@@ -1,0 +1,35 @@
+{
+ "validated_on": 2024,
+ "base": {
+  "catch@50": 0.16193386912345886,
+  "avg_precision": 0.20916918995943823
+ },
+ "tried": {
+  "festival": {
+   "catch@50": 0.16432341933250427,
+   "avg_precision": 0.21667286212492434,
+   "kept": false
+  },
+  "noaa21": {
+   "catch@50": 0.16421228647232056,
+   "avg_precision": 0.21009958319929634,
+   "kept": false
+  },
+  "intensity": {
+   "catch@50": 0.16160044074058533,
+   "avg_precision": 0.21102660915467134,
+   "kept": false
+  },
+  "modis": {
+   "catch@50": 0.1635454297065735,
+   "avg_precision": 0.20809540377805802,
+   "kept": false
+  },
+  "wind_dir": {
+   "catch@50": 0.16432341933250427,
+   "avg_precision": 0.21745270029611205,
+   "kept": false
+  }
+ },
+ "kept": []
+}

@@ -1,0 +1,45 @@
+SATARK Risk Window · Rajasthan · Fri 06 Nov 2026
+Yesterday: of the 50 places we flagged, satellites saw fire in 15 (30%). They held 29% of all fires seen.
+Expected today: about 10606022009989517312 fire detections. Most in Jodhpur, Jaisalmer, Sirohi, Bikaner.
+
+Team 1
+  1. near Rathikhara, Hanumangarh · risk 75% · https://maps.google.com/?q=29.5250,74.5250
+  2. near Jhamber, Hanumangarh · risk 64% · https://maps.google.com/?q=29.5250,74.4250
+  3. near Amarpura Rathan, Hanumangarh · risk 71% · https://maps.google.com/?q=29.4250,74.0250
+  4. near Ramsara Jakhran, Ganganagar · risk 42% · https://maps.google.com/?q=29.4750,73.8750
+Team 2
+  1. near Bilochia, Ganganagar · risk 62% · https://maps.google.com/?q=29.2250,73.5250
+  2. near Jetsar, Ganganagar · risk 49% · https://maps.google.com/?q=29.3250,73.6750
+  3. near Matunda, Bundi · risk 39% · https://maps.google.com/?q=25.4250,75.7250
+  4. near Alphanagar, Bundi · risk 37% · https://maps.google.com/?q=25.2750,75.6750
+Team 3
+  1. Bundi · risk 62% · https://maps.google.com/?q=25.3750,75.8250
+  2. near Hathanapur, Bundi · risk 44% · https://maps.google.com/?q=25.3250,75.9750
+  3. near Kishan Pura Takiya, Kota · risk 31% · https://maps.google.com/?q=25.2250,75.9250
+  4. near Polai Kalan, Kota · risk 59% · https://maps.google.com/?q=25.1750,76.0250
+Team 4
+  1. near Daulatpura, Sawai Madhopur · risk 52% · https://maps.google.com/?q=25.8750,76.5250
+  2. near Chhapol, Kota · risk 50% · https://maps.google.com/?q=25.7750,76.5250
+  3. near Luhawad, Kota · risk 48% · https://maps.google.com/?q=25.4750,76.4750
+  4. near Jhali Ji Ka Barana, Bundi · risk 37% · https://maps.google.com/?q=25.4750,76.0250
+Team 5
+  1. near Khatka, Baran · risk 49% · https://maps.google.com/?q=25.1750,77.0250
+  2. near Mahodra, Baran · risk 37% · https://maps.google.com/?q=25.0750,76.9750
+  3. near Badipura, Baran · risk 38% · https://maps.google.com/?q=24.8750,76.8750
+  4. near Deoli, Kota · risk 46% · https://maps.google.com/?q=24.9750,76.1250
+
+These 20 stops cover about 0% of today's expected fires.
+
+Next days: tomorrow about 356 detections; day after about 6449829 detections
+Support first. Enforcement last.
+
+सतर्क रिस्क विंडो
+आज पराली जलाने का खतरा सबसे ज़्यादा यहाँ है: Jodhpur, Jaisalmer, Sirohi, Bikaner
+टीम 1: Rathikhara (75%) → Jhamber (64%) → Amarpura Rathan (71%) → Ramsara Jakhran (42%)
+टीम 2: Bilochia (62%) → Jetsar (49%) → Matunda (39%) → Alphanagar (37%)
+टीम 3: Bundi (62%) → Hathanapur (44%) → Kishan Pura Takiya (31%) → Polai Kalan (59%)
+टीम 4: Daulatpura (52%) → Chhapol (50%) → Luhawad (48%) → Jhali Ji Ka Barana (37%)
+टीम 5: Khatka (49%) → Mahodra (37%) → Badipura (38%) → Deoli (46%)
+पहले मदद, सज़ा बाद में। किसान को मशीन या डीकंपोज़र के बारे में बताइए।
+
+Satellites miss most fires lit after about 1:30 pm, so real numbers are higher.
