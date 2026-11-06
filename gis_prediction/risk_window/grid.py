@@ -4,7 +4,7 @@ import numpy as np
 import pandas as pd
 from shapely.geometry import shape, Point
 from shapely.strtree import STRtree
-from config import ROOT, CELL, REGIONS, WX_STEP
+from config import ROOT, CELL, REGIONS, wx_step
 
 
 def cell_of(lat, lon, bbox):
@@ -37,8 +37,9 @@ def build_cells(region_name):
             rows.append((iy, ix, round(lat, 4), round(lon, 4), d, st))
     cells = pd.DataFrame(rows, columns=["iy", "ix", "lat", "lon", "district", "state"])
     # nearest weather point
-    cells["wlat"] = (np.floor((cells.lat - s) / WX_STEP) * WX_STEP + s + WX_STEP / 2).round(3)
-    cells["wlon"] = (np.floor((cells.lon - w) / WX_STEP) * WX_STEP + w + WX_STEP / 2).round(3)
+    st = wx_step(region_name)
+    cells["wlat"] = (np.floor((cells.lat - s) / st) * st + s + st / 2).round(3)
+    cells["wlon"] = (np.floor((cells.lon - w) / st) * st + w + st / 2).round(3)
     cells.index = pd.MultiIndex.from_arrays([cells.iy, cells.ix], names=["iy", "ix"])
     return cells
 
@@ -57,3 +58,8 @@ def outlines(region_name):
             continue
         out.append(f)
     return out
+
+
+def wx_points_for(cells):
+    """The weather points the model actually needs (one per wx_step square that has a cell)."""
+    return sorted(set(zip(cells.wlat.round(3), cells.wlon.round(3))))

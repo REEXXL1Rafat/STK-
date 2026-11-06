@@ -1,7 +1,11 @@
-"""Builds out/index.html: one self-contained page (no internet needed once built)."""
-import json
+"""Builds out/index.html and out/data/<region>.json.
+
+The pilot regions are written into the page itself, so it opens even without internet. The big
+states are separate files the page loads when you pick them (that part needs the web link).
+"""
+import json, os
 from shapely.geometry import shape
-from config import OUT, REGIONS
+from config import OUT, REGIONS, SHOW
 import grid
 
 import base64
@@ -26,18 +30,25 @@ def region_geo(region):
 
 
 def build(latest_by_region):
-    data = {}
-    for r, latest in latest_by_region.items():
-        data[r] = latest | {"geo": region_geo(r)}
     OUT.mkdir(parents=True, exist_ok=True)
-    html = TEMPLATE.read_text().replace("/*__DATA__*/null", json.dumps(data, separators=(",", ":")))
+    (OUT / "data").mkdir(exist_ok=True)
+    inline, meta = {}, []
+    for r in [x for x in SHOW if x in latest_by_region]:
+        d = latest_by_region[r] | {"geo": region_geo(r)}
+        js = json.dumps(d, separators=(",", ":"))
+        (OUT / "data" / f"{r}.json").write_text(js)
+        inline[r] = d if not REGIONS[r].get("active_only") else None
+        meta.append([r, d["label"]])
+    cfg = {"regions": meta, "voice": os.environ.get("SATARK_VOICE_URL", "").rstrip("/")}
+    html = TEMPLATE.read_text().replace("/*__DATA__*/null", json.dumps(inline, separators=(",", ":")))
+    html = html.replace("/*__CFG__*/null", json.dumps(cfg, separators=(",", ":")))
     html = html.replace("<!--__LOGO__-->", logo_symbol())
     for key, name in (("__BANNER__", "banner.webp"), ("__DIVA__", "harvester.webp")):
         f = ASSETS / name
         uri = "data:image/webp;base64," + base64.b64encode(f.read_bytes()).decode() if f.exists() else ""
         html = html.replace(key, uri)
     (OUT / "index.html").write_text(html)
-    print("dashboard:", OUT / "index.html")
+    print("dashboard:", OUT / "index.html", f"({len(html) // 1024} KB, {len(meta)} regions)")
 
 
 def logo_symbol():

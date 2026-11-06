@@ -1,19 +1,21 @@
-"""Pull past burning seasons once, so the model has something to learn from.
+"""Pull past burning seasons, so the model has something to learn from.
 
-    python fetch_history.py YOUR_MAP_KEY                 # every region, 2020 to now
-    python fetch_history.py YOUR_MAP_KEY punjab_haryana  # one region
-    python fetch_history.py --sensors=MODIS              # add one sensor to what's already there
-    (the key can also come from key.txt or the FIRMS_MAP_KEY environment variable)
+    python fetch_history.py                      # every region: download only what's missing
+    python fetch_history.py uttar_pradesh        # one region
+    python fetch_history.py --sensors=MODIS      # only this sensor
+    python fetch_history.py --force              # download everything again
+    (the NASA key comes from the FIRMS_MAP_KEY environment variable, key.txt, or the first argument)
 
 Get a free MAP_KEY in a minute at https://firms.modaps.eosdis.nasa.gov/api/map_key/
-It resumes where it stopped if the connection drops. The first run takes 30 to 60 minutes;
-running it again after an update only downloads what's new.
-Writes data/fires_<region>.csv.gz and data/weather_<region>.csv.gz
+What has been downloaded is listed in data/fetched.json, so a run that stops halfway
+picks up where it left off. Writes data/fires_<region>.csv.gz and data/weather_<region>.csv.gz
 """
 import csv, gzip, json, os, sys, time
 from datetime import date, timedelta
-from config import DATA, REGIONS, FIRST_YEAR, SENSORS, WX_STEP, WX_DAILY
+from config import DATA, REGIONS, ORDER, FIRST_YEAR, SENSORS, WX_DAILY, wx_step
 import sources
+
+MANIFEST = DATA / "fetched.json"
 
 
 def season_window(region, year, today):
@@ -23,10 +25,72 @@ def season_window(region, year, today):
     return start, min(end, today - timedelta(days=1))
 
 
+def read_csv_gz(path):
+    if not path.exists():
+        return []
+    with gzip.open(path, "rt", newline="") as fh:
+        return list(csv.DictReader(fh))
+
+
+def write_csv_gz(path, rows, fields=None):
+    fields = fields or sorted({k for r in rows for k in r}, key=lambda k: (k not in ("wlat", "wlon", "date", *sources.KEEP), k))
+    with gzip.open(path, "wt", newline="") as fh:
+        w = csv.DictWriter(fh, fieldnames=fields, extrasaction="ignore")
+        w.writeheader(); w.writerows(rows)
+
+
+def wx_key(name):
+    return f"wx{len(WX_DAILY)}@{wx_step(name)}"
+
+
+def load_manifest(today):
+    """What's already here. For data from before this file existed, work it out from the files."""
+    if MANIFEST.exists():
+        return json.loads(MANIFEST.read_text())
+    m = {"fires": {}, "weather": {}}
+    for name, reg in REGIONS.items():
+        rows = read_csv_gz(DATA / f"fires_{name}.csv.gz")
+        if rows:
+            got = {}
+            for r in rows:
+                fam = next((s for s in SENSORS if r.get("product", "").startswith(s)), None)
+                if fam:
+                    got.setdefault(fam, set()).add(int(r["acq_date"][:4]))
+            seasons = {}
+            for fam, ys in got.items():   # a season can run into January, so count it by its start year
+                seasons[fam] = sorted({y for y in range(FIRST_YEAR, today.year + 1) if y in ys or y + 1 in ys})
+            m["fires"][name] = seasons
+        wx = read_csv_gz(DATA / f"weather_{name}.csv.gz")
+        if wx and all(k in wx[0] for k in WX_DAILY):
+            m["weather"][name] = {wx_key(name): sorted({int(r["date"][:4]) for r in wx})}
+    return m
+
+
+def save_manifest(m):
+    MANIFEST.write_text(json.dumps(m, indent=1, sort_keys=True))
+
+
+def weather_points(name, fires_rows):
+    """Every weather point in the box, or for big states only those near cells that have burned before."""
+    reg = REGIONS[name]
+    if not reg.get("active_only"):
+        return sources.wx_points(reg["bbox"], wx_step(name))
+    import pandas as pd
+    import grid, features as F
+    fires = F.load_fires_frame(pd.DataFrame(fires_rows))
+    years = list(range(FIRST_YEAR, date.today().year + 1))
+    static = F.static_cells(fires, name)
+    cells = F.keep_active(grid.build_cells(name), F.active_cells(fires, name, years, static))
+    pts = grid.wx_points_for(cells)
+    print(f"  {len(cells):,} cells have burned before; {len(pts)} weather points")
+    return pts
+
+
 def main():
     keyfile = DATA.parent / "key.txt"
     args = [a for a in sys.argv[1:] if not a.startswith("--")]
     only = next((a.split("=", 1)[1].split(",") for a in sys.argv[1:] if a.startswith("--sensors=")), None)
+    force = "--force" in sys.argv
     if args and args[0] not in REGIONS:
         key, names = args[0], args[1:]
     elif os.environ.get("FIRMS_MAP_KEY"):
@@ -35,23 +99,27 @@ def main():
         key, names = keyfile.read_text().strip(), args
     else:
         print(__doc__); sys.exit(1)
-    names = names or list(REGIONS)
+    names = names or [r for r in ORDER if r in REGIONS]
     sensors = [s for s in SENSORS if not only or s in only]
     today = date.today()
     DATA.mkdir(exist_ok=True)
     cache = DATA / "cache"; cache.mkdir(exist_ok=True)
+    man = load_manifest(today)
     avail = sources.firms_availability(key)
-    print("FIRMS products:", ", ".join(f"{k} {v[0]}..{v[1]}" for k, v in sorted(avail.items()) if k.startswith("VIIRS")))
+    print("FIRMS products:", ", ".join(f"{k} {v[0]}..{v[1]}" for k, v in sorted(avail.items()) if k.startswith(("VIIRS", "MODIS"))))
 
     for name in names:
         reg = REGIONS[name]
-        rows, wx = [], []
-        for year in range(FIRST_YEAR, today.year + 1):
-            a, b = season_window(reg, year, today)
-            if a > b:
-                continue
-            print(f"\n{reg['label']} {year}: {a} to {b}")
-            for sensor in sensors:
+        years = [y for y in range(FIRST_YEAR, today.year + 1) if season_window(reg, y, today)[0] <= season_window(reg, y, today)[1]]
+        have = man["fires"].setdefault(name, {})
+        todo = [(s, y) for s in sensors for y in years if force or y not in have.get(s, [])]
+        out = DATA / f"fires_{name}.csv.gz"
+        rows = read_csv_gz(out)
+        if todo:
+            print(f"\n{reg['label']}: {len(todo)} sensor-seasons to download")
+            new = []
+            for sensor, year in todo:
+                a, b = season_window(reg, year, today)
                 for start, n in sources.daterange(a, b, 5):
                     prod = sources.pick_product(sensor, start, avail)
                     if not prod:
@@ -63,39 +131,47 @@ def main():
                         got = sources.firms_area(key, prod, reg["bbox"], start, n)
                         f.write_text(json.dumps(got))
                         time.sleep(0.4)
-                    rows += got
-                print(f"  {sensor}: {sum(1 for r in rows if r['product'].startswith(sensor) and r['acq_date'][:4] in (str(year), str(year + 1)))} points so far", flush=True)
-            wf = cache / f"{name}_wx{len(WX_DAILY)}_{year}.json"   # new weather fields mean a fresh download
-            if wf.exists():
-                wx += json.loads(wf.read_text())
-            else:
-                got = sources.weather_history(sources.wx_points(reg["bbox"], WX_STEP), a, b, WX_DAILY)
-                wf.write_text(json.dumps(got)); wx += got
-            print(f"  weather: {len(wx)} point-days so far")
+                    new += got
+                print(f"  {sensor} {year}: {len(new):,} new points so far", flush=True)
+            seen, uniq = set(), []
+            for r in rows + new:   # SP and NRT can overlap at the edges
+                k = (r["latitude"], r["longitude"], r["acq_date"], r["acq_time"], r["satellite"])
+                if k not in seen:
+                    seen.add(k); uniq.append(r)
+            rows = uniq
+            write_csv_gz(out, rows, sources.KEEP + ["product"])
+            for sensor, year in todo:
+                have[sensor] = sorted(set(have.get(sensor, [])) | {year})
+            save_manifest(man)
+            print(f"  saved {len(rows):,} fire points to {out.name}")
 
-        out = DATA / f"fires_{name}.csv.gz"
-        if only and out.exists():   # adding a sensor: keep what's already downloaded
-            with gzip.open(out, "rt", newline="") as fh:
-                rows = list(csv.DictReader(fh)) + rows
-        seen = set(); uniq = []
-        for r in rows:   # SP and NRT can overlap at the edges
-            k = (r["latitude"], r["longitude"], r["acq_date"], r["acq_time"], r["satellite"])
-            if k not in seen:
-                seen.add(k); uniq.append(r)
-        with gzip.open(out, "wt", newline="") as fh:
-            w = csv.DictWriter(fh, fieldnames=list(uniq[0].keys()) if uniq else sources.KEEP + ["product"])
-            w.writeheader(); w.writerows(uniq)
-        wout = DATA / f"weather_{name}.csv.gz"
-        with gzip.open(wout, "wt", newline="") as fh:
-            w = csv.DictWriter(fh, fieldnames=list(wx[0].keys()))
-            w.writeheader(); w.writerows(wx)
-        print(f"\nSaved {len(uniq):,} fire points to {out.name} and {len(wx):,} weather rows to {wout.name}")
-    import zipfile
-    bundle = DATA.parent / "SEND_THIS_TO_CLAUDE.zip"
-    with zipfile.ZipFile(bundle, "w") as z:
-        for f in sorted(DATA.glob("*_*.csv.gz")):
-            z.write(f, f.name)
-    print(f"\nDone. Send this one file back: {bundle}")
+        wk = wx_key(name)
+        whave = man["weather"].setdefault(name, {})
+        wtodo = [y for y in years if force or y not in whave.get(wk, [])]
+        if wtodo:
+            pts = weather_points(name, rows)
+            wout = DATA / f"weather_{name}.csv.gz"
+            old = [r for r in read_csv_gz(wout) if wk in whave]   # a new field list or grid means starting over
+            new = []
+            for year in wtodo:
+                a, b = season_window(reg, year, today)
+                wf = cache / f"{name}_{wk}_{year}_{len(pts)}.json"
+                if wf.exists():
+                    got = json.loads(wf.read_text())
+                else:
+                    got = sources.weather_history(pts, a, b, WX_DAILY)
+                    wf.write_text(json.dumps(got))
+                new += got
+                print(f"  weather {year}: {len(got):,} point-days", flush=True)
+            merged = {(str(r["wlat"]), str(r["wlon"]), r["date"]): r for r in old + new}
+            write_csv_gz(wout, list(merged.values()))
+            prev = set(whave.get(wk, [])) if old else set()
+            whave.clear(); whave[wk] = sorted(prev | set(wtodo))
+            save_manifest(man)
+            print(f"  saved {len(merged):,} weather rows to {wout.name}")
+        if not todo and not wtodo:
+            print(f"{reg['label']}: nothing new to download")
+    print("\nDone.")
 
 
 if __name__ == "__main__":

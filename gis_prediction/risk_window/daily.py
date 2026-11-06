@@ -12,8 +12,8 @@ import argparse, gzip, csv, json, os, pickle, urllib.parse, urllib.request
 from datetime import date, datetime, timedelta, timezone
 import numpy as np
 import pandas as pd
-from config import ROOT, DATA, OUT, MODELS, REGIONS, CELL, SENSORS, WX_STEP, WX_DAILY
-import grid, features as F, dispatch, brief, sources
+from config import ROOT, DATA, OUT, MODELS, REGIONS, ORDER, CELL, SENSORS, WX_DAILY
+import grid, features as F, dispatch, brief, sources, smoke
 
 IST = timezone(timedelta(hours=5, minutes=30))
 
@@ -44,8 +44,8 @@ def fetch_live(region, key):
     return len(rows)
 
 
-def fetch_weather(region):
-    pts = sources.wx_points(REGIONS[region]["bbox"], WX_STEP)
+def fetch_weather(region, cells):
+    pts = grid.wx_points_for(cells)
     wx = pd.DataFrame(sources.weather_forecast(pts, WX_DAILY))
     path = DATA / f"wxlive_{region}.csv.gz"
     old = pd.read_csv(path) if path.exists() else pd.DataFrame()
@@ -125,6 +125,42 @@ def score_day(g, k=50):
             "top_district_actual": int(lead.actual.iloc[0]) if len(lead) and tot else None}
 
 
+def green_villages(region, year, today, days, cube, fires, static, cells, cname):
+    """Places that burned by this date last season and show no fires so far this season. Celebrate them."""
+    di = days.index(today)
+    if di < 7:
+        return None
+    shp = F.grid_shape(region)
+    ldays, lcube = F.fire_cube(fires, region, year - 1, shp, static=static)
+    if not lcube.sum():
+        return None
+    now, last = cube[:di].sum(0), lcube[:di].sum(0)
+    iy, ix = cells.iy.to_numpy(), cells.ix.to_numpy()
+    c = cells.assign(now=now[iy, ix], last=last[iy, ix])
+    dist = c.groupby("district").agg(last=("last", "sum"), now=("now", "sum"))
+    dist = dist[dist["last"] >= 5].sort_values("last", ascending=False).head(14)
+    g = c[(c["last"] >= 3) & (c["now"] == 0)].sort_values("last", ascending=False)
+    vill, seen = [], set()
+    for r in g.itertuples():
+        name = cname.get((r.iy, r.ix))
+        if not name or (name, r.district) in seen:
+            continue
+        seen.add((name, r.district))
+        vill.append([name, r.district, int(r.last), round(float(r.lat), 3), round(float(r.lon), 3)])
+        if len(vill) >= 30:
+            break
+    return {"last_season": year - 1, "through": str(today - timedelta(days=1)), "season_day": di,
+            "now_total": int(c.now.sum()), "last_total": int(c["last"].sum()), "green_cells": int(len(g)),
+            "districts": [[d, int(r["last"]), int(r["now"])] for d, r in dist.iterrows()], "villages": vill}
+
+
+def read_json(path):
+    try:
+        return json.loads(path.read_text()) if path.exists() else None
+    except ValueError:
+        return None
+
+
 def telegram(text, region):
     tok = os.environ.get("TELEGRAM_TOKEN")
     chat = os.environ.get(f"TELEGRAM_CHAT_{region.upper()}") or os.environ.get("TELEGRAM_CHAT")
@@ -140,11 +176,14 @@ def run_region(region, today, teams, stops, backfill, live):
     if not mp.exists():
         print(f"{region}: no model yet, run train.py first"); return None
     model = pickle.loads(mp.read_bytes())
+    cells = grid.build_cells(region)
+    if model.get("cells"):
+        cells = F.keep_active(cells, set(map(tuple, model["cells"])))
     key = os.environ.get("FIRMS_MAP_KEY")
     if live and key:
         try:
             print(f"{region}: {fetch_live(region, key)} new satellite points")
-            fetch_weather(region)
+            fetch_weather(region, cells)
         except Exception as e:  # keep going with what we have
             print(f"{region}: live fetch failed ({e}), using stored data")
     fires, wx = load_all(region)
@@ -152,14 +191,16 @@ def run_region(region, today, teams, stops, backfill, live):
     harvest = None
     if hp.exists():
         harvest = pd.read_csv(hp); harvest["date"] = pd.to_datetime(harvest["date"]).dt.date
-    cells = grid.build_cells(region)
     places = load_places(region)
     cname = name_cells(cells, places)
     od = OUT / region; od.mkdir(parents=True, exist_ok=True)
     rows, cube, days = predict_season(region, today, fires, wx, cells, model, harvest, backfill)
     report = json.loads((MODELS / f"{region}_report.json").read_text()) if (MODELS / f"{region}_report.json").exists() else None
+    extras = {"replay": read_json(MODELS / f"{region}_replay.json"), "people": read_json(DATA / f"people_{region}.json"),
+              "bbox": reg["bbox"], "cell": CELL, "lang": reg["lang"],
+              "season": [f"{m:02d}-{d:02d}" for m, d in reg["season"]]}
     if rows is None:
-        latest = {"region": region, "label": reg["label"], "date": str(today), "in_season": False, "report": report}
+        latest = {"region": region, "label": reg["label"], "date": str(today), "in_season": False, "report": report} | extras
         (od / "latest.json").write_text(json.dumps(latest)); return latest
 
     rows["place"] = [cname.get((a, b), "") for a, b in zip(rows.iy, rows.ix)]
@@ -180,7 +221,7 @@ def run_region(region, today, teams, stops, backfill, live):
     if new:
         sb = pd.concat([sb, pd.DataFrame(new)], ignore_index=True).drop_duplicates("date", keep="last").sort_values("date")
         sb.to_csv(sb_path, index=False)
-    yday = sb[sb.date == str(today - timedelta(days=1))].astype(object).where(lambda x: pd.notna(x), None).to_dict("records")
+    yday = sb[sb.date == str(today - timedelta(days=1))].astype(object).where(lambda x: pd.notna(x), None).to_dict("records") if "date" in sb else []
     yscore = yday[0] if yday else None
 
     plan, summary = dispatch.plan(pred, teams, stops)
@@ -195,6 +236,9 @@ def run_region(region, today, teams, stops, backfill, live):
         ys, xs = np.nonzero(cube[di - 1])
         inside = set(zip(cells.iy, cells.ix))
         yfires = [[round(s + (a + .5) * CELL, 3), round(w + (b + .5) * CELL, 3), int(cube[di - 1, a, b])] for a, b in zip(ys, xs) if (a, b) in inside]
+    static = set(map(tuple, model.get("static", [])))
+    green = green_villages(region, season_of(region, today)[0], today, days, cube, fires, static, cells, cname)
+    smoke_fc = smoke.forecast(region, today, pred, live=live)
     dn = sorted(pred.district.unique()); di_of = {d: i for i, d in enumerate(dn)}
     labels = {1: "today", 2: "tomorrow", 3: "day after"}
 
@@ -222,7 +266,8 @@ def run_region(region, today, teams, stops, backfill, live):
         "summary": summary, "brief": text, "report": report, "teams_default": teams, "stops_default": stops,
         "model": {"seasons": model["seasons"], "trained": model["trained"], "signals": model.get("groups", [])},
         "generated": datetime.now(IST).strftime("%d %b %Y, %H:%M IST"),
-    }
+        "green": green, "smoke": smoke_fc,
+    } | extras
     (od / "latest.json").write_text(json.dumps(latest))
     print(f"{region}: {today} expected {summary.get('expected_fires_total')} detections; brief at {od / f'brief_{today}.txt'}")
     if live:
@@ -244,7 +289,7 @@ def main():
     a = ap.parse_args()
     today = date.fromisoformat(a.date) if a.date else datetime.now(IST).date()
     out = {}
-    for r in a.region or list(REGIONS):
+    for r in a.region or [x for x in ORDER if x in REGIONS]:
         res = run_region(r, today, a.teams, a.stops, a.backfill, not a.offline)
         if res:
             out[r] = res

@@ -6,13 +6,21 @@ FIRMS = "https://firms.modaps.eosdis.nasa.gov/api"
 KEEP = ["latitude", "longitude", "acq_date", "acq_time", "satellite", "confidence", "frp", "daynight"]
 
 
-def _get(url, tries=4, timeout=90):
+def _get(url, tries=8, timeout=90):
     last = None
     for i in range(tries):
         try:
             req = urllib.request.Request(url, headers={"User-Agent": "satark-risk-window/1.0"})
             with urllib.request.urlopen(req, timeout=timeout) as r:
                 return r.read().decode("utf-8", "replace")
+        except urllib.error.HTTPError as e:
+            last = e
+            if e.code == 429:            # free services limit calls per minute and per hour: wait it out
+                time.sleep(min(60 * 2 ** i, 900))
+            elif e.code >= 500:
+                time.sleep(5 + 10 * i)
+            else:
+                break
         except (urllib.error.URLError, TimeoutError) as e:
             last = e
             time.sleep(2 + 3 * i)

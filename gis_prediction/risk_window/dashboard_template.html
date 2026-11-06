@@ -7,7 +7,7 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..100,500..900&family=IBM+Plex+Mono:wght@500&family=IBM+Plex+Sans:wght@400;500;600&family=Kalam:wght@400;700&family=Tiro+Bangla&family=Noto+Sans+Gurmukhi:wght@400;600&family=Noto+Sans+Devanagari:wght@400;600&family=Noto+Sans+Bengali:wght@400;600&display=swap">
 <style>
 /* SATARK riso look: cream paper, blue + red + yellow inks, a little grain */
-.viz-root{
+:root,.viz-root{
   --surface:#EFE6D2; --panel:#F8F2E4; --ink:#1B2747; --ink2:#3F5285; --muted:#6F7480; --line:#D9CDB2; --rule:#C3B796;
   --brand:#2F4A8A; --red:#D7261E; --yel:#FFB511; --s1:#2a78d6; --s2:#eb6834; --wa:#1a7f45;
   --scr:'IBM Plex Sans','Noto Sans Gurmukhi','Noto Sans Devanagari','Noto Sans Bengali',system-ui,sans-serif;
@@ -132,6 +132,53 @@ details summary{cursor:pointer;color:var(--brand);font-size:13px;margin-top:8px}
 .footbar a{color:var(--yel);font:700 15px 'Archivo',sans-serif;text-decoration:none}
 .credits{font-size:11.5px;color:#C9C3B4;margin-top:10px}
 .credits a{color:#E4DCC8}
+.wide{margin-top:22px}
+.rp{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:20px;align-items:start}
+.rp svg{width:100%;height:auto;display:block;max-height:70vh}
+.rpbar{display:flex;align-items:center;gap:10px;margin-top:10px;flex-wrap:wrap}
+.rpbar input[type=range]{flex:1;min-width:160px}
+.rpbtn{font:800 15px 'Archivo',sans-serif;border:2px solid var(--red);background:var(--red);color:#fff;border-radius:999px;padding:7px 16px;cursor:pointer;min-width:92px}
+.rpbtn.sec{background:transparent;color:var(--red);min-width:0;padding:6px 12px;font-size:13px}
+.rpdate{font:900 34px/1 'Archivo',sans-serif;font-stretch:80%;color:var(--brand)}
+.rpstat{display:grid;grid-template-columns:auto 1fr;gap:6px 12px;align-items:baseline;margin-top:14px;font-size:14px}
+.rpstat b{font:900 26px 'Archivo',sans-serif;color:var(--ink);text-align:right}
+.rpsum{margin-top:14px;background:#fff;border-left:4px solid var(--yel);border-radius:0 8px 8px 0;padding:10px 12px;font-size:14.5px}
+.rpsum b{color:var(--red)}
+.rpkey{display:flex;gap:14px;flex-wrap:wrap;font-size:12.5px;color:var(--ink2);margin-top:10px}
+.rpkey i{display:inline-block;width:12px;height:12px;vertical-align:-1px;margin-right:4px}
+.row2b{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:22px}
+.band{font:700 12px 'IBM Plex Sans',sans-serif;padding:2px 7px;border-radius:999px;color:#fff;white-space:nowrap}
+.b-good{background:#5d7a3a}.b-satisfactory{background:#8a9a2c}.b-moderate{background:#b4860d}.b-poor{background:#c2611d}.b-verypoor{background:#a83d14}.b-severe{background:#6e2408}
+.gv{display:flex;flex-wrap:wrap;gap:6px;margin:10px 0 12px}
+.gv span{background:#E3EED6;color:#2F5A1F;border-radius:999px;padding:4px 11px;font-size:13.5px}
+.gv small{color:#5d7a3a}
+.people{margin-top:12px;padding-top:10px;border-top:1px dashed var(--rule);font-size:14px}
+.people b{font:900 24px 'Archivo',sans-serif;color:var(--red)}
+.chg-dn{color:#2F7A2F;font-weight:700}.chg-up{color:#B4300F;font-weight:700}
+.loading{padding:60px 20px;text-align:center;color:var(--ink2);font-size:17px}
+/* voice */
+.ask{position:fixed;right:22px;bottom:22px;z-index:40;display:flex;align-items:center;gap:10px;border:0;cursor:pointer;background:var(--brand);color:#EFE6D2;border-radius:999px;padding:8px 18px 8px 8px;font:800 15px 'Archivo',sans-serif;box-shadow:0 6px 18px rgba(27,39,71,.35)}
+.ask .dot{width:42px;height:42px;border-radius:50%;background:radial-gradient(circle at 35% 35%,#FFE08A,#FFB511 40%,#D7261E 100%);box-shadow:0 0 0 0 rgba(255,181,17,.6);animation:askp 2.4s infinite}
+@keyframes askp{0%{box-shadow:0 0 0 0 rgba(255,181,17,.55)}70%{box-shadow:0 0 0 14px rgba(255,181,17,0)}100%{box-shadow:0 0 0 0 rgba(255,181,17,0)}}
+.vo{position:fixed;inset:0;z-index:50;background:rgba(17,26,51,.92);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;color:#EFE6D2;padding:24px}
+.vo[hidden]{display:none}
+.orb{width:190px;height:190px;border-radius:50%;position:relative;background:radial-gradient(circle at 38% 32%,#FFF2C2 0%,#FFB511 28%,#D7261E 62%,#2F4A8A 100%);box-shadow:0 0 60px rgba(255,181,17,.45),inset 0 0 40px rgba(47,74,138,.6);transition:transform .08s linear}
+.orb::before,.orb::after{content:'';position:absolute;inset:-18px;border-radius:50%;border:2px solid rgba(255,181,17,.35);animation:ring 3s infinite}
+.orb::after{inset:-38px;border-color:rgba(239,230,210,.18);animation-delay:1.2s}
+@keyframes ring{0%{transform:scale(.92);opacity:.9}100%{transform:scale(1.12);opacity:0}}
+.vo .vs{font:700 22px 'Kalam',cursive;color:var(--yel);min-height:30px;text-align:center}
+.vo .vt{width:min(640px,100%);max-height:32vh;overflow:auto;font-size:15.5px;line-height:1.5;display:flex;flex-direction:column;gap:8px}
+.vo .vt .u{align-self:flex-end;background:rgba(239,230,210,.12);padding:6px 12px;border-radius:12px 12px 2px 12px;max-width:85%}
+.vo .vt .a{align-self:flex-start;background:rgba(47,74,138,.55);padding:6px 12px;border-radius:12px 12px 12px 2px;max-width:85%}
+.vo .vb{display:flex;gap:10px}
+.vo button{font:800 15px 'Archivo',sans-serif;border-radius:999px;padding:9px 20px;cursor:pointer;border:2px solid #EFE6D2;background:transparent;color:#EFE6D2}
+.vo button.end{background:var(--red);border-color:var(--red)}
+.vo .vn{font-size:12px;color:#B9C1D6;text-align:center;max-width:560px}
+body.kiosk header .hright,body.kiosk .foot,body.kiosk .banner .psst{display:none}
+body.kiosk .viz-root{max-width:none}
+body.kiosk .rp svg{max-height:80vh}
+@media (max-width:1100px){.rp,.row2b{grid-template-columns:1fr}}
+@media (max-width:600px){.ask{right:12px;bottom:12px;padding:6px}.ask #askl{display:none}.ask .dot{width:40px;height:40px}.rpstat b{font-size:20px}.orb{width:150px;height:150px}.rpdate{font-size:28px}}
 @media (max-width:1100px){.grid,.row2,.check{grid-template-columns:1fr}}
 @media (max-width:760px){
   .diva{justify-self:stretch;max-width:none}
@@ -186,14 +233,32 @@ details summary{cursor:pointer;color:var(--brand);font-size:13px;margin-top:8px}
 </footer>
 </div>
 <div class="tip" id="tip"></div>
+<button class="ask" id="ask" hidden aria-label="Ask SATARK by voice"><span class="dot"></span><span id="askl">Ask SATARK</span></button>
+<div class="vo" id="vo" hidden role="dialog" aria-label="Talk to SATARK">
+  <div class="orb" id="orb"></div>
+  <div class="vs" id="vs">Connecting</div>
+  <div class="vt" id="vt"></div>
+  <div class="vb"><button id="vmute">Mute mic</button><button class="end" id="vend">End</button></div>
+  <div class="vn">Talk in Punjabi, Hindi, Bengali or English. You are speaking to an AI. It reads the same forecast as this page and can be wrong. Calls end after 3 minutes.</div>
+</div>
 <script>
 const DATA = /*__DATA__*/null;
+const CFG = /*__CFG__*/null || {regions:Object.keys(DATA).map(k=>[k,DATA[k].label]), voice:''};
+const KIOSK = location.hash==='#kiosk';
 const RAMP = [0.02,0.05,0.10,0.20,0.35,0.55];
 const RAMPHEX = ['#f8cdb3','#f6b48f','#ee8650','#d95926','#a83d14','#6e2408'];
 const $ = s => document.querySelector(s);
 const pct = p => (p<0.005?'<1':Math.round(p*100))+'%';
 const esc = s => String(s==null?'':s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
-let REG = Object.keys(DATA)[0], DAY = 0, LANG = 'en', PLACE = null;
+let REG = (CFG.regions.find(r=>DATA[r[0]])||CFG.regions[0])[0], DAY = 0, LANG = 'en', PLACE = null;
+const LOADING = {};
+function loadRegion(r){   // big states live in their own file, fetched when picked
+  if(DATA[r]) return Promise.resolve(DATA[r]);
+  if(!LOADING[r]) LOADING[r]=fetch('data/'+r+'.json').then(x=>{if(!x.ok) throw 0; return x.json()})
+    .then(j=>(DATA[r]=j)).catch(()=>(DATA[r]={label:(CFG.regions.find(x=>x[0]===r)||[r,r])[1],failed:true}));
+  return LOADING[r];
+}
+function selectRegion(r){ REG=r; DAY=0; PLACE=null; if(DATA[r]) return render(); render(); loadRegion(r).then(()=>{if(REG===r) render()}); }
 try{ const l=localStorage.getItem('rw_lang'); if(l) LANG=l; }catch(e){}
 
 /* ---- words people read. Punjabi, Hindi and Bengali should be checked by a native speaker. ---- */
@@ -262,15 +327,15 @@ function head(){
   $('#langs').innerHTML=Object.keys(STR).map(k=>`<button class="pill" aria-pressed="${k===LANG}" data-l="${k}">${STR[k].name}</button>`).join('');
   $('#langs').querySelectorAll('button').forEach(b=>b.onclick=()=>{LANG=b.dataset.l;try{localStorage.setItem('rw_lang',LANG)}catch(e){};render()});
   const t=$('#tabs'); t.innerHTML='';
-  for(const r of Object.keys(DATA)){
-    const b=document.createElement('button'); b.className='pill'; b.textContent=DATA[r].label; b.setAttribute('role','tab');
-    b.setAttribute('aria-selected', r===REG); b.onclick=()=>{REG=r;DAY=0;PLACE=null;render()}; t.appendChild(b);
+  for(const [r,label] of CFG.regions){
+    const b=document.createElement('button'); b.className='pill'; b.textContent=label; b.setAttribute('role','tab');
+    b.setAttribute('aria-selected', r===REG); b.onclick=()=>selectRegion(r); t.appendChild(b);
   }
 }
 
 /* the "psst" sticker: a real fact from last season's satellite counts, worked out here */
 function psst(d){
-  const el=$('#psst'), rows=d&&d.report&&d.report.backtest_daily;
+  const el=$('#psst'), rows=d&&!d.failed&&d.report&&d.report.backtest_daily;
   if(!rows||rows.length<10){el.hidden=true;return}
   const v=rows.map(r=>r.actual||0).sort((a,b)=>b-a), tot=v.reduce((a,b)=>a+b,0);
   if(tot<20){el.hidden=true;return}
@@ -304,6 +369,12 @@ function mapSVG(d, blk){
   }
   o+=`</g><g fill="none" stroke="#9AA6C6" stroke-width="0.9">`+d.geo.outlines.map(f=>f.r.map(r=>`<path d="${path(r)}"/>`).join('')).join('')+`</g>`;
   o+=`<g id="yfires" fill="#1E2A44">`+(DAY===0?d.yesterday_fires.map(([la,lo,n])=>`<circle cx="${P.x(lo).toFixed(1)}" cy="${P.y(la).toFixed(1)}" r="${Math.min(1.4+n*0.35,3.4).toFixed(1)}" opacity=".75"/>`).join(''):'')+`</g>`;
+  const sm=(DAY===0&&d.smoke&&d.smoke.paths)?d.smoke:null;
+  if(sm){
+    o+=`<defs><marker id="arw" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="4.5" markerHeight="4.5" orient="auto-start-reverse"><path d="M0,0L10,5L0,10z" fill="#4E5F8E"/></marker></defs>`;
+    o+=`<g id="smoke" fill="none" stroke="#4E5F8E" stroke-linecap="round" opacity=".5">`+sm.paths.map(p=>`<path d="M${p.pts.map(q=>P.x(q[1]).toFixed(1)+','+P.y(q[0]).toFixed(1)).join('L')}" stroke-width="${Math.min(1.4+p.fires/10,4).toFixed(1)}" stroke-dasharray="0.5 6" marker-end="url(#arw)"/>`).join('')+`</g>`;
+    o+=`<g id="towns" font-family="IBM Plex Sans,sans-serif" font-size="11.5" font-weight="600" fill="#1B2747">`+sm.towns.filter(t=>t.eta).map(t=>`<circle cx="${P.x(t.lon).toFixed(1)}" cy="${P.y(t.lat).toFixed(1)}" r="3.4" fill="#fff" stroke="#4E5F8E" stroke-width="1.6"/><text x="${(P.x(t.lon)+6).toFixed(1)}" y="${(P.y(t.lat)-5).toFixed(1)}" style="paint-order:stroke" stroke="#FBF7EE" stroke-width="3">${esc(t.town)}</text>`).join('')+`</g>`;
+  }
   const top=new Set(blk.districts.slice(0,6).map(x=>x[0]));
   o+=`<g font-family="IBM Plex Sans,sans-serif" font-size="12" font-weight="600" fill="#4E5F8E" text-anchor="middle" style="paint-order:stroke" stroke="#FBF7EE" stroke-width="3">`+d.geo.labels.filter(l=>top.has(l[0])).map(([nm,la,lo])=>`<text x="${P.x(lo).toFixed(1)}" y="${P.y(la).toFixed(1)}">${esc(nm)}</text>`).join('')+`</g>`;
   o+=`<g id="stops"></g><g id="pin"></g></svg>`;
@@ -431,10 +502,218 @@ function drawPlace(d){
   const P=window._P; if(P){const x=P.x(lon),y=P.y(lat); $('#pin').innerHTML=`<circle cx="${x}" cy="${y}" r="14" fill="none" stroke="#D7261E" stroke-width="3"/><circle cx="${x}" cy="${y}" r="3.5" fill="#D7261E"/><text x="${x+18}" y="${y+4}" font-size="13" font-weight="700" fill="#D7261E" style="paint-order:stroke" stroke="#FBF7EE" stroke-width="3">${esc(name)}</text>`}
 }
 
+const fmtPeople = n => n>=1e7?(n/1e7).toFixed(1)+' crore':n>=1e5?(n/1e5).toFixed(1)+' lakh':Math.round(n).toLocaleString('en-IN');
+function peopleAt(d, blk, minP=0.15){   // people living in the areas with a high chance of fire
+  if(!d.people||!d.people.cells) return null;
+  if(!d._pop){d._pop={}; d.people.cells.forEach(([a,b,n])=>d._pop[a+'_'+b]=n)}
+  let n=0, cells=0; for(const r of blk.risk){ if(r[2]>=minP){ n+=d._pop[r[0]+'_'+r[1]]||0; cells++ } }
+  return {n, cells};
+}
+function when(eta, base){   // '2026-11-06T03:00' -> 'tomorrow 3 am'
+  const days=Math.round((new Date(eta.slice(0,10)+'T00:00:00')-new Date(base+'T00:00:00'))/864e5), h=+eta.slice(11,13);
+  return (days<=0?'today':days===1?'tomorrow':fmtDate(eta.slice(0,10),{day:'numeric',month:'short'}))+' '+((h%12)||12)+(h<12?' am':' pm');
+}
+function smokeCard(d){
+  const sm=d.smoke; if(!sm||!sm.towns||!sm.towns.length) return '';
+  const rows=sm.towns.filter(t=>t.eta||t.pm_tomorrow!=null).slice(0,10); if(!rows.length) return '';
+  const band=t=>t.band?`<span class="band b-${t.band.replace(' ','')}">${t.band}</span>`:'';
+  return `<div class="card"><h2>Where today's smoke goes</h2>
+    <div class="note" style="margin:0 0 8px">From the areas where fires are expected today, following the wind forecast for ${sm.hours} hours from 2 pm. The dotted arrows on the map show the paths.</div>
+    <table><tr><th>Town</th><th>Smoke from fields in</th><th>Reaches it</th><th>PM2.5 tomorrow</th></tr>
+    ${rows.map(t=>`<tr><td>${esc(t.town)}</td><td>${t.from?esc(t.from):'<span style="color:#7A7F8C">not on a path</span>'}</td><td>${t.eta?(t.eta<=sm.start?'already there':when(t.eta,d.date)):''}</td><td>${t.pm_tomorrow!=null?t.pm_tomorrow+' '+band(t):''}</td></tr>`).join('')}</table>
+    <div class="note">PM2.5 is the CAMS air quality forecast for all sources, not only farm fires: a 24-hour average in µg/m³, with India's AQI band. The paths are a guide to where smoke drifts, not a pollution model. Data: Open-Meteo, Copernicus Atmosphere Monitoring Service.</div></div>`;
+}
+function greenCard(d){
+  const g=d.green; if(!g||g.last_total<20) return '';
+  const chs=v=>`<span class="${v<=0?'chg-dn':'chg-up'}">${v>0?'+':''}${Math.round(v*100)}%</span>`;
+  return `<div class="card"><h2>Green villages · no fires seen yet this season</h2>
+    <p style="margin:0 0 6px;font-size:14.5px">Up to ${fmtDate(g.through,{day:'numeric',month:'short'})}, satellites saw <b>${g.now_total.toLocaleString('en-IN')}</b> farm fires this season, against ${g.last_total.toLocaleString('en-IN')} by the same day last season (${chs((g.now_total-g.last_total)/g.last_total)}).</p>
+    ${g.villages.length?`<div class="gv">${g.villages.slice(0,18).map(v=>`<span>${esc(v[0])} <small>· ${esc(v[1])} · ${v[2]} fires by now last year</small></span>`).join('')}</div>`:''}
+    <table><tr><th>District</th><th>Last season, by this day</th><th>This season</th><th>Change</th></tr>${g.districts.slice(0,10).map(([n,l,c])=>`<tr><td>${esc(n)}</td><td>${l}</td><td>${c}</td><td>${chs((c-l)/l)}</td></tr>`).join('')}</table>
+    <div class="note">${g.green_cells.toLocaleString('en-IN')} areas burned by this day last season and show no fires on the satellites so far. Some may just be harvesting later, and fires after the 1:30 pm pass are missed. Worth a visit to find out what changed, and to say well done.</div></div>`;
+}
+let RP=null;
+function replayCard(d){
+  const r=d.replay; if(!r||!r.days||!r.days.length) return '';
+  const yr=r.days[0].date.slice(0,4);
+  return `<div class="card wide" id="rpcard"><h2>${yr} season replay · what the model said each morning, and what the satellites then saw</h2>
+    <div class="rp"><div><div id="rpmap"></div>
+      <div class="rpbar"><button class="rpbtn" id="rpplay">Play</button><input type="range" id="rpslide" min="0" max="${r.days.length-1}" value="0" aria-label="Day of the season"><button class="rpbtn sec" id="rpspeed" aria-label="Speed">1x</button></div>
+      <div class="rpkey"><span><i style="background:#ee8650"></i>squares the model flagged that morning</span><span><i style="background:#1E2A44;border-radius:50%"></i>fire inside a flagged square</span><span><i style="border:1.5px solid #1E2A44;border-radius:50%;width:9px;height:9px"></i>fire outside</span></div></div>
+    <div><div class="rpdate" id="rpdate"></div>
+      <div class="rpstat"><span>Fires the satellites saw</span><b id="rpseen"></b><span>Inside the flagged squares</span><b id="rpin"></b><span>Flagged squares, share of the map</span><b id="rparea"></b></div>
+      <div class="rpsum" id="rpsum"></div>
+      <div class="note">The model learned from ${d.report?d.report.train_seasons.join(', '):'earlier seasons'} and never saw ${yr}. Each morning it only knew what had happened up to the day before.</div></div></div></div>`;
+}
+function startReplay(d){
+  const r=d.replay, host=$('#rpmap'); if(!r||!host) return;
+  if(RP&&RP.timer) clearInterval(RP.timer);
+  const W=900, P=proj(d,W), [w,s]=d.bbox, cw=d.cell*P.k*P.S, ch=d.cell*P.S;
+  const path=q=>`M${q.map(p=>P.x(p[0]).toFixed(1)+','+P.y(p[1]).toFixed(1)).join('L')}Z`;
+  const out=d.geo.outlines.map(f=>f.r.map(q=>`<path d="${path(q)}"/>`).join('')).join('');
+  host.innerHTML=`<svg viewBox="0 0 ${W} ${P.H.toFixed(0)}" role="img" aria-label="Season replay map"><g fill="#FBF7EE">${out}</g><g id="rpr"></g><g fill="none" stroke="#9AA6C6" stroke-width="0.8">${out}</g><g id="rpf"></g></svg>`;
+  const ncell=(d.report&&d.report.cells)||1;
+  let cs=0, ci=0, ca=0;
+  const stat=r.days.map(dd=>{const set=new Set(); for(let i=0;i<dd.risk.length;i+=3) set.add(dd.risk[i]+'_'+dd.risk[i+1]);
+    let inn=0; for(let i=0;i<dd.fires.length;i+=3) if(set.has(dd.fires[i]+'_'+dd.fires[i+1])) inn+=dd.fires[i+2];
+    cs+=dd.seen; ci+=inn; ca+=set.size/ncell; return {set, inn, area:set.size/ncell, cs, ci, ca};});
+  const frame=i=>{const dd=r.days[i], st=stat[i]; let o='';
+    for(let j=0;j<dd.risk.length;j+=3){o+=`<rect x="${P.x(w+dd.risk[j+1]*d.cell).toFixed(1)}" y="${P.y(s+(dd.risk[j]+1)*d.cell).toFixed(1)}" width="${(cw+.3).toFixed(1)}" height="${(ch+.3).toFixed(1)}" fill="${rampColor(dd.risk[j+2]/100)||'#f8cdb3'}"/>`}
+    $('#rpr').innerHTML=o; o='';
+    for(let j=0;j<dd.fires.length;j+=3){const a=dd.fires[j], b=dd.fires[j+1], n=dd.fires[j+2];
+      const cx=P.x(w+(b+.5)*d.cell).toFixed(1), cy=P.y(s+(a+.5)*d.cell).toFixed(1), rr=Math.min(1.6+n*.45,4.2).toFixed(1);
+      o+=st.set.has(a+'_'+b)?`<circle cx="${cx}" cy="${cy}" r="${rr}" fill="#1E2A44"/>`:`<circle cx="${cx}" cy="${cy}" r="${rr}" fill="none" stroke="#1E2A44" stroke-width="1"/>`}
+    $('#rpf').innerHTML=o;
+    $('#rpdate').textContent=fmtDate(dd.date,{day:'numeric',month:'short',year:'numeric'});
+    $('#rpseen').textContent=dd.seen.toLocaleString('en-IN');
+    $('#rpin').textContent=dd.seen?`${st.inn.toLocaleString('en-IN')} (${Math.round(100*st.inn/dd.seen)}%)`:'0';
+    $('#rparea').textContent=(100*st.area).toFixed(1)+'%';
+    $('#rpsum').innerHTML=st.cs?`Season so far: <b>${Math.round(100*st.ci/st.cs)}%</b> of the ${st.cs.toLocaleString('en-IN')} fires fell inside squares the model flagged that morning, while those squares covered only <b>${(100*st.ca/(i+1)).toFixed(1)}%</b> of the map on an average day.`:'No fires seen yet.';
+    $('#rpslide').value=i;};
+  RP={i:0, speed:1, timer:null, n:r.days.length};
+  const stop=()=>{clearInterval(RP.timer);RP.timer=null;$('#rpplay').textContent='Play'};
+  const play=()=>{ if(RP.timer) return stop(); if(RP.i>=RP.n-1) RP.i=0; $('#rpplay').textContent='Pause';
+    RP.timer=setInterval(()=>{ if(!document.body.contains(host)) return clearInterval(RP.timer);
+      RP.i++; if(RP.i>=RP.n){ if(KIOSK) RP.i=0; else {RP.i=RP.n-1; return stop()} } frame(RP.i)}, 420/RP.speed)};
+  $('#rpplay').onclick=play;
+  $('#rpslide').oninput=e=>{RP.i=+e.target.value; frame(RP.i)};
+  $('#rpspeed').onclick=()=>{RP.speed=RP.speed>=4?1:RP.speed*2; $('#rpspeed').textContent=RP.speed+'x'; if(RP.timer){stop(); play()}};
+  RP.i=KIOSK?0:r.days.reduce((a,x,i)=>x.seen>r.days[a].seen?i:a,0); frame(RP.i);   // still frame: the busiest day
+  if(KIOSK) play();
+  else if('IntersectionObserver' in window){ const ob=new IntersectionObserver(es=>{ if(es[0].isIntersecting){ ob.disconnect(); if(!RP.timer){RP.i=0; frame(0); play()} } },{threshold:.6}); ob.observe($('#rpcard')); }
+}
+
+/* ---- voice: OpenAI realtime, through SATARK's own key server (voice/worker.js). The AI only answers from
+   what the tools below read off this page, so its numbers are the forecast's numbers. ---- */
+const VOICE={pc:null, dc:null, stream:null, timer:null, raf:null, line:null, calls:[]};
+const lvlWord=p=>['low','medium','high','very high'][level(p)];
+const plain=h=>String(h||'').replace(/<[^>]+>/g,'');
+function initVoice(){
+  const b=$('#ask'); if(!CFG.voice||!b) return;
+  b.hidden=false; b.onclick=startVoice; $('#vend').onclick=()=>endVoice();
+  $('#vmute').onclick=()=>{ if(!VOICE.stream) return; const t=VOICE.stream.getAudioTracks()[0]; t.enabled=!t.enabled; $('#vmute').textContent=t.enabled?'Mute mic':'Unmute mic'; };
+}
+function vsay(cls, text){ const el=document.createElement('div'); el.className=cls; el.textContent=text; $('#vt').appendChild(el); $('#vt').scrollTop=1e9; return el; }
+async function startVoice(){
+  if(VOICE.pc) return;
+  $('#vo').hidden=false; $('#vt').innerHTML=''; $('#vs').textContent='Connecting';
+  try{
+    const d=DATA[REG]||{};
+    const r=await fetch(CFG.voice+'/session',{method:'POST',headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({lang:LANG, region:d.label||'', date:d.date||'', regions:CFG.regions.map(x=>x[1])})});
+    if(!r.ok) throw new Error('key server said '+r.status);
+    const j=await r.json(), key=j.value||(j.client_secret&&j.client_secret.value); if(!key) throw new Error('no key from the key server');
+    const pc=new RTCPeerConnection(); VOICE.pc=pc;
+    const audio=document.createElement('audio'); audio.autoplay=true;
+    pc.ontrack=e=>{audio.srcObject=e.streams[0]; meter(e.streams[0])};
+    const stream=await navigator.mediaDevices.getUserMedia({audio:{echoCancellation:true,noiseSuppression:true,autoGainControl:true}}); VOICE.stream=stream;
+    pc.addTrack(stream.getTracks()[0], stream);
+    const dc=pc.createDataChannel('oai-events'); VOICE.dc=dc;
+    dc.onmessage=e=>{try{onVoiceEvent(JSON.parse(e.data))}catch(x){console.log('[voice]',x)}};
+    dc.onopen=()=>{ $('#vs').textContent='Listening'; dc.send(JSON.stringify({type:'response.create'})); };   // it says hello first
+    const offer=await pc.createOffer(); await pc.setLocalDescription(offer);
+    const ans=await fetch('https://api.openai.com/v1/realtime/calls',{method:'POST',body:offer.sdp,headers:{Authorization:'Bearer '+key,'Content-Type':'application/sdp'}});
+    if(!ans.ok) throw new Error('voice service said '+ans.status);
+    await pc.setRemoteDescription({type:'answer', sdp:await ans.text()});
+    VOICE.timer=setTimeout(()=>endVoice('Time is up. Tap Ask SATARK to talk again.'), 180000);
+  }catch(e){ console.log('[voice]',e); endVoice('Could not connect ('+(e.message||e)+'). Allow the microphone and check the internet.'); }
+}
+function endVoice(msg){
+  clearTimeout(VOICE.timer); cancelAnimationFrame(VOICE.raf);
+  try{VOICE.dc&&VOICE.dc.close()}catch(e){} try{VOICE.pc&&VOICE.pc.close()}catch(e){}
+  if(VOICE.stream) VOICE.stream.getTracks().forEach(t=>t.stop());
+  Object.assign(VOICE,{pc:null,dc:null,stream:null,line:null,calls:[]});
+  $('#orb').style.transform='';
+  if(msg){ $('#vs').textContent=msg; setTimeout(()=>{if(!VOICE.pc) $('#vo').hidden=true},5000); } else $('#vo').hidden=true;
+}
+function meter(stream){   // the orb breathes with the voice
+  try{ const ac=new (window.AudioContext||window.webkitAudioContext)(), an=ac.createAnalyser(); an.fftSize=256;
+    ac.createMediaStreamSource(stream).connect(an); const buf=new Uint8Array(an.frequencyBinCount);
+    const tick=()=>{ if(!VOICE.pc) return; an.getByteFrequencyData(buf); let v=0; for(const x of buf) v+=x; v/=buf.length*255;
+      $('#orb').style.transform=`scale(${(1+v*1.1).toFixed(3)})`; VOICE.raf=requestAnimationFrame(tick)}; tick(); }catch(e){}
+}
+function onVoiceEvent(ev){
+  const t=ev.type;
+  if(t==='input_audio_buffer.speech_started') $('#vs').textContent='Listening';
+  else if(t==='conversation.item.input_audio_transcription.completed'){ if(ev.transcript&&ev.transcript.trim()) vsay('u', ev.transcript.trim()); }
+  else if(t==='response.output_audio_transcript.delta'||t==='response.audio_transcript.delta'){ if(!VOICE.line) VOICE.line=vsay('a',''); VOICE.line.textContent+=ev.delta||''; $('#vs').textContent='Speaking'; $('#vt').scrollTop=1e9; }
+  else if(t==='response.output_audio_transcript.done'||t==='response.audio_transcript.done') VOICE.line=null;
+  else if(t==='response.function_call_arguments.done'){ $('#vs').textContent='Checking the forecast'; VOICE.calls.push(runTool(ev.name, ev.arguments, ev.call_id)); }
+  else if(t==='response.done'){
+    if(VOICE.calls.length){ const c=VOICE.calls; VOICE.calls=[]; Promise.all(c).then(()=>VOICE.dc&&VOICE.dc.send(JSON.stringify({type:'response.create'}))); }
+    else $('#vs').textContent='Listening';
+  }
+  else if(t==='error') console.log('[voice] error', ev.error);
+}
+async function runTool(name, args, id){
+  let a={}; try{a=JSON.parse(args||'{}')}catch(e){}
+  let out; try{ out=await (VTOOLS[name]||(()=>({error:'unknown tool '+name})))(a) }catch(e){ out={error:String(e)} }
+  console.log('[voice] tool', name, a, out);
+  if(VOICE.dc) VOICE.dc.send(JSON.stringify({type:'conversation.item.create', item:{type:'function_call_output', call_id:id, output:JSON.stringify(out)}}));
+}
+function regionByName(q){
+  const n=norm(q||''); if(!n) return REG;
+  const hit=CFG.regions.find(([k,l])=>norm(l).includes(n)||n.includes(norm(l).slice(0,6))||norm(k).includes(n));
+  return hit?hit[0]:REG;
+}
+function prepDays(d){ (d.days||[]).forEach(b=>{if(!b._idx){b._idx={};b.risk.forEach(x=>b._idx[x[0]+'_'+x[1]]=x)}}); }
+const VTOOLS={
+  async village_forecast({place}){
+    const order=[REG,...CFG.regions.map(x=>x[0]).filter(r=>r!==REG)];
+    const find=()=>{ for(const r of order){ const d=DATA[r]; if(!d||d.failed||!d.places) continue; const m=search(d,place||''); if(m.length) return [r,d,m]; } return null; };
+    let hit=find();
+    if(!hit){ await Promise.all(order.map(loadRegion)); hit=find(); }
+    if(!hit) return {found:false, covered_regions:CFG.regions.map(x=>x[1]), note:'No village, town or PIN code by that name in the covered regions. Ask for the spelling, the PIN code, or a bigger village nearby.'};
+    const [r,d,m]=hit, p=m[0];
+    if(REG!==r){ REG=r; DAY=0; render(); }
+    if(!d.in_season) return {found:true, place:p[0], district:p[2], region:d.label, in_season:false, note:'It is not the burning season there, so there is no forecast today.'};
+    prepDays(d); openPlace(d,p);
+    const rk=riskAt(d,p[5],p[6]);
+    return {found:true, place:p[0], pin:p[1], district:p[2], region:d.label, forecast_made:d.generated,
+      forecast:d.days.map((b,i)=>({day:['today','tomorrow','day after'][b.h-1], date:b.date, chance_percent:Math.max(0,Math.round(rk[i][0]*100)), level:lvlWord(rk[i][0])})),
+      other_places_with_that_name:m.slice(1,4).map(x=>x[0]+' ('+x[2]+')'),
+      note:'The chance is for the 5 km area around the village, not one field. Low is under 5%, medium 5 to 15%, high 15 to 35%, very high 35% or more.'};
+  },
+  async region_summary({region}){
+    const r=regionByName(region), d=await loadRegion(r); if(d.failed) return {available:false};
+    if(!d.in_season) return {region:d.label, in_season:false, note:'No burning season there right now.'};
+    prepDays(d); const pp=peopleAt(d,d.days[0]), ys=d.yesterday, g=d.green;
+    return {region:d.label, forecast_made:d.generated, season_day:d.season_day, season_length:d.season_len,
+      expected_fire_detections:Object.fromEntries(d.days.map(b=>[['today','tomorrow','day after'][b.h-1], Math.round(b.total_mu)])),
+      busiest_districts_today:d.days[0].districts.slice(0,5).map(([n,v])=>({district:n, expected:Math.round(v)})),
+      people_in_high_risk_areas_today:pp&&pp.cells?pp.n:null,
+      yesterday_check:ys&&ys.actual_total?{fires_seen:ys.actual_total, flagged_places:ys.flagged, flagged_places_that_burned:ys.hits, share_of_fires_inside_flagged:Math.round((ys.catch||0)*100)+'%'}:null,
+      compared_with_last_season:g?{fires_so_far:g.now_total, same_day_last_season:g.last_total, example_green_villages:g.villages.slice(0,5).map(v=>v[0]+' ('+v[1]+')')}:null,
+      note:'Detections are what NASA satellites see around 1:30 pm. Fires lit later are missed, so real burning is higher.'};
+  },
+  async smoke_forecast({town}){
+    const order=[REG,...CFG.regions.map(x=>x[0]).filter(r=>r!==REG)];
+    if(town){ for(const r of order){ const d=DATA[r]; const t=d&&d.smoke&&d.smoke.towns.find(x=>norm(x.town)===norm(town)); if(t) return {region:d.label, town:t.town,
+        smoke_from_fields_in:t.from||'not on a smoke path today', arrives:t.eta?when(t.eta,d.date):null, pm25_tomorrow:t.pm_tomorrow, aqi_band:t.band}; } }
+    const d=DATA[REG]; if(!d||!d.smoke) return {available:false, note:'No smoke forecast for this region today.'};
+    return {region:d.label, hours:d.smoke.hours, towns:d.smoke.towns.filter(t=>t.eta).slice(0,8).map(t=>({town:t.town, smoke_from_fields_in:t.from, arrives:when(t.eta,d.date), pm25_tomorrow:t.pm_tomorrow, aqi_band:t.band})),
+      note:'Smoke paths follow the wind forecast from the fields expected to burn today. PM2.5 is the Copernicus CAMS forecast, from all sources.'};
+  },
+  async how_accurate({region}){
+    const r=regionByName(region), d=await loadRegion(r), rep=d.report; if(!rep) return {available:false};
+    return {region:d.label, tested_on_season:rep.test_season, trained_on:rep.train_seasons,
+      model:{flagged_places_that_burned:Math.round(rep.model['precision@50']*100)+'%', fires_inside_top_50_places:Math.round(rep.model['catch@50']*100)+'%'},
+      simple_guess_where_it_burned_yesterday:{flagged_places_that_burned:Math.round(rep.persistence['precision@50']*100)+'%', fires_inside_top_50_places:Math.round(rep.persistence['catch@50']*100)+'%'},
+      note:'Tested on a whole season the model never saw while learning.'};
+  },
+  async help_options(){
+    return {instead_of_burning:[plain(T('h1')), REG==='punjab_haryana'?plain(T('hpb')):null, plain(T('h2')), plain(T('h3'))].filter(Boolean),
+      principle:'Support first, enforcement last.'};
+  },
+};
+
 function render(){
   head();
-  const d=DATA[REG], body=$('#body');
-  if(!d.in_season){ $('#datebar').textContent=fmtDate(d.date,{day:'numeric',month:'short',year:'numeric'}); body.innerHTML=`<div class="off">${T('off')}</div>`; return; }
+  const d=DATA[REG], body=$('#body'), label=(CFG.regions.find(x=>x[0]===REG)||[REG,REG])[1];
+  if(!d){ $('#datebar').textContent=''; body.innerHTML=`<div class="loading">Loading ${esc(label)}</div>`; const r=REG; loadRegion(r).then(()=>{if(REG===r) render()}); return; }
+  if(d.failed){ body.innerHTML=`<div class="off">${esc(label)} is kept in a separate file. It opens on the website link, not from a page saved on your computer.</div>`; return; }
+  if(KIOSK){ document.body.classList.add('kiosk'); body.innerHTML=replayCard(d)||`<div class="off">${T('off')}</div>`; startReplay(d); initVoice(); return; }
+  if(!d.in_season){ $('#datebar').textContent=fmtDate(d.date,{day:'numeric',month:'short',year:'numeric'}); body.innerHTML=`<div class="off">${T('off')}</div>`+replayCard(d); startReplay(d); initVoice(); return; }
   d.days.forEach(b=>{if(!b._idx){b._idx={};b.risk.forEach(r=>b._idx[r[0]+'_'+r[1]]=r)}});
   DAY=Math.min(DAY,d.days.length-1); const blk=d.days[DAY];
   $('#datebar').textContent=`Forecast made ${d.generated||''}`;
@@ -458,13 +737,15 @@ function render(){
     <div class="card mapwrap"><h2>${T('mapt')} · ${esc(d.label)} · ${dayName(blk.h)}</h2>${svg}
       <div class="legend">${RAMP.map((r,i)=>`<span class="sw"><i style="background:${RAMPHEX[i]}"></i>${Math.round(r*100)}%${i===RAMP.length-1?'+':''}</span>`).join('')}
         ${DAY===0?'<span class="sw"><i style="background:#1E2A44;width:7px;height:7px;border-radius:50%"></i>fires satellites saw yesterday</span>':''}
+        ${DAY===0&&d.smoke?'<span class="sw"><i style="background:none;border-top:2px dotted #4E5F8E;height:0;width:18px"></i>where today\'s smoke drifts</span>':''}
         <span class="sw"><i style="background:#2F4A8A;width:14px;height:14px;border-radius:50%"></i>planned stop (team number)</span></div>
-      <div class="toggles">${DAY===0?'<label><input type="checkbox" id="tY" checked> Yesterday\'s fires</label>':''}<label><input type="checkbox" id="tS" checked> Planned stops</label></div>
+      <div class="toggles">${DAY===0?'<label><input type="checkbox" id="tY" checked> Yesterday\'s fires</label>':''}${DAY===0&&d.smoke?'<label><input type="checkbox" id="tK" checked> Smoke paths (next 36 h)</label>':''}<label><input type="checkbox" id="tS" checked> Planned stops</label></div>
     </div>
     <div style="display:flex;flex-direction:column;gap:16px">
       <div class="card"><h2>${T('exp')} · ${dayName(blk.h)}</h2>
         <div class="hero"><b>${blk.total_mu<1?'&lt;1':Math.round(blk.total_mu)}</b><span>${T('det')}<br>${esc(d.label)} · season day ${d.season_day+DAY} of ${d.season_len}</span></div>
         <div class="bars">${blk.districts.map(([n,v])=>`<span>${esc(n)}</span><div class="b" style="width:${(100*v/maxD).toFixed(1)}%"></div><span class="v">${v<10?v.toFixed(1):v.toFixed(0)}</span>`).join('')}</div>
+        ${(()=>{const pp=peopleAt(d,blk); return pp&&pp.cells?`<div class="people"><b>${fmtPeople(pp.n)}</b> people live in the ${pp.cells.toLocaleString('en-IN')} areas with a high chance of fire (15% or more) ${dayName(blk.h).toLowerCase()}. <span class="note">Population: GHS-POP 2025, EC JRC.</span></div>`:''})()}
       </div>
       <div class="card"><h2>Plan the day · ${dayName(blk.h)}</h2>
         <div class="ctl"><label for="nT">Teams on the road</label><input id="nT" type="range" min="1" max="20" value="${d.teams_default||5}"><output id="oT"></output>
@@ -473,6 +754,8 @@ function render(){
       </div>
     </div>
   </div>
+  ${(()=>{const a=smokeCard(d), b=greenCard(d); return a||b?`<div class="${a&&b?'row2b':'wide'}">${a}${b}</div>`:''})()}
+  ${replayCard(d)}
   <div class="row2">
     <div class="card chk"><h2>Yesterday, checked against the satellites</h2>${ys&&ys.actual_total===0?'<div class="note" style="font-size:15px;color:#4E5F8E">Satellites saw no fires yesterday, so there was nothing to check.</div>':ys?`
       <div><span class="big">${ys.hits} of ${ys.flagged}</span> places we flagged had a fire (${pct(ys.precision)}).</div>
@@ -531,6 +814,7 @@ function render(){
   $('#nT').oninput=ctl; $('#nS').oninput=ctl; ctl();
   if($('#tY')) $('#tY').onchange=e=>{$('#yfires').style.display=e.target.checked?'':'none'};
   $('#tS').onchange=e=>{$('#stops').style.display=e.target.checked?'':'none'};
+  if($('#tK')) $('#tK').onchange=e=>{['#smoke','#towns'].forEach(k=>{if($(k)) $(k).style.display=e.target.checked?'':'none'})};
   $('#cp').onclick=()=>{try{navigator.clipboard.writeText(d.brief||'').then(()=>$('#cp').textContent='Copied',()=>$('#cp').textContent='Select and copy')}catch(e){$('#cp').textContent='Select and copy'}};
   // search
   const q=$('#q'), res=$('#res');
@@ -561,6 +845,7 @@ function render(){
   hookChart($('#c1'),seasonRows,['actual','predicted'],['Seen','Expected'],'n');
   $('#c2').innerHTML=lineChart(seasonRows,['mc','pc'],['Model','Yesterday'],['#2a78d6','#eb6834'],'pct','Share of fires in the flagged places');
   hookChart($('#c2'),seasonRows,['mc','pc'],['Model','Yesterday'],'pct');
+  startReplay(d); initVoice();
   $('#t1').innerHTML=`<table><tr><th>Date</th><th>Seen</th><th>Expected</th><th>Caught by model</th><th>Caught by "yesterday"</th></tr>${seasonRows.map(r=>`<tr><td>${r.date}</td><td>${r.actual}</td><td>${Math.round(r.predicted)}</td><td>${r.mc==null||!isFinite(r.mc)?'':pct(r.mc)}</td><td>${r.pc==null||!isFinite(r.pc)?'':pct(r.pc)}</td></tr>`).join('')}</table>`;
 }
 render();

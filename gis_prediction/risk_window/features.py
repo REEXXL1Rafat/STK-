@@ -7,8 +7,8 @@ D itself (in live runs that is the forecast; in training it is the observed valu
 from datetime import date, timedelta
 import numpy as np
 import pandas as pd
-from scipy.ndimage import uniform_filter
-from config import CELL, REGIONS, TARGET_SENSORS, DAYTIME_ONLY, STATIC_NIGHT_SHARE, STATIC_MIN_N, STATIC_DAY_SHARE
+from scipy.ndimage import uniform_filter, binary_dilation
+from config import CELL, REGIONS, ACTIVE_MIN, TARGET_SENSORS, DAYTIME_ONLY, STATIC_NIGHT_SHARE, STATIC_MIN_N, STATIC_DAY_SHARE
 import grid
 
 BASE = [
@@ -27,6 +27,7 @@ EXTRA = {
     "modis": ["mod_lag1", "mod_nb_lag1"],                  # MODIS morning (Terra) and afternoon (Aqua) passes
     "wind_dir": ["wind_u", "wind_v"],                      # wind direction, as east and north parts
     "harvest": ["harv", "harv_change7", "harv_nb"],        # share of cropland already cut (Sentinel-2)
+    "scar": ["scar", "scar_change7", "scar_nb"],           # share of paddy with a fresh burn scar (Sentinel-2), catches fires VIIRS missed
 }
 FEATURES = BASE  # what a model uses is stored with the model
 DIWALI = {2019: date(2019, 10, 27), 2020: date(2020, 11, 14), 2021: date(2021, 11, 4), 2022: date(2022, 10, 24),
@@ -42,7 +43,17 @@ def season_dates(region, year):
 
 
 def load_fires(path):
-    f = pd.read_csv(path, dtype={"acq_time": str, "satellite": str, "confidence": str})
+    return load_fires_frame(pd.read_csv(path, dtype={"acq_time": str, "satellite": str, "confidence": str}))
+
+
+def load_fires_frame(f):
+    f = f.copy()
+    for c in ("acq_time", "satellite", "confidence", "daynight"):
+        if c in f:
+            f[c] = f[c].astype(str)
+    for c in ("latitude", "longitude", "frp"):
+        if c in f:
+            f[c] = pd.to_numeric(f[c], errors="coerce")
     f["acq_date"] = pd.to_datetime(f["acq_date"]).dt.date
     return f
 
@@ -181,11 +192,12 @@ def season_rows(region, year, cube, days, cells, cubes, pool, wx, last_day=None,
         X["frp_sum3"] = _lagsum(aux["frp"], h, 3); X["frp_nb_sum3"] = _lagsum(_ring(aux["frp"], 1), h, 3)
     if "modis" in aux:
         X["mod_lag1"] = _lagsum(aux["modis"], h, 1); X["mod_nb_lag1"] = _lagsum(_ring(aux["modis"], 1) + aux["modis"], h, 1)
-    if "harvest" in aux:   # share of cropland cut, as known on each day (NaN where no clear image yet)
-        hv = aux["harvest"]
-        sh = lambda a, k: np.concatenate([np.full((k,) + a.shape[1:], np.nan, a.dtype), a[:-k]]) if k else a
-        X["harv"] = sh(hv, h); X["harv_change7"] = sh(hv, h) - sh(hv, h + 7)
-        X["harv_nb"] = sh(uniform_filter(np.nan_to_num(hv), size=(1, 3, 3), mode="constant"), h)
+    sh = lambda a, k: np.concatenate([np.full((k,) + a.shape[1:], np.nan, a.dtype), a[:-k]]) if k else a
+    for key, nm in (("harvest", "harv"), ("scar", "scar")):   # Sentinel-2 shares, as known on each day (NaN until a clear image)
+        if key in aux:
+            hv = aux[key]
+            X[nm] = sh(hv, h); X[f"{nm}_change7"] = sh(hv, h) - sh(hv, h + 7)
+            X[f"{nm}_nb"] = sh(uniform_filter(np.nan_to_num(hv), size=(1, 3, 3), mode="constant"), h)
     dw = DIWALI.get(year)
 
     lo = max(h, 1) if first_day is None else days.index(first_day)
@@ -242,11 +254,15 @@ def aux_cubes(fires, region, year, static, harvest=None):
         hv = harvest_cube(harvest, region, year, shp)
         if hv is not None:
             out["harvest"] = hv
+        if "scar" in harvest and harvest.scar.notna().any():
+            sc = harvest_cube(harvest.dropna(subset=["scar"]), region, year, shp, col="scar")
+            if sc is not None:
+                out["scar"] = sc
     return out
 
 
-def harvest_cube(harvest, region, year, shp):
-    """harvest table (iy, ix, date, harv) -> [day, iy, ix], carrying the last clear value forward."""
+def harvest_cube(harvest, region, year, shp, col="harv"):
+    """harvest table (iy, ix, date, harv[, scar]) -> [day, iy, ix], carrying the last clear value forward."""
     days = season_dates(region, year)
     h = harvest[(harvest.date >= days[0] - timedelta(days=30)) & (harvest.date <= days[-1])]
     if not len(h):
@@ -257,12 +273,12 @@ def harvest_cube(harvest, region, year, shp):
     pre = h[h.date < days[0]].sort_values("date")
     for r in pre.itertuples():
         if 0 <= r.iy < shp[0] and 0 <= r.ix < shp[1]:
-            last[r.iy, r.ix] = r.harv
+            last[r.iy, r.ix] = getattr(r, col)
     for i, d in enumerate(days):
         g = byday.get(d)
         if g is not None:
             ok = (g.iy >= 0) & (g.iy < shp[0]) & (g.ix >= 0) & (g.ix < shp[1])
-            last[g.iy[ok].to_numpy(), g.ix[ok].to_numpy()] = g.harv[ok].to_numpy()
+            last[g.iy[ok].to_numpy(), g.ix[ok].to_numpy()] = g[col][ok].to_numpy()
         cube[i] = last
     return cube
 
@@ -273,3 +289,20 @@ def all_cubes(fires, region, years, static=frozenset()):
     for y in years:
         dayss[y], cubes[y] = fire_cube(fires, region, y, shp, static=static)
     return cubes, dayss
+
+
+def active_cells(fires, region, years, static=frozenset(), min_n=ACTIVE_MIN):
+    """Cells with at least min_n farm-fire detections in past seasons, plus their neighbours.
+    Used for big states, where most of the map never burns (forest, desert, cities)."""
+    shp = grid_shape(region)
+    cnt = np.zeros(shp, np.float32)
+    for y in years:
+        cnt += fire_cube(fires, region, y, shp, static=static)[1].sum(0)
+    mask = binary_dilation(cnt >= min_n, structure=np.ones((3, 3), bool))
+    return set(zip(*map(lambda a: a.tolist(), np.nonzero(mask))))
+
+
+def keep_active(cells, active):
+    if active is None:
+        return cells
+    return cells[[(a, b) in active for a, b in zip(cells.iy, cells.ix)]]

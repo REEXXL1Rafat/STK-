@@ -5,6 +5,11 @@ Every morning at 6 am, Risk Window answers one question: **where are farm fires 
 - **Anyone** can type their village or PIN code (or tap the map, or press "Near me") and see the chance of a farm fire around it for the next three days, what to do instead of burning, and share it on WhatsApp. The page switches between English, Punjabi, Hindi and Bengali.
 - **Field teams and officials** get a plan for however many teams they have, with stops named by the nearest village, and a short brief (English plus Punjabi or Bengali) with Google Maps links.
 - **Everyone** can see how it did: the next morning it checks itself against what the satellites saw. If the forecast was wrong, the scoreboard says so.
+- **Ask SATARK:** tap and talk in Punjabi, Hindi, Bengali or English. An AI voice answers from the same forecast and opens the village on the map (optional, paid, see `SETUP.md`).
+- **Where today's smoke goes:** paths from the fields expected to burn, the towns they reach and when, and tomorrow's PM2.5 forecast for those towns.
+- **Green villages:** places that burned by this date last season and show no fires this season, and every district against last year. Something to celebrate, and to learn from.
+- **People in the red zone:** how many people live in today's high-risk areas (needs Earth Engine).
+- **Season replay:** the 2025 season day by day, what the model flagged each morning against what the satellites then saw. Add `#kiosk` to the link for a full-screen loop for events.
 
 Regions:
 
@@ -12,6 +17,11 @@ Regions:
 |---|---|
 | Punjab and Haryana | The biggest stubble-burning area in India |
 | Purba Medinipur | SATARK's Kolaghat pilot (BDO Kolaghat mandate) |
+| Uttar Pradesh | Large paddy belt, west UP smoke reaches Delhi |
+| Madhya Pradesh | Fast-growing paddy-straw burning (the April wheat-straw season is not covered yet) |
+| Rajasthan | Paddy in Sri Ganganagar, Hanumangarh and the Kota belt |
+
+The three big states only model the 5 km areas that have burned before (and their neighbours), and read weather every 1° instead of 0.5°, so the free services and GitHub's machines can keep up. Their numbers appear on the dashboard once the setup run has downloaded and tested them.
 
 **Support first, enforcement last.** A high-risk cell means a farmer who needs a machine or decomposer today, not a fine.
 
@@ -119,6 +129,9 @@ On Sundays during the season it retrains and re-tests every extra signal, so onl
 - **Weather.** Rain matters. In live runs the weather is a forecast, which can be wrong.
 - **District names.** These come from 2011 census boundaries, so districts created later (like Malerkotla) carry their old parent's name.
 - **Ground truth.** Guardian field reports ("burned / not burned / helped") would make it better. That's the next step.
+- **Smoke paths.** They follow the forecast wind from 2 pm for 36 hours. That shows where smoke drifts, not how thick it is. The PM2.5 numbers are CAMS forecasts for all sources.
+- **Burn scars.** The Sentinel-2 burn-scar threshold is a first guess. `train.py --select` keeps the signal only if it improves the forecast.
+- **The voice** is an AI. It is told to use only the forecast's numbers and to say when it doesn't know, but it can still mishear or slip. The page says it is an AI.
 - **Translations.** The Punjabi, Hindi and Bengali text in `brief.py` and the dashboard (the `STR` table in `dashboard_template.html`) should be checked by a native speaker before wide use.
 
 ## Files
@@ -136,8 +149,10 @@ On Sundays during the season it retrains and re-tests every extra signal, so onl
 | `brief.py` | The morning message |
 | `geo/places_*.csv` | Villages and towns (India Post PIN directory) for search and stop names |
 | `gee/harvest_signal.js`, `import_harvest.py` | Optional Sentinel-2 harvest signal |
-| `harvest.py` | Daily Sentinel-2 harvest signal through Earth Engine (optional) |
-| `dashboard.py`, `dashboard_template.html` | The one-file dashboard (works offline once built) |
+| `harvest.py` | Sentinel-2 harvest and burn-scar signals, and population, through Earth Engine (optional) |
+| `smoke.py` | Where today's smoke drifts (wind paths) and PM2.5 for towns (CAMS) |
+| `voice/worker.js` | The Cloudflare Worker that keeps the OpenAI key safe for Ask SATARK |
+| `dashboard.py`, `dashboard_template.html` | The dashboard. The pilot regions are inside the page (works offline); big states load from `out/data/` |
 | `assets/` | SATARK logo, riso field photo and DIVA drawing used by the dashboard |
 | `SETUP.md` | One-time setup on GitHub |
 
@@ -147,5 +162,8 @@ On Sundays during the season it retrains and re-tests every extra signal, so onl
 - **Weather:** Open-Meteo (https://open-meteo.com), CC BY 4.0.
 - **District boundaries:** DataMeet India community (https://github.com/datameet/maps), CC BY 4.0.
 - **Village names:** India Post All India Pincode Directory via data.gov.in (GODL-India). Some post office coordinates are rough, so treat the name as "near", not exact.
+- **Air quality forecast:** Copernicus Atmosphere Monitoring Service (CAMS), via Open-Meteo.
+- **Population:** GHS-POP R2023A, European Commission Joint Research Centre. **Land cover:** ESA WorldCover. **Imagery:** Copernicus Sentinel-2, via Google Earth Engine.
+- **Voice:** OpenAI realtime API, through your own key.
 
 Licensed GPL-3.0, same as SATARK PRIME.

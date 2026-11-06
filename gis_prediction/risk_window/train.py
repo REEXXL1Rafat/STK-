@@ -47,6 +47,7 @@ def available_groups(fires, wx, harvest):
     if sats & {"Terra", "Aqua", "T", "A"}: g.append("modis")
     if wx is not None and "wind_direction_10m_dominant" in wx: g.append("wind_dir")
     if harvest is not None: g.append("harvest")
+    if harvest is not None and "scar" in harvest and harvest.scar.notna().any(): g.append("scar")
     return g
 
 
@@ -80,6 +81,9 @@ def choose_groups(region, years, fires, wx, cells, cubes, dayss, aux, groups):
     log = {"validated_on": va_y, "base": {"catch@50": base_c, "avg_precision": base_ap}, "tried": {}}
     keep = []
     for g in groups:
+        if any(f not in tr or tr[f].notna().sum() == 0 for f in F.EXTRA[g]):   # e.g. a satellite that only started recently
+            log["tried"][g] = {"kept": False, "note": "no data in the training seasons yet"}
+            print(f"  {g:10} no data in the training seasons yet, skipped"); continue
         c, ap = score(F.BASE + F.EXTRA[g])
         ok = c >= base_c + 0.005 and ap >= base_ap - 0.002
         log["tried"][g] = {"catch@50": c, "avg_precision": ap, "kept": ok}
@@ -135,12 +139,29 @@ def fit(X, y):
     return clf, reg
 
 
+def replay(te, p, k=50, max_cells=140, min_p=0.08):
+    """The test season, day by day: where fires were seen, and where the model said to look (it never saw this season)."""
+    out = {"k": k, "days": []}
+    for d, g in te.assign(pp=p).groupby("date"):
+        g = g.sort_values("pp", ascending=False)
+        top = g.head(k)
+        fires = g[g.y > 0]
+        risk = g[g.pp >= min_p].head(max_cells)
+        tot = float(g.y.sum())
+        out["days"].append({
+            "date": str(d), "seen": int(tot), "caught": int(top.y.sum()),
+            "fires": [int(v) for r in fires.itertuples() for v in (r.iy, r.ix, r.y)],
+            "risk": [int(v) for r in risk.itertuples() for v in (r.iy, r.ix, round(r.pp * 100))],
+        })
+    return out
+
+
 def evaluate(te, p):
     yb = (te.y > 0).astype(int)
     return {"auc": float(roc_auc_score(yb, p)), "avg_precision": float(average_precision_score(yb, p)), **topk_scores(te, p)}
 
 
-def main(region, today=None, select=False):
+def main(region, today=None, select=False, replay_only=False):
     today = today or date.today()
     fires, wx = load(region)
     harvest = load_harvest(region)
@@ -150,6 +171,10 @@ def main(region, today=None, select=False):
         raise SystemExit(f"Need at least 3 complete seasons, found {years}")
     static = F.static_cells(fires, region)
     print(f"Ignoring {len(static)} cells that look like factories, flares or power plants")
+    active = F.active_cells(fires, region, years, static) if REGIONS[region].get("active_only") else None
+    if active is not None:
+        n0 = len(cells); cells = F.keep_active(cells, active)
+        print(f"Modelling the {len(cells):,} of {n0:,} cells that have burned before (and their neighbours)")
     cubes, dayss = F.all_cubes(fires, region, years, static)
     aux = {y: F.aux_cubes(fires, region, y, static, harvest) for y in years}
     gpath = MODELS / f"{region}_groups.json"
@@ -167,7 +192,7 @@ def main(region, today=None, select=False):
               "cells": int(len(cells)), "static_cells_ignored": len(static), "extra_signals": groups, "horizons": {}}
     if gpath.exists():
         report["signal_tests"] = json.loads(gpath.read_text())
-    for h in HORIZONS:
+    for h in ((1,) if replay_only else HORIZONS):
         tr = build(region, train_years, train_years, fires, wx, cells, cubes, dayss, h, aux)
         te = build(region, [test_year], train_years, fires, wx, cells, cubes, dayss, h, aux)
         clf, reg = fit(tr[feats], tr.y)
@@ -190,6 +215,10 @@ def main(region, today=None, select=False):
             cal = pd.DataFrame({"p": p, "y": (te.y > 0).astype(int)}).assign(b=lambda x: pd.cut(x.p, bins)).groupby("b", observed=True).agg(said=("p", "mean"), saw=("y", "mean"), n=("y", "size"))
             report["calibration"] = [{"said": round(float(r.said), 3), "saw": round(float(r.saw), 3), "n": int(r.n)} for r in cal.itertuples()]
             report["backtest_daily"] = daily_table(te, p, mu, base["persistence"])
+            MODELS.mkdir(parents=True, exist_ok=True)
+            (MODELS / f"{region}_replay.json").write_text(json.dumps(replay(te, p), separators=(",", ":")))
+            if replay_only:
+                print(f"Wrote the {test_year} replay"); return report
     report["generated"] = str(today)
 
     # final models: learn from every complete season, including the test one
@@ -200,7 +229,7 @@ def main(region, today=None, select=False):
     MODELS.mkdir(parents=True, exist_ok=True)
     with open(MODELS / f"{region}.pkl", "wb") as fh:
         pickle.dump({"h": models, "features": feats, "groups": groups, "seasons": years, "trained": str(today),
-                     "static": sorted(static)}, fh)
+                     "static": sorted(static), "cells": sorted(active) if active is not None else None}, fh)
     (MODELS / f"{region}_report.json").write_text(json.dumps(report, indent=1))
     m, ps = report["model"], report["persistence"]
     print(f"Saved. Today's model on {test_year}: catch@50 {m['catch@50']:.2f} vs yesterday-guess {ps['catch@50']:.2f}")
@@ -213,9 +242,24 @@ def in_season(region, day):
 
 if __name__ == "__main__":
     args = [a for a in sys.argv[1:] if not a.startswith("--")]
+    if "--all" in sys.argv:   # every region; with --missing, only those without a model yet
+        from config import ORDER
+        for r in ORDER:
+            if "--missing" in sys.argv and (MODELS / f"{r}.pkl").exists():
+                continue
+            man = json.loads((DATA / "fetched.json").read_text()) if (DATA / "fetched.json").exists() else None
+            if not (DATA / f"fires_{r}.csv.gz").exists() or (man is not None and not man.get("weather", {}).get(r)):
+                print(f"{r}: data still downloading, skipping"); continue
+            if "--if-in-season" in sys.argv and (MODELS / f"{r}.pkl").exists() and not in_season(r, date.today()):
+                print(f"{r}: not in season, keeping the current model"); continue
+            try:
+                main(r, select="--select" in sys.argv)
+            except SystemExit as e:
+                print(f"{r}: {e}")
+        sys.exit(0)
     region = args[0] if args else "punjab_haryana"
     # the daily robot retrains weekly only while fields are burning, so the repo doesn't fill up with old models
     if "--if-in-season" in sys.argv and (MODELS / f"{region}.pkl").exists() and not in_season(region, date.today()):
         print(f"{region}: not in season, keeping the current model")
         sys.exit(0)
-    main(region, select="--select" in sys.argv)
+    main(region, select="--select" in sys.argv, replay_only="--replay-only" in sys.argv)
