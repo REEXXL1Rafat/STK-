@@ -1,0 +1,44 @@
+SATARK Risk Window · Punjab and Haryana · Sun 08 Nov 2026
+Expected today: about 261 fire detections. Most in Firozpur, Sangrur, Bathinda, Ludhiana.
+
+Team 1
+  1. near Chugatte Wala, Firozpur · risk 31% · https://maps.google.com/?q=30.8250,74.5750
+  2. near Daroli Bhai, Firozpur · risk 23% · https://maps.google.com/?q=30.8750,74.6750
+  3. near Bahamni Wala, Firozpur · risk 24% · https://maps.google.com/?q=30.5750,74.2250
+  4. near Railway Road Mandi  Ladhuka, Firozpur · risk 23% · https://maps.google.com/?q=30.4750,74.1750
+Team 2
+  1. near Mehma, Firozpur · risk 35% · https://maps.google.com/?q=31.0250,74.6250
+  2. near Mandi Amin Ganj, Firozpur · risk 23% · https://maps.google.com/?q=30.9750,74.7250
+  3. near Bhangala, Tarn Taran · risk 34% · https://maps.google.com/?q=31.1250,74.7250
+  4. near Nasrala, Firozpur · risk 23% · https://maps.google.com/?q=31.1250,74.8250
+Team 3
+  1. near Karahewala, Firozpur · risk 32% · https://maps.google.com/?q=31.0750,75.0750
+  2. near Kaunke Kalan, Ludhiana · risk 24% · https://maps.google.com/?q=30.7750,75.4250
+  3. near Gumti Kalan, Bathinda · risk 23% · https://maps.google.com/?q=30.4250,75.1750
+  4. near Mandi Kalan, Bathinda · risk 23% · https://maps.google.com/?q=30.2250,75.2750
+Team 4
+  1. near Tossey, Ludhiana · risk 35% · https://maps.google.com/?q=30.7250,75.6750
+  2. near Kalsian, Sangrur · risk 23% · https://maps.google.com/?q=30.6250,75.6750
+  3. near Maherna Kalan, Sangrur · risk 29% · https://maps.google.com/?q=30.6250,75.7750
+  4. near Meerpur Hans, Ludhiana · risk 23% · https://maps.google.com/?q=30.7750,75.5250
+Team 5
+  1. near Saraud, Sangrur · risk 29% · https://maps.google.com/?q=30.5750,75.9250
+  2. near Bathan, Sangrur · risk 22% · https://maps.google.com/?q=30.5250,76.0250
+  3. near Rajgarh, Patiala · risk 23% · https://maps.google.com/?q=30.4250,76.3250
+  4. near Mandir Mathra Bhagi, Tarn Taran · risk 26% · https://maps.google.com/?q=31.3750,74.5750
+
+These 20 stops cover about 3% of today's expected fires.
+
+Next days: tomorrow about 164 detections; day after about 202 detections
+Support first. Enforcement last.
+
+ਸਤਰਕ ਰਿਸਕ ਵਿੰਡੋ
+ਅੱਜ ਪਰਾਲੀ ਸਾੜਨ ਦਾ ਖ਼ਤਰਾ ਸਭ ਤੋਂ ਵੱਧ ਇੱਥੇ ਹੈ: Firozpur, Sangrur, Bathinda, Ludhiana
+ਟੀਮ 1: Chugatte Wala (31%) → Daroli Bhai (23%) → Bahamni Wala (24%) → Railway Road Mandi  Ladhuka (23%)
+ਟੀਮ 2: Mehma (35%) → Mandi Amin Ganj (23%) → Bhangala (34%) → Nasrala (23%)
+ਟੀਮ 3: Karahewala (32%) → Kaunke Kalan (24%) → Gumti Kalan (23%) → Mandi Kalan (23%)
+ਟੀਮ 4: Tossey (35%) → Kalsian (23%) → Maherna Kalan (29%) → Meerpur Hans (23%)
+ਟੀਮ 5: Saraud (29%) → Bathan (22%) → Rajgarh (23%) → Mandir Mathra Bhagi (26%)
+ਪਹਿਲਾਂ ਮਦਦ, ਸਜ਼ਾ ਬਾਅਦ ਵਿੱਚ। ਕਿਸਾਨ ਨੂੰ ਮਸ਼ੀਨ ਜਾਂ ਡੀਕੰਪੋਜ਼ਰ ਬਾਰੇ ਦੱਸੋ।
+
+Satellites miss most fires lit after about 1:30 pm, so real numbers are higher.

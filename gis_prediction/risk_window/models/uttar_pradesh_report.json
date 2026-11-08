@@ -141,6 +141,14 @@
     "catch@50": 0.16432341933250427,
     "avg_precision": 0.21745270029611205,
     "kept": false
+   },
+   "harvest": {
+    "kept": false,
+    "note": "no data in the training seasons yet"
+   },
+   "scar": {
+    "kept": false,
+    "note": "no data in the training seasons yet"
    }
   },
   "kept": []
@@ -824,5 +832,5 @@
    "persist_catch": 0.25
   }
  ],
- "generated": "2026-11-06"
+ "generated": "2026-11-08"
 }
