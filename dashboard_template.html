@@ -1,0 +1,912 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SATARK Risk Window</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..100,500..900&family=IBM+Plex+Mono:wght@500&family=IBM+Plex+Sans:wght@400;500;600&family=Kalam:wght@400;700&family=Tiro+Bangla&family=Noto+Sans+Gurmukhi:wght@400;600&family=Noto+Sans+Devanagari:wght@400;600&family=Noto+Sans+Bengali:wght@400;600&display=swap">
+<style>
+/* SATARK riso look: cream paper, blue + red + yellow inks, a little grain */
+:root,.viz-root{
+  --surface:#EFE6D2; --panel:#F8F2E4; --ink:#1B2747; --ink2:#3F5285; --muted:#6F7480; --line:#D9CDB2; --rule:#C3B796;
+  --brand:#2F4A8A; --red:#D7261E; --yel:#FFB511; --s1:#2a78d6; --s2:#eb6834; --wa:#1a7f45;
+  --scr:'IBM Plex Sans','Noto Sans Gurmukhi','Noto Sans Devanagari','Noto Sans Bengali',system-ui,sans-serif;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+body{margin:0;background:#EFE6D2 url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='260' height='260'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .18 0 0 0 0 .29 0 0 0 0 .54 1.7 0 0 0 -.8'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.16'/%3E%3C/svg%3E");color:#1B2747;font-family:'IBM Plex Sans','Noto Sans Gurmukhi','Noto Sans Devanagari','Noto Sans Bengali',system-ui,sans-serif;font-size:15px;line-height:1.45}
+.viz-root{max-width:1480px;margin:0 auto;padding:20px 28px 40px}
+a{color:var(--brand)}
+header{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;padding-bottom:14px;border-bottom:3px solid var(--brand);box-shadow:0 4px 0 -1px rgba(215,38,30,.45)}
+.lockup{display:flex;align-items:center;gap:18px;flex-wrap:wrap}
+.logo{height:46px;width:163px;color:var(--brand);display:block}
+.rw{display:flex;flex-direction:column;gap:5px;align-items:flex-start}
+.rwname{font:900 25px/1 'Archivo',sans-serif;font-stretch:75%;text-transform:uppercase;letter-spacing:.02em;color:var(--red);border:2.5px solid var(--red);padding:4px 9px 3px;transform:rotate(-2deg);mix-blend-mode:multiply}
+.alert{display:flex;align-items:baseline;gap:7px;color:var(--brand)}
+.alert .bn{font:400 21px/1 'Tiro Bangla',serif}
+.alert .k{font:400 14px/1 'Kalam',cursive;color:var(--ink2)}
+.hright{display:flex;flex-direction:column;align-items:flex-end;gap:8px}
+.tabs,.langs,.days{display:flex;gap:6px;flex-wrap:wrap}
+.pill{font:700 14px 'Archivo','Noto Sans Gurmukhi','Noto Sans Devanagari','Noto Sans Bengali',sans-serif;border:2px solid var(--brand);background:transparent;color:var(--brand);padding:6px 14px;border-radius:999px;cursor:pointer;line-height:1.2}
+.pill[aria-pressed=true],.pill[aria-selected=true]{background:var(--brand);color:#EFE6D2}
+.tabs .pill[aria-selected=true]{background:var(--red);border-color:var(--red)}
+.langs .pill{border-width:1.5px;padding:4px 10px;font-size:13px;font-weight:600}
+.datebar{font-family:'IBM Plex Mono',monospace;font-size:12.5px;color:var(--ink2);text-align:right}
+.banner{position:relative;margin-top:18px;min-height:250px;border-radius:10px;overflow:hidden;background:#EFE6D2 center 45%/cover no-repeat;display:flex;justify-content:space-between;align-items:flex-start;gap:18px;padding:24px 24px 40px;box-shadow:4px 4px 0 rgba(47,74,138,.14)}
+.banner h1{margin:0;font:900 42px/1.08 'Archivo','Noto Sans Gurmukhi','Noto Sans Devanagari','Noto Sans Bengali',sans-serif;font-stretch:85%;color:var(--brand);max-width:620px}
+.banner h1 span,.banner p span{background:#EFE6D2;box-decoration-break:clone;-webkit-box-decoration-break:clone;padding:0 10px}
+.banner p{margin:10px 0 0;max-width:560px;font:700 19px/1.55 'Kalam','Noto Sans Gurmukhi','Noto Sans Devanagari','Noto Sans Bengali',cursive;color:var(--red)}
+.psst{flex:0 0 270px;background:var(--yel);color:var(--ink);padding:12px 15px 13px;transform:rotate(2.5deg);font:400 16.5px/1.35 'Kalam','Noto Sans Gurmukhi','Noto Sans Devanagari','Noto Sans Bengali',cursive;box-shadow:3px 3px 0 rgba(47,74,138,.3);margin-top:6px}
+.psst b{display:block;font:900 22px/1 'Archivo',sans-serif;color:var(--red);margin-bottom:4px;letter-spacing:.01em}
+.psst u{text-decoration:none;font-weight:700;border-bottom:2px solid var(--red)}
+.cap{position:absolute;left:0;bottom:0;font:500 11px 'IBM Plex Mono',monospace;color:#EFE6D2;background:rgba(47,74,138,.88);padding:4px 10px;border-radius:0 6px 0 0}
+.card{background:var(--panel);border:1.5px solid rgba(47,74,138,.28);border-radius:8px;padding:16px 18px;box-shadow:4px 4px 0 rgba(47,74,138,.08)}
+.card h2{font:700 21px/1.15 'Kalam','Noto Sans Gurmukhi','Noto Sans Devanagari','Noto Sans Bengali',cursive;color:var(--red);margin:0 0 10px}
+.check{margin-top:22px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.25fr);gap:18px;align-items:start}
+.searchrow{display:flex;gap:8px;position:relative}
+.searchrow input{flex:1;font:500 17px 'IBM Plex Sans',sans-serif;padding:11px 14px;border:2px solid var(--brand);border-radius:8px;background:#fff;color:var(--ink);min-width:0}
+.searchrow button{font:700 14px 'Archivo','Noto Sans Gurmukhi','Noto Sans Devanagari','Noto Sans Bengali',sans-serif;border:2px solid var(--brand);background:var(--brand);color:#EFE6D2;border-radius:8px;padding:0 14px;cursor:pointer;white-space:nowrap}
+.results{position:absolute;left:0;right:0;top:52px;background:#fff;border:1px solid var(--line);border-radius:8px;box-shadow:0 8px 24px rgba(30,42,68,.12);z-index:5;max-height:330px;overflow:auto}
+.results button{display:block;width:100%;text-align:left;border:0;border-bottom:1px solid var(--line);background:#fff;padding:9px 12px;font:15px 'IBM Plex Sans',sans-serif;color:var(--ink);cursor:pointer}
+.results button:hover,.results button:focus{background:#EFE6D2}
+.results small{color:var(--muted)}
+.hint{font-size:13px;color:var(--muted);margin-top:8px}
+.toplist button{display:flex;justify-content:space-between;align-items:baseline;gap:10px;width:100%;border:0;border-bottom:1px dashed var(--rule);background:transparent;padding:8px 2px;font:600 15.5px var(--scr);color:var(--ink);cursor:pointer;text-align:left}
+.toplist button:hover,.toplist button:focus{background:#EFE6D2}
+.toplist small{font-weight:400;color:var(--muted);font-size:13px}
+.toplist b{font:900 20px 'Archivo',sans-serif}
+.place h3{margin:0;font:900 26px 'Archivo',sans-serif;font-stretch:85%;color:var(--brand)}
+.place .meta{color:var(--ink2);font-size:13.5px;margin:2px 0 12px}
+.chips{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.chip{border-radius:8px;padding:10px 12px;border:1px solid var(--line);background:#fff}
+.chip .d{font-size:12.5px;color:var(--ink2)}
+.chip .v{font:900 27px 'Archivo',sans-serif;line-height:1.1}
+.chip .l{font-size:13px;font-weight:600}
+.lv0{color:#5d7a3a}.lv1{color:#b4610d}.lv2{color:#c23a12}.lv3{color:#8e1b0b}
+.help{margin-top:12px;background:#fff;border-left:4px solid var(--yel);border-radius:0 8px 8px 0;padding:10px 12px;font-size:14px}
+.help b{display:block;margin-bottom:4px;color:var(--brand);font:700 18px 'Kalam','Noto Sans Gurmukhi','Noto Sans Devanagari','Noto Sans Bengali',cursive}
+.help ul{margin:0;padding-left:18px}
+.help li{margin:3px 0}
+a.wa{display:inline-flex;align-items:center;gap:8px;margin-top:12px;background:var(--wa);color:#fff;text-decoration:none;font:600 14px 'IBM Plex Sans','Noto Sans Gurmukhi','Noto Sans Devanagari','Noto Sans Bengali',sans-serif;padding:9px 14px;border-radius:8px}
+a.wa svg{width:18px;height:18px}
+.daysbar{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin:22px 0 12px}
+.daysbar .note{margin:0}
+.grid{display:grid;grid-template-columns:minmax(0,1fr) 430px;gap:22px}
+.mapwrap{position:relative}
+#map{width:100%;height:auto;max-height:78vh;display:block;cursor:crosshair}
+.legend{display:flex;align-items:center;gap:10px;flex-wrap:wrap;font-size:12.5px;color:var(--ink2);margin-top:10px}
+.legend .sw{display:inline-flex;align-items:center;gap:4px}
+.legend i{display:inline-block;width:16px;height:12px;border-radius:2px}
+.toggles{display:flex;gap:16px;flex-wrap:wrap;font-size:13px;color:var(--ink2);margin-top:8px}
+.tip{position:absolute;pointer-events:none;background:#1B2747;color:#fff;font-size:12.5px;padding:7px 9px;border-radius:6px;white-space:nowrap;transform:translate(-50%,-115%);opacity:0;transition:opacity .08s;z-index:10}
+.hero{display:flex;align-items:baseline;gap:10px}
+.hero b{font:900 60px 'Archivo',sans-serif;font-stretch:80%;line-height:1;color:var(--brand)}
+.hero span{color:var(--ink2);font-size:14px}
+.bars{display:grid;grid-template-columns:auto 1fr auto;gap:5px 10px;align-items:center;font-size:13.5px;margin-top:12px}
+.bars .b{height:12px;background:#d95926;border-radius:0 4px 4px 0;min-width:2px}
+.bars .v{font-family:'IBM Plex Mono',monospace;font-size:12.5px;color:var(--ink2)}
+.ctl{display:grid;grid-template-columns:auto 1fr 34px;gap:6px 10px;align-items:center;font-size:14px}
+.ctl output{font:600 15px 'IBM Plex Mono',monospace;text-align:right}
+input[type=range]{width:100%;accent-color:var(--brand)}
+.cover{margin:10px 0 8px;font-size:14px}
+.cover b{font:900 23px 'Archivo',sans-serif;color:var(--red)}
+.teams{max-height:330px;overflow:auto;border-top:1px solid var(--line);margin-top:6px}
+.team{padding:8px 0;border-bottom:1px solid var(--line)}
+.team h3{margin:0 0 4px;font:800 13px 'Archivo',sans-serif;letter-spacing:.04em;text-transform:uppercase;color:var(--brand)}
+.stop{display:grid;grid-template-columns:18px 1fr auto;gap:8px;font-size:13.5px;align-items:baseline}
+.stop .n{font:600 12px 'IBM Plex Mono',monospace;color:var(--muted)}
+.stop a{color:var(--ink);text-decoration:underline;text-decoration-color:var(--rule)}
+.stop .p{font:600 12.5px 'IBM Plex Mono',monospace;color:#a83d14}
+.chk{font-size:14.5px}
+.chk .big{font:900 36px 'Archivo',sans-serif;font-stretch:85%;color:var(--brand)}
+.kv{display:grid;grid-template-columns:1fr auto;gap:4px 12px;font-size:13.5px;margin-top:8px}
+.kv span:nth-child(even){font-family:'IBM Plex Mono',monospace;text-align:right}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:22px}
+.chart svg{width:100%;height:auto;display:block}
+.note{font-size:12.5px;color:var(--muted);margin-top:6px}
+pre.brief{white-space:pre-wrap;font:13px/1.5 'IBM Plex Mono','Noto Sans Gurmukhi','Noto Sans Bengali',monospace;background:#fff;border:1px solid var(--line);border-radius:8px;padding:12px;max-height:340px;overflow:auto;margin:0}
+.btnrow{display:flex;gap:8px;justify-content:flex-end;margin:-38px 0 10px}
+button.copy{font:600 13px 'IBM Plex Sans',sans-serif;border:1.5px solid var(--brand);background:#fff;color:var(--brand);padding:5px 12px;border-radius:6px;cursor:pointer}
+.btnrow a.wa{margin:0;padding:5px 12px;font-size:13px}
+table{border-collapse:collapse;width:100%;font-size:13px}
+th,td{padding:5px 6px;border-bottom:1px solid var(--line);text-align:right}
+th:first-child,td:first-child{text-align:left}
+th{font-weight:600;color:var(--ink2)}
+ul.lims{margin:6px 0 0;padding-left:18px;font-size:13.5px}
+ul.lims li{margin-bottom:4px}
+details summary{cursor:pointer;color:var(--brand);font-size:13px;margin-top:8px}
+.off{padding:60px 20px;text-align:center;color:var(--ink2);font-size:17px}
+.foot{margin-top:30px;background:var(--brand);color:#EFE6D2;border-radius:10px;padding:28px 28px 18px;box-shadow:4px 4px 0 rgba(215,38,30,.35)}
+.foot .top{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:28px;align-items:center}
+.foot .big{font:900 38px/1.05 'Archivo',sans-serif;font-stretch:80%;text-transform:uppercase;letter-spacing:.01em}
+.foot .big em{font-style:normal;color:var(--yel)}
+.foot .kal{font:700 24px/1.3 'Kalam',cursive;color:var(--yel);margin-top:8px;transform:rotate(-1.5deg);transform-origin:left}
+.foot p{font-size:14.5px;max-width:560px;margin:12px 0 0;color:#E4DCC8}
+.diva{justify-self:end;max-width:460px;background:#EFE6D2;color:var(--ink);border-radius:8px;padding:12px 14px 14px;transform:rotate(1deg)}
+.diva img{width:100%;height:auto;display:block;mix-blend-mode:multiply}
+.diva div{font-size:14px;margin-top:6px}
+.diva b{font:900 17px 'Archivo',sans-serif;color:var(--red);letter-spacing:.03em}
+.footbar{display:flex;align-items:center;gap:16px;flex-wrap:wrap;margin-top:24px;padding-top:14px;border-top:1px solid rgba(239,230,210,.3)}
+.footbar .logo{color:#EFE6D2;height:32px;width:113px}
+.footbar span{font:500 12px 'IBM Plex Mono',monospace;color:#E4DCC8;flex:1;min-width:220px}
+.footbar a{color:var(--yel);font:700 15px 'Archivo',sans-serif;text-decoration:none}
+.credits{font-size:11.5px;color:#C9C3B4;margin-top:10px}
+.credits a{color:#E4DCC8}
+.wide{margin-top:22px}
+.logsum{display:flex;gap:10px 28px;flex-wrap:wrap;align-items:baseline;margin:2px 0 12px;font-size:14px;color:var(--ink2)}
+.logsum b{font:900 32px 'Archivo',sans-serif;font-stretch:85%;color:var(--brand);margin-right:5px}
+.logsum .seen b{color:#2a78d6}.logsum .exp b{color:#eb6834}
+.flogwrap{overflow-x:auto}
+.flog td{font:12.5px 'IBM Plex Mono',monospace;font-variant-numeric:tabular-nums}
+.flog td:first-child{font:13px 'IBM Plex Sans',sans-serif;white-space:nowrap}
+.flog tr.wait td{color:var(--muted);background:rgba(239,230,210,.45)}
+.flog tr.more{display:none}.flog.all tr.more{display:table-row}
+.flog .later{color:var(--muted);font-style:italic}
+.flog .up{color:#a83d14}.flog .dn{color:#2F4A8A}
+.logbtns{display:flex;gap:8px;margin-top:10px;flex-wrap:wrap}
+@media (max-width:560px){.flog .opt{display:none}.logsum{gap:4px 18px}.logsum b{font-size:26px}}
+.rp{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:20px;align-items:start}
+.rp svg{width:100%;height:auto;display:block;max-height:70vh}
+.rpbar{display:flex;align-items:center;gap:10px;margin-top:10px;flex-wrap:wrap}
+.rpbar input[type=range]{flex:1;min-width:160px}
+.rpbtn{font:800 15px 'Archivo',sans-serif;border:2px solid var(--red);background:var(--red);color:#fff;border-radius:999px;padding:7px 16px;cursor:pointer;min-width:92px}
+.rpbtn.sec{background:transparent;color:var(--red);min-width:0;padding:6px 12px;font-size:13px}
+.rpdate{font:900 34px/1 'Archivo',sans-serif;font-stretch:80%;color:var(--brand)}
+.rpstat{display:grid;grid-template-columns:auto 1fr;gap:6px 12px;align-items:baseline;margin-top:14px;font-size:14px}
+.rpstat b{font:900 26px 'Archivo',sans-serif;color:var(--ink);text-align:right}
+.rpsum{margin-top:14px;background:#fff;border-left:4px solid var(--yel);border-radius:0 8px 8px 0;padding:10px 12px;font-size:14.5px}
+.rpsum b{color:var(--red)}
+.rpkey{display:flex;gap:14px;flex-wrap:wrap;font-size:12.5px;color:var(--ink2);margin-top:10px}
+.rpkey i{display:inline-block;width:12px;height:12px;vertical-align:-1px;margin-right:4px}
+.row2b{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:22px}
+.band{font:700 12px 'IBM Plex Sans',sans-serif;padding:2px 7px;border-radius:999px;color:#fff;white-space:nowrap}
+.b-good{background:#5d7a3a}.b-satisfactory{background:#8a9a2c}.b-moderate{background:#b4860d}.b-poor{background:#c2611d}.b-verypoor{background:#a83d14}.b-severe{background:#6e2408}
+.gv{display:flex;flex-wrap:wrap;gap:6px;margin:10px 0 12px}
+.gv span{background:#E3EED6;color:#2F5A1F;border-radius:999px;padding:4px 11px;font-size:13.5px}
+.gv small{color:#5d7a3a}
+.people{margin-top:12px;padding-top:10px;border-top:1px dashed var(--rule);font-size:14px}
+.people b{font:900 24px 'Archivo',sans-serif;color:var(--red)}
+.chg-dn{color:#2F7A2F;font-weight:700}.chg-up{color:#B4300F;font-weight:700}
+.loading{padding:60px 20px;text-align:center;color:var(--ink2);font-size:17px}
+/* voice */
+.ask{position:fixed;right:22px;bottom:22px;z-index:40;display:flex;align-items:center;gap:10px;border:0;cursor:pointer;background:var(--brand);color:#EFE6D2;border-radius:999px;padding:8px 18px 8px 8px;font:800 15px 'Archivo',sans-serif;box-shadow:0 6px 18px rgba(27,39,71,.35)}
+.ask .dot{width:42px;height:42px;border-radius:50%;background:radial-gradient(circle at 35% 35%,#FFE08A,#FFB511 40%,#D7261E 100%);box-shadow:0 0 0 0 rgba(255,181,17,.6);animation:askp 2.4s infinite}
+@keyframes askp{0%{box-shadow:0 0 0 0 rgba(255,181,17,.55)}70%{box-shadow:0 0 0 14px rgba(255,181,17,0)}100%{box-shadow:0 0 0 0 rgba(255,181,17,0)}}
+.vo{position:fixed;inset:0;z-index:50;background:rgba(17,26,51,.92);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;color:#EFE6D2;padding:24px}
+.vo[hidden]{display:none}
+.orb{width:190px;height:190px;border-radius:50%;position:relative;background:radial-gradient(circle at 38% 32%,#FFF2C2 0%,#FFB511 28%,#D7261E 62%,#2F4A8A 100%);box-shadow:0 0 60px rgba(255,181,17,.45),inset 0 0 40px rgba(47,74,138,.6);transition:transform .08s linear}
+.orb::before,.orb::after{content:'';position:absolute;inset:-18px;border-radius:50%;border:2px solid rgba(255,181,17,.35);animation:ring 3s infinite}
+.orb::after{inset:-38px;border-color:rgba(239,230,210,.18);animation-delay:1.2s}
+@keyframes ring{0%{transform:scale(.92);opacity:.9}100%{transform:scale(1.12);opacity:0}}
+.vo .vs{font:700 22px 'Kalam',cursive;color:var(--yel);min-height:30px;text-align:center}
+.vo .vt{width:min(640px,100%);max-height:32vh;overflow:auto;font-size:15.5px;line-height:1.5;display:flex;flex-direction:column;gap:8px}
+.vo .vt .u{align-self:flex-end;background:rgba(239,230,210,.12);padding:6px 12px;border-radius:12px 12px 2px 12px;max-width:85%}
+.vo .vt .a{align-self:flex-start;background:rgba(47,74,138,.55);padding:6px 12px;border-radius:12px 12px 12px 2px;max-width:85%}
+.vo .vb{display:flex;gap:10px}
+.vo button{font:800 15px 'Archivo',sans-serif;border-radius:999px;padding:9px 20px;cursor:pointer;border:2px solid #EFE6D2;background:transparent;color:#EFE6D2}
+.vo button.end{background:var(--red);border-color:var(--red)}
+.vo .vn{font-size:12px;color:#B9C1D6;text-align:center;max-width:560px}
+body.kiosk header .hright,body.kiosk .foot,body.kiosk .banner .psst{display:none}
+body.kiosk .viz-root{max-width:none}
+body.kiosk .rp svg{max-height:80vh}
+@media (max-width:1100px){.rp,.row2b{grid-template-columns:1fr}}
+@media (max-width:600px){.ask{right:12px;bottom:12px;padding:6px}.ask #askl{display:none}.ask .dot{width:40px;height:40px}.rpstat b{font-size:20px}.orb{width:150px;height:150px}.rpdate{font-size:28px}}
+@media (max-width:1100px){.grid,.row2,.check{grid-template-columns:1fr}}
+@media (max-width:760px){
+  .diva{justify-self:stretch;max-width:none}
+  .banner{flex-direction:column;min-height:0;padding:18px 16px 40px}.banner h1{font-size:30px}.banner p{font-size:17px}
+  .psst{flex:none;align-self:flex-end;max-width:300px}.foot .top{grid-template-columns:1fr}
+}
+@media (max-width:600px){
+  .viz-root{padding:14px 12px 30px}.logo{height:36px;width:128px}.rwname{font-size:21px}.hright{align-items:flex-start}.datebar{text-align:left}
+  .chip .v{font-size:21px}.hero b{font-size:46px}.card{padding:14px}.foot{padding:22px 18px 16px}.foot .big{font-size:30px}
+}
+</style>
+</head>
+<body>
+<!--__LOGO__-->
+<div class="viz-root">
+<header>
+  <div class="lockup">
+    <svg class="logo" role="img" aria-label="SATARK"><use href="#satark-logo"/></svg>
+    <div class="rw">
+      <div class="rwname">Risk Window</div>
+      <div class="alert"><span class="bn" lang="bn">সতর্ক</span><span class="k">Bengali for "alert"</span></div>
+    </div>
+  </div>
+  <div class="hright">
+    <div class="langs" id="langs"></div>
+    <div class="tabs" role="tablist" id="tabs"></div>
+    <div class="datebar" id="datebar"></div>
+  </div>
+</header>
+<section class="banner" style="background-image:url(__BANNER__)">
+  <div><h1><span id="hl"></span></h1><p><span id="tagline"></span></p></div>
+  <div class="psst" id="psst" hidden></div>
+  <div class="cap">Straw smoke over paddy, Purba Medinipur. SATARK field photo.</div>
+</section>
+<div id="body"></div>
+<footer class="foot">
+  <div class="top">
+    <div>
+      <div class="big">Farmers are not the problem. <em>14 days</em> is.</div>
+      <div class="kal">Support first. Enforcement last.</div>
+      <p>SATARK works on the short gap between harvest and the next sowing, when straw gets burnt. Risk Window is free to use, and it checks itself against the satellites every day.</p>
+    </div>
+    <div class="diva"><img src="__DIVA__" alt="Drawing of the DIVA drum fitted at the back of a combine harvester" width="560" height="306">
+      <div><b>DIVA</b> is the cold plasma straw drum we are building to ride on the combine. <a href="https://satark.co.in/diva" target="_blank" rel="noopener">satark.co.in/diva</a></div></div>
+  </div>
+  <div class="footbar">
+    <svg class="logo" role="img" aria-label="SATARK"><use href="#satark-logo"/></svg>
+    <span>Emergent Ventures grantee · OSHWA IN000084 · Mandated by BDO Kolaghat</span>
+    <a href="https://satark.co.in" target="_blank" rel="noopener">satark.co.in</a>
+  </div>
+  <div class="credits">Fire data: NASA FIRMS (VIIRS and MODIS, LANCE). Weather: Open-Meteo (CC BY 4.0). District maps: DataMeet (CC BY 4.0). Village names: India Post PIN code directory (GODL-India).</div>
+</footer>
+</div>
+<div class="tip" id="tip"></div>
+<button class="ask" id="ask" hidden aria-label="Ask SATARK by voice"><span class="dot"></span><span id="askl">Ask SATARK</span></button>
+<div class="vo" id="vo" hidden role="dialog" aria-label="Talk to SATARK">
+  <div class="orb" id="orb"></div>
+  <div class="vs" id="vs">Connecting</div>
+  <div class="vt" id="vt"></div>
+  <div class="vb"><button id="vmute">Mute mic</button><button class="end" id="vend">End</button></div>
+  <div class="vn">Talk in Punjabi, Hindi, Bengali or English. You are speaking to an AI. It reads the same forecast as this page and can be wrong. Calls end after 3 minutes.</div>
+</div>
+<script>
+const DATA = /*__DATA__*/null;
+const CFG = /*__CFG__*/null || {regions:Object.keys(DATA).map(k=>[k,DATA[k].label]), voice:''};
+const KIOSK = location.hash==='#kiosk';
+const RAMP = [0.02,0.05,0.10,0.20,0.35,0.55];
+const RAMPHEX = ['#f8cdb3','#f6b48f','#ee8650','#d95926','#a83d14','#6e2408'];
+const $ = s => document.querySelector(s);
+const pct = p => (p<0.005?'<1':Math.round(p*100))+'%';
+const esc = s => String(s==null?'':s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+let REG = (CFG.regions.find(r=>DATA[r[0]])||CFG.regions[0])[0], DAY = 0, LANG = 'en', PLACE = null;
+const LOADING = {};
+function loadRegion(r){   // big states live in their own file, fetched when picked
+  if(DATA[r]) return Promise.resolve(DATA[r]);
+  if(!LOADING[r]) LOADING[r]=fetch('data/'+r+'.json').then(x=>{if(!x.ok) throw 0; return x.json()})
+    .then(j=>(DATA[r]=j)).catch(()=>(DATA[r]={label:(CFG.regions.find(x=>x[0]===r)||[r,r])[1],failed:true}));
+  return LOADING[r];
+}
+function selectRegion(r){ REG=r; DAY=0; PLACE=null; if(DATA[r]) return render(); render(); loadRegion(r).then(()=>{if(REG===r) render()}); }
+try{ const l=localStorage.getItem('rw_lang'); if(l) LANG=l; }catch(e){}
+
+/* ---- words people read. Punjabi, Hindi and Bengali should be checked by a native speaker. ---- */
+const STR = {
+ en:{name:'English',hl:'Where will the fields burn next?',psst:'Half of all fires satellites saw in {region} last season came on just <u>{k} of {n} days</u>. The worst day, {date}, had {max}.',
+   top:'Highest chance',topn:'Tap a village to see its 3-day outlook and what to do instead of burning.',
+   tag:'Where farm fires are most likely, and who should go where. Checked against the satellites every day.',
+   today:'Today',tomorrow:'Tomorrow',dayafter:'Day after',check:'Check your village',ph:'Type your village or PIN code (English letters)',near:'Near me',
+   hint:'Or tap anywhere on the map.',chance:'Chance of a farm fire',levels:['Low','Medium','High','Very high'],
+   instead:'Instead of burning',h1:'Book a straw machine (Super Seeder, Happy Seeder, baler) from your nearest Custom Hiring Centre.',
+   hpb:'In Punjab, book it on the Unnat Kisan app.',h2:'Ask your agriculture office about the Pusa decomposer spray.',
+   h3:'Kisan Call Centre: 1800-180-1551 (free, 6 am to 10 pm).',share:'Share on WhatsApp',mapt:'Chance of a fire, by 5 km area',
+   exp:'Expected',det:'fire detections',noloc:'Location isn\'t available here. Type your village instead.',outside:'You seem to be outside this map. Type a village instead.',
+   area:'Area near',nomatch:'No match. Try the PIN code, or a nearby bigger village.',off:'No burning season here right now. The forecast restarts when the season begins.',
+   sharetxt:'Farm fire risk near {name} ({district}): today {p1} ({l1}), tomorrow {p2}, day after {p3}. Instead of burning, book a straw machine at your nearest Custom Hiring Centre. Kisan Call Centre 1800-180-1551.'},
+ pa:{name:'ਪੰਜਾਬੀ',hl:'ਅਗਲੀ ਅੱਗ ਕਿਹੜੇ ਖੇਤਾਂ ਵਿੱਚ ਲੱਗੇਗੀ?',psst:'ਪਿਛਲੇ ਸੀਜ਼ਨ {region} ਵਿੱਚ ਸੈਟੇਲਾਈਟ ਨੇ ਜਿੰਨੀਆਂ ਅੱਗਾਂ ਦੇਖੀਆਂ, ਉਨ੍ਹਾਂ ਵਿੱਚੋਂ ਅੱਧੀਆਂ ਸਿਰਫ਼ <u>{n} ਵਿੱਚੋਂ {k} ਦਿਨਾਂ</u> ਵਿੱਚ ਲੱਗੀਆਂ। ਸਭ ਤੋਂ ਭੈੜੇ ਦਿਨ, {date} ਨੂੰ, {max} ਅੱਗਾਂ।',
+   top:'ਸਭ ਤੋਂ ਵੱਧ ਸੰਭਾਵਨਾ',topn:'ਤਿੰਨ ਦਿਨਾਂ ਦਾ ਅਨੁਮਾਨ ਅਤੇ ਸਾੜਨ ਦੀ ਬਜਾਏ ਕੀ ਕਰਨਾ ਹੈ, ਦੇਖਣ ਲਈ ਪਿੰਡ ਉੱਤੇ ਦਬਾਓ।',
+   tag:'ਖੇਤਾਂ ਵਿੱਚ ਅੱਗ ਕਿੱਥੇ ਲੱਗਣ ਦੀ ਸਭ ਤੋਂ ਵੱਧ ਸੰਭਾਵਨਾ ਹੈ। ਹਰ ਰੋਜ਼ ਸੈਟੇਲਾਈਟ ਨਾਲ ਜਾਂਚਿਆ ਜਾਂਦਾ ਹੈ।',
+   today:'ਅੱਜ',tomorrow:'ਕੱਲ੍ਹ',dayafter:'ਪਰਸੋਂ',check:'ਆਪਣਾ ਪਿੰਡ ਦੇਖੋ',ph:'ਪਿੰਡ ਦਾ ਨਾਮ (ਅੰਗਰੇਜ਼ੀ ਅੱਖਰਾਂ ਵਿੱਚ) ਜਾਂ ਪਿੰਨ ਕੋਡ ਲਿਖੋ',near:'ਮੇਰੇ ਨੇੜੇ',
+   hint:'ਜਾਂ ਨਕਸ਼ੇ ਉੱਤੇ ਕਿਤੇ ਵੀ ਦਬਾਓ।',chance:'ਖੇਤ ਵਿੱਚ ਅੱਗ ਦੀ ਸੰਭਾਵਨਾ',levels:['ਘੱਟ','ਦਰਮਿਆਨੀ','ਵੱਧ','ਬਹੁਤ ਵੱਧ'],
+   instead:'ਸਾੜਨ ਦੀ ਬਜਾਏ',h1:'ਨੇੜਲੇ ਕਸਟਮ ਹਾਇਰਿੰਗ ਸੈਂਟਰ ਤੋਂ ਪਰਾਲੀ ਦੀ ਮਸ਼ੀਨ (ਸੁਪਰ ਸੀਡਰ, ਹੈਪੀ ਸੀਡਰ, ਬੇਲਰ) ਬੁੱਕ ਕਰੋ।',
+   hpb:'ਪੰਜਾਬ ਵਿੱਚ ਉੱਨਤ ਕਿਸਾਨ ਐਪ ਉੱਤੇ ਬੁੱਕ ਕਰੋ।',h2:'ਪੂਸਾ ਡੀਕੰਪੋਜ਼ਰ ਸਪਰੇਅ ਬਾਰੇ ਖੇਤੀਬਾੜੀ ਦਫ਼ਤਰ ਤੋਂ ਪੁੱਛੋ।',
+   h3:'ਕਿਸਾਨ ਕਾਲ ਸੈਂਟਰ: 1800-180-1551 (ਮੁਫ਼ਤ, ਸਵੇਰੇ 6 ਤੋਂ ਰਾਤ 10 ਵਜੇ ਤੱਕ)।',share:'ਵਟਸਐਪ ਉੱਤੇ ਭੇਜੋ',mapt:'ਅੱਗ ਦੀ ਸੰਭਾਵਨਾ, 5 ਕਿਲੋਮੀਟਰ ਖੇਤਰ ਮੁਤਾਬਕ',
+   exp:'ਅਨੁਮਾਨ',det:'ਅੱਗ ਦੀਆਂ ਘਟਨਾਵਾਂ',noloc:'ਇੱਥੇ ਟਿਕਾਣਾ ਨਹੀਂ ਮਿਲ ਸਕਦਾ। ਪਿੰਡ ਦਾ ਨਾਮ ਲਿਖੋ।',outside:'ਤੁਸੀਂ ਇਸ ਨਕਸ਼ੇ ਤੋਂ ਬਾਹਰ ਹੋ। ਪਿੰਡ ਦਾ ਨਾਮ ਲਿਖੋ।',
+   area:'ਨੇੜੇ ਦਾ ਖੇਤਰ',nomatch:'ਕੁਝ ਨਹੀਂ ਮਿਲਿਆ। ਪਿੰਨ ਕੋਡ ਜਾਂ ਨੇੜੇ ਦਾ ਵੱਡਾ ਪਿੰਡ ਲਿਖੋ।',off:'ਇਸ ਵੇਲੇ ਇੱਥੇ ਪਰਾਲੀ ਸਾੜਨ ਦਾ ਮੌਸਮ ਨਹੀਂ ਹੈ।',
+   sharetxt:'{name} ({district}) ਨੇੜੇ ਖੇਤ ਵਿੱਚ ਅੱਗ ਦੀ ਸੰਭਾਵਨਾ: ਅੱਜ {p1} ({l1}), ਕੱਲ੍ਹ {p2}, ਪਰਸੋਂ {p3}। ਸਾੜਨ ਦੀ ਬਜਾਏ ਨੇੜਲੇ ਕਸਟਮ ਹਾਇਰਿੰਗ ਸੈਂਟਰ ਤੋਂ ਮਸ਼ੀਨ ਬੁੱਕ ਕਰੋ। ਕਿਸਾਨ ਕਾਲ ਸੈਂਟਰ 1800-180-1551।'},
+ hi:{name:'हिंदी',hl:'अगली आग किन खेतों में लगेगी?',psst:'पिछले सीज़न {region} में सैटेलाइट ने जितनी आग देखी, उनमें से आधी सिर्फ़ <u>{n} में से {k} दिनों</u> में लगीं। सबसे बुरे दिन, {date} को, {max} आग।',
+   top:'सबसे ज़्यादा संभावना',topn:'तीन दिन का अनुमान और जलाने के बजाय क्या करें, देखने के लिए गाँव पर दबाएँ।',
+   tag:'खेतों में आग कहाँ लगने की सबसे ज़्यादा संभावना है। हर दिन सैटेलाइट से जाँचा जाता है।',
+   today:'आज',tomorrow:'कल',dayafter:'परसों',check:'अपना गाँव देखें',ph:'गाँव का नाम (अंग्रेज़ी अक्षरों में) या पिन कोड लिखें',near:'मेरे पास',
+   hint:'या नक्शे पर कहीं भी दबाएँ।',chance:'खेत में आग की संभावना',levels:['कम','मध्यम','ज़्यादा','बहुत ज़्यादा'],
+   instead:'जलाने के बजाय',h1:'नज़दीकी कस्टम हायरिंग सेंटर से पराली की मशीन (सुपर सीडर, हैप्पी सीडर, बेलर) बुक करें।',
+   hpb:'पंजाब में उन्नत किसान ऐप पर बुक करें।',h2:'पूसा डीकंपोज़र स्प्रे के बारे में कृषि कार्यालय से पूछें।',
+   h3:'किसान कॉल सेंटर: 1800-180-1551 (मुफ़्त, सुबह 6 से रात 10 बजे तक)।',share:'व्हाट्सऐप पर भेजें',mapt:'आग की संभावना, 5 किलोमीटर क्षेत्र के हिसाब से',
+   exp:'अनुमान',det:'आग की घटनाएँ',noloc:'यहाँ लोकेशन नहीं मिल सकती। गाँव का नाम लिखें।',outside:'आप इस नक्शे से बाहर हैं। गाँव का नाम लिखें।',
+   area:'पास का क्षेत्र',nomatch:'कुछ नहीं मिला। पिन कोड या पास का बड़ा गाँव लिखें।',off:'अभी यहाँ पराली जलाने का मौसम नहीं है।',
+   sharetxt:'{name} ({district}) के पास खेत में आग की संभावना: आज {p1} ({l1}), कल {p2}, परसों {p3}। जलाने के बजाय नज़दीकी कस्टम हायरिंग सेंटर से मशीन बुक करें। किसान कॉल सेंटर 1800-180-1551।'},
+ bn:{name:'বাংলা',hl:'পরের আগুন কোন খেতে লাগবে?',psst:'গত মরসুমে {region}-এ স্যাটেলাইট যত আগুন দেখেছে, তার অর্ধেক লেগেছে মাত্র <u>{n} দিনের মধ্যে {k} দিনে</u>। সবচেয়ে খারাপ দিন, {date}, {max}টি আগুন।',
+   top:'সবচেয়ে বেশি সম্ভাবনা',topn:'তিন দিনের পূর্বাভাস আর পোড়ানোর বদলে কী করবেন, দেখতে গ্রামে চাপুন।',
+   tag:'খেতে আগুন লাগার সম্ভাবনা কোথায় সবচেয়ে বেশি। প্রতিদিন স্যাটেলাইট দিয়ে যাচাই করা হয়।',
+   today:'আজ',tomorrow:'আগামীকাল',dayafter:'পরশু',check:'আপনার গ্রাম দেখুন',ph:'গ্রামের নাম (ইংরেজি অক্ষরে) বা পিন কোড লিখুন',near:'আমার কাছে',
+   hint:'অথবা মানচিত্রে যেকোনো জায়গায় চাপুন।',chance:'খেতে আগুনের সম্ভাবনা',levels:['কম','মাঝারি','বেশি','খুব বেশি'],
+   instead:'পোড়ানোর বদলে',h1:'কাছের কাস্টম হায়ারিং সেন্টার থেকে খড়ের যন্ত্র (সুপার সিডার, হ্যাপি সিডার, বেলার) বুক করুন।',
+   hpb:'পাঞ্জাবে উন্নত কিষাণ অ্যাপে বুক করুন।',h2:'পুসা ডিকম্পোজার স্প্রে নিয়ে কৃষি দপ্তরে জিজ্ঞেস করুন।',
+   h3:'কিষাণ কল সেন্টার: 1800-180-1551 (বিনামূল্যে, সকাল 6টা থেকে রাত 10টা)।',share:'হোয়াটসঅ্যাপে পাঠান',mapt:'আগুনের সম্ভাবনা, 5 কিলোমিটার এলাকা অনুযায়ী',
+   exp:'আনুমানিক',det:'আগুনের ঘটনা',noloc:'এখানে লোকেশন পাওয়া যাচ্ছে না। গ্রামের নাম লিখুন।',outside:'আপনি এই মানচিত্রের বাইরে। গ্রামের নাম লিখুন।',
+   area:'কাছের এলাকা',nomatch:'কিছু পাওয়া যায়নি। পিন কোড বা কাছের বড় গ্রামের নাম লিখুন।',off:'এখন এখানে খড় পোড়ানোর মরসুম নয়।',
+   sharetxt:'{name} ({district})-এর কাছে খেতে আগুনের সম্ভাবনা: আজ {p1} ({l1}), আগামীকাল {p2}, পরশু {p3}। পোড়ানোর বদলে কাছের কাস্টম হায়ারিং সেন্টার থেকে যন্ত্র বুক করুন। কিষাণ কল সেন্টার 1800-180-1551।'},
+};
+const T = k => (STR[LANG]&&STR[LANG][k]) || STR.en[k];
+const MONTHS = {
+  en:['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'],
+  pa:['ਜਨਵਰੀ','ਫ਼ਰਵਰੀ','ਮਾਰਚ','ਅਪ੍ਰੈਲ','ਮਈ','ਜੂਨ','ਜੁਲਾਈ','ਅਗਸਤ','ਸਤੰਬਰ','ਅਕਤੂਬਰ','ਨਵੰਬਰ','ਦਸੰਬਰ'],
+  hi:['जनवरी','फ़रवरी','मार्च','अप्रैल','मई','जून','जुलाई','अगस्त','सितंबर','अक्टूबर','नवंबर','दिसंबर'],
+  bn:['জানুয়ারি','ফেব্রুয়ারি','মার্চ','এপ্রিল','মে','জুন','জুলাই','আগস্ট','সেপ্টেম্বর','অক্টোবর','নভেম্বর','ডিসেম্বর']};
+const fmtDate = (s,opt) => { const d=new Date(s+'T00:00:00'), m=(MONTHS[LANG]||MONTHS.en)[d.getMonth()];
+  return opt&&opt.year ? `${d.getDate()} ${m} ${d.getFullYear()}` : `${d.getDate()} ${m}`; };
+const level = p => p>=0.35?3:p>=0.15?2:p>=0.05?1:0;
+const dayName = h => [T('today'),T('tomorrow'),T('dayafter')][h-1];
+const WAICON = '<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#fff" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3a.5.5 0 0 0 0-.4l-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .1-1.2c0-.1-.2-.2-.4-.3z"/></svg>';
+const waLink = txt => 'https://wa.me/?text='+encodeURIComponent(txt);
+function rampColor(p){let c=null;for(let i=0;i<RAMP.length;i++){if(p>=RAMP[i])c=RAMPHEX[i]}return c}
+
+function head(){
+  $('#tagline').textContent=T('tag'); $('#hl').textContent=T('hl'); psst(DATA[REG]);
+  $('#langs').innerHTML=Object.keys(STR).map(k=>`<button class="pill" aria-pressed="${k===LANG}" data-l="${k}">${STR[k].name}</button>`).join('');
+  $('#langs').querySelectorAll('button').forEach(b=>b.onclick=()=>{LANG=b.dataset.l;try{localStorage.setItem('rw_lang',LANG)}catch(e){};render()});
+  const t=$('#tabs'); t.innerHTML='';
+  for(const [r,label] of CFG.regions){
+    const b=document.createElement('button'); b.className='pill'; b.textContent=label; b.setAttribute('role','tab');
+    b.setAttribute('aria-selected', r===REG); b.onclick=()=>selectRegion(r); t.appendChild(b);
+  }
+}
+
+/* the "psst" sticker: a real fact from last season's satellite counts, worked out here */
+function psst(d){
+  const el=$('#psst'), rows=d&&!d.failed&&d.report&&d.report.backtest_daily;
+  if(!rows||rows.length<10){el.hidden=true;return}
+  const v=rows.map(r=>r.actual||0).sort((a,b)=>b-a), tot=v.reduce((a,b)=>a+b,0);
+  if(tot<20){el.hidden=true;return}
+  let c=0,k=0; while(c<tot/2&&k<v.length){c+=v[k++]}
+  const top=rows.reduce((a,r)=>(r.actual||0)>(a.actual||0)?r:a);
+  const f={region:esc(d.label.replace(/\s*\(.*\)\s*/,'')),k,n:rows.length,date:fmtDate(top.date),max:(top.actual||0).toLocaleString('en-IN')};
+  el.innerHTML='<b>psst!</b>'+T('psst').replace(/\{(\w+)\}/g,(m,x)=>f[x]);
+  el.hidden=false;
+}
+
+function proj(d, W){
+  const [w,s,e,n]=d.bbox, k=Math.cos((s+n)/2*Math.PI/180);
+  const S=W/((e-w)*k), H=(n-s)*S;
+  return {x:lon=>(lon-w)*k*S, y:lat=>(n-lat)*S, lon:x=>w+x/(k*S), lat:y=>n-y/S, W, H, S, k};
+}
+
+function riskAt(d, iy, ix){  // [p, mu] for each forecast day
+  return d.days.map(b=>{const r=b._idx[iy+'_'+ix]; return r?[r[2],r[3]]:[0,0]});
+}
+
+function mapSVG(d, blk){
+  const W=900, P=proj(d,W);
+  const cw=d.cell*P.k*P.S, ch=d.cell*P.S;
+  const [w,s]=d.bbox;
+  const path=r=>`M${r.map(p=>P.x(p[0]).toFixed(1)+','+P.y(p[1]).toFixed(1)).join('L')}Z`;
+  let o=`<svg id="map" viewBox="0 0 ${W} ${P.H.toFixed(0)}" role="img" aria-label="Map of fire risk by 5 km area">`;
+  o+=`<g fill="#FBF7EE">`+d.geo.outlines.map(f=>f.r.map(r=>`<path d="${path(r)}"/>`).join('')).join('')+`</g><g id="cells">`;
+  for(const [iy,ix,p] of blk.risk){
+    const c=rampColor(p); if(!c) continue;
+    o+=`<rect x="${P.x(w+ix*d.cell).toFixed(1)}" y="${P.y(s+(iy+1)*d.cell).toFixed(1)}" width="${(cw+0.3).toFixed(1)}" height="${(ch+0.3).toFixed(1)}" fill="${c}" data-iy="${iy}" data-ix="${ix}"/>`;
+  }
+  o+=`</g><g fill="none" stroke="#9AA6C6" stroke-width="0.9">`+d.geo.outlines.map(f=>f.r.map(r=>`<path d="${path(r)}"/>`).join('')).join('')+`</g>`;
+  o+=`<g id="yfires" fill="#1E2A44">`+(DAY===0?d.yesterday_fires.map(([la,lo,n])=>`<circle cx="${P.x(lo).toFixed(1)}" cy="${P.y(la).toFixed(1)}" r="${Math.min(1.4+n*0.35,3.4).toFixed(1)}" opacity=".75"/>`).join(''):'')+`</g>`;
+  const sm=(DAY===0&&d.smoke&&d.smoke.paths)?d.smoke:null;
+  if(sm){
+    o+=`<defs><marker id="arw" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="4.5" markerHeight="4.5" orient="auto-start-reverse"><path d="M0,0L10,5L0,10z" fill="#4E5F8E"/></marker></defs>`;
+    o+=`<g id="smoke" fill="none" stroke="#4E5F8E" stroke-linecap="round" opacity=".5">`+sm.paths.map(p=>`<path d="M${p.pts.map(q=>P.x(q[1]).toFixed(1)+','+P.y(q[0]).toFixed(1)).join('L')}" stroke-width="${Math.min(1.4+p.fires/10,4).toFixed(1)}" stroke-dasharray="0.5 6" marker-end="url(#arw)"/>`).join('')+`</g>`;
+    o+=`<g id="towns" font-family="IBM Plex Sans,sans-serif" font-size="11.5" font-weight="600" fill="#1B2747">`+sm.towns.filter(t=>t.eta).map(t=>`<circle cx="${P.x(t.lon).toFixed(1)}" cy="${P.y(t.lat).toFixed(1)}" r="3.4" fill="#fff" stroke="#4E5F8E" stroke-width="1.6"/><text x="${(P.x(t.lon)+6).toFixed(1)}" y="${(P.y(t.lat)-5).toFixed(1)}" style="paint-order:stroke" stroke="#FBF7EE" stroke-width="3">${esc(t.town)}</text>`).join('')+`</g>`;
+  }
+  const top=new Set(blk.districts.slice(0,6).map(x=>x[0]));
+  o+=`<g font-family="IBM Plex Sans,sans-serif" font-size="12" font-weight="600" fill="#4E5F8E" text-anchor="middle" style="paint-order:stroke" stroke="#FBF7EE" stroke-width="3">`+d.geo.labels.filter(l=>top.has(l[0])).map(([nm,la,lo])=>`<text x="${P.x(lo).toFixed(1)}" y="${P.y(la).toFixed(1)}">${esc(nm)}</text>`).join('')+`</g>`;
+  o+=`<g id="stops"></g><g id="pin"></g></svg>`;
+  return {svg:o, P};
+}
+
+/* ---- planning, same rules as dispatch.py ---- */
+function pick(c, n, spacing=2){
+  const out=[], taken=[];
+  for(const r of c){
+    if(taken.some(t=>Math.abs(t[0]-r[0])<spacing && Math.abs(t[1]-r[1])<spacing)) continue;
+    out.push(r); taken.push([r[0],r[1]]); if(out.length>=n) break;
+  }
+  return out;
+}
+function kmeans(pts,k){
+  const lat0=pts.reduce((a,p)=>a+p[2],0)/pts.length, kx=Math.cos(lat0*Math.PI/180);
+  const xy=pts.map(p=>[p[3]*kx,p[2]]);
+  let cen=xy.slice(0,k).map(v=>v.slice()); let lab=new Array(xy.length).fill(0);
+  for(let it=0;it<30;it++){
+    lab=xy.map(v=>{let b=0,bd=1e9;cen.forEach((c,j)=>{const dd=(v[0]-c[0])**2+(v[1]-c[1])**2;if(dd<bd){bd=dd;b=j}});return b});
+    cen=cen.map((c,j)=>{const m=xy.filter((_,i)=>lab[i]===j);return m.length?[m.reduce((a,v)=>a+v[0],0)/m.length,m.reduce((a,v)=>a+v[1],0)/m.length]:c});
+  }
+  return lab;
+}
+function balance(pts,lab,k,cap){
+  const lat0=pts.reduce((a,p)=>a+p[2],0)/pts.length, kx=Math.cos(lat0*Math.PI/180), xy=pts.map(p=>[p[3]*kx,p[2]]);
+  const cen=[...Array(k)].map((_,j)=>{const m=xy.filter((_,i)=>lab[i]===j);return m.length?[m.reduce((a,v)=>a+v[0],0)/m.length,m.reduce((a,v)=>a+v[1],0)/m.length]:xy[j%xy.length]});
+  const pairs=[]; xy.forEach((v,i)=>cen.forEach((c,j)=>pairs.push([(v[0]-c[0])**2+(v[1]-c[1])**2,i,j]))); pairs.sort((a,b)=>a[0]-b[0]);
+  const out=new Array(xy.length).fill(-1), load=new Array(k).fill(0);
+  for(const [_,i,j] of pairs){ if(out[i]<0&&load[j]<cap){out[i]=j;load[j]++} }
+  return out;
+}
+function km(a,b){const R=6371,t=Math.PI/180,dp=(b[2]-a[2])*t,dl=(b[3]-a[3])*t;const h=Math.sin(dp/2)**2+Math.cos(a[2]*t)*Math.cos(b[2]*t)*Math.sin(dl/2)**2;return 2*R*Math.asin(Math.sqrt(h))}
+function plan(blk, teams, stops){
+  const pts=pick(blk.candidates.filter(c=>c[5]>=0.05), teams*stops); if(!pts.length) return {groups:[],cover:0};
+  const k=Math.min(teams,pts.length), lab=balance(pts,kmeans(pts,k),k,stops);
+  let groups=[...Array(k)].map((_,j)=>pts.filter((_,i)=>lab[i]===j)).filter(g=>g.length);
+  groups.sort((a,b)=>a.reduce((s,p)=>s+p[3],0)/a.length-b.reduce((s,p)=>s+p[3],0)/b.length);
+  groups=groups.map(g=>{let cur=g.reduce((a,b)=>b[5]>a[5]?b:a), left=g.filter(p=>p!==cur), r=[cur];
+    while(left.length){left.sort((a,b)=>km(cur,a)-km(cur,b));cur=left.shift();r.push(cur)} return r});
+  return {groups, cover: blk.total_mu>0? pts.reduce((a,p)=>a+p[6],0)/blk.total_mu:0};
+}
+function drawStops(P,groups){
+  $('#stops').innerHTML=groups.map((grp,t)=>grp.map((p,i)=>{const x=P.x(p[3]),y=P.y(p[2]);
+    return `<g><circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="9.5" fill="#2F4A8A" stroke="#fff" stroke-width="2"/><text x="${x.toFixed(1)}" y="${(y+4).toFixed(1)}" text-anchor="middle" font-family="IBM Plex Mono,monospace" font-size="10.5" font-weight="600" fill="#fff">${t+1}</text><title>Team ${t+1}, stop ${i+1}: ${esc(p[7]||p[4])}, risk ${pct(p[5])}</title></g>`}).join('')).join('');
+}
+
+/* ---- charts ---- */
+function lineChart(rows, keys, labels, colors, yfmt, title){
+  if(!rows.length) return '<div class="note">Not enough days yet.</div>';
+  const W=640,H=230,L=44,R=86,T0=12,B=28, n=rows.length, ok=v=>v!=null&&isFinite(v);
+  let max=0; rows.forEach(r=>keys.forEach(k=>{if(ok(r[k])&&r[k]>max)max=r[k]}));
+  max=max||1; const nice=yfmt==='pct'?1:Math.pow(10,Math.floor(Math.log10(max)))*Math.ceil(max/Math.pow(10,Math.floor(Math.log10(max))));
+  const X=i=>L+(n<2?0:i*(W-L-R)/(n-1)), Y=v=>T0+(H-T0-B)*(1-v/nice);
+  let o=`<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="${esc(title)}">`;
+  for(let i=0;i<=4;i++){const v=nice*i/4,y=Y(v);o+=`<line x1="${L}" x2="${W-R}" y1="${y}" y2="${y}" stroke="#E6DDC8"/><text x="${L-6}" y="${y+4}" text-anchor="end" font-size="11" fill="#7A7F8C" font-family="IBM Plex Mono,monospace">${yfmt==='pct'?Math.round(v*100)+'%':Math.round(v)}</text>`}
+  const ticks=Math.min(6,n); for(let j=0;j<ticks;j++){const i=Math.round(j*(n-1)/Math.max(1,ticks-1));const dd=new Date(rows[i].date+'T00:00:00');o+=`<text x="${X(i)}" y="${H-8}" text-anchor="middle" font-size="11" fill="#7A7F8C">${dd.getDate()} ${dd.toLocaleString('en',{month:'short'})}</text>`}
+  const ends=[];
+  keys.forEach((k,j)=>{
+    const pts=rows.map((r,i)=>ok(r[k])?[X(i),Y(r[k])]:null).filter(Boolean);
+    o+=`<polyline points="${pts.map(p=>p.map(v=>v.toFixed(1)).join(',')).join(' ')}" fill="none" stroke="${colors[j]}" stroke-width="2" ${j?'stroke-dasharray="5 4"':''} stroke-linejoin="round"/>`;
+    const last=pts[pts.length-1]; if(last) ends.push([last[0],last[1],j]);
+  });
+  ends.sort((a,b)=>a[1]-b[1]); for(let i=1;i<ends.length;i++) if(ends[i][1]-ends[i-1][1]<15) ends[i][1]=ends[i-1][1]+15;
+  ends.forEach(([x,y,j])=>{o+=`<line x1="${x+2}" x2="${x+12}" y1="${y}" y2="${y}" stroke="${colors[j]}" stroke-width="2" ${j?'stroke-dasharray="3 2"':''}/><text x="${x+15}" y="${y+4}" font-size="12" font-weight="600" fill="#1E2A44">${esc(labels[j])}</text>`});
+  o+=`<line class="xh" x1="0" x2="0" y1="${T0}" y2="${H-B}" stroke="#1E2A44" stroke-width="1" opacity="0"/><rect x="${L}" y="${T0}" width="${W-L-R}" height="${H-T0-B}" fill="transparent" data-chart="1"/></svg>`;
+  return o;
+}
+function hookChart(el, rows, keys, labels, yfmt){
+  const svg=el.querySelector('svg'); if(!svg) return; const hit=svg.querySelector('[data-chart]'), xh=svg.querySelector('.xh'), tip=$('#tip');
+  hit.addEventListener('mousemove',ev=>{
+    const b=svg.getBoundingClientRect(), vb=svg.viewBox.baseVal, x=(ev.clientX-b.left)*vb.width/b.width;
+    const L=44,R=86,n=rows.length, i=Math.max(0,Math.min(n-1,Math.round((x-L)/((vb.width-L-R)/Math.max(1,n-1)))));
+    const xx=L+i*(vb.width-L-R)/Math.max(1,n-1); xh.setAttribute('x1',xx); xh.setAttribute('x2',xx); xh.setAttribute('opacity',.35);
+    const r=rows[i]; tip.innerHTML=`<b>${fmtDate(r.date)}</b><br>`+keys.map((k,j)=>`${labels[j]}: ${!(r[k]!=null&&isFinite(r[k]))?'no fires':(yfmt==='pct'?pct(r[k]):Math.round(r[k]))}`).join('<br>');
+    const wb=document.body.getBoundingClientRect(); tip.style.left=(ev.clientX-wb.left)+'px'; tip.style.top=(ev.clientY-wb.top-8)+'px'; tip.style.opacity=1;
+  });
+  hit.addEventListener('mouseleave',()=>{xh.setAttribute('opacity',0);tip.style.opacity=0});
+}
+
+/* ---- check your village ---- */
+function norm(s){return String(s).toLowerCase().replace(/[^a-z0-9]/g,'')}
+function search(d, q){
+  q=q.trim(); if(!q) return [];
+  if(/^\d+$/.test(q)) return d.places.filter(p=>String(p[1]).startsWith(q)).slice(0,8);
+  const n=norm(q); if(n.length<2) return [];
+  const hits=[]; for(const p of d.places){const m=norm(p[0]); const k=m===n?0:m.startsWith(n)?1:m.includes(n)?2:-1; if(k>=0) hits.push([k,m.length,p]);}
+  hits.sort((a,b)=>a[0]-b[0]||a[1]-b[1]);
+  return hits.slice(0,8).map(x=>x[2]);
+}
+function nearestPlace(d, lat, lon, maxDeg=0.06){
+  let best=null, bd=1e9, k=Math.cos(lat*Math.PI/180);
+  for(const p of d.places){const dd=(p[3]-lat)**2+((p[4]-lon)*k)**2; if(dd<bd){bd=dd;best=p}}
+  return bd<=maxDeg*maxDeg?best:null;
+}
+function openPlace(d, place){ PLACE=place; drawPlace(d); }
+function placeFromPoint(d, lat, lon){
+  const p=nearestPlace(d,lat,lon); if(p) return p;
+  const iy=Math.floor((lat-d.bbox[1])/d.cell), ix=Math.floor((lon-d.bbox[0])/d.cell);
+  const r=d.days[0]._idx[iy+'_'+ix]; if(!r) return null;   // outside the mapped area
+  return [T('area')+' '+lat.toFixed(3)+', '+lon.toFixed(3),'',d.dnames[r[4]]||'',lat,lon,iy,ix];
+}
+function drawPlace(d){
+  const box=$('#place'); if(!box) return;
+  if(!PLACE){ $('#pin').innerHTML='';   // nothing picked yet: show the villages with the highest chance
+    const blk=d.days[DAY], seen=new Set(), top=[];
+    for(const r of [...blk.risk].sort((a,b)=>b[2]-a[2])){
+      const pl=nearestPlace(d,d.bbox[1]+(r[0]+.5)*d.cell,d.bbox[0]+(r[1]+.5)*d.cell);
+      if(!pl||seen.has(pl[0]+'|'+pl[2])) continue; seen.add(pl[0]+'|'+pl[2]); top.push(pl); if(top.length>=8) break; }
+    top.sort((a,b)=>riskAt(d,b[5],b[6])[DAY][0]-riskAt(d,a[5],a[6])[DAY][0]); top.length=Math.min(top.length,5);
+    box.innerHTML=top.length?`<h2>${T('top')} · ${dayName(blk.h)}</h2><div class="toplist">${top.map((p,i)=>{const v=riskAt(d,p[5],p[6])[DAY][0];
+      return `<button data-i="${i}"><span>${esc(p[0])}<small> · ${esc(p[2])}</small></span><b class="lv${level(v)}">${pct(v)}</b></button>`}).join('')}</div><div class="hint">${T('topn')}</div>`:'';
+    box.querySelectorAll('.toplist button').forEach(b=>b.onclick=()=>openPlace(d,top[+b.dataset.i]));
+    return; }
+  const [name,pin,dist,lat,lon,iy,ix]=PLACE, rk=riskAt(d,iy,ix);
+  const chips=rk.map(([p],i)=>{const lv=level(p);return `<div class="chip"><div class="d">${dayName(d.days[i].h)} · ${fmtDate(d.days[i].date,{day:'numeric',month:'short'})}</div><div class="v lv${lv}">${pct(p)}</div><div class="l lv${lv}">${T('levels')[lv]}</div></div>`}).join('');
+  const inPunjab = REG==='punjab_haryana' && lat>29.5 && lon<76.95;
+  const share=T('sharetxt').replace('{name}',name).replace('{district}',dist).replace('{p1}',pct(rk[0][0])).replace('{l1}',T('levels')[level(rk[0][0])])
+    .replace('{p2}',rk[1]?pct(rk[1][0]):'n/a').replace('{p3}',rk[2]?pct(rk[2][0]):'n/a')+' SATARK Risk Window'+(d.site_url?' '+d.site_url:'');
+  box.innerHTML=`<div class="place"><h3>${esc(name)}</h3><div class="meta">${esc(dist)}${pin?' · PIN '+esc(pin):''} · <a href="https://maps.google.com/?q=${lat},${lon}" target="_blank" rel="noopener">${(+lat).toFixed(3)}, ${(+lon).toFixed(3)}</a></div>
+    <div class="note" style="margin:0 0 6px">${T('chance')}</div><div class="chips">${chips}</div>
+    <div class="help"><b>${T('instead')}</b><ul><li>${T('h1')}${inPunjab?' '+T('hpb'):''}</li><li>${T('h2')}</li><li>${T('h3')}</li></ul></div>
+    <a class="wa" href="${waLink(share)}" target="_blank" rel="noopener">${WAICON}${T('share')}</a></div>`;
+  const P=window._P; if(P){const x=P.x(lon),y=P.y(lat); $('#pin').innerHTML=`<circle cx="${x}" cy="${y}" r="14" fill="none" stroke="#D7261E" stroke-width="3"/><circle cx="${x}" cy="${y}" r="3.5" fill="#D7261E"/><text x="${x+18}" y="${y+4}" font-size="13" font-weight="700" fill="#D7261E" style="paint-order:stroke" stroke="#FBF7EE" stroke-width="3">${esc(name)}</text>`}
+}
+
+const fmtPeople = n => n>=1e7?(n/1e7).toFixed(1)+' crore':n>=1e5?(n/1e5).toFixed(1)+' lakh':Math.round(n).toLocaleString('en-IN');
+function peopleAt(d, blk, minP=0.15){   // people living in the areas with a high chance of fire
+  if(!d.people||!d.people.cells) return null;
+  if(!d._pop){d._pop={}; d.people.cells.forEach(([a,b,n])=>d._pop[a+'_'+b]=n)}
+  let n=0, cells=0; for(const r of blk.risk){ if(r[2]>=minP){ n+=d._pop[r[0]+'_'+r[1]]||0; cells++ } }
+  return {n, cells};
+}
+function when(eta, base){   // '2026-11-06T03:00' -> 'tomorrow 3 am'
+  const days=Math.round((new Date(eta.slice(0,10)+'T00:00:00')-new Date(base+'T00:00:00'))/864e5), h=+eta.slice(11,13);
+  return (days<=0?'today':days===1?'tomorrow':fmtDate(eta.slice(0,10),{day:'numeric',month:'short'}))+' '+((h%12)||12)+(h<12?' am':' pm');
+}
+function smokeCard(d){
+  const sm=d.smoke; if(!sm||!sm.towns||!sm.towns.length) return '';
+  const rows=sm.towns.filter(t=>t.eta||t.pm_tomorrow!=null).slice(0,10); if(!rows.length) return '';
+  const band=t=>t.band?`<span class="band b-${t.band.replace(' ','')}">${t.band}</span>`:'';
+  return `<div class="card"><h2>Where today's smoke goes</h2>
+    <div class="note" style="margin:0 0 8px">From the areas where fires are expected today, following the wind forecast for ${sm.hours} hours from 2 pm. The dotted arrows on the map show the paths.</div>
+    <table><tr><th>Town</th><th>Smoke from fields in</th><th>Reaches it</th><th>PM2.5 tomorrow</th></tr>
+    ${rows.map(t=>`<tr><td>${esc(t.town)}</td><td>${t.from?esc(t.from):'<span style="color:#7A7F8C">not on a path</span>'}</td><td>${t.eta?(t.eta<=sm.start?'already there':when(t.eta,d.date)):''}</td><td>${t.pm_tomorrow!=null?t.pm_tomorrow+' '+band(t):''}</td></tr>`).join('')}</table>
+    <div class="note">PM2.5 is the CAMS air quality forecast for all sources, not only farm fires: a 24-hour average in µg/m³, with India's AQI band. The paths are a guide to where smoke drifts, not a pollution model. Data: Open-Meteo, Copernicus Atmosphere Monitoring Service.</div></div>`;
+}
+function greenCard(d){
+  const g=d.green; if(!g||g.last_total<20) return '';
+  const chs=v=>`<span class="${v<=0?'chg-dn':'chg-up'}">${v>0?'+':''}${Math.round(v*100)}%</span>`;
+  return `<div class="card"><h2>Green villages · no fires seen yet this season</h2>
+    <p style="margin:0 0 6px;font-size:14.5px">Up to ${fmtDate(g.through,{day:'numeric',month:'short'})}, satellites saw <b>${g.now_total.toLocaleString('en-IN')}</b> farm fires this season, against ${g.last_total.toLocaleString('en-IN')} by the same day last season (${chs((g.now_total-g.last_total)/g.last_total)}).</p>
+    ${g.villages.length?`<div class="gv">${g.villages.slice(0,18).map(v=>`<span>${esc(v[0])} <small>· ${esc(v[1])} · ${v[2]} fires by now last year</small></span>`).join('')}</div>`:''}
+    <table><tr><th>District</th><th>Last season, by this day</th><th>This season</th><th>Change</th></tr>${g.districts.slice(0,10).map(([n,l,c])=>`<tr><td>${esc(n)}</td><td>${l}</td><td>${c}</td><td>${chs((c-l)/l)}</td></tr>`).join('')}</table>
+    <div class="note">${g.green_cells.toLocaleString('en-IN')} areas burned by this day last season and show no fires on the satellites so far. Some may just be harvesting later, and fires after the 1:30 pm pass are missed. Worth a visit to find out what changed, and to say well done.</div></div>`;
+}
+let RP=null;
+function replayCard(d){
+  const r=d.replay; if(!r||!r.days||!r.days.length) return '';
+  const yr=r.days[0].date.slice(0,4);
+  return `<div class="card wide" id="rpcard"><h2>${yr} season replay · what the model said each morning, and what the satellites then saw</h2>
+    <div class="rp"><div><div id="rpmap"></div>
+      <div class="rpbar"><button class="rpbtn" id="rpplay">Play</button><input type="range" id="rpslide" min="0" max="${r.days.length-1}" value="0" aria-label="Day of the season"><button class="rpbtn sec" id="rpspeed" aria-label="Speed">1x</button></div>
+      <div class="rpkey"><span><i style="background:#ee8650"></i>squares the model flagged that morning</span><span><i style="background:#1E2A44;border-radius:50%"></i>fire inside a flagged square</span><span><i style="border:1.5px solid #1E2A44;border-radius:50%;width:9px;height:9px"></i>fire outside</span></div></div>
+    <div><div class="rpdate" id="rpdate"></div>
+      <div class="rpstat"><span>Fires the satellites saw</span><b id="rpseen"></b><span>Inside the flagged squares</span><b id="rpin"></b><span>Flagged squares, share of the map</span><b id="rparea"></b></div>
+      <div class="rpsum" id="rpsum"></div>
+      <div class="note">The model learned from ${d.report?d.report.train_seasons.join(', '):'earlier seasons'} and never saw ${yr}. Each morning it only knew what had happened up to the day before.</div></div></div></div>`;
+}
+function startReplay(d){
+  const r=d.replay, host=$('#rpmap'); if(!r||!host) return;
+  if(RP&&RP.timer) clearInterval(RP.timer);
+  const W=900, P=proj(d,W), [w,s]=d.bbox, cw=d.cell*P.k*P.S, ch=d.cell*P.S;
+  const path=q=>`M${q.map(p=>P.x(p[0]).toFixed(1)+','+P.y(p[1]).toFixed(1)).join('L')}Z`;
+  const out=d.geo.outlines.map(f=>f.r.map(q=>`<path d="${path(q)}"/>`).join('')).join('');
+  host.innerHTML=`<svg viewBox="0 0 ${W} ${P.H.toFixed(0)}" role="img" aria-label="Season replay map"><g fill="#FBF7EE">${out}</g><g id="rpr"></g><g fill="none" stroke="#9AA6C6" stroke-width="0.8">${out}</g><g id="rpf"></g></svg>`;
+  const ncell=(d.report&&d.report.cells)||1;
+  let cs=0, ci=0, ca=0;
+  const stat=r.days.map(dd=>{const set=new Set(); for(let i=0;i<dd.risk.length;i+=3) set.add(dd.risk[i]+'_'+dd.risk[i+1]);
+    let inn=0; for(let i=0;i<dd.fires.length;i+=3) if(set.has(dd.fires[i]+'_'+dd.fires[i+1])) inn+=dd.fires[i+2];
+    cs+=dd.seen; ci+=inn; ca+=set.size/ncell; return {set, inn, area:set.size/ncell, cs, ci, ca};});
+  const frame=i=>{const dd=r.days[i], st=stat[i]; let o='';
+    for(let j=0;j<dd.risk.length;j+=3){o+=`<rect x="${P.x(w+dd.risk[j+1]*d.cell).toFixed(1)}" y="${P.y(s+(dd.risk[j]+1)*d.cell).toFixed(1)}" width="${(cw+.3).toFixed(1)}" height="${(ch+.3).toFixed(1)}" fill="${rampColor(dd.risk[j+2]/100)||'#f8cdb3'}"/>`}
+    $('#rpr').innerHTML=o; o='';
+    for(let j=0;j<dd.fires.length;j+=3){const a=dd.fires[j], b=dd.fires[j+1], n=dd.fires[j+2];
+      const cx=P.x(w+(b+.5)*d.cell).toFixed(1), cy=P.y(s+(a+.5)*d.cell).toFixed(1), rr=Math.min(1.6+n*.45,4.2).toFixed(1);
+      o+=st.set.has(a+'_'+b)?`<circle cx="${cx}" cy="${cy}" r="${rr}" fill="#1E2A44"/>`:`<circle cx="${cx}" cy="${cy}" r="${rr}" fill="none" stroke="#1E2A44" stroke-width="1"/>`}
+    $('#rpf').innerHTML=o;
+    $('#rpdate').textContent=fmtDate(dd.date,{day:'numeric',month:'short',year:'numeric'});
+    $('#rpseen').textContent=dd.seen.toLocaleString('en-IN');
+    $('#rpin').textContent=dd.seen?`${st.inn.toLocaleString('en-IN')} (${Math.round(100*st.inn/dd.seen)}%)`:'0';
+    $('#rparea').textContent=(100*st.area).toFixed(1)+'%';
+    $('#rpsum').innerHTML=st.cs?`Season so far: <b>${Math.round(100*st.ci/st.cs)}%</b> of the ${st.cs.toLocaleString('en-IN')} fires fell inside squares the model flagged that morning, while those squares covered only <b>${(100*st.ca/(i+1)).toFixed(1)}%</b> of the map on an average day.`:'No fires seen yet.';
+    $('#rpslide').value=i;};
+  RP={i:0, speed:1, timer:null, n:r.days.length};
+  const stop=()=>{clearInterval(RP.timer);RP.timer=null;$('#rpplay').textContent='Play'};
+  const play=()=>{ if(RP.timer) return stop(); if(RP.i>=RP.n-1) RP.i=0; $('#rpplay').textContent='Pause';
+    RP.timer=setInterval(()=>{ if(!document.body.contains(host)) return clearInterval(RP.timer);
+      RP.i++; if(RP.i>=RP.n){ if(KIOSK) RP.i=0; else {RP.i=RP.n-1; return stop()} } frame(RP.i)}, 420/RP.speed)};
+  $('#rpplay').onclick=play;
+  $('#rpslide').oninput=e=>{RP.i=+e.target.value; frame(RP.i)};
+  $('#rpspeed').onclick=()=>{RP.speed=RP.speed>=4?1:RP.speed*2; $('#rpspeed').textContent=RP.speed+'x'; if(RP.timer){stop(); play()}};
+  RP.i=KIOSK?0:r.days.reduce((a,x,i)=>x.seen>r.days[a].seen?i:a,0); frame(RP.i);   // still frame: the busiest day
+  if(KIOSK) play();
+  else if('IntersectionObserver' in window){ const ob=new IntersectionObserver(es=>{ if(es[0].isIntersecting){ ob.disconnect(); if(!RP.timer){RP.i=0; frame(0); play()} } },{threshold:.6}); ob.observe($('#rpcard')); }
+}
+
+/* ---- voice: OpenAI realtime, through SATARK's own key server (voice/worker.js). The AI only answers from
+   what the tools below read off this page, so its numbers are the forecast's numbers. ---- */
+const VOICE={pc:null, dc:null, stream:null, timer:null, raf:null, line:null, calls:[]};
+const lvlWord=p=>['low','medium','high','very high'][level(p)];
+const plain=h=>String(h||'').replace(/<[^>]+>/g,'');
+function initVoice(){
+  const b=$('#ask'); if(!CFG.voice||!b) return;
+  b.hidden=false; b.onclick=startVoice; $('#vend').onclick=()=>endVoice();
+  $('#vmute').onclick=()=>{ if(!VOICE.stream) return; const t=VOICE.stream.getAudioTracks()[0]; t.enabled=!t.enabled; $('#vmute').textContent=t.enabled?'Mute mic':'Unmute mic'; };
+}
+function vsay(cls, text){ const el=document.createElement('div'); el.className=cls; el.textContent=text; $('#vt').appendChild(el); $('#vt').scrollTop=1e9; return el; }
+async function startVoice(){
+  if(VOICE.pc) return;
+  $('#vo').hidden=false; $('#vt').innerHTML=''; $('#vs').textContent='Connecting';
+  try{
+    const d=DATA[REG]||{};
+    const r=await fetch(CFG.voice+'/session',{method:'POST',headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({lang:LANG, region:d.label||'', date:d.date||'', regions:CFG.regions.map(x=>x[1])})});
+    if(!r.ok) throw new Error('key server said '+r.status);
+    const j=await r.json(), key=j.value||(j.client_secret&&j.client_secret.value); if(!key) throw new Error('no key from the key server');
+    const pc=new RTCPeerConnection(); VOICE.pc=pc;
+    const audio=document.createElement('audio'); audio.autoplay=true;
+    pc.ontrack=e=>{audio.srcObject=e.streams[0]; meter(e.streams[0])};
+    const stream=await navigator.mediaDevices.getUserMedia({audio:{echoCancellation:true,noiseSuppression:true,autoGainControl:true}}); VOICE.stream=stream;
+    pc.addTrack(stream.getTracks()[0], stream);
+    const dc=pc.createDataChannel('oai-events'); VOICE.dc=dc;
+    dc.onmessage=e=>{try{onVoiceEvent(JSON.parse(e.data))}catch(x){console.log('[voice]',x)}};
+    dc.onopen=()=>{ $('#vs').textContent='Listening'; dc.send(JSON.stringify({type:'response.create'})); };   // it says hello first
+    const offer=await pc.createOffer(); await pc.setLocalDescription(offer);
+    const ans=await fetch('https://api.openai.com/v1/realtime/calls',{method:'POST',body:offer.sdp,headers:{Authorization:'Bearer '+key,'Content-Type':'application/sdp'}});
+    if(!ans.ok) throw new Error('voice service said '+ans.status);
+    await pc.setRemoteDescription({type:'answer', sdp:await ans.text()});
+    VOICE.timer=setTimeout(()=>endVoice('Time is up. Tap Ask SATARK to talk again.'), 180000);
+  }catch(e){ console.log('[voice]',e); endVoice('Could not connect ('+(e.message||e)+'). Allow the microphone and check the internet.'); }
+}
+function endVoice(msg){
+  clearTimeout(VOICE.timer); cancelAnimationFrame(VOICE.raf);
+  try{VOICE.dc&&VOICE.dc.close()}catch(e){} try{VOICE.pc&&VOICE.pc.close()}catch(e){}
+  if(VOICE.stream) VOICE.stream.getTracks().forEach(t=>t.stop());
+  Object.assign(VOICE,{pc:null,dc:null,stream:null,line:null,calls:[]});
+  $('#orb').style.transform='';
+  if(msg){ $('#vs').textContent=msg; setTimeout(()=>{if(!VOICE.pc) $('#vo').hidden=true},5000); } else $('#vo').hidden=true;
+}
+function meter(stream){   // the orb breathes with the voice
+  try{ const ac=new (window.AudioContext||window.webkitAudioContext)(), an=ac.createAnalyser(); an.fftSize=256;
+    ac.createMediaStreamSource(stream).connect(an); const buf=new Uint8Array(an.frequencyBinCount);
+    const tick=()=>{ if(!VOICE.pc) return; an.getByteFrequencyData(buf); let v=0; for(const x of buf) v+=x; v/=buf.length*255;
+      $('#orb').style.transform=`scale(${(1+v*1.1).toFixed(3)})`; VOICE.raf=requestAnimationFrame(tick)}; tick(); }catch(e){}
+}
+function onVoiceEvent(ev){
+  const t=ev.type;
+  if(t==='input_audio_buffer.speech_started') $('#vs').textContent='Listening';
+  else if(t==='conversation.item.input_audio_transcription.completed'){ if(ev.transcript&&ev.transcript.trim()) vsay('u', ev.transcript.trim()); }
+  else if(t==='response.output_audio_transcript.delta'||t==='response.audio_transcript.delta'){ if(!VOICE.line) VOICE.line=vsay('a',''); VOICE.line.textContent+=ev.delta||''; $('#vs').textContent='Speaking'; $('#vt').scrollTop=1e9; }
+  else if(t==='response.output_audio_transcript.done'||t==='response.audio_transcript.done') VOICE.line=null;
+  else if(t==='response.function_call_arguments.done'){ $('#vs').textContent='Checking the forecast'; VOICE.calls.push(runTool(ev.name, ev.arguments, ev.call_id)); }
+  else if(t==='response.done'){
+    if(VOICE.calls.length){ const c=VOICE.calls; VOICE.calls=[]; Promise.all(c).then(()=>VOICE.dc&&VOICE.dc.send(JSON.stringify({type:'response.create'}))); }
+    else $('#vs').textContent='Listening';
+  }
+  else if(t==='error') console.log('[voice] error', ev.error);
+}
+async function runTool(name, args, id){
+  let a={}; try{a=JSON.parse(args||'{}')}catch(e){}
+  let out; try{ out=await (VTOOLS[name]||(()=>({error:'unknown tool '+name})))(a) }catch(e){ out={error:String(e)} }
+  console.log('[voice] tool', name, a, out);
+  if(VOICE.dc) VOICE.dc.send(JSON.stringify({type:'conversation.item.create', item:{type:'function_call_output', call_id:id, output:JSON.stringify(out)}}));
+}
+function regionByName(q){
+  const n=norm(q||''); if(!n) return REG;
+  const hit=CFG.regions.find(([k,l])=>norm(l).includes(n)||n.includes(norm(l).slice(0,6))||norm(k).includes(n));
+  return hit?hit[0]:REG;
+}
+function prepDays(d){ (d.days||[]).forEach(b=>{if(!b._idx){b._idx={};b.risk.forEach(x=>b._idx[x[0]+'_'+x[1]]=x)}}); }
+const VTOOLS={
+  async village_forecast({place}){
+    const order=[REG,...CFG.regions.map(x=>x[0]).filter(r=>r!==REG)];
+    const find=()=>{ for(const r of order){ const d=DATA[r]; if(!d||d.failed||!d.places) continue; const m=search(d,place||''); if(m.length) return [r,d,m]; } return null; };
+    let hit=find();
+    if(!hit){ await Promise.all(order.map(loadRegion)); hit=find(); }
+    if(!hit) return {found:false, covered_regions:CFG.regions.map(x=>x[1]), note:'No village, town or PIN code by that name in the covered regions. Ask for the spelling, the PIN code, or a bigger village nearby.'};
+    const [r,d,m]=hit, p=m[0];
+    if(REG!==r){ REG=r; DAY=0; render(); }
+    if(!d.in_season) return {found:true, place:p[0], district:p[2], region:d.label, in_season:false, note:'It is not the burning season there, so there is no forecast today.'};
+    prepDays(d); openPlace(d,p);
+    const rk=riskAt(d,p[5],p[6]);
+    return {found:true, place:p[0], pin:p[1], district:p[2], region:d.label, forecast_made:d.generated,
+      forecast:d.days.map((b,i)=>({day:['today','tomorrow','day after'][b.h-1], date:b.date, chance_percent:Math.max(0,Math.round(rk[i][0]*100)), level:lvlWord(rk[i][0])})),
+      other_places_with_that_name:m.slice(1,4).map(x=>x[0]+' ('+x[2]+')'),
+      note:'The chance is for the 5 km area around the village, not one field. Low is under 5%, medium 5 to 15%, high 15 to 35%, very high 35% or more.'};
+  },
+  async region_summary({region}){
+    const r=regionByName(region), d=await loadRegion(r); if(d.failed) return {available:false};
+    if(!d.in_season) return {region:d.label, in_season:false, note:'No burning season there right now.'};
+    prepDays(d); const pp=peopleAt(d,d.days[0]), ys=d.yesterday, g=d.green;
+    return {region:d.label, forecast_made:d.generated, season_day:d.season_day, season_length:d.season_len,
+      expected_fire_detections:Object.fromEntries(d.days.map(b=>[['today','tomorrow','day after'][b.h-1], Math.round(b.total_mu)])),
+      busiest_districts_today:d.days[0].districts.slice(0,5).map(([n,v])=>({district:n, expected:Math.round(v)})),
+      people_in_high_risk_areas_today:pp&&pp.cells?pp.n:null,
+      yesterday_check:ys&&ys.actual_total?{fires_seen:ys.actual_total, fires_expected:Math.round(ys.predicted_total), flagged_places:ys.flagged, flagged_places_that_burned:ys.hits, share_of_fires_inside_flagged:Math.round((ys.catch||0)*100)+'%'}:null,
+      last_7_days_expected_vs_seen:(d.log||[]).filter(r=>r.seen!=null&&r.expected!=null).slice(-7).map(r=>({date:r.date, expected:Math.round(r.expected), seen:r.seen, forecast_made_that_morning:r.made_that_morning})),
+      compared_with_last_season:g?{fires_so_far:g.now_total, same_day_last_season:g.last_total, example_green_villages:g.villages.slice(0,5).map(v=>v[0]+' ('+v[1]+')')}:null,
+      note:'Detections are what NASA satellites see around 1:30 pm. Fires lit later are missed, so real burning is higher.'};
+  },
+  async smoke_forecast({town}){
+    const order=[REG,...CFG.regions.map(x=>x[0]).filter(r=>r!==REG)];
+    if(town){ for(const r of order){ const d=DATA[r]; const t=d&&d.smoke&&d.smoke.towns.find(x=>norm(x.town)===norm(town)); if(t) return {region:d.label, town:t.town,
+        smoke_from_fields_in:t.from||'not on a smoke path today', arrives:t.eta?when(t.eta,d.date):null, pm25_tomorrow:t.pm_tomorrow, aqi_band:t.band}; } }
+    const d=DATA[REG]; if(!d||!d.smoke) return {available:false, note:'No smoke forecast for this region today.'};
+    return {region:d.label, hours:d.smoke.hours, towns:d.smoke.towns.filter(t=>t.eta).slice(0,8).map(t=>({town:t.town, smoke_from_fields_in:t.from, arrives:when(t.eta,d.date), pm25_tomorrow:t.pm_tomorrow, aqi_band:t.band})),
+      note:'Smoke paths follow the wind forecast from the fields expected to burn today. PM2.5 is the Copernicus CAMS forecast, from all sources.'};
+  },
+  async how_accurate({region}){
+    const r=regionByName(region), d=await loadRegion(r), rep=d.report; if(!rep) return {available:false};
+    return {region:d.label, tested_on_season:rep.test_season, trained_on:rep.train_seasons,
+      model:{flagged_places_that_burned:Math.round(rep.model['precision@50']*100)+'%', fires_inside_top_50_places:Math.round(rep.model['catch@50']*100)+'%'},
+      simple_guess_where_it_burned_yesterday:{flagged_places_that_burned:Math.round(rep.persistence['precision@50']*100)+'%', fires_inside_top_50_places:Math.round(rep.persistence['catch@50']*100)+'%'},
+      this_season_day_by_day:(()=>{const L=(d.log||[]).filter(r=>r.seen!=null&&r.expected!=null&&r.made_that_morning); return L.length?{days:L.length,
+        fire_detections_expected:Math.round(L.reduce((a,r)=>a+r.expected,0)), fire_detections_seen:L.reduce((a,r)=>a+r.seen,0)}:null})(),
+      note:'Tested on a whole season the model never saw while learning. This season, every morning\'s forecast is saved and checked against the satellites.'};
+  },
+  async help_options(){
+    return {instead_of_burning:[plain(T('h1')), REG==='punjab_haryana'?plain(T('hpb')):null, plain(T('h2')), plain(T('h3'))].filter(Boolean),
+      principle:'Support first, enforcement last.'};
+  },
+};
+
+// Fire log: every day, the fire detections the forecast expected that morning and what the satellites then saw.
+function logCard(d){
+  const L=d.log||[]; if(!L.length) return '';
+  const N=n=>n==null?'':(n>0&&n<1?'&lt;1':Math.round(n).toLocaleString('en-IN'));
+  const done=L.filter(r=>r.seen!=null&&r.expected!=null), live=done.filter(r=>r.made_that_morning);
+  const base=live.length>=3?live:done;
+  const sE=base.reduce((a,r)=>a+r.expected,0), sS=base.reduce((a,r)=>a+r.seen,0);
+  const errs=base.filter(r=>r.seen>=5).map(r=>Math.abs(r.expected-r.seen)/r.seen).sort((a,b)=>a-b);
+  const med=errs.length>=3?errs[Math.floor(errs.length/2)]:null;
+  const ahead=dt=>Math.round((new Date(dt+'T00:00:00')-new Date(d.date+'T00:00:00'))/864e5);
+  const later=L.some(r=>r.expected!=null&&!r.made_that_morning);
+  const rows=L.filter(r=>d.in_season?(r.expected!=null||r.expected_day_before!=null||r.seen!=null):r.seen!=null).reverse(), K=10;
+  const body=rows.map((r,i)=>{
+    const k=ahead(r.date), wait=r.seen==null, when=k>=0&&k<=2&&d.in_season?`${dayName(k+1)}, ${fmtDate(r.date)}`:fmtDate(r.date);
+    const diff=!wait&&r.expected!=null?r.seen-Math.round(r.expected):null;
+    const exp=r.expected==null?'':r.made_that_morning?N(r.expected):`<span class="later" title="Worked out later: the system wasn't running that morning yet">${N(r.expected)}*</span>`;
+    return `<tr class="${wait?'wait':''} ${i>=K?'more':''} ${r.expected==null&&r.seen==null?'opt':''}"><td>${when}</td><td>${exp}</td><td class="opt">${N(r.expected_day_before)}</td>
+      <td>${wait?(k===0?'next morning':''):N(r.seen)}</td>
+      <td>${diff==null?'':`<span class="${diff>0?'up':diff<0?'dn':''}" title="${diff>0?'more fires than expected':diff<0?'fewer fires than expected':'exactly as expected'}">${diff>0?'+':diff<0?'\u2212':''}${Math.abs(diff).toLocaleString('en-IN')}</span>`}</td>
+      <td class="opt">${r.flagged_hit!=null?`${r.flagged_hit} of ${r.flagged}`:''}</td></tr>`}).join('');
+  return `<div class="card"><h2>${d.in_season?'Fire log':'Last season\'s fire log'}: what we expected, what the satellites saw</h2>
+    ${base.length?`<div class="logsum"><span class="exp"><b>${N(sE)}</b>fire detections expected</span><span class="seen"><b>${N(sS)}</b>seen</span>
+      <span>over ${base.length} day${base.length>1?'s':''}${base===live?' with the forecast made that morning':''}</span>
+      ${med!=null?`<span>On half the days, the total was within <b style="font-size:22px">${Math.max(1,Math.round(med*100))}%</b> of what was seen</span>`:''}</div>`:''}
+    <div class="flogwrap"><table class="flog" id="flog"><tr><th>Day</th><th>Expected that morning</th><th class="opt">Expected a day ahead</th><th>Seen by satellites</th><th>Seen minus expected</th><th class="opt">Flagged places that burned</th></tr>${body}</table></div>
+    <div class="logbtns">${rows.length>K?`<button class="copy" id="logall">Show all ${rows.length} days</button>`:''}<button class="copy" id="logdl">Download the full log (CSV)</button></div>
+    <div class="note">Seen: fire detections by NASA's VIIRS satellites in the areas the forecast covers. Fires lit after about 1:30 pm are mostly missed, so real fires are more. Each expected number is saved the morning it is made and never changed afterwards.${later?' * Worked out later, for days before the system was running.':''}</div></div>`;
+}
+function hookLog(d){
+  const t=$('#flog'), b=$('#logall'), dl=$('#logdl');
+  if(b) b.onclick=()=>{const all=t.classList.toggle('all'); b.textContent=all?'Show fewer days':`Show all ${(d.log||[]).length} days`};
+  if(dl) dl.onclick=()=>{
+    const v=x=>x==null?'':x, q=x=>/[",\n]/.test(String(x))?'"'+String(x).replace(/"/g,'""')+'"':x;
+    const H=['date','fire_detections_seen','expected_that_morning','made_that_morning','expected_a_day_ahead','expected_two_days_ahead','flagged_places','flagged_places_that_burned','share_of_fires_in_flagged_places'];
+    const lines=[H.join(',')].concat((d.log||[]).map(r=>[r.date,v(r.seen),v(r.expected),r.expected==null?'':(r.made_that_morning?'yes':'no, worked out later'),
+      v(r.expected_day_before),v(r.expected_2_days_before),v(r.flagged),v(r.flagged_hit),r.share_caught==null?'':(+r.share_caught).toFixed(3)].map(q).join(',')));
+    const a=document.createElement('a'); a.href=URL.createObjectURL(new Blob([lines.join('\n')+'\n'],{type:'text/csv'}));
+    a.download=`satark_fire_log_${d.region}_${d.date}.csv`; document.body.appendChild(a); a.click(); setTimeout(()=>{URL.revokeObjectURL(a.href);a.remove()},1000);
+  };
+}
+
+function render(){
+  head();
+  const d=DATA[REG], body=$('#body'), label=(CFG.regions.find(x=>x[0]===REG)||[REG,REG])[1];
+  if(!d){ $('#datebar').textContent=''; body.innerHTML=`<div class="loading">Loading ${esc(label)}</div>`; const r=REG; loadRegion(r).then(()=>{if(REG===r) render()}); return; }
+  if(d.failed){ body.innerHTML=`<div class="off">${esc(label)} is kept in a separate file. It opens on the website link, not from a page saved on your computer.</div>`; return; }
+  if(KIOSK){ document.body.classList.add('kiosk'); body.innerHTML=replayCard(d)||`<div class="off">${T('off')}</div>`; startReplay(d); initVoice(); return; }
+  if(!d.in_season){ $('#datebar').textContent=fmtDate(d.date,{day:'numeric',month:'short',year:'numeric'}); body.innerHTML=`<div class="off">${T('off')}</div>`+replayCard(d)+(d.log&&d.log.length?`<div class="wide">${logCard(d)}</div>`:''); startReplay(d); hookLog(d); initVoice(); return; }
+  d.days.forEach(b=>{if(!b._idx){b._idx={};b.risk.forEach(r=>b._idx[r[0]+'_'+r[1]]=r)}});
+  DAY=Math.min(DAY,d.days.length-1); const blk=d.days[DAY];
+  $('#datebar').textContent=`Forecast made ${d.generated||''}`;
+  const rep=d.report, ys=d.yesterday, sb=d.scoreboard||[];
+  const useBack=sb.filter(r=>r.actual_total>0).length<3 && rep && rep.backtest_daily;
+  const seasonRows=useBack? rep.backtest_daily.map(r=>({date:r.date,actual:r.actual,predicted:r.predicted,mc:r.model_catch,pc:r.persist_catch}))
+                         : sb.map(r=>({date:r.date,actual:r.actual_total,predicted:r.predicted_total,mc:r.catch,pc:r.persist_catch}));
+  const {svg,P}=mapSVG(d,blk); window._P=P;
+  const maxD=blk.districts.length?Math.max(blk.districts[0][1],0.1):1;
+  const hz=rep&&rep.horizons?rep.horizons:null;
+  body.innerHTML=`
+  <div class="check">
+    <div class="card"><h2>${T('check')}</h2>
+      <div class="searchrow"><input id="q" type="search" autocomplete="off" placeholder="${esc(T('ph'))}" aria-label="${esc(T('ph'))}"><button id="me">${T('near')}</button><div class="results" id="res" hidden></div></div>
+      <div class="hint" id="hint">${T('hint')}</div></div>
+    <div class="card" id="place" aria-live="polite"></div>
+  </div>
+  <div class="daysbar"><div class="days" id="days">${d.days.map((b,i)=>`<button class="pill" aria-pressed="${i===DAY}" data-i="${i}">${dayName(b.h)} · ${fmtDate(b.date,{day:'numeric',month:'short'})}</button>`).join('')}</div>
+    <div class="note">${T('exp')}: <b style="color:#1E2A44">${blk.total_mu<1?'&lt;1':Math.round(blk.total_mu)}</b> ${T('det')}</div></div>
+  <div class="grid">
+    <div class="card mapwrap"><h2>${T('mapt')} · ${esc(d.label)} · ${dayName(blk.h)}</h2>${svg}
+      <div class="legend">${RAMP.map((r,i)=>`<span class="sw"><i style="background:${RAMPHEX[i]}"></i>${Math.round(r*100)}%${i===RAMP.length-1?'+':''}</span>`).join('')}
+        ${DAY===0?'<span class="sw"><i style="background:#1E2A44;width:7px;height:7px;border-radius:50%"></i>fires satellites saw yesterday</span>':''}
+        ${DAY===0&&d.smoke?'<span class="sw"><i style="background:none;border-top:2px dotted #4E5F8E;height:0;width:18px"></i>where today\'s smoke drifts</span>':''}
+        <span class="sw"><i style="background:#2F4A8A;width:14px;height:14px;border-radius:50%"></i>planned stop (team number)</span></div>
+      <div class="toggles">${DAY===0?'<label><input type="checkbox" id="tY" checked> Yesterday\'s fires</label>':''}${DAY===0&&d.smoke?'<label><input type="checkbox" id="tK" checked> Smoke paths (next 36 h)</label>':''}<label><input type="checkbox" id="tS" checked> Planned stops</label></div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:16px">
+      <div class="card"><h2>${T('exp')} · ${dayName(blk.h)}</h2>
+        <div class="hero"><b>${blk.total_mu<1?'&lt;1':Math.round(blk.total_mu)}</b><span>${T('det')}<br>${esc(d.label)} · season day ${d.season_day+DAY} of ${d.season_len}</span></div>
+        <div class="bars">${blk.districts.map(([n,v])=>`<span>${esc(n)}</span><div class="b" style="width:${(100*v/maxD).toFixed(1)}%"></div><span class="v">${v<10?v.toFixed(1):v.toFixed(0)}</span>`).join('')}</div>
+        ${(()=>{const pp=peopleAt(d,blk); return pp&&pp.cells?`<div class="people"><b>${fmtPeople(pp.n)}</b> people live in the ${pp.cells.toLocaleString('en-IN')} areas with a high chance of fire (15% or more) ${dayName(blk.h).toLowerCase()}. <span class="note">Population: GHS-POP 2025, EC JRC.</span></div>`:''})()}
+      </div>
+      <div class="card"><h2>Plan the day · ${dayName(blk.h)}</h2>
+        <div class="ctl"><label for="nT">Teams on the road</label><input id="nT" type="range" min="1" max="20" value="${d.teams_default||5}"><output id="oT"></output>
+        <label for="nS">Stops per team</label><input id="nS" type="range" min="1" max="8" value="${d.stops_default||4}"><output id="oS"></output></div>
+        <div class="cover" id="cover"></div><div class="teams" id="teams"></div>
+      </div>
+    </div>
+  </div>
+  ${(()=>{const a=smokeCard(d), b=greenCard(d); return a||b?`<div class="${a&&b?'row2b':'wide'}">${a}${b}</div>`:''})()}
+  ${replayCard(d)}
+  <div class="row2">
+    <div class="card chk"><h2>Yesterday, checked against the satellites</h2>${ys&&ys.actual_total===0?'<div class="note" style="font-size:15px;color:#4E5F8E">Satellites saw no fires yesterday, so there was nothing to check.</div>':ys?`
+      <div><span class="big">${ys.hits} of ${ys.flagged}</span> places we flagged had a fire (${pct(ys.precision)}).</div>
+      <div class="kv"><span>Share of all fires inside our ${ys.flagged} places</span><span>${pct(ys.catch)}</span>
+      <span>Same guess using only "where it burned the day before"</span><span>${pct(ys.persist_catch)}</span>
+      <span>Fire detections expected / seen</span><span>${Math.round(ys.predicted_total)} / ${ys.actual_total}</span>
+      ${ys.top_district?`<span>Busiest district: ${esc(ys.top_district)}, expected / seen</span><span>${Math.round(ys.top_district_pred)} / ${ys.top_district_actual}</span>`:''}</div>`
+      :'<div class="note">No forecast from yesterday to check yet. This fills in after the first full day.</div>'}
+    </div>
+    <div class="card"><h2>Morning brief</h2><div class="btnrow"><a class="wa" href="${waLink((d.brief||'').slice(0,1800))}" target="_blank" rel="noopener">${WAICON}WhatsApp</a><button class="copy" id="cp">Copy</button></div><pre class="brief">${esc(d.brief||'')}</pre></div>
+  </div>
+  ${(()=>{const c=logCard(d); return c?`<div class="wide">${c}</div>`:''})()}
+  <div class="row2">
+    <div class="card chart"><h2>${useBack?`Last season (${rep.test_season}), tested blind: expected vs seen`:'This season: fire detections expected vs seen'}</h2><div id="c1"></div>
+      <div class="note">Seen = what the VIIRS satellites detected. ${useBack?'The model never saw this season while learning.':''}</div>
+      ${useBack?'<details><summary>Show as a table</summary><div id="t1"></div></details>':''}</div>
+    <div class="card chart"><h2>Share of the day's fires inside the 50 places we flagged</h2><div id="c2"></div>
+      <div class="note">Dashed line: the same 50 places picked by "where it burned yesterday". The gap is what the model adds.</div></div>
+  </div>
+  <div class="row2">
+    <div class="card"><h2>How good is it?</h2>${rep?`
+      <table><tr><th>Tested on ${rep.test_season}, unseen</th><th>Flagged places that burned</th><th>Fires caught in top 50</th><th>Fires caught in top 100</th></tr>
+      <tr><td><b>SATARK model</b></td><td>${pct(rep.model['precision@50'])}</td><td>${pct(rep.model['catch@50'])}</td><td>${pct(rep.model['catch@100'])}</td></tr>
+      <tr><td>Where it burned yesterday</td><td>${pct(rep.persistence['precision@50'])}</td><td>${pct(rep.persistence['catch@50'])}</td><td>${pct(rep.persistence['catch@100'])}</td></tr>
+      <tr><td>Where it usually burns</td><td>${pct(rep.climatology['precision@50'])}</td><td>${pct(rep.climatology['catch@50'])}</td><td>${pct(rep.climatology['catch@100'])}</td></tr></table>
+      ${hz?`<table style="margin-top:12px"><tr><th>Looking ahead</th><th>Model: flagged that burned</th><th>"Yesterday" guess</th></tr>${['1','2','3'].filter(h=>hz[h]).map(h=>`<tr><td>${['Today','Tomorrow','Day after'][h-1]}</td><td>${pct(hz[h].model['precision@50'])}</td><td>${pct(hz[h].persistence['precision@50'])}</td></tr>`).join('')}</table>`:''}
+      ${(()=>{const s=sb.filter(r=>r.actual_total>0&&r.catch!=null&&isFinite(r.catch)); if(s.length<3) return '';
+        const tot=s.reduce((a,r)=>a+r.actual_total,0), m=s.reduce((a,r)=>a+r.catch*r.actual_total,0)/tot, p=s.reduce((a,r)=>a+r.persist_catch*r.actual_total,0)/tot;
+        return `<p style="margin:12px 0 0;font-size:14px"><b>This season so far</b> (${s.length} days the model never trained on): its 50 places held <b>${pct(m)}</b> of all fires seen, against ${pct(p)} for "where it burned yesterday".</p>`})()}
+      <div class="note">Trained on ${rep.train_seasons.join(', ')}; tested on ${rep.test_season}: ${rep.test_fires.toLocaleString('en-IN')} detections across ${rep.cells.toLocaleString('en-IN')} areas. ${rep.static_cells_ignored} areas that burn like factories or flares are ignored. Extra signals in use: ${(rep.extra_signals||[]).join(', ')||'none (others were tested and didn\'t help)'}.</div>`:'<div class="note">No evaluation report yet.</div>'}
+    </div>
+    <div class="card"><h2>How it works, and its limits</h2>
+      <ul class="lims">
+        <li>Every morning it looks at the last week of NASA VIIRS fire detections, where fires usually happen at this point in the season, and the weather.</li>
+        <li>It gives each 5 km area a chance of a fire today, tomorrow and the day after, then plans visits so teams cover the most risk with the least driving.</li>
+        <li>Satellites pass at about 1:30 pm, so most fires lit later in the day are never counted. The real number of fires is higher than "seen".</li>
+        <li>Village names come from India Post's PIN code directory. The risk is for the 5 km area around the village, not one field.</li>
+        <li>Support first, enforcement last: a high-risk area means farmers who need a machine or decomposer today, not fines.</li>
+      </ul>
+    </div>
+  </div>`;
+  // days
+  $('#days').querySelectorAll('button').forEach(b=>b.onclick=()=>{DAY=+b.dataset.i;render()});
+  // plan
+  const ctl=()=>{
+    const t=+$('#nT').value, s=+$('#nS').value; $('#oT').textContent=t; $('#oS').textContent=s;
+    let pl;
+    if(DAY===0 && t===(d.teams_default||5) && s===(d.stops_default||4) && d.plan){
+      const by={}; d.plan.forEach(([tm,od,dist,la,lo,p,pl])=>{(by[tm]=by[tm]||[])[od-1]=[0,0,la,lo,dist,p,0,pl]});
+      pl={groups:Object.keys(by).sort((a,b)=>a-b).map(k=>by[k].filter(Boolean)), cover:(d.summary&&d.summary.share_covered)||0};
+    } else pl=plan(blk,t,s);
+    drawStops(P,pl.groups);
+    $('#cover').innerHTML=pl.groups.length?`These ${pl.groups.reduce((a,g)=>a+g.length,0)} stops cover <b>${pct(pl.cover)}</b> of ${dayName(blk.h).toLowerCase()}'s expected fires.`:`No place is above a 5% chance. <b>No visits needed.</b>`;
+    $('#teams').innerHTML=pl.groups.map((g,i)=>`<div class="team"><h3>Team ${i+1}</h3>${g.map((p,j)=>`<div class="stop"><span class="n">${j+1}</span><a href="https://maps.google.com/?q=${p[2]},${p[3]}" target="_blank" rel="noopener">${p[7]?esc(p[7])+', ':''}${esc(p[4])}</a><span class="p">${pct(p[5])}</span></div>`).join('')}</div>`).join('');
+    $('#stops').style.display=$('#tS').checked?'':'none';
+  };
+  $('#nT').oninput=ctl; $('#nS').oninput=ctl; ctl();
+  if($('#tY')) $('#tY').onchange=e=>{$('#yfires').style.display=e.target.checked?'':'none'};
+  $('#tS').onchange=e=>{$('#stops').style.display=e.target.checked?'':'none'};
+  if($('#tK')) $('#tK').onchange=e=>{['#smoke','#towns'].forEach(k=>{if($(k)) $(k).style.display=e.target.checked?'':'none'})};
+  $('#cp').onclick=()=>{try{navigator.clipboard.writeText(d.brief||'').then(()=>$('#cp').textContent='Copied',()=>$('#cp').textContent='Select and copy')}catch(e){$('#cp').textContent='Select and copy'}};
+  // search
+  const q=$('#q'), res=$('#res');
+  q.oninput=()=>{const r=search(d,q.value); if(!q.value.trim()){res.hidden=true;return}
+    res.innerHTML=r.length?r.map((p,i)=>`<button data-i="${i}">${esc(p[0])} <small>· ${esc(p[2])} · ${esc(p[1])}</small></button>`).join(''):`<div style="padding:10px 12px;color:#7A7F8C;font-size:14px">${T('nomatch')}</div>`;
+    res.hidden=false; res.querySelectorAll('button').forEach(b=>b.onclick=()=>{openPlace(d,r[+b.dataset.i]);res.hidden=true;q.value=r[+b.dataset.i][0]})};
+  q.onkeydown=e=>{if(e.key==='Enter'){const r=search(d,q.value); if(r.length){openPlace(d,r[0]);res.hidden=true;q.value=r[0][0]}}};
+  $('#me').onclick=()=>{
+    const fail=m=>{$('#hint').textContent=m};
+    try{ if(!navigator.geolocation) return fail(T('noloc'));
+      navigator.geolocation.getCurrentPosition(pos=>{const {latitude:la,longitude:lo}=pos.coords, [w,s,e,n]=d.bbox;
+        const pl=placeFromPoint(d,la,lo); if(la<s||la>n||lo<w||lo>e||!pl) return fail(T('outside')); openPlace(d,pl)},()=>fail(T('noloc')),{timeout:8000});
+    }catch(e){fail(T('noloc'))}
+  };
+  // map: hover and tap
+  const tip=$('#tip'), dn=d.dnames;
+  $('#cells').addEventListener('mousemove',ev=>{const t=ev.target; if(t.tagName!=='rect') return; const r=blk._idx[t.dataset.iy+'_'+t.dataset.ix]; if(!r) return;
+    tip.innerHTML=`<b>${esc(dn[r[4]])}</b><br>${T('chance')}: <b>${pct(r[2])}</b><br>Expected detections: ${r[3].toFixed(1)}`;
+    const wb=document.body.getBoundingClientRect(); tip.style.left=(ev.clientX-wb.left)+'px'; tip.style.top=(ev.clientY-wb.top-8)+'px'; tip.style.opacity=1});
+  $('#cells').addEventListener('mouseleave',()=>tip.style.opacity=0);
+  $('#map').addEventListener('click',ev=>{const svgEl=$('#map'), b=svgEl.getBoundingClientRect(), vb=svgEl.viewBox.baseVal;
+    const sc=Math.min(b.width/vb.width,b.height/vb.height), ox=(b.width-vb.width*sc)/2, oy=(b.height-vb.height*sc)/2;
+    const x=(ev.clientX-b.left-ox)/sc, y=(ev.clientY-b.top-oy)/sc; const la=P.lat(y), lo=P.lon(x), [w,s,e,n]=d.bbox;
+    const pl=placeFromPoint(d,la,lo); if(la<s||la>n||lo<w||lo>e||!pl) return; openPlace(d,pl); $('#place').scrollIntoView({behavior:'smooth',block:'nearest'})});
+  drawPlace(d);
+  // charts
+  $('#c1').innerHTML=lineChart(seasonRows,['actual','predicted'],['Seen','Expected'],['#2a78d6','#eb6834'],'n','Fire detections expected and seen per day');
+  hookChart($('#c1'),seasonRows,['actual','predicted'],['Seen','Expected'],'n');
+  $('#c2').innerHTML=lineChart(seasonRows,['mc','pc'],['Model','Yesterday'],['#2a78d6','#eb6834'],'pct','Share of fires in the flagged places');
+  hookChart($('#c2'),seasonRows,['mc','pc'],['Model','Yesterday'],'pct');
+  startReplay(d); initVoice();
+  hookLog(d);
+  if($('#t1')) $('#t1').innerHTML=`<table><tr><th>Date</th><th>Seen</th><th>Expected</th><th>Caught by model</th><th>Caught by "yesterday"</th></tr>${seasonRows.map(r=>`<tr><td>${r.date}</td><td>${r.actual}</td><td>${Math.round(r.predicted)}</td><td>${r.mc==null||!isFinite(r.mc)?'':pct(r.mc)}</td><td>${r.pc==null||!isFinite(r.pc)?'':pct(r.pc)}</td></tr>`).join('')}</table>`;
+}
+render();
+</script>
+</body>
+</html>
