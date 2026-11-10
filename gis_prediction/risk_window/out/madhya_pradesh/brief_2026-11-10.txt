@@ -1,0 +1,44 @@
+SATARK Risk Window · Madhya Pradesh · Tue 10 Nov 2026
+Expected today: about 1194 fire detections. Most in Hoshangabad, Sheopur, Seoni, Gwalior.
+
+Team 1
+  1. near Gurunawda, Sheopur · risk 95% · https://maps.google.com/?q=25.7750,76.7250
+  2. near Javdeshwar, Sheopur · risk 84% · https://maps.google.com/?q=25.8250,76.6250
+  3. near Tillipur, Sheopur · risk 82% · https://maps.google.com/?q=25.7250,76.6250
+  4. near Keolari, Seoni · risk 78% · https://maps.google.com/?q=22.3750,79.9250
+Team 2
+  1. near Reshalpur, Hoshangabad · risk 93% · https://maps.google.com/?q=22.6750,77.7750
+  2. near Gurra, Hoshangabad · risk 86% · https://maps.google.com/?q=22.6250,77.8750
+  3. near Gujjarwada, Hoshangabad · risk 78% · https://maps.google.com/?q=22.6750,77.9750
+  4. near Tamcharu, Sehore · risk 88% · https://maps.google.com/?q=22.7750,77.9250
+Team 3
+  1. near Radep, Sheopur · risk 87% · https://maps.google.com/?q=25.5750,76.7250
+  2. near Jahajpura, Sehore · risk 79% · https://maps.google.com/?q=22.7250,77.5750
+  3. near Bhiladia, Hoshangabad · risk 84% · https://maps.google.com/?q=22.6750,77.6750
+  4. Seoni · risk 78% · https://maps.google.com/?q=22.3750,79.7750
+Team 4
+  1. near Bhoma, Seoni · risk 93% · https://maps.google.com/?q=22.2750,79.8250
+  2. near Bargain, Gwalior · risk 78% · https://maps.google.com/?q=25.9250,78.2750
+  3. near Gadajar, Gwalior · risk 87% · https://maps.google.com/?q=25.8750,78.1250
+  4. near Girdharpur, Sheopur · risk 88% · https://maps.google.com/?q=25.8750,76.7750
+Team 5
+  1. near Basturi, Datia · risk 96% · https://maps.google.com/?q=26.0750,78.7250
+  2. near Rurai, Bhind · risk 89% · https://maps.google.com/?q=26.0750,78.8250
+  3. near Barthara, Bhind · risk 88% · https://maps.google.com/?q=25.9750,78.8250
+  4. near Ingui, Datia · risk 77% · https://maps.google.com/?q=25.9750,78.6750
+
+These 20 stops cover about 37% of today's expected fires.
+
+Next days: tomorrow about 991 detections; day after about 11253 detections
+Support first. Enforcement last.
+
+सतर्क रिस्क विंडो
+आज पराली जलाने का खतरा सबसे ज़्यादा यहाँ है: Hoshangabad, Sheopur, Seoni, Gwalior
+टीम 1: Gurunawda (95%) → Javdeshwar (84%) → Tillipur (82%) → Keolari (78%)
+टीम 2: Reshalpur (93%) → Gurra (86%) → Gujjarwada (78%) → Tamcharu (88%)
+टीम 3: Radep (87%) → Jahajpura (79%) → Bhiladia (84%) → Seoni (78%)
+टीम 4: Bhoma (93%) → Bargain (78%) → Gadajar (87%) → Girdharpur (88%)
+टीम 5: Basturi (96%) → Rurai (89%) → Barthara (88%) → Ingui (77%)
+पहले मदद, सज़ा बाद में। किसान को मशीन या डीकंपोज़र के बारे में बताइए।
+
+Satellites miss most fires lit after about 1:30 pm, so real numbers are higher.

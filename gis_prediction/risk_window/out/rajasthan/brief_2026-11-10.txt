@@ -1,0 +1,44 @@
+SATARK Risk Window · Rajasthan · Tue 10 Nov 2026
+Expected today: about 15920614534048866304 fire detections. Most in Jaisalmer, Sawai Madhopur, Bikaner, Barmer.
+
+Team 1
+  1. near Sarupsar, Ganganagar · risk 79% · https://maps.google.com/?q=29.3750,73.7250
+  2. near 17 Gb, Ganganagar · risk 37% · https://maps.google.com/?q=29.2750,73.6250
+  3. near Bilochia, Ganganagar · risk 66% · https://maps.google.com/?q=29.2250,73.5250
+  4. Ganganagar · risk 46% · https://maps.google.com/?q=29.2250,73.0750
+Team 2
+  1. near Amarpura Rathan, Hanumangarh · risk 62% · https://maps.google.com/?q=29.4250,74.0250
+  2. near Rampura, Ganganagar · risk 44% · https://maps.google.com/?q=29.3750,73.9250
+  3. near Ramsara Jakhran, Ganganagar · risk 36% · https://maps.google.com/?q=29.4750,73.8750
+  4. near Masani, Hanumangarh · risk 53% · https://maps.google.com/?q=29.5750,74.4750
+Team 3
+  1. near Talwara Jheel, Hanumangarh · risk 79% · https://maps.google.com/?q=29.5250,74.5750
+  2. near Jamsar, Bikaner · risk 41% · https://maps.google.com/?q=28.2750,73.4250
+  3. near Lakhusar, Bikaner · risk 31% · https://maps.google.com/?q=28.3250,73.2250
+  4. near Balda, Baran · risk 33% · https://maps.google.com/?q=25.0750,76.9250
+Team 4
+  1. near Anthada, Bundi · risk 39% · https://maps.google.com/?q=25.3250,75.7750
+  2. near Jhakhmund, Bundi · risk 31% · https://maps.google.com/?q=25.2250,75.7750
+  3. near Tathed, Kota · risk 33% · https://maps.google.com/?q=25.1750,75.9750
+  4. near Sarsala, Bundi · risk 34% · https://maps.google.com/?q=25.3750,76.0250
+Team 5
+  1. near Gandawar, Sawai Madhopur · risk 56% · https://maps.google.com/?q=25.8750,76.6250
+  2. near Daulatpura, Sawai Madhopur · risk 37% · https://maps.google.com/?q=25.8750,76.5250
+  3. near Barnawada, Sawai Madhopur · risk 42% · https://maps.google.com/?q=25.9750,76.6250
+  4. near Shahnawda, Kota · risk 38% · https://maps.google.com/?q=25.5250,76.5250
+
+These 20 stops cover about 0% of today's expected fires.
+
+Next days: tomorrow about 42688139 detections; day after about 4519319 detections
+Support first. Enforcement last.
+
+सतर्क रिस्क विंडो
+आज पराली जलाने का खतरा सबसे ज़्यादा यहाँ है: Jaisalmer, Sawai Madhopur, Bikaner, Barmer
+टीम 1: Sarupsar (79%) → 17 Gb (37%) → Bilochia (66%) → Ganganagar (46%)
+टीम 2: Amarpura Rathan (62%) → Rampura (44%) → Ramsara Jakhran (36%) → Masani (53%)
+टीम 3: Talwara Jheel (79%) → Jamsar (41%) → Lakhusar (31%) → Balda (33%)
+टीम 4: Anthada (39%) → Jhakhmund (31%) → Tathed (33%) → Sarsala (34%)
+टीम 5: Gandawar (56%) → Daulatpura (37%) → Barnawada (42%) → Shahnawda (38%)
+पहले मदद, सज़ा बाद में। किसान को मशीन या डीकंपोज़र के बारे में बताइए।
+
+Satellites miss most fires lit after about 1:30 pm, so real numbers are higher.
