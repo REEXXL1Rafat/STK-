@@ -1,0 +1,67 @@
+{
+ "validated_on": 2024,
+ "base": {
+  "catch@50": 0.359375,
+  "avg_precision": 0.2823688588155992
+ },
+ "tried": {
+  "festival": {
+   "catch@50": 0.3550204932689667,
+   "avg_precision": 0.2904656829937264,
+   "kept": false
+  },
+  "noaa21": {
+   "catch@50": 0.35361167788505554,
+   "avg_precision": 0.2804082655129925,
+   "kept": false
+  },
+  "intensity": {
+   "catch@50": 0.35604506731033325,
+   "avg_precision": 0.28997314921235323,
+   "kept": false
+  },
+  "modis": {
+   "catch@50": 0.36078381538391113,
+   "avg_precision": 0.28390202245359786,
+   "kept": false
+  },
+  "wind_dir": {
+   "catch@50": 0.359375,
+   "avg_precision": 0.2818806944475203,
+   "kept": false
+  },
+  "harvest": {
+   "kept": false,
+   "note": "no data in the training seasons yet"
+  },
+  "scar": {
+   "kept": false,
+   "note": "no data in the training seasons yet"
+  }
+ },
+ "kept": [],
+ "settings": "bigger",
+ "rank_by": "expected",
+ "ranking_tests": {
+  "standard, ranked by chance": {
+   "catch@50": 0.359375,
+   "precision@50": 0.25325000000000003,
+   "catch@100": 0.4807889461517334
+  },
+  "standard, ranked by expected": {
+   "catch@50": 0.3744876980781555,
+   "precision@50": 0.2475,
+   "catch@100": 0.5073001980781555
+  },
+  "bigger, ranked by chance": {
+   "catch@50": 0.35668545961380005,
+   "precision@50": 0.25725,
+   "catch@100": 0.4879610538482666
+  },
+  "bigger, ranked by expected": {
+   "catch@50": 0.3881916105747223,
+   "precision@50": 0.25125000000000003,
+   "catch@100": 0.5266393423080444
+  }
+ }
+}
