@@ -1,0 +1,44 @@
+SATARK Risk Window · Punjab and Haryana · Wed 11 Nov 2026
+Expected today: about 230 fire detections. Most in Firozpur, Sangrur, Ludhiana, Patiala.
+
+Team 1
+  1. near Guruharsahai, Firozpur · risk 32% · https://maps.google.com/?q=30.6750,74.4250
+  2. near Azamwala, Firozpur · risk 26% · https://maps.google.com/?q=30.6750,74.3250
+  3. Firozpur · risk 31% · https://maps.google.com/?q=30.7750,74.2750
+  4. near Lakho Ke Behram, Firozpur · risk 28% · https://maps.google.com/?q=30.8750,74.3750
+Team 2
+  1. near Ena Khera, Firozpur · risk 42% · https://maps.google.com/?q=30.5250,74.0750
+  2. near Railway Road Mandi  Ladhuka, Firozpur · risk 27% · https://maps.google.com/?q=30.5250,74.1750
+  3. near Mehma, Firozpur · risk 24% · https://maps.google.com/?q=31.0250,74.5750
+  4. near Karahewala, Firozpur · risk 28% · https://maps.google.com/?q=31.0750,75.0750
+Team 3
+  1. near Kotduna, Barnala · risk 30% · https://maps.google.com/?q=30.1750,75.5250
+  2. near Jharon, Sangrur · risk 26% · https://maps.google.com/?q=30.1750,75.6250
+  3. near Hodla Kalan, Mansa · risk 28% · https://maps.google.com/?q=30.0750,75.6250
+  4. near Dhanaula, Barnala · risk 26% · https://maps.google.com/?q=30.2750,75.5750
+Team 4
+  1. near Maherna Kalan, Sangrur · risk 45% · https://maps.google.com/?q=30.6250,75.7750
+  2. near Kalsian, Sangrur · risk 30% · https://maps.google.com/?q=30.6250,75.6750
+  3. near Tossey, Ludhiana · risk 31% · https://maps.google.com/?q=30.7250,75.6750
+  4. near Binjal, Ludhiana · risk 31% · https://maps.google.com/?q=30.6750,75.5250
+Team 5
+  1. near Balian, Sangrur · risk 33% · https://maps.google.com/?q=30.2750,75.8750
+  2. near Maloudh, Ludhiana · risk 31% · https://maps.google.com/?q=30.6250,75.9250
+  3. near Dehlon, Ludhiana · risk 31% · https://maps.google.com/?q=30.7250,75.8750
+  4. near Narangwal, Ludhiana · risk 27% · https://maps.google.com/?q=30.7750,75.7750
+
+These 20 stops cover about 3% of today's expected fires.
+
+Next days: tomorrow about 204 detections; day after about 263 detections
+Support first. Enforcement last.
+
+ਸਤਰਕ ਰਿਸਕ ਵਿੰਡੋ
+ਅੱਜ ਪਰਾਲੀ ਸਾੜਨ ਦਾ ਖ਼ਤਰਾ ਸਭ ਤੋਂ ਵੱਧ ਇੱਥੇ ਹੈ: Firozpur, Sangrur, Ludhiana, Patiala
+ਟੀਮ 1: Guruharsahai (32%) → Azamwala (26%) → Firozpur (31%) → Lakho Ke Behram (28%)
+ਟੀਮ 2: Ena Khera (42%) → Railway Road Mandi  Ladhuka (27%) → Mehma (24%) → Karahewala (28%)
+ਟੀਮ 3: Kotduna (30%) → Jharon (26%) → Hodla Kalan (28%) → Dhanaula (26%)
+ਟੀਮ 4: Maherna Kalan (45%) → Kalsian (30%) → Tossey (31%) → Binjal (31%)
+ਟੀਮ 5: Balian (33%) → Maloudh (31%) → Dehlon (31%) → Narangwal (27%)
+ਪਹਿਲਾਂ ਮਦਦ, ਸਜ਼ਾ ਬਾਅਦ ਵਿੱਚ। ਕਿਸਾਨ ਨੂੰ ਮਸ਼ੀਨ ਜਾਂ ਡੀਕੰਪੋਜ਼ਰ ਬਾਰੇ ਦੱਸੋ।
+
+Satellites miss most fires lit after about 1:30 pm, so real numbers are higher.
