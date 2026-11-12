@@ -1,0 +1,44 @@
+SATARK Risk Window · Madhya Pradesh · Thu 12 Nov 2026
+Expected today: about 585 fire detections. Most in Hoshangabad, Seoni, Sheopur, Gwalior.
+
+Team 1
+  1. near Javdeshwar, Sheopur · risk 92% · https://maps.google.com/?q=25.8250,76.6750
+  2. near Soi Kalan, Sheopur · risk 85% · https://maps.google.com/?q=25.7250,76.6750
+  3. near Sonthwa, Sheopur · risk 76% · https://maps.google.com/?q=25.7750,76.5750
+  4. near Radep, Sheopur · risk 82% · https://maps.google.com/?q=25.5750,76.7250
+Team 2
+  1. near Aari, Hoshangabad · risk 94% · https://maps.google.com/?q=22.7750,77.8750
+  2. near Reshalpur, Hoshangabad · risk 91% · https://maps.google.com/?q=22.6750,77.7750
+  3. near Gurra, Hoshangabad · risk 81% · https://maps.google.com/?q=22.6250,77.8750
+  4. near Anhai, Hoshangabad · risk 76% · https://maps.google.com/?q=22.8750,78.5750
+Team 3
+  1. near Chhimak, Gwalior · risk 86% · https://maps.google.com/?q=25.9250,78.1750
+  2. near Bargain, Gwalior · risk 78% · https://maps.google.com/?q=25.9250,78.2750
+  3. near Roora, Datia · risk 77% · https://maps.google.com/?q=25.9250,78.5250
+  4. near Nichi, Jabalpur · risk 76% · https://maps.google.com/?q=23.1750,79.7750
+Team 4
+  1. near Gondan, Datia · risk 90% · https://maps.google.com/?q=25.8750,78.6250
+  2. near Diguwan, Gwalior · risk 89% · https://maps.google.com/?q=26.0250,78.7250
+  3. near Barthara, Bhind · risk 83% · https://maps.google.com/?q=25.9750,78.8250
+  4. near Mohas, Jabalpur · risk 76% · https://maps.google.com/?q=23.3250,79.8750
+Team 5
+  1. near Bhoma, Seoni · risk 88% · https://maps.google.com/?q=22.2750,79.8250
+  2. Seoni · risk 77% · https://maps.google.com/?q=22.2750,79.7250
+  3. Seoni · risk 87% · https://maps.google.com/?q=22.3750,79.7750
+  4. Seoni · risk 77% · https://maps.google.com/?q=22.4250,79.6750
+
+These 20 stops cover about 8% of today's expected fires.
+
+Next days: tomorrow about 631 detections; day after about 1244 detections
+Support first. Enforcement last.
+
+सतर्क रिस्क विंडो
+आज पराली जलाने का खतरा सबसे ज़्यादा यहाँ है: Hoshangabad, Seoni, Sheopur, Gwalior
+टीम 1: Javdeshwar (92%) → Soi Kalan (85%) → Sonthwa (76%) → Radep (82%)
+टीम 2: Aari (94%) → Reshalpur (91%) → Gurra (81%) → Anhai (76%)
+टीम 3: Chhimak (86%) → Bargain (78%) → Roora (77%) → Nichi (76%)
+टीम 4: Gondan (90%) → Diguwan (89%) → Barthara (83%) → Mohas (76%)
+टीम 5: Bhoma (88%) → Seoni (77%) → Seoni (87%) → Seoni (77%)
+पहले मदद, सज़ा बाद में। किसान को मशीन या डीकंपोज़र के बारे में बताइए।
+
+Satellites miss most fires lit after about 1:30 pm, so real numbers are higher.
