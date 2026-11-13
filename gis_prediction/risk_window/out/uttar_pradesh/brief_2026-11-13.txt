@@ -1,0 +1,44 @@
+SATARK Risk Window · Uttar Pradesh · Fri 13 Nov 2026
+Expected today: about 222 fire detections. Most in Jalaun, Maharajganj, Jhansi, Kanpur Dehat.
+
+Team 1
+  1. near Jaitpura, Jalaun · risk 41% · https://maps.google.com/?q=26.1750,79.0750
+  2. near Simiriya, Jhansi · risk 38% · https://maps.google.com/?q=25.7250,78.8750
+  3. near Baral, Jhansi · risk 40% · https://maps.google.com/?q=25.6250,78.8750
+  4. Jhansi · risk 39% · https://maps.google.com/?q=25.5750,78.6250
+Team 2
+  1. near Semri, Jhansi · risk 45% · https://maps.google.com/?q=25.7750,78.9750
+  2. near Chheonta, Jhansi · risk 44% · https://maps.google.com/?q=25.8250,78.8750
+  3. near Kailiya, Jalaun · risk 39% · https://maps.google.com/?q=25.9750,78.9750
+  4. near Deogaon, Jalaun · risk 38% · https://maps.google.com/?q=25.9750,79.0750
+Team 3
+  1. near Itahiya, Jalaun · risk 46% · https://maps.google.com/?q=26.1750,79.4250
+  2. near Jakha, Jalaun · risk 40% · https://maps.google.com/?q=26.2750,79.4750
+  3. near Sarawan, Jalaun · risk 43% · https://maps.google.com/?q=26.2750,79.2750
+  4. near Khaksis, Jalaun · risk 41% · https://maps.google.com/?q=26.1750,79.2250
+Team 4
+  1. near Thuthibari, Maharajganj · risk 50% · https://maps.google.com/?q=27.3750,83.6750
+  2. near Chandarkha Bujurga, Shrawasti · risk 42% · https://maps.google.com/?q=27.6750,81.7250
+  3. near Madhavpur Chhatauna, Lucknow · risk 41% · https://maps.google.com/?q=26.7250,81.1250
+  4. near Pandhari, Hamirpur · risk 50% · https://maps.google.com/?q=25.8250,80.2250
+Team 5
+  1. near Parsauni, Maharajganj · risk 59% · https://maps.google.com/?q=27.2750,83.6750
+  2. near Laxmipurektanga, Maharajganj · risk 45% · https://maps.google.com/?q=27.1250,83.6750
+  3. near Adda Bazar, Maharajganj · risk 46% · https://maps.google.com/?q=27.1750,83.5250
+  4. near Khajuria, Maharajganj · risk 39% · https://maps.google.com/?q=27.0750,83.4750
+
+These 20 stops cover about 7% of today's expected fires.
+
+Next days: tomorrow about 231 detections; day after about 311 detections
+Support first. Enforcement last.
+
+सतर्क रिस्क विंडो
+आज पराली जलाने का खतरा सबसे ज़्यादा यहाँ है: Jalaun, Maharajganj, Jhansi, Kanpur Dehat
+टीम 1: Jaitpura (41%) → Simiriya (38%) → Baral (40%) → Jhansi (39%)
+टीम 2: Semri (45%) → Chheonta (44%) → Kailiya (39%) → Deogaon (38%)
+टीम 3: Itahiya (46%) → Jakha (40%) → Sarawan (43%) → Khaksis (41%)
+टीम 4: Thuthibari (50%) → Chandarkha Bujurga (42%) → Madhavpur Chhatauna (41%) → Pandhari (50%)
+टीम 5: Parsauni (59%) → Laxmipurektanga (45%) → Adda Bazar (46%) → Khajuria (39%)
+पहले मदद, सज़ा बाद में। किसान को मशीन या डीकंपोज़र के बारे में बताइए।
+
+Satellites miss most fires lit after about 1:30 pm, so real numbers are higher.

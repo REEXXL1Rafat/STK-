@@ -1,0 +1,44 @@
+SATARK Risk Window · Rajasthan · Fri 13 Nov 2026
+Expected today: about 467420276944 fire detections. Most in Jodhpur, Bikaner, Jaisalmer, Nagaur.
+
+Team 1
+  1. Jodhpur · risk 63% · https://maps.google.com/?q=27.4750,72.3750
+  2. near Kanasar, Jodhpur · risk 55% · https://maps.google.com/?q=27.4250,72.1750
+  3. Jodhpur · risk 54% · https://maps.google.com/?q=27.4250,72.0250
+  4. Jodhpur · risk 53% · https://maps.google.com/?q=27.4750,71.9250
+Team 2
+  1. Jaisalmer · risk 64% · https://maps.google.com/?q=26.8750,72.0750
+  2. Bikaner · risk 45% · https://maps.google.com/?q=28.1750,72.9750
+  3. Bikaner · risk 55% · https://maps.google.com/?q=28.2250,73.2250
+  4. near Lakhusar, Bikaner · risk 55% · https://maps.google.com/?q=28.3250,73.2250
+Team 3
+  1. near Jamsar, Bikaner · risk 67% · https://maps.google.com/?q=28.2750,73.4250
+  2. Bikaner · risk 57% · https://maps.google.com/?q=28.3750,73.4250
+  3. Bikaner · risk 58% · https://maps.google.com/?q=28.3250,73.3250
+  4. near Alphanagar, Bundi · risk 46% · https://maps.google.com/?q=25.2750,75.7250
+Team 4
+  1. near Kamrani, Hanumangarh · risk 66% · https://maps.google.com/?q=29.5750,74.4250
+  2. near Hanumangarh Town Bazar, Hanumangarh · risk 49% · https://maps.google.com/?q=29.5750,74.3250
+  3. near Kamana, Hanumangarh · risk 45% · https://maps.google.com/?q=29.5250,74.1750
+  4. near Barnawada, Sawai Madhopur · risk 45% · https://maps.google.com/?q=25.9750,76.6250
+Team 5
+  1. near Gandawar, Sawai Madhopur · risk 62% · https://maps.google.com/?q=25.8750,76.6250
+  2. near Shahnawda, Kota · risk 47% · https://maps.google.com/?q=25.5250,76.5250
+  3. near Jhali Ji Ka Barana, Bundi · risk 46% · https://maps.google.com/?q=25.4750,76.0250
+  4. near Sarsala, Bundi · risk 58% · https://maps.google.com/?q=25.3750,76.0250
+
+These 20 stops cover about 47% of today's expected fires.
+
+Next days: tomorrow about 648 detections; day after about 3885353 detections
+Support first. Enforcement last.
+
+सतर्क रिस्क विंडो
+आज पराली जलाने का खतरा सबसे ज़्यादा यहाँ है: Jodhpur, Bikaner, Jaisalmer, Nagaur
+टीम 1: Jodhpur (63%) → Kanasar (55%) → Jodhpur (54%) → Jodhpur (53%)
+टीम 2: Jaisalmer (64%) → Bikaner (45%) → Bikaner (55%) → Lakhusar (55%)
+टीम 3: Jamsar (67%) → Bikaner (57%) → Bikaner (58%) → Alphanagar (46%)
+टीम 4: Kamrani (66%) → Hanumangarh Town Bazar (49%) → Kamana (45%) → Barnawada (45%)
+टीम 5: Gandawar (62%) → Shahnawda (47%) → Jhali Ji Ka Barana (46%) → Sarsala (58%)
+पहले मदद, सज़ा बाद में। किसान को मशीन या डीकंपोज़र के बारे में बताइए।
+
+Satellites miss most fires lit after about 1:30 pm, so real numbers are higher.
