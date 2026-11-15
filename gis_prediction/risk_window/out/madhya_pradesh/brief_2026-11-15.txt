@@ -1,0 +1,44 @@
+SATARK Risk Window · Madhya Pradesh · Sun 15 Nov 2026
+Expected today: about 628 fire detections. Most in Sheopur, Datia, Gwalior, Jabalpur.
+
+Team 1
+  1. near Javdeshwar, Sheopur · risk 96% · https://maps.google.com/?q=25.8250,76.6750
+  2. near Girdharpur, Sheopur · risk 82% · https://maps.google.com/?q=25.8750,76.7750
+  3. near Tillipur, Sheopur · risk 91% · https://maps.google.com/?q=25.7250,76.6250
+  4. near Bukhari, Sheopur · risk 89% · https://maps.google.com/?q=25.4750,76.6250
+Team 2
+  1. near Aari, Hoshangabad · risk 93% · https://maps.google.com/?q=22.7750,77.8750
+  2. near Sirwar, Hoshangabad · risk 85% · https://maps.google.com/?q=22.7250,77.9750
+  3. near Sankheda, Hoshangabad · risk 83% · https://maps.google.com/?q=22.6250,77.8250
+  4. near Bhilakhedi, Hoshangabad · risk 85% · https://maps.google.com/?q=22.6250,77.7250
+Team 3
+  1. near Chhimak, Gwalior · risk 91% · https://maps.google.com/?q=25.9250,78.1750
+  2. near Bargain, Gwalior · risk 83% · https://maps.google.com/?q=25.9250,78.2750
+  3. near Bhegana, Gwalior · risk 84% · https://maps.google.com/?q=25.8250,78.1250
+  4. near Atra, Datia · risk 83% · https://maps.google.com/?q=26.0750,78.7750
+Team 4
+  1. near Gondan, Datia · risk 96% · https://maps.google.com/?q=25.8750,78.6250
+  2. near Talgaon, Gwalior · risk 84% · https://maps.google.com/?q=25.8750,78.7250
+  3. near Ingui, Datia · risk 94% · https://maps.google.com/?q=25.9750,78.6750
+  4. near Udi, Gwalior · risk 92% · https://maps.google.com/?q=25.9750,78.7750
+Team 5
+  1. near Amahinota, Jabalpur · risk 89% · https://maps.google.com/?q=23.1750,79.8250
+  2. near Mohas, Jabalpur · risk 86% · https://maps.google.com/?q=23.3250,79.8750
+  3. Seoni · risk 79% · https://maps.google.com/?q=22.3250,79.7250
+  4. near Chutka, Seoni · risk 83% · https://maps.google.com/?q=22.2250,79.7750
+
+These 20 stops cover about 10% of today's expected fires.
+
+Next days: tomorrow about 970 detections; day after about 1309 detections
+Support first. Enforcement last.
+
+सतर्क रिस्क विंडो
+आज पराली जलाने का खतरा सबसे ज़्यादा यहाँ है: Sheopur, Datia, Gwalior, Jabalpur
+टीम 1: Javdeshwar (96%) → Girdharpur (82%) → Tillipur (91%) → Bukhari (89%)
+टीम 2: Aari (93%) → Sirwar (85%) → Sankheda (83%) → Bhilakhedi (85%)
+टीम 3: Chhimak (91%) → Bargain (83%) → Bhegana (84%) → Atra (83%)
+टीम 4: Gondan (96%) → Talgaon (84%) → Ingui (94%) → Udi (92%)
+टीम 5: Amahinota (89%) → Mohas (86%) → Seoni (79%) → Chutka (83%)
+पहले मदद, सज़ा बाद में। किसान को मशीन या डीकंपोज़र के बारे में बताइए।
+
+Satellites miss most fires lit after about 1:30 pm, so real numbers are higher.

@@ -1,33 +1,33 @@
 {
  "validated_on": 2024,
  "base": {
-  "catch@50": 0.3538678288459778,
-  "avg_precision": 0.283046300580168
+  "catch@50": 0.359375,
+  "avg_precision": 0.2823688588155992
  },
  "tried": {
   "festival": {
-   "catch@50": 0.3568135201931,
-   "avg_precision": 0.2912859409948013,
+   "catch@50": 0.3550204932689667,
+   "avg_precision": 0.2904656829937264,
    "kept": false
   },
   "noaa21": {
-   "catch@50": 0.36449795961380005,
-   "avg_precision": 0.2773671289694591,
+   "catch@50": 0.35361167788505554,
+   "avg_precision": 0.2804082655129925,
    "kept": false
   },
   "intensity": {
-   "catch@50": 0.3546362817287445,
-   "avg_precision": 0.28845042051792585,
+   "catch@50": 0.35604506731033325,
+   "avg_precision": 0.28997314921235323,
    "kept": false
   },
   "modis": {
-   "catch@50": 0.3630891442298889,
-   "avg_precision": 0.28146845061964326,
-   "kept": true
+   "catch@50": 0.36078381538391113,
+   "avg_precision": 0.28390202245359786,
+   "kept": false
   },
   "wind_dir": {
-   "catch@50": 0.35668545961380005,
-   "avg_precision": 0.2898928971192152,
+   "catch@50": 0.359375,
+   "avg_precision": 0.2818806944475203,
    "kept": false
   },
   "harvest": {
@@ -39,7 +39,5 @@
    "note": "no data in the training seasons yet"
   }
  },
- "kept": [
-  "modis"
- ]
+ "kept": []
 }
