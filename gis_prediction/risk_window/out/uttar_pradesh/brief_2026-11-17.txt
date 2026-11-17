@@ -1,0 +1,44 @@
+SATARK Risk Window · Uttar Pradesh · Tue 17 Nov 2026
+Expected today: about 341 fire detections. Most in Maharajganj, Jhansi, Jalaun, Kanpur Dehat.
+
+Team 1
+  1. near Chheonta, Jhansi · risk 74% · https://maps.google.com/?q=25.8250,78.8750
+  2. near Simiriya, Jhansi · risk 73% · https://maps.google.com/?q=25.7250,78.8750
+  3. near Semri, Jhansi · risk 60% · https://maps.google.com/?q=25.7750,78.9750
+  4. near Karkos, Jhansi · risk 47% · https://maps.google.com/?q=25.6250,78.9250
+Team 2
+  1. near Mandir Mahewa, Etawah · risk 52% · https://maps.google.com/?q=26.6250,79.2250
+  2. near Jaitpura, Jalaun · risk 50% · https://maps.google.com/?q=26.1750,79.0750
+  3. near Toomra, Jalaun · risk 45% · https://maps.google.com/?q=26.0250,79.1250
+  4. near Kachhewan Kalan, Jalaun · risk 47% · https://maps.google.com/?q=25.9750,79.0250
+Team 3
+  1. near Pandhari, Hamirpur · risk 55% · https://maps.google.com/?q=25.8250,80.2250
+  2. near Itaura, Jalaun · risk 44% · https://maps.google.com/?q=25.9750,79.5250
+  3. near Itahiya, Jalaun · risk 53% · https://maps.google.com/?q=26.1750,79.4250
+  4. near Jakha, Jalaun · risk 47% · https://maps.google.com/?q=26.2750,79.4750
+Team 4
+  1. Jhansi · risk 55% · https://maps.google.com/?q=25.5750,78.6250
+  2. near Garhi Manikpur, Kaushambi · risk 54% · https://maps.google.com/?q=25.4750,81.2750
+  3. near Chandarkha Bujurga, Shrawasti · risk 50% · https://maps.google.com/?q=27.6750,81.7250
+  4. near Laxmipurektanga, Maharajganj · risk 49% · https://maps.google.com/?q=27.1250,83.6750
+Team 5
+  1. near Parsauni, Maharajganj · risk 75% · https://maps.google.com/?q=27.2750,83.6750
+  2. near Thuthibari, Maharajganj · risk 64% · https://maps.google.com/?q=27.3750,83.6750
+  3. near Orwalliya, Maharajganj · risk 62% · https://maps.google.com/?q=27.2250,83.5250
+  4. near Khajuria, Maharajganj · risk 62% · https://maps.google.com/?q=27.0750,83.4750
+
+These 20 stops cover about 8% of today's expected fires.
+
+Next days: tomorrow about 236 detections; day after about 263 detections
+Support first. Enforcement last.
+
+सतर्क रिस्क विंडो
+आज पराली जलाने का खतरा सबसे ज़्यादा यहाँ है: Maharajganj, Jhansi, Jalaun, Kanpur Dehat
+टीम 1: Chheonta (74%) → Simiriya (73%) → Semri (60%) → Karkos (47%)
+टीम 2: Mandir Mahewa (52%) → Jaitpura (50%) → Toomra (45%) → Kachhewan Kalan (47%)
+टीम 3: Pandhari (55%) → Itaura (44%) → Itahiya (53%) → Jakha (47%)
+टीम 4: Jhansi (55%) → Garhi Manikpur (54%) → Chandarkha Bujurga (50%) → Laxmipurektanga (49%)
+टीम 5: Parsauni (75%) → Thuthibari (64%) → Orwalliya (62%) → Khajuria (62%)
+पहले मदद, सज़ा बाद में। किसान को मशीन या डीकंपोज़र के बारे में बताइए।
+
+Satellites miss most fires lit after about 1:30 pm, so real numbers are higher.
