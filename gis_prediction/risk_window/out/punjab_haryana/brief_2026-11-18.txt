@@ -1,0 +1,44 @@
+SATARK Risk Window · Punjab and Haryana · Wed 18 Nov 2026
+Expected today: about 143 fire detections. Most in Firozpur, Ludhiana, Muktsar, Moga.
+
+Team 1
+  1. near Behak, Firozpur · risk 29% · https://maps.google.com/?q=30.4250,73.9750
+  2. Firozpur · risk 16% · https://maps.google.com/?q=30.3250,73.9750
+  3. near Churiwala Dhanna, Firozpur · risk 17% · https://maps.google.com/?q=30.1750,74.1250
+  4. near Ena Khera, Firozpur · risk 23% · https://maps.google.com/?q=30.5250,74.0750
+Team 2
+  1. near Dhandi Qadim, Firozpur · risk 17% · https://maps.google.com/?q=30.6250,74.2250
+  2. near Railway Road Mandi  Ladhuka, Firozpur · risk 14% · https://maps.google.com/?q=30.5250,74.1750
+  3. near Jandwala, Firozpur · risk 16% · https://maps.google.com/?q=30.6250,74.3750
+  4. near Azamwala, Firozpur · risk 17% · https://maps.google.com/?q=30.7250,74.3250
+Team 3
+  1. near Kauni, Muktsar · risk 15% · https://maps.google.com/?q=30.4250,74.6250
+  2. near Bam, Muktsar · risk 15% · https://maps.google.com/?q=30.3750,74.3750
+  3. near Jeeda, Bathinda · risk 15% · https://maps.google.com/?q=30.3750,75.0250
+  4. near Kalakh, Ludhiana · risk 14% · https://maps.google.com/?q=30.7250,75.7750
+Team 4
+  1. near Dehlon, Ludhiana · risk 19% · https://maps.google.com/?q=30.7250,75.8750
+  2. near Nasrala, Firozpur · risk 15% · https://maps.google.com/?q=31.0750,74.8750
+  3. Firozpur · risk 15% · https://maps.google.com/?q=30.6750,74.4750
+  4. near Jhabel Wali, Muktsar · risk 16% · https://maps.google.com/?q=30.5250,74.6250
+Team 5
+  1. near Makhu Canal Colony, Firozpur · risk 20% · https://maps.google.com/?q=31.0750,74.9750
+  2. near Fateh Garh Panjtoor, Moga · risk 19% · https://maps.google.com/?q=31.0750,75.1250
+  3. near Mallianwala, Moga · risk 15% · https://maps.google.com/?q=30.7250,75.2250
+  4. near Jalaldiwal, Ludhiana · risk 19% · https://maps.google.com/?q=30.6250,75.5750
+
+These 20 stops cover about 3% of today's expected fires.
+
+Next days: tomorrow about 134 detections; day after about 85 detections
+Support first. Enforcement last.
+
+ਸਤਰਕ ਰਿਸਕ ਵਿੰਡੋ
+ਅੱਜ ਪਰਾਲੀ ਸਾੜਨ ਦਾ ਖ਼ਤਰਾ ਸਭ ਤੋਂ ਵੱਧ ਇੱਥੇ ਹੈ: Firozpur, Ludhiana, Muktsar, Moga
+ਟੀਮ 1: Behak (29%) → Firozpur (16%) → Churiwala Dhanna (17%) → Ena Khera (23%)
+ਟੀਮ 2: Dhandi Qadim (17%) → Railway Road Mandi  Ladhuka (14%) → Jandwala (16%) → Azamwala (17%)
+ਟੀਮ 3: Kauni (15%) → Bam (15%) → Jeeda (15%) → Kalakh (14%)
+ਟੀਮ 4: Dehlon (19%) → Nasrala (15%) → Firozpur (15%) → Jhabel Wali (16%)
+ਟੀਮ 5: Makhu Canal Colony (20%) → Fateh Garh Panjtoor (19%) → Mallianwala (15%) → Jalaldiwal (19%)
+ਪਹਿਲਾਂ ਮਦਦ, ਸਜ਼ਾ ਬਾਅਦ ਵਿੱਚ। ਕਿਸਾਨ ਨੂੰ ਮਸ਼ੀਨ ਜਾਂ ਡੀਕੰਪੋਜ਼ਰ ਬਾਰੇ ਦੱਸੋ।
+
+Satellites miss most fires lit after about 1:30 pm, so real numbers are higher.

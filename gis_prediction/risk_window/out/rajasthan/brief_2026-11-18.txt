@@ -1,0 +1,44 @@
+SATARK Risk Window · Rajasthan · Wed 18 Nov 2026
+Expected today: about 23580763164498497536 fire detections. Most in Bikaner, Jodhpur, Hanumangarh, Ganganagar.
+
+Team 1
+  1. near Kanasar, Jodhpur · risk 77% · https://maps.google.com/?q=27.3750,72.1750
+  2. Jodhpur · risk 75% · https://maps.google.com/?q=27.4250,72.0250
+  3. Jodhpur · risk 73% · https://maps.google.com/?q=27.4750,71.9250
+  4. Jodhpur · risk 76% · https://maps.google.com/?q=27.4250,72.3250
+Team 2
+  1. near Sarupsar, Ganganagar · risk 68% · https://maps.google.com/?q=29.3750,73.7250
+  2. near Manaksar, Ganganagar · risk 48% · https://maps.google.com/?q=29.3250,73.8250
+  3. near 17 Gb, Ganganagar · risk 49% · https://maps.google.com/?q=29.2750,73.6250
+  4. Jaisalmer · risk 42% · https://maps.google.com/?q=26.6750,71.2250
+Team 3
+  1. near Manaktheri, Hanumangarh · risk 75% · https://maps.google.com/?q=29.3750,74.0250
+  2. near Pilibangan, Hanumangarh · risk 67% · https://maps.google.com/?q=29.4750,74.0750
+  3. near Fatehgarh, Hanumangarh · risk 57% · https://maps.google.com/?q=29.5250,74.2250
+  4. near Baluheda, Kota · risk 40% · https://maps.google.com/?q=24.9750,76.1750
+Team 4
+  1. near Kamrani, Hanumangarh · risk 78% · https://maps.google.com/?q=29.5750,74.4250
+  2. near Hanumangarh Town Bazar, Hanumangarh · risk 65% · https://maps.google.com/?q=29.5750,74.3250
+  3. near Talwara Jheel, Hanumangarh · risk 48% · https://maps.google.com/?q=29.5250,74.5750
+  4. near Jhali Ji Ka Barana, Bundi · risk 49% · https://maps.google.com/?q=25.4750,76.0250
+Team 5
+  1. near Karwala Ki Jhopri, Bundi · risk 46% · https://maps.google.com/?q=25.3750,75.8750
+  2. near Sarsala, Bundi · risk 34% · https://maps.google.com/?q=25.3750,76.0250
+  3. near Kotsuan, Kota · risk 40% · https://maps.google.com/?q=25.2250,76.0250
+  4. near Kaithun, Kota · risk 35% · https://maps.google.com/?q=25.1250,75.9750
+
+These 20 stops cover about 0% of today's expected fires.
+
+Next days: tomorrow about 29304958 detections; day after about 5159265 detections
+Support first. Enforcement last.
+
+सतर्क रिस्क विंडो
+आज पराली जलाने का खतरा सबसे ज़्यादा यहाँ है: Bikaner, Jodhpur, Hanumangarh, Ganganagar
+टीम 1: Kanasar (77%) → Jodhpur (75%) → Jodhpur (73%) → Jodhpur (76%)
+टीम 2: Sarupsar (68%) → Manaksar (48%) → 17 Gb (49%) → Jaisalmer (42%)
+टीम 3: Manaktheri (75%) → Pilibangan (67%) → Fatehgarh (57%) → Baluheda (40%)
+टीम 4: Kamrani (78%) → Hanumangarh Town Bazar (65%) → Talwara Jheel (48%) → Jhali Ji Ka Barana (49%)
+टीम 5: Karwala Ki Jhopri (46%) → Sarsala (34%) → Kotsuan (40%) → Kaithun (35%)
+पहले मदद, सज़ा बाद में। किसान को मशीन या डीकंपोज़र के बारे में बताइए।
+
+Satellites miss most fires lit after about 1:30 pm, so real numbers are higher.
