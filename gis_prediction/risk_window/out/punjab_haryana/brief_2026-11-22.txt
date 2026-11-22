@@ -1,0 +1,44 @@
+SATARK Risk Window · Punjab and Haryana · Sun 22 Nov 2026
+Expected today: about 53 fire detections. Most in Firozpur, Muktsar, Moga, Bathinda.
+
+Team 1
+  1. near Ena Khera, Firozpur · risk 12% · https://maps.google.com/?q=30.5250,74.0750
+  2. near Chak Banwala, Firozpur · risk 7% · https://maps.google.com/?q=30.3750,74.0250
+  3. Firozpur · risk 8% · https://maps.google.com/?q=30.3750,73.9250
+  4. near Churiwala Dhanna, Firozpur · risk 7% · https://maps.google.com/?q=30.1750,74.1250
+Team 2
+  1. Firozpur · risk 36% · https://maps.google.com/?q=30.4750,73.9750
+  2. near Dhandi Qadim, Firozpur · risk 8% · https://maps.google.com/?q=30.6250,74.2250
+  3. near Aslamwala, Muktsar · risk 8% · https://maps.google.com/?q=30.5750,74.6250
+  4. near Kareempur Chahwala, Muktsar · risk 7% · https://maps.google.com/?q=30.4750,74.6250
+Team 3
+  1. near Sikh Wala, Muktsar · risk 7% · https://maps.google.com/?q=30.0750,74.6250
+  2. near Dhaula Kingra, Muktsar · risk 7% · https://maps.google.com/?q=30.0750,74.5250
+  3. near Saidewala, Mansa · risk 7% · https://maps.google.com/?q=29.8250,75.5750
+  4. near Dhatt, Fatehabad · risk 7% · https://maps.google.com/?q=29.7250,75.6250
+Team 4
+  1. near Baja Chak, Moga · risk 11% · https://maps.google.com/?q=30.8250,75.1250
+  2. near Mehron, Moga · risk 7% · https://maps.google.com/?q=30.7750,75.2250
+  3. near Kalakh, Ludhiana · risk 6% · https://maps.google.com/?q=30.7250,75.7750
+  4. near Shankarpura, Amritsar · risk 8% · https://maps.google.com/?q=31.9250,74.7250
+Team 5
+  1. near Madina, Rohtak · risk 10% · https://maps.google.com/?q=28.9750,76.4250
+  2. Rohtak · risk 7% · https://maps.google.com/?q=29.0750,76.5250
+  3. Rohtak · risk 8% · https://maps.google.com/?q=29.0250,76.2750
+  4. near Pakiwan, Gurdaspur · risk 6% · https://maps.google.com/?q=32.0750,75.1250
+
+These 20 stops cover about 4% of today's expected fires.
+
+Next days: tomorrow about 51 detections; day after about 56 detections
+Support first. Enforcement last.
+
+ਸਤਰਕ ਰਿਸਕ ਵਿੰਡੋ
+ਅੱਜ ਪਰਾਲੀ ਸਾੜਨ ਦਾ ਖ਼ਤਰਾ ਸਭ ਤੋਂ ਵੱਧ ਇੱਥੇ ਹੈ: Firozpur, Muktsar, Moga, Bathinda
+ਟੀਮ 1: Ena Khera (12%) → Chak Banwala (7%) → Firozpur (8%) → Churiwala Dhanna (7%)
+ਟੀਮ 2: Firozpur (36%) → Dhandi Qadim (8%) → Aslamwala (8%) → Kareempur Chahwala (7%)
+ਟੀਮ 3: Sikh Wala (7%) → Dhaula Kingra (7%) → Saidewala (7%) → Dhatt (7%)
+ਟੀਮ 4: Baja Chak (11%) → Mehron (7%) → Kalakh (6%) → Shankarpura (8%)
+ਟੀਮ 5: Madina (10%) → Rohtak (7%) → Rohtak (8%) → Pakiwan (6%)
+ਪਹਿਲਾਂ ਮਦਦ, ਸਜ਼ਾ ਬਾਅਦ ਵਿੱਚ। ਕਿਸਾਨ ਨੂੰ ਮਸ਼ੀਨ ਜਾਂ ਡੀਕੰਪੋਜ਼ਰ ਬਾਰੇ ਦੱਸੋ।
+
+Satellites miss most fires lit after about 1:30 pm, so real numbers are higher.

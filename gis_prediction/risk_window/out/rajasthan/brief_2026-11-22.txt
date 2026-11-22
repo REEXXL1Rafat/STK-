@@ -1,0 +1,43 @@
+SATARK Risk Window · Rajasthan · Sun 22 Nov 2026
+Expected today: about 10439965240251451392 fire detections. Most in Jodhpur, Jaisalmer, Hanumangarh, Ganganagar.
+
+Team 1
+  1. Jaisalmer · risk 88% · https://maps.google.com/?q=26.6750,71.2250
+  2. Barmer · risk 70% · https://maps.google.com/?q=26.2750,71.1250
+  3. near Kotra, Barmer · risk 6% · https://maps.google.com/?q=26.1250,71.2250
+  4. near Kamrani, Hanumangarh · risk 10% · https://maps.google.com/?q=29.5750,74.4250
+Team 2
+  1. Jodhpur · risk 31% · https://maps.google.com/?q=27.4750,72.3750
+  2. Jodhpur · risk 8% · https://maps.google.com/?q=27.3250,72.2750
+  3. near Kanasar, Jodhpur · risk 11% · https://maps.google.com/?q=27.4250,72.1750
+  4. Bikaner · risk 9% · https://maps.google.com/?q=27.6250,72.5750
+Team 3
+  1. near Manaksar, Ganganagar · risk 11% · https://maps.google.com/?q=29.3250,73.8250
+  2. near 25 Gb, Ganganagar · risk 6% · https://maps.google.com/?q=29.2250,73.5750
+  3. near 90 Gb, Ganganagar · risk 5% · https://maps.google.com/?q=29.2250,73.1750
+  4. Ganganagar · risk 6% · https://maps.google.com/?q=29.2250,73.0750
+Team 4
+  1. near Rampura, Ganganagar · risk 8% · https://maps.google.com/?q=29.3750,73.9250
+  2. near Manaktheri, Hanumangarh · risk 6% · https://maps.google.com/?q=29.3750,74.0250
+  3. near Pilibangan, Hanumangarh · risk 6% · https://maps.google.com/?q=29.4750,74.0750
+  4. near Fatehgarh, Hanumangarh · risk 7% · https://maps.google.com/?q=29.5250,74.2250
+Team 5
+  1. near Jhakhmund, Bundi · risk 7% · https://maps.google.com/?q=25.2250,75.7750
+  2. near Shahnawda, Kota · risk 7% · https://maps.google.com/?q=25.5250,76.5250
+  3. near Chahiyan, Hanumangarh · risk 5% · https://maps.google.com/?q=29.5750,74.5250
+
+These 19 stops cover about 0% of today's expected fires.
+
+Next days: tomorrow about 208 detections; day after about 645131 detections
+Support first. Enforcement last.
+
+सतर्क रिस्क विंडो
+आज पराली जलाने का खतरा सबसे ज़्यादा यहाँ है: Jodhpur, Jaisalmer, Hanumangarh, Ganganagar
+टीम 1: Jaisalmer (88%) → Barmer (70%) → Kotra (6%) → Kamrani (10%)
+टीम 2: Jodhpur (31%) → Jodhpur (8%) → Kanasar (11%) → Bikaner (9%)
+टीम 3: Manaksar (11%) → 25 Gb (6%) → 90 Gb (5%) → Ganganagar (6%)
+टीम 4: Rampura (8%) → Manaktheri (6%) → Pilibangan (6%) → Fatehgarh (7%)
+टीम 5: Jhakhmund (7%) → Shahnawda (7%) → Chahiyan (5%)
+पहले मदद, सज़ा बाद में। किसान को मशीन या डीकंपोज़र के बारे में बताइए।
+
+Satellites miss most fires lit after about 1:30 pm, so real numbers are higher.
