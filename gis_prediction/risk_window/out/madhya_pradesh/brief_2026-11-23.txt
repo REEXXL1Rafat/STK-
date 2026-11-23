@@ -1,0 +1,44 @@
+SATARK Risk Window · Madhya Pradesh · Mon 23 Nov 2026
+Expected today: about 32101 fire detections. Most in Gwalior, Datia, Jabalpur, Shivpuri.
+
+Team 1
+  1. near Gharsondi, Gwalior · risk 95% · https://maps.google.com/?q=25.9250,78.1250
+  2. near Maina, Gwalior · risk 60% · https://maps.google.com/?q=25.9250,78.0250
+  3. near Rahi, Gwalior · risk 94% · https://maps.google.com/?q=25.8250,78.0750
+  4. near Bajana, Gwalior · risk 69% · https://maps.google.com/?q=25.8250,77.9750
+Team 2
+  1. near Bagwai, Gwalior · risk 91% · https://maps.google.com/?q=25.8250,78.1750
+  2. near Kerua, Gwalior · risk 89% · https://maps.google.com/?q=25.7250,78.1250
+  3. near Behgawa, Shivpuri · risk 88% · https://maps.google.com/?q=25.6250,78.1250
+  4. near Sad, Shivpuri · risk 81% · https://maps.google.com/?q=25.6250,78.2750
+Team 3
+  1. near Salwai, Gwalior · risk 96% · https://maps.google.com/?q=25.8750,78.2750
+  2. near Chandpur, Gwalior · risk 81% · https://maps.google.com/?q=25.8750,78.3750
+  3. near Chiruli, Gwalior · risk 92% · https://maps.google.com/?q=25.9750,78.3250
+  4. near Ladhwaya, Gwalior · risk 72% · https://maps.google.com/?q=25.9750,78.2250
+Team 4
+  1. near Dabhera, Datia · risk 92% · https://maps.google.com/?q=25.8750,78.5750
+  2. near Kamad, Datia · risk 63% · https://maps.google.com/?q=25.6250,78.6250
+  3. near Dhigwas, Shivpuri · risk 74% · https://maps.google.com/?q=25.7250,77.9750
+  4. near Sherpur, Bhind · risk 62% · https://maps.google.com/?q=26.4750,78.3250
+Team 5
+  1. near Udina, Gwalior · risk 98% · https://maps.google.com/?q=25.9250,78.6750
+  2. near Sohan, Gwalior · risk 92% · https://maps.google.com/?q=25.9250,78.7750
+  3. near Padari, Bhind · risk 59% · https://maps.google.com/?q=25.9750,78.8750
+  4. near Diguwan, Gwalior · risk 78% · https://maps.google.com/?q=26.0250,78.7250
+
+These 20 stops cover about 50% of today's expected fires.
+
+Next days: tomorrow about 1029 detections; day after about 2215 detections
+Support first. Enforcement last.
+
+सतर्क रिस्क विंडो
+आज पराली जलाने का खतरा सबसे ज़्यादा यहाँ है: Gwalior, Datia, Jabalpur, Shivpuri
+टीम 1: Gharsondi (95%) → Maina (60%) → Rahi (94%) → Bajana (69%)
+टीम 2: Bagwai (91%) → Kerua (89%) → Behgawa (88%) → Sad (81%)
+टीम 3: Salwai (96%) → Chandpur (81%) → Chiruli (92%) → Ladhwaya (72%)
+टीम 4: Dabhera (92%) → Kamad (63%) → Dhigwas (74%) → Sherpur (62%)
+टीम 5: Udina (98%) → Sohan (92%) → Padari (59%) → Diguwan (78%)
+पहले मदद, सज़ा बाद में। किसान को मशीन या डीकंपोज़र के बारे में बताइए।
+
+Satellites miss most fires lit after about 1:30 pm, so real numbers are higher.

@@ -1,0 +1,36 @@
+SATARK Risk Window · Punjab and Haryana · Mon 23 Nov 2026
+Expected today: about 39 fire detections. Most in Firozpur, Moga, Muktsar, Bathinda.
+
+Team 1
+  1. Firozpur · risk 28% · https://maps.google.com/?q=30.4750,73.9750
+  2. near Ena Khera, Firozpur · risk 11% · https://maps.google.com/?q=30.5250,74.0750
+  3. near Bahamni Wala, Firozpur · risk 6% · https://maps.google.com/?q=30.5750,74.2750
+  4. Firozpur · risk 5% · https://maps.google.com/?q=30.3750,73.9250
+Team 2
+  1. near Baja Chak, Moga · risk 7% · https://maps.google.com/?q=30.8250,75.1250
+  2. near Mehron, Moga · risk 5% · https://maps.google.com/?q=30.7750,75.2250
+  3. Firozpur · risk 6% · https://maps.google.com/?q=30.0250,74.4250
+Team 3
+  1. near Shankarpura, Amritsar · risk 7% · https://maps.google.com/?q=31.9250,74.7250
+  2. near Datial, Gurdaspur · risk 6% · https://maps.google.com/?q=32.2250,75.3750
+Team 4
+  1. near Fateh Garh Panjtoor, Moga · risk 5% · https://maps.google.com/?q=31.0750,75.1250
+Team 5
+  1. near Madina, Rohtak · risk 6% · https://maps.google.com/?q=28.9750,76.4250
+  2. near Dhatt, Fatehabad · risk 6% · https://maps.google.com/?q=29.7250,75.6250
+
+These 12 stops cover about 3% of today's expected fires.
+
+Next days: tomorrow about 50 detections; day after about 47 detections
+Support first. Enforcement last.
+
+ਸਤਰਕ ਰਿਸਕ ਵਿੰਡੋ
+ਅੱਜ ਪਰਾਲੀ ਸਾੜਨ ਦਾ ਖ਼ਤਰਾ ਸਭ ਤੋਂ ਵੱਧ ਇੱਥੇ ਹੈ: Firozpur, Moga, Muktsar, Bathinda
+ਟੀਮ 1: Firozpur (28%) → Ena Khera (11%) → Bahamni Wala (6%) → Firozpur (5%)
+ਟੀਮ 2: Baja Chak (7%) → Mehron (5%) → Firozpur (6%)
+ਟੀਮ 3: Shankarpura (7%) → Datial (6%)
+ਟੀਮ 4: Fateh Garh Panjtoor (5%)
+ਟੀਮ 5: Madina (6%) → Dhatt (6%)
+ਪਹਿਲਾਂ ਮਦਦ, ਸਜ਼ਾ ਬਾਅਦ ਵਿੱਚ। ਕਿਸਾਨ ਨੂੰ ਮਸ਼ੀਨ ਜਾਂ ਡੀਕੰਪੋਜ਼ਰ ਬਾਰੇ ਦੱਸੋ।
+
+Satellites miss most fires lit after about 1:30 pm, so real numbers are higher.
