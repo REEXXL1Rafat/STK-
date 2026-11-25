@@ -1,0 +1,40 @@
+SATARK Risk Window · Punjab and Haryana · Wed 25 Nov 2026
+Expected today: about 39 fire detections. Most in Firozpur, Muktsar, Moga, Sangrur.
+
+Team 1
+  1. near Chak Banwala, Firozpur · risk 8% · https://maps.google.com/?q=30.3750,74.0250
+  2. Firozpur · risk 5% · https://maps.google.com/?q=30.3750,74.1250
+  3. near Ena Khera, Firozpur · risk 8% · https://maps.google.com/?q=30.5250,74.0750
+  4. near Khuranj, Firozpur · risk 6% · https://maps.google.com/?q=30.4750,74.3250
+Team 2
+  1. Firozpur · risk 17% · https://maps.google.com/?q=30.4750,73.9750
+  2. near Lubanianwali, Firozpur · risk 9% · https://maps.google.com/?q=30.5750,74.4250
+  3. near Guruharsahai, Firozpur · risk 6% · https://maps.google.com/?q=30.6750,74.4250
+  4. near Balkhandi, Moga · risk 6% · https://maps.google.com/?q=30.8750,75.0750
+Team 3
+  1. near Dastul Sahib, Muktsar · risk 7% · https://maps.google.com/?q=29.9750,74.5750
+  2. near Kundal, Firozpur · risk 7% · https://maps.google.com/?q=30.1750,74.2750
+  3. near Chhattiana, Muktsar · risk 5% · https://maps.google.com/?q=30.3250,74.6750
+  4. near Aslamwala, Muktsar · risk 5% · https://maps.google.com/?q=30.5750,74.6250
+Team 4
+  1. Firozpur · risk 11% · https://maps.google.com/?q=30.3750,73.9250
+  2. near Makorar Sahib, Sangrur · risk 6% · https://maps.google.com/?q=29.8250,75.9750
+Team 5
+  1. near Shankarpura, Amritsar · risk 6% · https://maps.google.com/?q=31.9250,74.7250
+  2. near Jhabkra, Gurdaspur · risk 5% · https://maps.google.com/?q=32.1750,75.3250
+
+These 16 stops cover about 4% of today's expected fires.
+
+Next days: tomorrow about 40 detections; day after about 36 detections
+Support first. Enforcement last.
+
+ਸਤਰਕ ਰਿਸਕ ਵਿੰਡੋ
+ਅੱਜ ਪਰਾਲੀ ਸਾੜਨ ਦਾ ਖ਼ਤਰਾ ਸਭ ਤੋਂ ਵੱਧ ਇੱਥੇ ਹੈ: Firozpur, Muktsar, Moga, Sangrur
+ਟੀਮ 1: Chak Banwala (8%) → Firozpur (5%) → Ena Khera (8%) → Khuranj (6%)
+ਟੀਮ 2: Firozpur (17%) → Lubanianwali (9%) → Guruharsahai (6%) → Balkhandi (6%)
+ਟੀਮ 3: Dastul Sahib (7%) → Kundal (7%) → Chhattiana (5%) → Aslamwala (5%)
+ਟੀਮ 4: Firozpur (11%) → Makorar Sahib (6%)
+ਟੀਮ 5: Shankarpura (6%) → Jhabkra (5%)
+ਪਹਿਲਾਂ ਮਦਦ, ਸਜ਼ਾ ਬਾਅਦ ਵਿੱਚ। ਕਿਸਾਨ ਨੂੰ ਮਸ਼ੀਨ ਜਾਂ ਡੀਕੰਪੋਜ਼ਰ ਬਾਰੇ ਦੱਸੋ।
+
+Satellites miss most fires lit after about 1:30 pm, so real numbers are higher.
