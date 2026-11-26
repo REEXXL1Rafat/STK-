@@ -1,0 +1,31 @@
+SATARK Risk Window · Punjab and Haryana · Thu 26 Nov 2026
+Expected today: about 35 fire detections. Most in Firozpur, Muktsar, Moga, Ludhiana.
+
+Team 1
+  1. Firozpur · risk 13% · https://maps.google.com/?q=30.4750,73.9750
+  2. Firozpur · risk 6% · https://maps.google.com/?q=30.3750,73.9250
+Team 2
+  1. near Lubanianwali, Firozpur · risk 5% · https://maps.google.com/?q=30.5750,74.4250
+Team 3
+  1. near Dastul Sahib, Muktsar · risk 8% · https://maps.google.com/?q=29.9750,74.5750
+  2. near Kundal, Firozpur · risk 5% · https://maps.google.com/?q=30.1750,74.2750
+Team 4
+  1. near Madina, Rohtak · risk 7% · https://maps.google.com/?q=28.9750,76.4250
+Team 5
+  1. near Mokhra, Rohtak · risk 8% · https://maps.google.com/?q=28.8750,76.4750
+
+These 7 stops cover about 2% of today's expected fires.
+
+Next days: tomorrow about 35 detections; day after about 32 detections
+Support first. Enforcement last.
+
+ਸਤਰਕ ਰਿਸਕ ਵਿੰਡੋ
+ਅੱਜ ਪਰਾਲੀ ਸਾੜਨ ਦਾ ਖ਼ਤਰਾ ਸਭ ਤੋਂ ਵੱਧ ਇੱਥੇ ਹੈ: Firozpur, Muktsar, Moga, Ludhiana
+ਟੀਮ 1: Firozpur (13%) → Firozpur (6%)
+ਟੀਮ 2: Lubanianwali (5%)
+ਟੀਮ 3: Dastul Sahib (8%) → Kundal (5%)
+ਟੀਮ 4: Madina (7%)
+ਟੀਮ 5: Mokhra (8%)
+ਪਹਿਲਾਂ ਮਦਦ, ਸਜ਼ਾ ਬਾਅਦ ਵਿੱਚ। ਕਿਸਾਨ ਨੂੰ ਮਸ਼ੀਨ ਜਾਂ ਡੀਕੰਪੋਜ਼ਰ ਬਾਰੇ ਦੱਸੋ।
+
+Satellites miss most fires lit after about 1:30 pm, so real numbers are higher.
