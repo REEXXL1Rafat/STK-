@@ -1,0 +1,44 @@
+SATARK Risk Window · Madhya Pradesh · Fri 27 Nov 2026
+Expected today: about 2585 fire detections. Most in Gwalior, Jabalpur, Shivpuri, Satna.
+
+Team 1
+  1. near Itma, Gwalior · risk 98% · https://maps.google.com/?q=25.8750,78.0750
+  2. near Gohinda, Gwalior · risk 95% · https://maps.google.com/?q=25.7750,78.0750
+  3. near Bajana, Gwalior · risk 91% · https://maps.google.com/?q=25.8250,77.9750
+  4. near Dhigwas, Shivpuri · risk 81% · https://maps.google.com/?q=25.7250,77.9750
+Team 2
+  1. near Samaya, Gwalior · risk 97% · https://maps.google.com/?q=25.9250,78.2250
+  2. near Chiruli, Gwalior · risk 88% · https://maps.google.com/?q=25.9750,78.3250
+  3. near Bhaisnari, Gwalior · risk 87% · https://maps.google.com/?q=25.8250,78.2750
+  4. near Bagwai, Gwalior · risk 92% · https://maps.google.com/?q=25.8250,78.1750
+Team 3
+  1. near Bhori, Gwalior · risk 96% · https://maps.google.com/?q=25.9750,78.1250
+  2. near Dhihala, Shivpuri · risk 88% · https://maps.google.com/?q=25.6750,78.1750
+  3. near Basadi, Jabalpur · risk 87% · https://maps.google.com/?q=23.1750,79.6750
+  4. near Khirhani, Jabalpur · risk 94% · https://maps.google.com/?q=23.3250,79.9750
+Team 4
+  1. near Nunji, Jabalpur · risk 95% · https://maps.google.com/?q=23.4250,80.1750
+  2. near Umaria Jujhari, Jabalpur · risk 92% · https://maps.google.com/?q=23.4750,80.0250
+  3. Jabalpur · risk 90% · https://maps.google.com/?q=23.5750,79.9250
+  4. near Sad, Shivpuri · risk 93% · https://maps.google.com/?q=25.6250,78.2750
+Team 5
+  1. near Mohas, Jabalpur · risk 95% · https://maps.google.com/?q=23.2750,79.8750
+  2. near Sukha Bharatpur, Jabalpur · risk 90% · https://maps.google.com/?q=23.2750,79.7750
+  3. near Nichi, Jabalpur · risk 93% · https://maps.google.com/?q=23.1750,79.7750
+  4. near Medical College S.O (Jabalpur), Jabalpur · risk 76% · https://maps.google.com/?q=23.1750,79.8750
+
+These 20 stops cover about 31% of today's expected fires.
+
+Next days: tomorrow about 1570 detections; day after about 579 detections
+Support first. Enforcement last.
+
+सतर्क रिस्क विंडो
+आज पराली जलाने का खतरा सबसे ज़्यादा यहाँ है: Gwalior, Jabalpur, Shivpuri, Satna
+टीम 1: Itma (98%) → Gohinda (95%) → Bajana (91%) → Dhigwas (81%)
+टीम 2: Samaya (97%) → Chiruli (88%) → Bhaisnari (87%) → Bagwai (92%)
+टीम 3: Bhori (96%) → Dhihala (88%) → Basadi (87%) → Khirhani (94%)
+टीम 4: Nunji (95%) → Umaria Jujhari (92%) → Jabalpur (90%) → Sad (93%)
+टीम 5: Mohas (95%) → Sukha Bharatpur (90%) → Nichi (93%) → Medical College S.O (Jabalpur) (76%)
+पहले मदद, सज़ा बाद में। किसान को मशीन या डीकंपोज़र के बारे में बताइए।
+
+Satellites miss most fires lit after about 1:30 pm, so real numbers are higher.

@@ -1,0 +1,39 @@
+SATARK Risk Window · Rajasthan · Fri 27 Nov 2026
+Expected today: about 2547738134425870336 fire detections. Most in Barmer, Jaisalmer, Hanumangarh, Jhunjhunun.
+
+Team 1
+  1. near Manaksar, Ganganagar · risk 34% · https://maps.google.com/?q=29.3250,73.8250
+  2. near Sotha, Ganganagar · risk 10% · https://maps.google.com/?q=29.2250,73.1250
+  3. near Bamanwali, Bikaner · risk 14% · https://maps.google.com/?q=28.3250,73.4750
+Team 2
+  1. near Rampura, Ganganagar · risk 36% · https://maps.google.com/?q=29.3250,73.9250
+  2. near Manaktheri, Hanumangarh · risk 16% · https://maps.google.com/?q=29.3750,74.0250
+  3. near Ahmedpura, Hanumangarh · risk 7% · https://maps.google.com/?q=29.4750,74.0250
+  4. near Kalibanga, Hanumangarh · risk 19% · https://maps.google.com/?q=29.4750,74.1250
+Team 3
+  1. near Fatehpura, Hanumangarh · risk 57% · https://maps.google.com/?q=29.6250,74.3750
+  2. near Dholipal, Hanumangarh · risk 38% · https://maps.google.com/?q=29.5750,74.2750
+  3. near Masani, Hanumangarh · risk 11% · https://maps.google.com/?q=29.5750,74.4750
+  4. near Surewali, Hanumangarh · risk 6% · https://maps.google.com/?q=29.5750,74.5750
+Team 4
+  1. near Bamori Kalan, Kota · risk 20% · https://maps.google.com/?q=25.4250,76.5250
+Team 5
+  1. near Barnawada, Sawai Madhopur · risk 42% · https://maps.google.com/?q=25.9750,76.6250
+  2. near Gandawar, Sawai Madhopur · risk 27% · https://maps.google.com/?q=25.8750,76.6250
+  3. near Badwas, Sawai Madhopur · risk 34% · https://maps.google.com/?q=25.9250,76.7250
+
+These 15 stops cover about 0% of today's expected fires.
+
+Next days: tomorrow about 61 detections; day after about 50 detections
+Support first. Enforcement last.
+
+सतर्क रिस्क विंडो
+आज पराली जलाने का खतरा सबसे ज़्यादा यहाँ है: Barmer, Jaisalmer, Hanumangarh, Jhunjhunun
+टीम 1: Manaksar (34%) → Sotha (10%) → Bamanwali (14%)
+टीम 2: Rampura (36%) → Manaktheri (16%) → Ahmedpura (7%) → Kalibanga (19%)
+टीम 3: Fatehpura (57%) → Dholipal (38%) → Masani (11%) → Surewali (6%)
+टीम 4: Bamori Kalan (20%)
+टीम 5: Barnawada (42%) → Gandawar (27%) → Badwas (34%)
+पहले मदद, सज़ा बाद में। किसान को मशीन या डीकंपोज़र के बारे में बताइए।
+
+Satellites miss most fires lit after about 1:30 pm, so real numbers are higher.

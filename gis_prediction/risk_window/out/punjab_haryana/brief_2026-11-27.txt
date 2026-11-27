@@ -1,0 +1,37 @@
+SATARK Risk Window · Punjab and Haryana · Fri 27 Nov 2026
+Expected today: about 36 fire detections. Most in Firozpur, Muktsar, Sirsa, Hisar.
+
+Team 1
+  1. Firozpur · risk 12% · https://maps.google.com/?q=30.4750,73.9750
+  2. Firozpur · risk 7% · https://maps.google.com/?q=30.3750,73.9250
+  3. near Arniwala Sheikh Subhan, Firozpur · risk 6% · https://maps.google.com/?q=30.3250,74.2750
+  4. near Kundal, Firozpur · risk 6% · https://maps.google.com/?q=30.1750,74.2750
+Team 2
+  1. near Shankarpura, Amritsar · risk 6% · https://maps.google.com/?q=31.9250,74.7250
+  2. near Lubanianwali, Firozpur · risk 5% · https://maps.google.com/?q=30.5750,74.4250
+Team 3
+  1. near Khuiyana Malkana, Sirsa · risk 10% · https://maps.google.com/?q=29.9250,74.6750
+  2. near Dastul Sahib, Muktsar · risk 7% · https://maps.google.com/?q=29.9750,74.5750
+  3. near Dhaula Kingra, Muktsar · risk 5% · https://maps.google.com/?q=30.0250,74.4750
+  4. near Balasar, Sirsa · risk 5% · https://maps.google.com/?q=29.5250,74.7250
+Team 4
+  1. near Pakiwan, Gurdaspur · risk 7% · https://maps.google.com/?q=32.0750,75.1250
+Team 5
+  1. near Madina, Rohtak · risk 9% · https://maps.google.com/?q=28.9750,76.4250
+  2. near Makorar Sahib, Sangrur · risk 6% · https://maps.google.com/?q=29.8250,75.9750
+
+These 13 stops cover about 4% of today's expected fires.
+
+Next days: tomorrow about 29 detections; day after about 36 detections
+Support first. Enforcement last.
+
+ਸਤਰਕ ਰਿਸਕ ਵਿੰਡੋ
+ਅੱਜ ਪਰਾਲੀ ਸਾੜਨ ਦਾ ਖ਼ਤਰਾ ਸਭ ਤੋਂ ਵੱਧ ਇੱਥੇ ਹੈ: Firozpur, Muktsar, Sirsa, Hisar
+ਟੀਮ 1: Firozpur (12%) → Firozpur (7%) → Arniwala Sheikh Subhan (6%) → Kundal (6%)
+ਟੀਮ 2: Shankarpura (6%) → Lubanianwali (5%)
+ਟੀਮ 3: Khuiyana Malkana (10%) → Dastul Sahib (7%) → Dhaula Kingra (5%) → Balasar (5%)
+ਟੀਮ 4: Pakiwan (7%)
+ਟੀਮ 5: Madina (9%) → Makorar Sahib (6%)
+ਪਹਿਲਾਂ ਮਦਦ, ਸਜ਼ਾ ਬਾਅਦ ਵਿੱਚ। ਕਿਸਾਨ ਨੂੰ ਮਸ਼ੀਨ ਜਾਂ ਡੀਕੰਪੋਜ਼ਰ ਬਾਰੇ ਦੱਸੋ।
+
+Satellites miss most fires lit after about 1:30 pm, so real numbers are higher.
