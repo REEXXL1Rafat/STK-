@@ -1,0 +1,44 @@
+SATARK Risk Window · Uttar Pradesh · Sat 28 Nov 2026
+Expected today: about 332 fire detections. Most in Maharajganj, Kushinagar, Jhansi, Rae Bareli.
+
+Team 1
+  1. near Karkos, Jhansi · risk 70% · https://maps.google.com/?q=25.6750,78.9250
+  2. near Shahjahanpur, Jhansi · risk 54% · https://maps.google.com/?q=25.7750,78.9250
+  3. near Birguwan, Jhansi · risk 65% · https://maps.google.com/?q=25.7250,78.8250
+  4. near Ranguwan, Jhansi · risk 42% · https://maps.google.com/?q=25.5750,78.6750
+Team 2
+  1. near Parsauni, Maharajganj · risk 79% · https://maps.google.com/?q=27.2750,83.6750
+  2. near Laxmipur Khurd, Maharajganj · risk 57% · https://maps.google.com/?q=27.3750,83.7250
+  3. near Shitalganj, Pratapgarh · risk 41% · https://maps.google.com/?q=26.1750,81.6250
+  4. near Asother, Fatehpur · risk 43% · https://maps.google.com/?q=25.7250,80.8750
+Team 3
+  1. near Jaddupipra, Maharajganj · risk 75% · https://maps.google.com/?q=26.9750,83.6250
+  2. Siddharth Nagar · risk 54% · https://maps.google.com/?q=27.1250,82.8750
+  3. near Balaiya Jagdishpur, Ambedkar Nagar · risk 51% · https://maps.google.com/?q=26.4750,82.6750
+  4. near Rukunuddinpur, Ambedkar Nagar · risk 43% · https://maps.google.com/?q=26.3750,82.7250
+Team 4
+  1. near Basantpur, Maharajganj · risk 89% · https://maps.google.com/?q=27.1750,83.5750
+  2. near Eksarwa, Maharajganj · risk 82% · https://maps.google.com/?q=27.1750,83.6750
+  3. near Pachrukhia, Maharajganj · risk 74% · https://maps.google.com/?q=27.0750,83.6250
+  4. near Uska, Maharajganj · risk 81% · https://maps.google.com/?q=27.0750,83.5250
+Team 5
+  1. near Luhasi, Kushinagar · risk 83% · https://maps.google.com/?q=26.8250,83.6250
+  2. near Sabarhad, Kushinagar · risk 76% · https://maps.google.com/?q=26.8250,83.7250
+  3. near Patra Bazar, Gorakhpur · risk 62% · https://maps.google.com/?q=26.8250,83.5250
+  4. Deoria · risk 45% · https://maps.google.com/?q=26.6250,83.7250
+
+These 20 stops cover about 7% of today's expected fires.
+
+Next days: tomorrow about 317 detections; day after about 267 detections
+Support first. Enforcement last.
+
+सतर्क रिस्क विंडो
+आज पराली जलाने का खतरा सबसे ज़्यादा यहाँ है: Maharajganj, Kushinagar, Jhansi, Rae Bareli
+टीम 1: Karkos (70%) → Shahjahanpur (54%) → Birguwan (65%) → Ranguwan (42%)
+टीम 2: Parsauni (79%) → Laxmipur Khurd (57%) → Shitalganj (41%) → Asother (43%)
+टीम 3: Jaddupipra (75%) → Siddharth Nagar (54%) → Balaiya Jagdishpur (51%) → Rukunuddinpur (43%)
+टीम 4: Basantpur (89%) → Eksarwa (82%) → Pachrukhia (74%) → Uska (81%)
+टीम 5: Luhasi (83%) → Sabarhad (76%) → Patra Bazar (62%) → Deoria (45%)
+पहले मदद, सज़ा बाद में। किसान को मशीन या डीकंपोज़र के बारे में बताइए।
+
+Satellites miss most fires lit after about 1:30 pm, so real numbers are higher.

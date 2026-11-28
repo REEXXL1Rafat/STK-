@@ -1,0 +1,35 @@
+SATARK Risk Window · Rajasthan · Sat 28 Nov 2026
+Expected today: about 31161350701 fire detections. Most in Jodhpur, Jhunjhunun, Barmer, Hanumangarh.
+
+Team 1
+  1. Jodhpur · risk 10% · https://maps.google.com/?q=27.4750,72.3750
+  2. Jodhpur · risk 8% · https://maps.google.com/?q=27.3750,72.2250
+  3. Jodhpur · risk 6% · https://maps.google.com/?q=27.3750,72.1250
+  4. Jaisalmer · risk 6% · https://maps.google.com/?q=26.6750,71.2250
+Team 2
+  1. near Boya, Pali · risk 9% · https://maps.google.com/?q=25.1750,73.2750
+Team 3
+  1. near Bamanwali, Bikaner · risk 8% · https://maps.google.com/?q=28.3250,73.4750
+  2. near Masani, Hanumangarh · risk 5% · https://maps.google.com/?q=29.5750,74.4750
+Team 4
+  1. near Bamori Kalan, Kota · risk 31% · https://maps.google.com/?q=25.4250,76.5250
+Team 5
+  1. near Barnawada, Sawai Madhopur · risk 43% · https://maps.google.com/?q=25.9750,76.6250
+  2. near Gandawar, Sawai Madhopur · risk 33% · https://maps.google.com/?q=25.8750,76.6250
+  3. near Badwas, Sawai Madhopur · risk 41% · https://maps.google.com/?q=25.9250,76.7250
+
+These 11 stops cover about 100% of today's expected fires.
+
+Next days: tomorrow about 56 detections; day after about 49 detections
+Support first. Enforcement last.
+
+सतर्क रिस्क विंडो
+आज पराली जलाने का खतरा सबसे ज़्यादा यहाँ है: Jodhpur, Jhunjhunun, Barmer, Hanumangarh
+टीम 1: Jodhpur (10%) → Jodhpur (8%) → Jodhpur (6%) → Jaisalmer (6%)
+टीम 2: Boya (9%)
+टीम 3: Bamanwali (8%) → Masani (5%)
+टीम 4: Bamori Kalan (31%)
+टीम 5: Barnawada (43%) → Gandawar (33%) → Badwas (41%)
+पहले मदद, सज़ा बाद में। किसान को मशीन या डीकंपोज़र के बारे में बताइए।
+
+Satellites miss most fires lit after about 1:30 pm, so real numbers are higher.
